@@ -3,7 +3,7 @@ import imgPhone from "../assets/phone-images/MOTOROLA/MOTO G13.webp";
 const Card = () => {
   return (
     <>
-      <div className="card-container w-[260px] h-[26.3rem] hover:scale-105 duration-500">
+      <div className="card-container w-[260px] h-[26.1rem] hover:scale-105 duration-500">
         <picture className="w-full ">
           <img className="rounded-t-lg" src={imgPhone} alt="" />
         </picture>
