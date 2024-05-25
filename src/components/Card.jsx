@@ -16,7 +16,7 @@ const Card = () => {
             REDMI NOTE 13 5G (6/128 8/256)
           </p>
           <button className="w-[55%] border border-[#f1a415] self-start mt-3  rounded-[6px] font-title  font-medium  text-zinc-400 hover:scale-105 duration-500">
-            <a className="flex items-center justify-center gap-3 text-[.9rem]" href=""> Contacto
+            <a className="flex items-center  pl-2 gap-3 text-[.9rem]" href=""> Contacto
               <i className="bx bxl-whatsapp text-2xl text-[#f1a415] opacity-80 "></i>
             </a>
           </button>
