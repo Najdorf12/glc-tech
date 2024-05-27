@@ -10,9 +10,11 @@ const AdminForm = () => {
     register,
     formState: { errors },
   } = useForm();
- 
+
   const [allProducts, setAllProducts] = useState([]);
-  
+  const [urlImagen, setUrlImagen] = useState("");
+  const [urlImagenPublicId, setUrlImagenPublicId] = useState("");
+
   const getProducts = () => {
     axios
       .get("http://localhost:3000/api/products")
@@ -20,29 +22,54 @@ const AdminForm = () => {
       .catch((error) => console.error(error));
   };
 
-  useEffect (()=>{
+  useEffect(() => {
     getProducts();
-  },[])
+  }, []);
 
-  const changeUploadImage = (e) =>{
-    console.log(e)
+  const changeUploadImage = async (e) => {
+    const file = e.target?.files[0];
+    const data = new FormData();
+
+    data.append("file", file);
+    data.append("upload_preset", "glcTech");
+    const response = await axios.post(
+      "https://api.cloudinary.com/v1_1/najdorf/image/upload",
+      data
+    );
+    console.log(response.data)
+    setUrlImagen(response.data.secure_url)
+    setUrlImagenPublicId(response.data.public_id)
+  };
+  const deleteImage = () => {
+    setUrlImagen("");
   }
-  const submit = (e) => {
-    console.log(e)
-   /*  axios
-      .post("http://localhost:3000/api/products", data)
-      .then((res) => console.log(res))
-      .catch((error) => console.error(error)); */
+  
+  const submit = (data) => {
+    const newProduct = {
+      name: data.name,
+      description: data.description,
+      price:data.price,
+      category:data.category,
+      image: {
+        public_id: urlImagenPublicId,
+        secure_url: urlImagen,
+      }
+    }
+
+      axios
+      .post("http://localhost:3000/api/products", newProduct)
+      .then(() => getProducts())
+      .catch((error) => console.error(error)); 
   };
 
   return (
-    <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-6 pb-10 lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
+    <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10 lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
       <Link to="/">
-        <h2 className="font-title text-6xl font-bold text-gray-300 xl:self-start xl:absolute xl:top-0 m-16">
+        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 xl:self-start xl:absolute xl:top-0 m-16">
           GLC TECH
         </h2>
       </Link>
-      <div className="form-container mt-10">
+      <div className="form-container mt-4">
         <form
           onSubmit={handleSubmit(submit)}
           className="form"
@@ -77,14 +104,21 @@ const AdminForm = () => {
             <label htmlFor="Price">Precio</label>
             <input name="Price" id="Price" {...register("price")} />
           </div>
-          <div className="form-group">
+          <div className="flex flex-col gap-2 mt-2 text-sm text-[#717171]">
+            Imagen
             <input
               type="file"
               name="image"
               accept="image/*"
               onChange={changeUploadImage}
-              {...register("image")}
+              /*  {...register("image")} */
             />
+            {urlImagen && (
+              <picture className="w-32">
+                <img src={urlImagen} alt="" />
+                <button onClick={()=> deleteImage()} className="text-gray-400 rounded-sm border border-gray-300 py-1 px-2 mt-2">Eliminar imagen</button>
+              </picture>
+            )}
           </div>
           <section className="flex justify-between">
             <button type="submit" className="form-submit-btn">
@@ -94,9 +128,16 @@ const AdminForm = () => {
         </form>
       </div>
 
-      <section id="products-container_admin" className="mt-12 pt-6 lg:mt-24 xl:mt-8 flex flex-wrap gap-3 items-center justify-center w-full overflow-hidden lg:gap-6 lg:w-[65%] xl:w-[60%] 2xl:w-[55%] xl:justify-center xl:items-center xl:overflow-y-scroll lg:h-[90vh] xl:overflow-visible 2xl:gap-x-16 bg-zinc-900 rounded-lg xl:pt-6 xl:pb-12">
-        { allProducts.map((product,i)=>(
-          <CardProductsAdmin key={i} product={product} getProducts={getProducts} />
+      <section
+        id="products-container_admin"
+        className="mt-12 pt-6 lg:mt-24 xl:mt-8 flex flex-wrap gap-3 items-center justify-center w-full overflow-hidden lg:gap-6 lg:w-[65%]  2xl:w-[55%] xl:justify-center xl:items-center xl:overflow-y-scroll lg:h-[90vh] xl:overflow-visible 2xl:gap-x-16 bg-zinc-900 rounded-lg xl:pt-6 xl:pb-12"
+      >
+        {allProducts.map((product, i) => (
+          <CardProductsAdmin
+            key={i}
+            product={product}
+            getProducts={getProducts}
+          />
         ))}
       </section>
     </section>
