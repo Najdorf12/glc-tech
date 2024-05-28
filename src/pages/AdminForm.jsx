@@ -63,9 +63,9 @@ const AdminForm = () => {
   };
 
   return (
-    <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10 lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
+    <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10  lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
       <Link to="/">
-        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 xl:self-start xl:absolute xl:top-0 m-16">
+        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-center lg:absolute lg:top-0  ">
           GLC TECH
         </h2>
       </Link>
