@@ -6,7 +6,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
 
   const deleteProduct = (id) => {
     axios
-      .delete(`http://localhost:3000/api/products/${id}`)
+      .delete(`https://glctech-backend.onrender.com/api/products/${id}`)
       .then(() => getProducts())
       .catch((error) => console.error(error));
   };

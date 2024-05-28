@@ -8,13 +8,13 @@ const Store = () => {
 
   const getProducts = () => {
     axios
-      .get("http://localhost:3000/api/products")
+      .get("https://glctech-backend.onrender.com/api/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };
   const getProductsByCategory = (category) => {
     axios
-      .get(`http://localhost:3000/api/products/${category}`)
+      .get(`https://glctech-backend.onrender.com/api/products/${category}`)
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };

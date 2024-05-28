@@ -17,7 +17,7 @@ const AdminForm = () => {
 
   const getProducts = () => {
     axios
-      .get("http://localhost:3000/api/products")
+      .get("https://glctech-backend.onrender.com/api/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };
@@ -57,7 +57,7 @@ const AdminForm = () => {
     }
 
       axios
-      .post("http://localhost:3000/api/products", newProduct)
+      .post("https://glctech-backend.onrender.com/api/products", newProduct)
       .then(() => getProducts())
       .catch((error) => console.error(error)); 
   };
