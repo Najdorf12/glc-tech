@@ -14,12 +14,12 @@ const CardProductsAdmin = ({ product, getProducts }) => {
   return (
     <>
       <section className="relative bg-[#212121] w-[95%] border border-[#92856e]  sm:w-[400px] xl:w-[400px] rounded-md h-32 flex justify-center items-center">
-        <p className="absolute top-0 right-0 mt-3 mr-6 py-2 px-4 border border-[#f1a415] font-semibold font-title text-gray-300 rounded-md">
+       {/*  <p className="absolute top-0 right-0 mt-3 mr-6 py-2 px-4 border border-[#f1a415] font-semibold font-title text-gray-300 rounded-md">
           ${price}
-        </p>
+        </p> */}
         <picture className="mr-2  sm:mr-4 lg:mr-6 ">
           <img
-            className="max-w-28 rounded-md lg:w-full"
+            className="max-w-28 rounded-md lg:w-full object-cover"
             src={image?.secure_url}
           />
         </picture>

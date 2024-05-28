@@ -13,6 +13,7 @@ const Store = () => {
       .catch((error) => console.error(error));
   };
   const getProductsByCategory = (category) => {
+    console.log(category)
     axios
       .get(`https://glctech-backend.onrender.com/api/products/${category}`)
       .then((res) => setAllProducts(res.data))

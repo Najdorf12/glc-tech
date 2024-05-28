@@ -4,12 +4,12 @@ const Card = ({product}) => {
   return (
     <>
       <div className="card-container w-[260px] h-[26.1rem] hover:scale-105 duration-500">
-        <picture className="w-full ">
-          <img className="rounded-t-lg" src={product.image?.secure_url} alt="" />
+        <picture className="w-full">
+          <img className="rounded-t-lg w-full h-[260px] object-cover" src={product.image?.secure_url} alt="" />
         </picture>
         <article className="relative flex flex-col gap-1 pt-2 pl-2 font-title">
           <h6 className="text-[#f1a415] font-semibold text-lg ">
-            {product.name}
+            {product.name.toUpperCase()}
           </h6>
           <p className="text-gray-500 font-semibold text-base">{product.category}</p>
           <p className="text-gray-300 text-sm pr-1 mt-1 font-medium">

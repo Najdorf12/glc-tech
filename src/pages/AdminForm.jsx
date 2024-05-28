@@ -36,7 +36,6 @@ const AdminForm = () => {
       "https://api.cloudinary.com/v1_1/najdorf/image/upload",
       data
     );
-    console.log(response.data)
     setUrlImagen(response.data.secure_url)
     setUrlImagenPublicId(response.data.public_id)
   };
@@ -55,7 +54,6 @@ const AdminForm = () => {
         secure_url: urlImagen,
       }
     }
-
       axios
       .post("https://glctech-backend.onrender.com/api/products", newProduct)
       .then(() => getProducts())
@@ -65,7 +63,7 @@ const AdminForm = () => {
   return (
     <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10  lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
       <Link to="/">
-        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-center lg:absolute lg:top-0  ">
+        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-end lg:absolute lg:top-0 lg:right-0 mr-8">
           GLC TECH
         </h2>
       </Link>
@@ -100,10 +98,10 @@ const AdminForm = () => {
               {...register("description")}
             />
           </div>
-          <div className="form-group">
+         {/*  <div className="form-group">
             <label htmlFor="Price">Precio</label>
             <input name="Price" id="Price" {...register("price")} />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-2 mt-2 text-sm text-[#717171]">
             Imagen
             <input
