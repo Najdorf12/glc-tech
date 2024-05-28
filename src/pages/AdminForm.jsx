@@ -36,34 +36,34 @@ const AdminForm = () => {
       "https://api.cloudinary.com/v1_1/najdorf/image/upload",
       data
     );
-    setUrlImagen(response.data.secure_url)
-    setUrlImagenPublicId(response.data.public_id)
+    setUrlImagen(response.data.secure_url);
+    setUrlImagenPublicId(response.data.public_id);
   };
   const deleteImage = () => {
     setUrlImagen("");
-  }
-  
+  };
+
   const submit = (data) => {
     const newProduct = {
       name: data.name,
       description: data.description,
-      price:data.price,
-      category:data.category,
+      price: data.price,
+      category: data.category,
       image: {
         public_id: urlImagenPublicId,
         secure_url: urlImagen,
-      }
-    }
-      axios
+      },
+    };
+    axios
       .post("https://glctech-backend.onrender.com/api/products", newProduct)
       .then(() => getProducts())
-      .catch((error) => console.error(error)); 
+      .catch((error) => console.error(error));
   };
 
   return (
     <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10  lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
       <Link to="/">
-        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-end lg:absolute lg:top-0 lg:right-0 mr-8">
+        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-end lg:absolute lg:top-0 lg:right-0 mr-8 lg:pb-2">
           GLC TECH
         </h2>
       </Link>
@@ -98,10 +98,10 @@ const AdminForm = () => {
               {...register("description")}
             />
           </div>
-         {/*  <div className="form-group">
+          <div className="form-group">
             <label htmlFor="Price">Precio</label>
             <input name="Price" id="Price" {...register("price")} />
-          </div> */}
+          </div>
           <div className="flex flex-col gap-2 mt-2 text-sm text-[#717171]">
             Imagen
             <input
@@ -114,7 +114,12 @@ const AdminForm = () => {
             {urlImagen && (
               <picture className="w-32">
                 <img src={urlImagen} alt="" />
-                <button onClick={()=> deleteImage()} className="text-gray-400 rounded-sm border border-gray-300 py-1 px-2 mt-2">Eliminar imagen</button>
+                <button
+                  onClick={() => deleteImage()}
+                  className="text-gray-400 rounded-sm border border-gray-300 py-1 px-2 mt-2"
+                >
+                  Eliminar imagen
+                </button>
               </picture>
             )}
           </div>

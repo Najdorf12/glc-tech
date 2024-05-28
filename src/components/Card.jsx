@@ -15,11 +15,12 @@ const Card = ({product}) => {
           <p className="text-gray-300 text-sm pr-1 mt-1 font-medium">
           {product.description}
           </p>
-          <button className="w-[55%] border border-[#f1a415] self-start mt-3  rounded-[6px] font-title  font-medium  text-zinc-400 hover:scale-105 duration-500">
+          <button className="w-[50%] border border-zinc-500 self-start mt-3  rounded-[6px] font-title  font-medium  text-zinc-400 hover:scale-105 duration-500">
             <a className="flex items-center  pl-2 gap-4 text-[.9rem]" href="https://api.whatsapp.com/send/?phone=541125043539" target="blank" > Contacto
-              <i className="bx bxl-whatsapp text-2xl text-[#f1a415] opacity-80 "></i>
+              <i className="bx bxl-whatsapp text-2xl text-green-700 opacity-80 "></i>
             </a>
           </button>
+          <p className="absolute right-0 bottom-0 mr-3 mb-[3px] text-lg font-semibold text-[#f1a415]">$USD {product.price}</p>
         </article>
       </div>
     </>
