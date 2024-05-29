@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 .btn-home {
-  --color: #f1a415;
+  --color: #b8b7b3;
   --color2: #f1a415;
   padding: 0.5rem 1rem;
   border-radius: 6px;

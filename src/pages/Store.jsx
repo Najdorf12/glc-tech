@@ -43,7 +43,7 @@ const Store = () => {
             <button
               onClick={(e) => searchByCategory(e.target.innerText)}
               key={i}
-              className="w-[160px] py-2 border border-[#f1a415] rounded-[6px] font-title  font-medium text-lg  text-gray-100 hover:scale-105 duration-500 2xl:font-semibold 2xl:text-xl lg:w-[200px]"
+              className="w-[160px] py-2 border border-[#92856e] rounded-[6px] font-title  font-medium text-lg  text-gray-200 hover:scale-105 duration-500 2xl:font-semibold 2xl:text-xl lg:w-[200px]"
             >
               {btn.toUpperCase()}
             </button>
