@@ -57,25 +57,13 @@
 /* BORDER CARDS */
 .card-container {
   background: linear-gradient(#212121, #212121) padding-box,
-    linear-gradient(145deg, transparent 35%, #575654, #e7e2e2) border-box;
+    linear-gradient(145deg, transparent 35%, #92856e, #92856e) border-box;
   border: 2px solid transparent;
   border-radius: 16px;
   animation: gradient 5s ease infinite;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
 
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* FORM */
 .form-container {

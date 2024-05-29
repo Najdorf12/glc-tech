@@ -11,11 +11,11 @@ const Card = ({product}) => {
           <h6 className="text-[#f1a415] font-semibold text-lg ">
             {product.name.toUpperCase()}
           </h6>
-          <p className="text-gray-500 font-semibold text-base">{product.category}</p>
-          <p className="text-gray-300 text-sm pr-1 mt-1 font-medium">
+          <p className="text-[#92856e] font-semibold text-base">{product.category}</p>
+          <p className="text-gray-200 text-sm pr-1 mt-1 font-medium">
           {product.description}
           </p>
-          <button className="w-[47%] border border-zinc-400 self-start mt-3  rounded-[6px] font-title  font-medium  text-zinc-400 hover:scale-105 duration-500">
+          <button className="w-[47%] border border-[#92856e] self-start mt-3  rounded-[6px] font-title  font-medium  text-[#92856e] hover:scale-105 duration-500">
             <a className="flex items-center  pl-2 gap-2 text-[.9rem]" href="https://api.whatsapp.com/send/?phone=541125043539" target="blank" > Contacto
               <i className="bx bxl-whatsapp text-2xl text-green-700 opacity-80 "></i>
             </a>
