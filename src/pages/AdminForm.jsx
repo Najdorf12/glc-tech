@@ -133,7 +133,7 @@ const AdminForm = () => {
 
       <section
         id="products-container_admin"
-        className="mt-12 pt-6 lg:mt-24 xl:mt-8 flex flex-wrap gap-3 items-center justify-center w-full overflow-hidden lg:gap-6 lg:w-[65%]  2xl:w-[55%] xl:justify-center xl:items-center xl:overflow-y-scroll lg:h-[90vh] xl:overflow-visible 2xl:gap-x-16 bg-zinc-900 rounded-lg xl:pt-6 xl:pb-12"
+        className="mt-12 pt-6 lg:mt-24 xl:mt-8 flex flex-wrap gap-3 items-center justify-center w-full overflow-hidden lg:gap-6 lg:w-[65%] 2xl:w-[55%]  xl:overflow-y-scroll lg:h-[90vh] xl:overflow-visible 2xl:gap-x-16 bg-zinc-900 rounded-lg xl:pt-6 xl:pb-12"
       >
         {allProducts.map((product, i) => (
           <CardProductsAdmin
