@@ -16,7 +16,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
       <section className="relative bg-[#212121] w-[95%] border border-[#92856e]  sm:w-[400px] xl:w-[400px] rounded-md h-32 flex justify-center items-center">
         <picture className="pl-[2px] mr-2  sm:mr-4 lg:mr-6">
           <img
-            className="max-w-[135px] h-full rounded-md lg:w-full object-cover"
+            className="w-[120px] md:max-w-[135px] h-full rounded-md lg:w-full object-cover"
             src={image?.secure_url}
           />
         </picture>
