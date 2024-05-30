@@ -3,7 +3,6 @@ import Store from "../pages/Store";
 
 const Home = () => {
  
-
   return (
     <>
       <main className="w-full h-screen overflow-hidden bg-gray-300  flex flex-col items-center pt-14 md:pt-10 lg:pt-0 lg:justify-center">
