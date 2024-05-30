@@ -5,7 +5,7 @@ const Home = () => {
  
   return (
     <>
-      <main className="w-full h-screen overflow-hidden bg-gray-300  flex flex-col items-center pt-14 md:pt-10 lg:pt-0 lg:justify-center">
+      <main className="w-full h-screen overflow-hidden bg-gray-300  flex flex-col items-center pt-8 md:pt-10 lg:pt-0 lg:justify-center">
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-56">
           <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem] sm:text-[9rem] w-full -mt-[4.5rem] flex justify-end items-center text-gray-200 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-20 md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-12 lg:mr-0 lg:-ml-12 xl:-mt-[3.6rem] xl:text-[16rem] 2xl:-mt-[4.5rem] 2xl:text-[17rem]">
             GLC
@@ -27,7 +27,7 @@ const Home = () => {
 
           <picture className="z-50">
             <img
-              className="mt-10 h-auto max-w-96 lg:mt-0 xl:w-[420px]"
+              className="mt-14 h-auto max-w-96 lg:mt-0 xl:w-[420px]"
               src={imgHome}
               alt=""
             />
