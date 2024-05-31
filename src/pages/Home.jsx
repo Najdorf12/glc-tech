@@ -27,7 +27,7 @@ const Home = () => {
 
           <picture className="z-50  pl-8 lg:-mr-20">
             <img
-              className="mt-20 h-auto max-w-96 lg:mt-0 xl:max-w-[420px]  2xl:max-w-[500px]"
+              className="mt-10 h-auto max-w-96 lg:mt-0 xl:max-w-[420px]  2xl:max-w-[500px]"
               src={imgHome}
               alt=""
             />
