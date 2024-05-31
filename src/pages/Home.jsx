@@ -19,7 +19,7 @@ const Home = () => {
               GRUPO LA COMUNIDAD
             </h2>
             <div className="mt-8 flex justify-center">
-              <button className="btn-home font-text2 border-[2px] border-[#92856e] text-[#92856e]  bg- lg:font-semibold lg:py-[0.8rem] lg:px-[1.5rem] lg:mt-3  2xl:text-[1.3rem]   hover:border-none hover:text-gray-100">
+              <button className="btn-home font-text2 border-[2px] border-[#92856e] text-[#92856e]  bg- lg:font-semibold lg:py-[0.8rem] lg:px-[1.5rem] lg:mt-3  2xl:text-[1.3rem]  hover:text-gray-100">
                 <a href="#store">Nuestros Productos</a>
               </button>
             </div>
