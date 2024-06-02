@@ -3,7 +3,7 @@ import imgPhone from "../assets/phone-images/MOTOROLA/MOTO G13.webp";
 const Card = ({product}) => {
   return (
     <>
-      <div className="card-container w-[170px] h-[18.8rem] sm:w-[190px] sm:h-[20.5rem] md:w-[260px] md:h-[26.3rem] md: hover:scale-105 duration-500">
+      <div className="card-container w-[175px] h-[18.8rem] sm:w-[190px] sm:h-[20.5rem] md:w-[260px] md:h-[26.3rem] md: hover:scale-105 duration-500">
         <picture className="w-full">
           <img className="rounded-t-lg w-full md:h-[260px] object-cover" src={product.image?.secure_url} alt="" />
         </picture>
@@ -20,7 +20,7 @@ const Card = ({product}) => {
               <i className="bx bxl-whatsapp text-xl text-green-700 opacity-80 md:text-2xl"></i>
             </a>
           </button>
-          <p className="absolute right-0 bottom-0 mr-2 mb-[5px] text-[.80rem] sm:text-sm sm:mr-2 md:text-lg md:mr-3 font-semibold text-[#f1a415]">$USD {product.price}</p>
+          <p className="absolute right-0 bottom-0 mr-2 mb-[5px] md:mb-[3px] text-[.80rem] sm:text-sm sm:mr-2 md:text-lg md:mr-4 font-semibold text-[#f1a415]">$USD {product.price}</p>
         </article>
       </div>
     </>
