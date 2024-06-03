@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import AdminForm from "./pages/AdminForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<AdminForm />} />
+          <Route path="/:id" element={<ProductDetail />} />
         </Routes>
       </BrowserRouter>
     </>
