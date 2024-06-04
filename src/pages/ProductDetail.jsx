@@ -38,7 +38,7 @@ const ProductDetail = () => {
         <img className="w-full rounded-lg" src={productDetail.image?.secure_url} alt="" />
       </picture>
 
-      <div className="absolute bottom-0 mb-12 text-6xl font-title font-bold text-[#92856e] xl:top-0 xl:left-0 xl:mt-10 ml-10">
+      <div className="absolute bottom-0 mb-12 text-6xl font-title font-bold text-[#92856e] xl:top-0 xl:left-0 xl:mt-10 xl:ml-10">
         <Link to={"/"}>GLC</Link>
       </div>
     </section>
