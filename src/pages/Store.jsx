@@ -15,7 +15,7 @@ const Store = () => {
   const getProductsByCategory = (category) => {
     console.log(category)
     axios
-      .get(`https://glctech-backend.onrender.com/api/products/${category}`)
+      .get(`https://glctech-backend.onrender.com/api/products/category/${category}`)
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };
