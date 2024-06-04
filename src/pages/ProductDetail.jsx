@@ -40,10 +40,12 @@ const ProductDetail = () => {
           alt=""
         />
       </picture>
+      <Link to={"/"}>
       <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-20 xl:left-12 xl:text-3xl">
-        <Link to={"/"}><i class='bx bx-left-arrow-alt text-4xl xl:text-6xl'></i></Link>
+       <i class='bx bx-left-arrow-alt text-4xl xl:text-6xl'></i>
         Home
       </div>
+      </Link>
       <div className="text-6xl font-title font-bold text-[#92856e] xl:absolute  xl:top-0 xl:left-0 xl:mt-10 xl:ml-10">
         GLC TECH
       </div>
