@@ -16,13 +16,13 @@ const Card = ({ product }) => {
         </picture>
         <article className="relative flex flex-col gap-1 pt-2 pl-2 font-title">
           <h6 className="text-[#f1a415] font-semibold text-sm sm:text-[0.9rem] md:text-lg">
-            {product.name.toUpperCase()}
+            {product.name.toUpperCase()?.substring(0, 21)}
           </h6>
           <p className="text-[#92856e] font-semibold text-sm sm:text-[0.9rem] md:text-base">
             {product.category}
           </p>
           <p className="text-gray-200 text-xs sm:text-sm pr-1 mt-1 font-medium md:text-[0.9rem]">
-            {product.description}
+            {product.description?.substring(0, 25)}
           </p>
           <button className="w-[85px] md:w-[110px] border border-[#92856e] self-start mt-2 sm:mt-4 lg:mt-3  rounded-[6px] font-title  font-medium  text-[#92856e] hover:scale-105 duration-500">
             <a

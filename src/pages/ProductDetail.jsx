@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import imgProduct from "../assets/phone-images/MOTOROLA/MOTO G13.webp";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -21,7 +20,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <section className="relative bg-zinc-900 h-dvh w-full pt-6 flex flex-col items-center gap-14 lg:pt-0 lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40">
+    <section className="relative bg-zinc-900 h-dvh w-full pt-6 flex flex-col items-center gap-14 lg:pt-0 lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
       <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-5">
         <h5 className="text-3xl text-[#92856e] font-semibold xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
