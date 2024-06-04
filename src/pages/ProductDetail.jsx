@@ -34,7 +34,7 @@ const ProductDetail = () => {
           $USD {productDetail.price}
         </p>
       </article>
-      <picture className="max-w-[500px] xl:w-[450px]">
+      <picture className="w-[300px] sm:w-[350px] md:w-[400px] xl:w-[450px]">
         <img className="w-full rounded-lg" src={productDetail.image?.secure_url} alt="" />
       </picture>
 
