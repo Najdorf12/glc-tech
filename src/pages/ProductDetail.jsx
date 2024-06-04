@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import imgProduct from "../assets/phone-images/MOTOROLA/MOTO G13.webp";
 
 const ProductDetail = () => {
-/*   const { id } = useParams();
+  /*   const { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
 
   console.log(productDetail)
@@ -22,9 +23,29 @@ const ProductDetail = () => {
   }; */
 
   return (
-    <>
-      <h1>Product DETAIL</h1>
-    </>
+    <section className="relative bg-gray-300 h-screen w-full pt-6 flex flex-col items-center gap-14 lg:pt-0 lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40">
+      <article className="font-text flex flex-col justify-center items-center gap-3 xl:gap-5">
+        <h5 className="text-3xl text-[#92856e] font-semibold xl:text-4xl 2xl:text-5xl">
+          MOTO G46 203 PLUS
+        </h5>
+        <p className="text-center  text-base text-zinc-700 sm:px-3 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et illo
+          numquam adipisci debitis possimus eos beatae velit? Quia tenetur
+          accusamus deserunt enim nulla consectetur nisi blanditiis beatae, at
+          eaque?
+        </p>
+        <p className="mt-4 border border-[#92856e] py-2 px-4 rounded-lg text-2xl font-bold text-[#92856e] 2xl:text-3xl 2xl:px-7">
+          $USD 543
+        </p>
+      </article>
+      <picture className="max-w-[500px] ">
+        <img className="w-full rounded-lg" src={imgProduct} alt="" />
+      </picture>
+
+      <div className="absolute bottom-0 mb-12 text-6xl font-title font-bold text-[#92856e] xl:top-0 xl:left-0 xl:mt-10 ml-10">
+        <Link to={"/"}>GLC</Link>
+      </div>
+    </section>
   );
 };
 
