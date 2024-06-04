@@ -22,19 +22,19 @@ const ProductDetail = () => {
   }; 
 
   return (
-    <section className="relative bg-gray-300 h-screen w-full pt-6 flex flex-col items-center gap-14 lg:pt-0 lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40">
-      <article className="font-text flex flex-col justify-center items-center gap-3 xl:gap-5">
+    <section className="relative bg-zinc-900 h-screen w-full pt-6 flex flex-col items-center gap-14 lg:pt-0 lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40">
+      <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-5">
         <h5 className="text-3xl text-[#92856e] font-semibold xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
         </h5>
-        <p className="text-center  text-base text-zinc-700 sm:px-3 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-3">
+        <p className="text-center  text-base text-zinc-300 sm:px-3 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-3">
         {productDetail.description}
         </p>
         <p className="mt-4 border border-[#92856e] py-2 px-4 rounded-lg text-2xl font-bold text-[#92856e] 2xl:text-3xl 2xl:px-7">
           $USD {productDetail.price}
         </p>
       </article>
-      <picture className="max-w-[500px] ">
+      <picture className="max-w-[500px] xl:w-[450px]">
         <img className="w-full rounded-lg" src={productDetail.image?.secure_url} alt="" />
       </picture>
 
