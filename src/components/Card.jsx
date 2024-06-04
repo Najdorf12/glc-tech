@@ -1,18 +1,18 @@
 import imgPhone from "../assets/phone-images/MOTOROLA/MOTO G13.webp";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Card = ({ product }) => {
   return (
     <>
       <div className="card-container w-[175px] h-[18.8rem] sm:w-[190px] sm:h-[20.5rem] md:w-[260px] md:h-[26.3rem] md: hover:scale-105 duration-500">
         <picture className="w-full">
-       
+          <Link to={`/${product._id}`}>
             <img
               className="rounded-t-lg w-full md:h-[260px] object-cover"
               src={product.image?.secure_url}
               alt=""
             />
-        
+          </Link>
         </picture>
         <article className="relative flex flex-col gap-1 pt-2 pl-2 font-title">
           <h6 className="text-[#f1a415] font-semibold text-sm sm:text-[0.9rem] md:text-lg">
