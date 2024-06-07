@@ -16,7 +16,7 @@ const Card = ({ product }) => {
         </picture>
         <article className="relative flex flex-col   gap-1 pt-2 pl-2 font-title">
           <h6 className="text-[#f1a415] font-semibold leading-4 text-sm sm:text-[0.9rem] md:text-lg">
-            {product.name.toUpperCase()?.substring(0, 21)}
+            {product.name?.toUpperCase()?.substring(0, 21)}
           </h6>
           <p className="text-[#92856e] font-semibold text-sm sm:text-[0.9rem] md:text-base">
             {product.category}

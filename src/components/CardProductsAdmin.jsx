@@ -23,7 +23,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
 
         <article className="w-[80%] lg:w-[70%]">
           <p className="text-lg  font-text font-semibold text-[#f1a415]">
-            {name.toUpperCase()}
+            {name?.toUpperCase()}
           </p>
           <p className="mt-1 text-sm  font-text text-gray-200 leading-6">
             {description}

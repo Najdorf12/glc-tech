@@ -47,6 +47,7 @@ const AdminForm = () => {
     const newProduct = {
       name: data.name,
       description: data.description,
+      description2: data.description2,
       price: data.price,
       category: data.category,
       image: {
@@ -91,13 +92,22 @@ const AdminForm = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="description">Descripción</label>
+            <label htmlFor="description">Descripción Cards</label>
             <input
               name="description"
               id="description"
               {...register("description")}
             />
           </div>
+         
+            <label className="text-[#717171] " htmlFor="description2">Descripción Detalle Prod.</label>
+            <textarea className="text-gray-200 bg-[#212121] border border-[#717171] rounded-lg p-2"
+              name="description2"
+              id="description2"
+              {...register("description2")}
+              rows="5" cols="33"
+            />
+         
           <div className="form-group">
             <label htmlFor="Price">Precio</label>
             <input name="Price" id="Price" {...register("price")} />
