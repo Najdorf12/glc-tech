@@ -69,8 +69,9 @@ const AdminForm = () => {
           GLC TECH
         </h2>
       </Link>
-      <ArsPriceForm />
-
+    <section>
+      
+    <ArsPriceForm />
       <div className="form-container mt-4">
         <form
           onSubmit={handleSubmit(submit)}
@@ -147,6 +148,7 @@ const AdminForm = () => {
           </section>
         </form>
       </div>
+    </section>
 
       <section
         id="products-container_admin"

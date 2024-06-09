@@ -10,6 +10,7 @@ const ArsPriceForm = () => {
   } = useForm();
 
   const [ARSPrice, setARSPrice] = useState([]);
+
   const getARSPrice = () => {
     axios
       .get("https://glctech-backend.onrender.com/api/usdPrice")
@@ -21,8 +22,7 @@ const ArsPriceForm = () => {
     getARSPrice();
   }, []);
 
-  const submit = (data) => {
-    console.log(data);
+  const submitArs = (data) => {
     const newArsPrice = {
       usdPrice: data.arsPrice,
     };
@@ -31,17 +31,10 @@ const ArsPriceForm = () => {
       .then(() => getARSPrice())
       .catch((error) => console.error(error));
   };
-  const deleteArsPrice = () => {
-    axios
-      .delete(
-        `https://glctech-backend.onrender.com/api/usdprice/${ARSPrice[0]._id}`
-      )
-      .then(() => getARSPrice())
-      .catch((error) => console.error(error));
-  };
+
   return (
     <section className="form-container mt-5">
-      <form onSubmit={handleSubmit(submit)}>
+      <form onSubmit={handleSubmit(submitArs)}>
         <div className="form-group">
           <label htmlFor="arsPrice">
             Peso Argentino - ACTUAL : {ARSPrice[0]?.usdPrice}
@@ -52,13 +45,21 @@ const ArsPriceForm = () => {
           <button type="submit" className="form-submit-btn">
             Subir nuevo
           </button>
-          <button
-            onClick={deleteArsPrice}
-            className="py-2 px-3 bg-zinc-900 text-zinc-300 border border-[#f1a415]  mt-2 rounded-lg font-text text-base  "
-          >
-            Eliminar Ultimo
-          </button>
+          <p
+          onClick={() =>
+             axios
+              .delete(
+                `https://glctech-backend.onrender.com/api/usdprice/${ARSPrice[ARSPrice.length - 1]._id}`
+              )
+              .then(() => getARSPrice())
+              .catch((error) => console.error(error)) 
+          }
+          className="py-2 w-[160px] px-3 bg-zinc-900 text-zinc-300 border border-[#f1a415]  mt-2 rounded-lg font-text text-base flex items-center justify-center "
+        >
+          Eliminar Ultimo
+        </p>
         </div>
+       
       </form>
     </section>
   );
