@@ -1,7 +1,7 @@
 import imgPhone from "../assets/phone-images/MOTOROLA/MOTO G13.webp";
 import { Link } from "react-router-dom";
 
-const Card = ({ product }) => {
+const Card = ({ product, arsPrice }) => {
   return (
     <>
       <div className="card-container w-[175px] h-[18.9rem] sm:w-[190px] sm:h-[19.5rem] md:w-[260px] md:h-[26.3rem] md: hover:scale-105 duration-500">
@@ -36,7 +36,7 @@ const Card = ({ product }) => {
             </a>
           </button>
           <p className="absolute right-0 bottom-0 mr-2 mb-[5px] md:mb-[3px] text-[.80rem] sm:text-sm sm:mr-2 md:text-lg md:mr-4 font-semibold text-[#f1a415]">
-            $USD {product.price}
+            $ {product.price * arsPrice[0]?.usdPrice}
           </p>
         </article>
       </div>

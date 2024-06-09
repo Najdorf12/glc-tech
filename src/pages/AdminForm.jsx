@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CardProductsAdmin from "../components/CardProductsAdmin";
+import ArsPriceForm from "../components/ArsPriceForm";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -64,10 +65,12 @@ const AdminForm = () => {
   return (
     <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10  lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
       <Link to="/">
-        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-end lg:absolute lg:top-0 lg:right-0 mr-8 lg:pb-2">
+        <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-end lg:absolute lg:top-0 lg:right-0 lg:mr-8 lg:pb-2">
           GLC TECH
         </h2>
       </Link>
+      <ArsPriceForm />
+
       <div className="form-container mt-4">
         <form
           onSubmit={handleSubmit(submit)}
@@ -99,15 +102,19 @@ const AdminForm = () => {
               {...register("description")}
             />
           </div>
-         
-            <label className="text-[#717171] " htmlFor="description2">Descripción Detalle Prod.</label>
-            <textarea className="text-gray-200 bg-[#212121] border border-[#717171] rounded-lg p-2"
-              name="description2"
-              id="description2"
-              {...register("description2")}
-              rows="5" cols="33"
-            />
-         
+
+          <label className="text-[#717171] " htmlFor="description2">
+            Descripción Detalle Prod.
+          </label>
+          <textarea
+            className="text-gray-200 bg-[#212121] border border-[#717171] rounded-lg p-2"
+            name="description2"
+            id="description2"
+            {...register("description2")}
+            rows="5"
+            cols="33"
+          />
+
           <div className="form-group">
             <label htmlFor="Price">Precio</label>
             <input name="Price" id="Price" {...register("price")} />

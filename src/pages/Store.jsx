@@ -5,6 +5,14 @@ import Card from "../components/Card";
 const Store = () => {
   const btns = ["Todos", "Motorola", "Xiaomi", "Samsung"];
   const [allProducts, setAllProducts] = useState([]);
+  const [ARSPrice,setARSPrice] = useState([])
+
+  const getARSPrice = () => {
+    axios
+    .get("https://glctech-backend.onrender.com/api/usdPrice")
+    .then((res) => setARSPrice(res.data))
+    .catch((error) => console.error(error));
+  }
 
   const getProducts = () => {
     axios
@@ -21,6 +29,7 @@ const Store = () => {
   };
 
   useEffect(() => {
+    getARSPrice();
     getProducts();
   }, []);
 
@@ -50,7 +59,7 @@ const Store = () => {
           ))}
         </div>
         {allProducts?.map((product, i) => (
-          <Card key={i} product={product} />
+          <Card key={i} product={product} arsPrice ={ARSPrice} />
         ))}
       </section>
     </>
