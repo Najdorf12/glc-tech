@@ -69,86 +69,85 @@ const AdminForm = () => {
           GLC TECH
         </h2>
       </Link>
-    <section>
-      
-    <ArsPriceForm />
-      <div className="form-container mt-4">
-        <form
-          onSubmit={handleSubmit(submit)}
-          className="form"
-          encType="multipart/form-data"
-        >
-          <div className="form-group">
-            <label htmlFor="name">Nombre</label>
-            <input name="name" id="name" {...register("name")} />
-          </div>
-          <div className="form-group">
-            <label htmlFor="category">Categoría</label>
-            <input
-              name="category"
-              id="category"
-              {...register("category", {
-                required: {
-                  value: true,
-                  message: "Category is required",
-                },
-              })}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="description">Descripción Cards</label>
-            <input
-              name="description"
-              id="description"
-              {...register("description")}
-            />
-          </div>
+      <section className="flex flex-col justify-center items-center">
+        <ArsPriceForm />
+        <div className="form-container mt-4">
+          <form
+            onSubmit={handleSubmit(submit)}
+            className="form"
+            encType="multipart/form-data"
+          >
+            <div className="form-group">
+              <label htmlFor="name">Nombre</label>
+              <input name="name" id="name" {...register("name")} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="category">Categoría</label>
+              <input
+                name="category"
+                id="category"
+                {...register("category", {
+                  required: {
+                    value: true,
+                    message: "Category is required",
+                  },
+                })}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="description">Descripción Cards</label>
+              <input
+                name="description"
+                id="description"
+                {...register("description")}
+              />
+            </div>
 
-          <label className="text-[#717171] " htmlFor="description2">
-            Descripción Detalle Prod.
-          </label>
-          <textarea
-            className="text-gray-200 bg-[#212121] border border-[#717171] rounded-lg p-2"
-            name="description2"
-            id="description2"
-            {...register("description2")}
-            rows="5"
-            cols="33"
-          />
-
-          <div className="form-group">
-            <label htmlFor="Price">Precio</label>
-            <input name="Price" id="Price" {...register("price")} />
-          </div>
-          <div className="flex flex-col gap-2 mt-2 text-sm text-[#717171]">
-            Imagen
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              onChange={changeUploadImage}
-              /*  {...register("image")} */
+            <label className="text-[#717171] " htmlFor="description2">
+              Descripción Detalle Prod.
+            </label>
+            <textarea
+              className="text-gray-200 bg-[#212121] border border-[#717171] rounded-lg p-2"
+              name="description2"
+              id="description2"
+              {...register("description2")}
+              rows="5"
+              cols="33"
             />
-            {urlImagen && (
-              <picture className="w-32">
-                <img src={urlImagen} alt="" />
-                <button
-                  onClick={() => deleteImage()}
-                  className="text-gray-400 rounded-sm border border-gray-300 py-1 px-2 mt-2"
-                >
-                  Eliminar imagen
-                </button>
-              </picture>
-            )}
-          </div>
-          <section className="flex justify-between">
-            <button type="submit" className="form-submit-btn">
-              Crear
-            </button>
-          </section>
-        </form>
-      </div>
-    </section>
+
+            <div className="form-group">
+              <label htmlFor="Price">Precio</label>
+              <input name="Price" id="Price" {...register("price")} />
+            </div>
+            <div className="flex flex-col gap-2 mt-2 text-sm text-[#717171]">
+              Imagen
+              <input
+                type="file"
+                name="image"
+                accept="image/*"
+                onChange={changeUploadImage}
+                /*  {...register("image")} */
+              />
+              {urlImagen && (
+                <picture className="w-32">
+                  <img src={urlImagen} alt="" />
+                  <button
+                    onClick={() => deleteImage()}
+                    className="text-gray-400 rounded-sm border border-gray-300 py-1 px-2 mt-2"
+                  >
+                    Eliminar imagen
+                  </button>
+                </picture>
+              )}
+            </div>
+            <section className="flex justify-between">
+              <button type="submit" className="form-submit-btn">
+                Crear
+              </button>
+            </section>
+          </form>
+        </div>
+      </section>
 
       <section
         id="products-container_admin"

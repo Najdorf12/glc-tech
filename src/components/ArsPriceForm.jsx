@@ -54,7 +54,7 @@ const ArsPriceForm = () => {
               .then(() => getARSPrice())
               .catch((error) => console.error(error)) 
           }
-          className="py-2 w-[160px] px-3 bg-zinc-900 text-zinc-300 border border-[#f1a415]  mt-2 rounded-lg font-text text-base flex items-center justify-center "
+          className="py-2 w-[160px] px-3 bg-zinc-900 text-zinc-300 border border-[#f1a415]  mt-2 rounded-lg font-text text-base flex items-center justify-center cursor-pointer "
         >
           Eliminar Ultimo
         </p>
