@@ -35,7 +35,10 @@ const Card = ({ product, arsPrice }) => {
               <i className="bx bxl-whatsapp text-xl text-green-700 opacity-80 md:text-2xl"></i>
             </a>
           </button>
-          <p className="absolute right-0 bottom-0 mr-2 mb-[5px] md:mb-[3px] text-[.80rem] sm:text-sm sm:mr-2 md:text-lg md:mr-4 font-semibold text-[#f1a415]">
+          <p className="absolute right-0 bottom-2 sm:bottom-3 md:bottom-4 mr-2 mb-[5px] md:mb-[3px] text-[.80rem] sm:text-sm sm:mr-2 md:text-lg md:mr-4 font-semibold text-[#f1a415]">
+            $USD {product?.price}
+          </p>
+          <p className="absolute right-0 -bottom-2  mr-2 mb-[5px] md:mb-[3px] text-[.80rem] sm:text-sm sm:mr-2 md:text-lg md:mr-4 font-semibold text-[#f1a415]">
             $ {product.price * arsPrice[0]?.usdPrice}
           </p>
         </article>
