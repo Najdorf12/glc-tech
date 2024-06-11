@@ -51,6 +51,7 @@ const AdminForm = () => {
       description2: data.description2,
       price: data.price,
       category: data.category,
+      youtube: data.youtube,
       image: {
         public_id: urlImagenPublicId,
         secure_url: urlImagen,
@@ -63,7 +64,7 @@ const AdminForm = () => {
   };
 
   return (
-    <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10  lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24">
+    <section className="relative w-full bg-zinc-900 min-h-screen flex flex-col items-center pt-3 pb-10  lg:pb-0 xl:flex-row xl:justify-start xl:gap-6 2xl:gap-24 xl:pb-10">
       <Link to="/">
         <h2 className="font-title text-5xl sm:text-6xl font-bold text-zinc-400 lg:self-end lg:absolute lg:top-0 lg:right-0 lg:mr-8 lg:pb-2">
           GLC TECH
@@ -102,7 +103,14 @@ const AdminForm = () => {
                 {...register("description")}
               />
             </div>
-
+            <div className="form-group">
+              <label htmlFor="youtube">Link de Youtube</label>
+              <input
+                name="youtube"
+                id="youtube"
+                {...register("youtube")}
+              />
+            </div>
             <label className="text-[#717171] " htmlFor="description2">
               Descripción Detalle Prod.
             </label>
