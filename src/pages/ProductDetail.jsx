@@ -41,7 +41,7 @@ console.log(productDetail)
         </p>
         <p className="text-center lg:self-start  ">
           <Link to={`${productDetail.youtube}`}>
-             <i className='bx bxl-youtube text-5xl sm:text-5xl text-red-700'></i>
+             <i className='bx bxl-youtube text-5xl sm:text-5xl text-[#FF0000]'></i>
           </Link>
         </p>
         <div className="flex justify-center items-center gap-3 sm:gap-10 lg:self-start">
