@@ -28,7 +28,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
           <p className="text-lg  font-text font-semibold text-[#f1a415] leading-5">
             {name?.toUpperCase()}
           </p>
-          <p className="mt-1 text-sm  font-text text-gray-200 leading-6">
+          <p className="mt-3 text-sm  font-text text-gray-200 leading-6">
             {description}
           </p>
           <div className="flex  justify-between pr-4  w-full items-center mt-2">
