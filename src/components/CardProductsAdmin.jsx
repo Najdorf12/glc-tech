@@ -14,7 +14,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
 
   return (
     <>
-      <section className="relative bg-[#212121] w-[95%] border border-[#92856e]  sm:w-[400px] xl:w-[400px] rounded-md h-32 flex justify-center items-center">
+      <section className="relative bg-[#212121] w-[95%] border border-[#92856e]  sm:w-[400px] xl:w-[400px] rounded-md h-36 flex justify-center items-center">
         <Link to={`/${_id}`}>
           <picture className="pl-[2px] mr-2  sm:mr-4 lg:mr-6">
             <img
@@ -25,7 +25,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
         </Link>
 
         <article className="w-[80%] lg:w-[70%] pl-2">
-          <p className="text-lg  font-text font-semibold text-[#f1a415]">
+          <p className="text-lg  font-text font-semibold text-[#f1a415] leading-5">
             {name?.toUpperCase()}
           </p>
           <p className="mt-1 text-sm  font-text text-gray-200 leading-6">

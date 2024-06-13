@@ -28,7 +28,7 @@ console.log(productDetail)
   };
 
   return (
-    <section className="relative bg-zinc-900 h-dvh w-full pt-6 flex flex-col items-center gap-14 lg:pt-0 lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
+    <section className="relative bg-zinc-900 pb-12 xl:h-dvh w-full pt-6 lg:pt-12 flex flex-col items-center gap-14  lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
       <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-4">
         <h5 className="text-3xl text-[#92856e] font-semibold lg:self-start xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
@@ -61,12 +61,12 @@ console.log(productDetail)
         />
       </picture>
       <Link to={"/"}>
-        <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-20 xl:left-12 xl:text-3xl">
+        <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-12 xl:left-12 xl:text-3xl">
           <i class="bx bx-left-arrow-alt text-4xl xl:text-6xl"></i>
           Home
         </div>
       </Link>
-      <div className="text-6xl font-title font-bold text-[#92856e] xl:absolute  xl:top-0 xl:left-0 xl:mt-10 xl:ml-10">
+      <div className="text-6xl font-title font-bold text-[#92856e] xl:absolute  xl:top-0 xl:left-0 xl:mt-6 xl:ml-6">
         GLC TECH
       </div>
     </section>
