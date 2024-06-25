@@ -15,13 +15,13 @@ const ProductDetail = () => {
   console.log(productDetail.youtube);
   const getARSPrice = () => {
     axios
-      .get("https://glctech-backend.onrender.com/api/usdPrice")
+      .get("https://glc-tech-backend.vercel.app/api/usdPrice")
       .then((res) => setARSPrice(res.data))
       .catch((error) => console.error(error));
   };
   const getProductDetail = () => {
     axios
-      .get(`https://glctech-backend.onrender.com/api/products/${id}`)
+      .get(`https://glc-tech-backend.vercel.app/api/products/${id}`)
       .then((res) => {
         setProductDetail(res.data);
       })
@@ -40,7 +40,7 @@ const ProductDetail = () => {
         <p className="text-center lg:text-start text-base text-zinc-300 sm:px-3 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
           {productDetail.description2}
         </p>
-        <div className="my-3 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-red-500 2xl:self-start">
+        <div className="my-3 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
           <iframe
             className="aspect-video w-full h-[250px]  xl:h-[230px]"
            

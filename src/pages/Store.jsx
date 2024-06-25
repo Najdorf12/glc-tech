@@ -9,21 +9,21 @@ const Store = () => {
 
   const getARSPrice = () => {
     axios
-    .get("https://glctech-backend.onrender.com/api/usdPrice")
+    .get("https://glc-tech-backend.vercel.app/api/usdPrice")
     .then((res) => setARSPrice(res.data))
     .catch((error) => console.error(error));
   }
 
   const getProducts = () => {
     axios
-      .get("https://glctech-backend.onrender.com/api/products")
+      .get("https://glc-tech-backend.vercel.app/api/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };
   const getProductsByCategory = (category) => {
     console.log(category)
     axios
-      .get(`https://glctech-backend.onrender.com/api/products/category/${category}`)
+      .get(`https://glc-tech-backend.vercel.app/api/products/category/${category}`)
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };

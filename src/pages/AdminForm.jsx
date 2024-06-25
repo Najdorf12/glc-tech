@@ -58,7 +58,7 @@ const AdminForm = () => {
       },
     };
     axios
-      .post("https://glctech-backend.onrender.com/api/products", newProduct)
+      .post("https://glc-tech-backend.vercel.app/api/products", newProduct)
       .then(() => getProducts())
       .catch((error) => console.error(error));
   };

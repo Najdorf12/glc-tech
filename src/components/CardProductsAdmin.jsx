@@ -7,7 +7,7 @@ const CardProductsAdmin = ({ product, getProducts }) => {
 
   const deleteProduct = (id) => {
     axios
-      .delete(`https://glctech-backend.onrender.com/api/products/${id}`)
+      .delete(`https://glc-tech-backend.vercel.app/api/products/${id}`)
       .then(() => getProducts())
       .catch((error) => console.error(error));
   };
