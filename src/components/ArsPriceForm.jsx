@@ -13,7 +13,7 @@ const ArsPriceForm = () => {
 
   const getARSPrice = () => {
     axios
-      .get("https://glctech-backend.onrender.com/api/usdPrice")
+      .get("https://glc-tech-backend.vercel.app/api/usdPrice")
       .then((res) => setARSPrice(res.data))
       .catch((error) => console.error(error));
   };
