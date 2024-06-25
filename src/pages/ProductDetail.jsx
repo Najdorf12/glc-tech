@@ -29,7 +29,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <section className="relative bg-zinc-900 pb-12 xl:h-dvh w-full pt-6 lg:pt-12 flex flex-col items-center gap-14  lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
+    <section className="relative bg-zinc-900 pb-12  2xl:h-dvh w-full pt-6 lg:pt-12 flex flex-col items-center gap-14  lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
       <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-3">
         <h5 className="text-3xl text-[#92856e] font-semibold lg:self-start xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
@@ -37,7 +37,7 @@ const ProductDetail = () => {
         <p className="text-center lg:text-start text-lg text-zinc-400 font-semibold  sm:max-w-[500px] lg:self-start xl:max-w-[420px] md:text-xl  2xl:max-w-[470px] ">
           {productDetail.description}
         </p>
-        <p className="text-center lg:text-start text-base text-zinc-300 sm:px-3 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
+        <p className="text-center lg:text-start text-base text-zinc-300 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
           {productDetail.description2}
         </p>
         <div className="my-3 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
@@ -68,14 +68,16 @@ const ProductDetail = () => {
         />
       </picture>
       <Link to={"/"}>
-        <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-[0] xl:right-0 xl:left-0 xl:text-3xl">
-          <i class="bx bx-left-arrow-alt text-4xl xl:text-6xl"></i>
-          Home
+        <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-[10px] xl:right-0 xl:left-0 xl:text-3xl">
+          <i class="bx bx-left-arrow-alt text-4xl 2xl:text-6xl"></i>
+          Volver 
         </div>
       </Link>
+      <Link to={"/"}>
       <div className="text-6xl font-title font-bold text-[#92856e] xl:absolute  xl:top-0 xl:right-0 xl:mt-[5px] xl:mr-6">
         GLC TECH
       </div>
+      </Link>
     </section>
   );
 };
