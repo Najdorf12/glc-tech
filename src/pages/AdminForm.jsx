@@ -18,7 +18,7 @@ const AdminForm = () => {
 
   const getProducts = () => {
     axios
-      .get("https://glctech-backend.onrender.com/api/products")
+      .get("https://glc-tech-backend.vercel.app/api/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };

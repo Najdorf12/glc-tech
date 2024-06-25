@@ -13,7 +13,7 @@ const ArsPriceForm = () => {
 
   const getARSPrice = () => {
     axios
-      .get("https://glc-tech-backend.vercel.app/api/usdPrice")
+      .get("https://glc-tech-backend.vercel.app/api/usdprice")
       .then((res) => setARSPrice(res.data))
       .catch((error) => console.error(error));
   };
@@ -26,6 +26,7 @@ const ArsPriceForm = () => {
     const newArsPrice = {
       usdPrice: data.arsPrice,
     };
+    console.log(newArsPrice)
     axios
       .post("https://glc-tech-backend.vercel.app/api/usdprice", newArsPrice)
       .then(() => getARSPrice())
@@ -49,7 +50,7 @@ const ArsPriceForm = () => {
           onClick={() =>
              axios
               .delete(
-                `https://glc-tech-backend.vercel.app/api/usdprice/${ARSPrice[ARSPrice.length - 1]._id}`
+                `https://glc-tech-backend.vercel.app/api/usdprice/${ARSPrice[ARSPrice.length - 1]?._id}`
               )
               .then(() => getARSPrice())
               .catch((error) => console.error(error)) 
