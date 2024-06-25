@@ -10,7 +10,6 @@ const Card = ({ product, arsPrice }) => {
             <img
               className="rounded-t-lg w-full h-[170px] md:h-[260px] object-cover"
               src={product.image?.secure_url}
-              alt=""
             />
           </Link>
         </picture>
