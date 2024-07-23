@@ -8,8 +8,10 @@ const Card = ({ product, arsPrice }) => {
         <picture className="w-full">
           <Link to={`/${product._id}`}>
             <img
+              loading="lazy"
               className="rounded-t-lg w-full h-[170px] md:h-[260px] object-cover"
               src={product.image?.secure_url}
+              alt="phone-img"
             />
           </Link>
         </picture>

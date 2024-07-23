@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../api/axios";
 import Card from "../components/Card";
 
 const Store = () => {
@@ -9,21 +9,21 @@ const Store = () => {
 
   const getARSPrice = () => {
     axios
-    .get("https://glc-tech-backend.vercel.app/api/usdPrice")
+    .get("/usdPrice")
     .then((res) => setARSPrice(res.data))
     .catch((error) => console.error(error));
   }
 
   const getProducts = () => {
     axios
-      .get("https://glc-tech-backend.vercel.app/api/products")
+      .get("/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };
   const getProductsByCategory = (category) => {
     console.log(category)
     axios
-      .get(`https://glc-tech-backend.vercel.app/api/products/category/${category}`)
+      .get(`/products/category/${category}`)
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error));
   };

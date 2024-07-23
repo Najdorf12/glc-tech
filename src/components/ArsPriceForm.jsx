@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../api/axios";
+
+import "./arsPrice.css";
 
 const ArsPriceForm = () => {
   const {
@@ -13,8 +15,10 @@ const ArsPriceForm = () => {
 
   const getARSPrice = () => {
     axios
-      .get("https://glc-tech-backend.vercel.app/api/usdprice")
-      .then((res) => setARSPrice(res.data))
+      .get("/usdprice")
+      .then((res) => {
+        setARSPrice(res?.data);
+      })
       .catch((error) => console.error(error));
   };
 
@@ -26,43 +30,57 @@ const ArsPriceForm = () => {
     const newArsPrice = {
       usdPrice: data.arsPrice,
     };
-    console.log(newArsPrice)
     axios
-      .post("https://glc-tech-backend.vercel.app/api/usdprice", newArsPrice)
+      .post("/usdprice", newArsPrice)
+      .then(() => getARSPrice())
+      .catch((error) => console.error(error));
+  };
+  const deleteLastPrice = () => {
+    axios
+      .delete(`/usdprice/${ARSPrice[ARSPrice?.length - 1]?._id}`)
       .then(() => getARSPrice())
       .catch((error) => console.error(error));
   };
 
   return (
-    <section className="form-container mt-5">
-      <form onSubmit={handleSubmit(submitArs)}>
-        <div className="form-group">
-          <label htmlFor="arsPrice">
-            Peso Argentino - ACTUAL : {ARSPrice[0]?.usdPrice}
-          </label>
-          <input name="arsPrice" id="arsPrice" {...register("arsPrice")} />
-        </div>
-        <div className="flex justify-between items-center mt-2">
-          <button type="submit" className="form-submit-btn">
-            Subir nuevo
-          </button>
-          <p
-          onClick={() =>
-             axios
-              .delete(
-                `https://glc-tech-backend.vercel.app/api/usdprice/${ARSPrice[ARSPrice.length - 1]?._id}`
-              )
-              .then(() => getARSPrice())
-              .catch((error) => console.error(error)) 
-          }
-          className="py-2 w-[160px] px-3 bg-zinc-900 text-zinc-300 border border-[#f1a415]  mt-2 rounded-lg font-text text-base flex items-center justify-center cursor-pointer "
-        >
-          Eliminar Ultimo
-        </p>
-        </div>
-       
-      </form>
-    </section>
+    <>
+      <div className="container-ars w-full mt-6 lg:self-start lg:mt-10  ">
+        <form onSubmit={handleSubmit(submitArs)} className="form-ars">
+          <div className="form_front pt-5 pb-8 px-6 w-[320px] xl:w-[380px]">
+            {/* <div className=" absolute top-[130%] flex justify-center items-center">
+              <div className="w-[200px] h-[200px] rounded-[50%] absolute flex justify-center items-center text-2xl font-title font-bold text-gray-300 border-t-[3px] border-b-[3px] border-gray-300">
+                GLC TECH
+              </div>
+              <div className="w-[250px] h-[250px] border-[2px] border-[#92856e] rounded-[50%]"></div>
+            </div> */}
+            <div className="form_details flex flex-col justify-center items-center gap-1 text-2xl text-white font-bold font-title">
+              ARS - USD
+              <div className="text-amber-600 text-lg font-title font-semibold">
+                ACTUAL : $ {ARSPrice[ARSPrice?.length - 1]?.usdPrice}
+              </div>
+            </div>
+
+            <input
+              name="arsPrice"
+              id="arsPrice"
+              type="text"
+              className="input mt-4 w-[90%] "
+              placeholder="Ingrese valor"
+              {...register("arsPrice")}
+            />
+
+            <div className="flex flex-col gap-5 mt-5 text-[#92856e] font-semibold">
+              <p onClick={() => deleteLastPrice()} className="btn">
+                Eliminar último{" "}
+              </p>
+              <button type="submit" className="btn">
+                Cargar nuevo
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 

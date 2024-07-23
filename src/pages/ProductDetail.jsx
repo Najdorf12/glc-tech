@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import YouTube from "react-youtube";
-import axios from "axios";
+import axios from "../api/axios";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -12,16 +11,16 @@ const ProductDetail = () => {
     getProductDetail();
     getARSPrice();
   }, []);
-  console.log(productDetail.youtube);
+
   const getARSPrice = () => {
     axios
-      .get("https://glc-tech-backend.vercel.app/api/usdPrice")
+      .get("/usdPrice")
       .then((res) => setARSPrice(res.data))
       .catch((error) => console.error(error));
   };
   const getProductDetail = () => {
     axios
-      .get(`https://glc-tech-backend.vercel.app/api/products/${id}`)
+      .get(`/products/${id}`)
       .then((res) => {
         setProductDetail(res.data);
       })
@@ -47,8 +46,8 @@ const ProductDetail = () => {
             src={
               productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
             }
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
         </div>
         <div className="flex justify-center items-center gap-3 sm:gap-10 lg:self-start">
@@ -69,7 +68,7 @@ const ProductDetail = () => {
       </picture>
       <Link to={"/"}>
         <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-[10px] xl:right-0 xl:left-0 xl:text-3xl">
-          <i class="bx bx-left-arrow-alt text-4xl 2xl:text-6xl"></i>
+          <i className="bx bx-left-arrow-alt text-4xl 2xl:text-6xl"></i>
           Volver 
         </div>
       </Link>
