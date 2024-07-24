@@ -45,14 +45,17 @@ const Store = () => {
     <>
       <section
         id="store"
-        className=" relative w-full pb-24 bg-zinc-900  flex flex-wrap  gap-2 sm:gap-3 justify-center pt-52 sm:pt-56  lg:pt-52 lg:px-10 lg:gap-8 lg:pb-32 2xl:gap-10 2xl:px-20"
+        className=" relative w-full pb-24 bg-gray-300  flex flex-wrap  gap-4 sm:gap-5 justify-center pt-52 sm:pt-56  lg:pt-52 lg:px-10 lg:gap-8 lg:pb-32 2xl:gap-10 2xl:px-20"
       >
         <div className="absolute top-0 flex flex-wrap justify-center items-center gap-5 mt-10 px-2 sm:mt-14 lg:gap-10 2xl:gap-14">
           {btns.map((btn, i) => (
             <button
+            style={{
+              boxShadow: "6px 6px 10px rgba(0, 0, 0, 1), 1px 1px 10px rgba(255, 255, 255, 0.6)"
+            }}
               onClick={(e) => searchByCategory(e.target.innerText)}
               key={i}
-              className="w-[160px] py-2 border border-[#92856e] rounded-[6px] font-title  font-medium text-lg  text-gray-200 hover:scale-105 duration-500 2xl:font-semibold 2xl:text-xl lg:w-[200px]"
+              className="w-[160px] py-2  bg-stone-500 border-[1px] border-[#92856e] rounded-[6px] font-title  font-medium text-lg  text-gray-200 hover:scale-105 duration-500 2xl:font-semibold 2xl:text-xl lg:w-[200px]"
             >
               {btn.toUpperCase()}
             </button>

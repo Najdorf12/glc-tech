@@ -39,7 +39,12 @@ const AdminForm = () => {
     axios
       .get("/auth/verify")
       .then((res) => setUser(res.data))
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        if (error) {
+          console.error(error.response?.data?.message);
+          navigate("/login")
+        }
+      });
   };
   const selectProduct = (user) => {
     setProductSelected(user);
