@@ -21,7 +21,6 @@ const Store = () => {
       .catch((error) => console.error(error));
   };
   const getProductsByCategory = (category) => {
-    console.log(category)
     axios
       .get(`/products/category/${category}`)
       .then((res) => setAllProducts(res.data))
@@ -53,9 +52,9 @@ const Store = () => {
             style={{
               boxShadow: "6px 6px 10px rgba(0, 0, 0, 1), 1px 1px 10px rgba(255, 255, 255, 0.6)"
             }}
-              onClick={(e) => searchByCategory(e.target.innerText)}
+              onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="w-[160px] py-2  bg-stone-500 border-[1px] border-[#92856e] rounded-[6px] font-title  font-medium text-lg  text-gray-200 hover:scale-105 duration-500 2xl:font-semibold 2xl:text-xl lg:w-[200px]"
+              className="w-[160px] py-2  bg-gradient-to-br from-stone-500 to-stone-800 rounded-[6px] font-title  font-medium text-lg  text-gray-200 hover:scale-105 duration-500 2xl:font-semibold 2xl:text-xl lg:w-[200px]"
             >
               {btn.toUpperCase()}
             </button>
