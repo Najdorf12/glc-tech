@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import AdminForm from "./pages/AdminForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
