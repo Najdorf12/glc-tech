@@ -6,8 +6,15 @@ import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
 import ErrorPage from "./pages/ErrorPage";
+import Cookies from "js-cookie";
 
 function App() {
+  useEffect(() => {
+    const token = Cookies.get("token");
+    console.log("APPTOKEN------->",token)
+     console.log("APPdocument.cookie------->", document.cookie)
+   }, [])
+   
   return (
     <>
       <BrowserRouter>

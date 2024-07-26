@@ -19,14 +19,15 @@ const ProtectedRoutes = () => {
   }; */
  useEffect(() => {
   const token = Cookies.get("token");
-  console.log(token)
+  console.log("PROTECTEDROUTESTOKEN------->",token)
+  console.log("PROTECTEDROUTESdocument.cookie------->", document.cookie)
  }, [])
  
  const token = Cookies.get("token");
- console.log(token)
- console.log("document.cookie------->", document.cookie)
+ console.log("PROTECTEDROUTESTOKEN------->",token)
+  console.log("PROTECTEDROUTESdocument.cookie------->", document.cookie)
 
-  if (true) {
+  if (token) {
     return <Outlet />;
   } else {
     return <Navigate to="/login" />;
