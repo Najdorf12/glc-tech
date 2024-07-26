@@ -15,14 +15,14 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-/*   useEffect(() => {
+  useEffect(() => {
     if (loginError?.length > 0) {
       const timer = setTimeout(() => {
         setLoginError([]);
       }, 4000);
       return () => clearTimeout(timer);
     }
-  }, [loginError]); */
+  }, [loginError]); 
 
   const submit = (data) => {
     axios
