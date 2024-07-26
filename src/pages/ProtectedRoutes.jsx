@@ -18,9 +18,10 @@ const ProtectedRoutes = () => {
     }
   }; */
  
-    const token = Cookies.get("token");
+ const token = Cookies.get("token");
+ console.log(token)
 
-  if (token) {
+  if (true) {
     return <Outlet />;
   } else {
     return <Navigate to="/login" />;
