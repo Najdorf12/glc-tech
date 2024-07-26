@@ -17,6 +17,10 @@ const ProtectedRoutes = () => {
       console.error(error);
     }
   }; */
+ useEffect(() => {
+  const token = Cookies.get("token");
+  console.log(token)
+ }, [])
  
  const token = Cookies.get("token");
  console.log(token)
