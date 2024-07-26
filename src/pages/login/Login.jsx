@@ -30,7 +30,7 @@ const Login = () => {
       .post("/auth/login", data)
       .then(() => {
         const token = Cookies.get("token");
-        console.log(token)
+        console.log("LOGIN",token)
        /*  navigate("/admin"); */
       })
       .catch((error) => {
