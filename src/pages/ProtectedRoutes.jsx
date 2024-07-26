@@ -24,6 +24,7 @@ const ProtectedRoutes = () => {
  
  const token = Cookies.get("token");
  console.log(token)
+ console.log("document.cookie------->", document.cookie)
 
   if (true) {
     return <Outlet />;
