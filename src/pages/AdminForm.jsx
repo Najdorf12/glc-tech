@@ -47,7 +47,10 @@ const AdminForm = () => {
   const verifyAuth = () => {
     axios
       .get("/auth/verify")
-      .then((res) => setUser(res.data))
+      .then((res) =>{ 
+        console.log(res.data?.email)
+        setUser(res.data)
+  })
       .catch((error) => {
         if (error) {
           console.error(error.response?.data?.message);
