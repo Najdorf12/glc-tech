@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import "../components/arsPrice.css";
 import axios from "../api/axios";
+import { useCookies } from "react-cookie";
+import Cookies from "js-cookie";
 
 const AdminForm = () => {
   const {
@@ -13,6 +15,13 @@ const AdminForm = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+  useEffect(() => {
+    console.log("ADMINREACTCOOKIE", cookies);
+    const token = Cookies.get("token");
+    console.log("ADMINJSCOOKIET------->", token);
+  }, []);
 
   const [allProducts, setAllProducts] = useState([]);
   const [user, setUser] = useState({});
@@ -42,7 +51,7 @@ const AdminForm = () => {
       .catch((error) => {
         if (error) {
           console.error(error.response?.data?.message);
-          navigate("/login")
+          navigate("/login");
         }
       });
   };

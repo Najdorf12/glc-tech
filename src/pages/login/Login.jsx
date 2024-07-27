@@ -31,7 +31,7 @@ const Login = () => {
       .then(() => {
         const token = Cookies.get("token");
         console.log("LOGIN",token)
-       /*  navigate("/admin"); */
+         navigate("/admin"); 
       })
       .catch((error) => {
         setLoginError(error.response?.data);

@@ -2,9 +2,13 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../api/axios";
 import Cookies from "js-cookie";
+import { useCookies } from "react-cookie";
+
 
 
 const ProtectedRoutes = () => {
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+
  /*  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const auth = async () => {
     try {
@@ -18,16 +22,12 @@ const ProtectedRoutes = () => {
     }
   }; */
  useEffect(() => {
-  const token = Cookies.get("token");
-  console.log("PROTECTEDROUTESTOKEN------->",token)
-  console.log("PROTECTEDROUTESdocument.cookie------->", document.cookie)
+   const token = Cookies.get("token");
+  console.log("JSCOKIEEPROTECTEDROUTES------->",token)
+  console.log("REACTCOOKIE-PROTECTEDROUTES------->", cookies ) 
  }, [])
- 
- const token = Cookies.get("token");
- console.log("PROTECTEDROUTESTOKEN------->",token)
- console.log("PROTECTEDROUTESdocument.cookie------->", document.cookie)
 
-  if (token) {
+  if (true) {
     return <Outlet />;
   } else {
     return <Navigate to="/login" />;
