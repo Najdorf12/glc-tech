@@ -6,6 +6,6 @@ const instance= axios.create({
 })
 export default instance
 
-/* https://glc-tech-backend.vercel.app/api 
+/*  
 
 http://localhost:1212/api*/
