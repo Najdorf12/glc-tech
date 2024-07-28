@@ -25,7 +25,9 @@ const Login = () => {
   }, [loginError]); 
   
   useEffect(() => {
-    
+    axios
+    .post("/auth/logout")
+    .catch((error) => console.error(error));
   }, [])
   
 

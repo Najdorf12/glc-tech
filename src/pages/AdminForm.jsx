@@ -59,8 +59,6 @@ const AdminForm = () => {
     axios
       .post("/auth/logout")
       .then((res) => {
-        cookieStore.delete("token");
-        removeCookie("token")
         navigate("/login");
       })
       .catch((error) => console.error(error));
