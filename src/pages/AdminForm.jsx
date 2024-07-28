@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import "../components/arsPrice.css";
 import axios from "../api/axios";
 import { useCookies } from "react-cookie";
-import Cookies from "js-cookie";
 
 const AdminForm = () => {
   const {
@@ -15,9 +14,6 @@ const AdminForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-
-  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
-
 
   const [allProducts, setAllProducts] = useState([]);
   const [user, setUser] = useState({});
@@ -28,47 +24,11 @@ const AdminForm = () => {
 
   const navigate = useNavigate();
 
-  const getProducts = () => {
-    axios
-      .get("/products")
-      .then((res) => setAllProducts(res.data))
-      .catch((error) => console.error(error));
-  };
-  const logout = () => {
-    axios
-      .post("/auth/logout")
-      .then((res) => {
-        removeCookie("token");
-      })
-      .catch((error) => console.error(error));
-  };
-  const verifyAuth = () => {
-    axios
-      .get("/auth/verify")
-      .then((res) =>{ 
-        console.log(res)
-        setUser(res.data)
-  })
-      .catch((error) => {
-        if (error) {
-          console.error(error.response?.data?.message);
-          navigate("/login");
-        }
-      });
-  };
-  const selectProduct = (user) => {
-    setProductSelected(user);
-    console.log(productSelected);
-  };
-  const editProduct = (product) => {
-    axios
-      .put(`/products/${product._id}`, product)
-      .then(() => {
-        getProducts();
-        setProductSelected(null);
-      })
-      .catch((error) => console.error(error));
-  };
+  useEffect(() => {
+    verifyAuth();
+    getProducts();
+  }, []);
+
   useEffect(() => {
     if (productSelected !== null) {
       reset(productSelected);
@@ -88,10 +48,46 @@ const AdminForm = () => {
     }
   }, [productSelected]);
 
-  useEffect(() => {
-    verifyAuth();
-    getProducts();
-  }, []);
+  const getProducts = () => {
+    axios
+      .get("/products")
+      .then((res) => setAllProducts(res.data))
+      .catch((error) => console.error(error));
+  };
+  const logout = () => {
+    axios
+      .post("/auth/logout")
+      .then((res) => {
+        navigate("/login");
+      })
+      .catch((error) => console.error(error));
+  };
+  const verifyAuth = () => {
+    axios
+      .get("/auth/verify")
+      .then((res) => {
+        console.log(res);
+        setUser(res.data);
+      })
+      .catch((error) => {
+        if (error) {
+          navigate("/login");
+        }
+      });
+  };
+  const selectProduct = (user) => {
+    setProductSelected(user);
+    console.log(productSelected);
+  };
+  const editProduct = (product) => {
+    axios
+      .put(`/products/${product._id}`, product)
+      .then(() => {
+        getProducts();
+        setProductSelected(null);
+      })
+      .catch((error) => console.error(error));
+  };
 
   const changeUploadImage = async (e) => {
     const file = e.target?.files[0];

@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import axios from "../../api/axios";
-import Cookies from "js-cookie";
 import "./login.css";
 
 const Login = () => {
@@ -29,9 +28,7 @@ const Login = () => {
     axios
       .post("/auth/login", data)
       .then(() => {
-        const token = Cookies.get("token");
-        console.log("LOGIN",token)
-         navigate("/admin"); 
+       navigate("/admin"); 
       })
       .catch((error) => {
         setLoginError(error.response?.data);
