@@ -22,12 +22,10 @@ const ProtectedRoutes = () => {
     }
   }; */
  useEffect(() => {
-   const token = Cookies.get("token");
-  console.log("JSCOKIEEPROTECTEDROUTES------->",token)
-  console.log("REACTCOOKIE-PROTECTEDROUTES------->", cookies ) 
+
  }, [])
 
-  if (true) {
+  if (cookies) {
     return <Outlet />;
   } else {
     return <Navigate to="/login" />;

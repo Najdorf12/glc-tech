@@ -17,11 +17,7 @@ const AdminForm = () => {
   } = useForm();
 
   const [cookies, setCookie, removeCookie] = useCookies(["token"]);
-  useEffect(() => {
-    console.log("ADMINREACTCOOKIE", cookies);
-    const token = Cookies.get("token");
-    console.log("ADMINJSCOOKIET------->", token);
-  }, []);
+
 
   const [allProducts, setAllProducts] = useState([]);
   const [user, setUser] = useState({});
@@ -41,7 +37,9 @@ const AdminForm = () => {
   const logout = () => {
     axios
       .post("/auth/logout")
-      .then((res) => navigate("/login"))
+      .then((res) => {
+        removeCookie("token");
+      })
       .catch((error) => console.error(error));
   };
   const verifyAuth = () => {
@@ -91,9 +89,9 @@ const AdminForm = () => {
   }, [productSelected]);
 
   useEffect(() => {
-    getProducts();
     verifyAuth();
-  }, []);
+    getProducts();
+  }, [logout]);
 
   const changeUploadImage = async (e) => {
     const file = e.target?.files[0];
