@@ -14,6 +14,7 @@ const AdminForm = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
   const [allProducts, setAllProducts] = useState([]);
   const [user, setUser] = useState({});
@@ -59,12 +60,14 @@ const AdminForm = () => {
       .post("/auth/logout")
       .then((res) => {
         cookieStore.delete("token");
+        removeCookie("token")
         navigate("/login");
       })
       .catch((error) => console.error(error));
   };
-  const verifyAuth = () => {
-    axios
+  const verifyAuth = async () => {
+  try{
+    const res = await axios
       .get("/auth/verify")
       .then((res) => {
         console.log(res);
@@ -72,9 +75,13 @@ const AdminForm = () => {
       })
       .catch((error) => {
         if (error) {
+          
           navigate("/login");
         }
-      });
+      })
+    }catch(error){
+      console.error(error)
+    }
   };
   const selectProduct = (user) => {
     setProductSelected(user);
