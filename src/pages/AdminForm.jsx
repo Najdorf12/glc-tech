@@ -91,7 +91,7 @@ const AdminForm = () => {
   useEffect(() => {
     verifyAuth();
     getProducts();
-  }, [logout]);
+  }, []);
 
   const changeUploadImage = async (e) => {
     const file = e.target?.files[0];
