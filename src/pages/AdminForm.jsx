@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import "../components/arsPrice.css";
 import axios from "../api/axios";
+import Loader from "../components/Loader";
 import { useCookies } from "react-cookie";
 
 const AdminForm = () => {
@@ -14,12 +15,12 @@ const AdminForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const [cookies, setCookie, removeCookie] = useCookies(['token']);
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
 
   const [allProducts, setAllProducts] = useState([]);
   const [user, setUser] = useState({});
   const [productSelected, setProductSelected] = useState(null);
-
+  const [isLoading, setIsLoading] = useState(false);
   const [urlImagen, setUrlImagen] = useState("");
   const [urlImagenPublicId, setUrlImagenPublicId] = useState("");
 
@@ -50,10 +51,14 @@ const AdminForm = () => {
   }, [productSelected]);
 
   const getProducts = () => {
-    axios
-      .get("/products")
-      .then((res) => setAllProducts(res.data))
-      .catch((error) => console.error(error));
+    setIsLoading(true);
+    setTimeout(() => {
+      axios
+        .get("/products")
+        .then((res) => setAllProducts(res.data))
+        .catch((error) => console.error(error))
+        .finally(() => setIsLoading(false));
+    }, 2500);
   };
   const logout = () => {
     axios
@@ -64,21 +69,19 @@ const AdminForm = () => {
       .catch((error) => console.error(error));
   };
   const verifyAuth = async () => {
-  try{
-    const res = await axios
-      .get("/auth/verify")
-      .then((res) => {
-        console.log(res);
-        setUser(res.data);
-      })
-      .catch((error) => {
-        if (error) {
-          
-          navigate("/login");
-        }
-      })
-    }catch(error){
-      console.error(error)
+    try {
+      const res = await axios
+        .get("/auth/verify")
+        .then((res) => {
+          setUser(res.data);
+        })
+        .catch((error) => {
+          if (error) {
+            navigate("/login");
+          }
+        });
+    } catch (error) {
+      console.error(error);
     }
   };
   const selectProduct = (user) => {
@@ -141,6 +144,7 @@ const AdminForm = () => {
 
   return (
     <section className="relative w-full bg-[#212121] min-h-screen flex flex-col items-center  pb-10">
+      {isLoading && <Loader />}
       <nav className="font-title text-xl xl:text-xl flex gap-2 justify-between uppercase items-center  font-bold text-[#92856e] w-full px-4 py-2 xl:py-3 rounded-b-2xl xl:px-12 2xl:text-2xl">
         {user.username}
         <div className="flex gap-3 xl:gap-4 2xl:gap-8 ">

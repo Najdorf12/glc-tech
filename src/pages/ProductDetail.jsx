@@ -1,11 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../api/axios";
+import Loader from "../components/Loader";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
   const [ARSPrice, setARSPrice] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getProductDetail();
@@ -19,16 +21,21 @@ const ProductDetail = () => {
       .catch((error) => console.error(error));
   };
   const getProductDetail = () => {
-    axios
-      .get(`/products/${id}`)
-      .then((res) => {
-        setProductDetail(res.data);
-      })
-      .catch((error) => console.error(error));
+    setIsLoading(true);
+    setTimeout(() => {
+      axios
+        .get(`/products/${id}`)
+        .then((res) => {
+          setProductDetail(res.data);
+        })
+        .catch((error) => console.error(error))
+        .finally(() => setIsLoading(false));
+    }, 2500);
   };
 
   return (
     <section className="relative bg-zinc-900 pb-12  2xl:h-dvh w-full pt-6 lg:pt-12 flex flex-col items-center gap-14  lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
+      {isLoading && <Loader />}
       <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-3">
         <h5 className="text-3xl text-[#92856e] font-semibold lg:self-start xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
@@ -42,9 +49,10 @@ const ProductDetail = () => {
         <div className="my-3 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
           <iframe
             className="aspect-video w-full h-[250px]  xl:h-[230px]"
-           
             src={
-              productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
+              productDetail.youtube
+                ?.replace("watch?v=", "embed/")
+                ?.split("&")[0]
             }
             frameBorder="0"
             allowFullScreen
@@ -69,13 +77,13 @@ const ProductDetail = () => {
       <Link to={"/"}>
         <div className=" flex justify-center items-center text-xl font-title font-bold text-[#92856e] xl:absolute xl:bottom-[10px] xl:right-0 xl:left-0 xl:text-3xl">
           <i className="bx bx-left-arrow-alt text-4xl 2xl:text-6xl"></i>
-          Volver 
+          Volver
         </div>
       </Link>
       <Link to={"/"}>
-      <div className="text-6xl font-title font-bold text-[#92856e] xl:absolute  xl:top-0 xl:right-0 xl:mt-[5px] xl:mr-6">
-        GLC TECH
-      </div>
+        <div className="text-6xl font-title font-bold text-[#92856e] xl:absolute  xl:top-0 xl:right-0 xl:mt-[5px] xl:mr-6">
+          GLC TECH
+        </div>
       </Link>
     </section>
   );

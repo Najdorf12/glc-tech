@@ -6,6 +6,8 @@ import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
 import ErrorPage from "./pages/ErrorPage";
+import { useState } from "react";
+import Loader from "./components/Loader";
 
 function App() {
   return (
@@ -19,12 +21,11 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<ErrorPage />} />
 
-          <Route
-            element={<ProtectedRoutes  />}
-          >
+          <Route element={<ProtectedRoutes />}>
             <Route path="/admin" element={<AdminForm />} />
           </Route>
         </Routes>
+        
       </BrowserRouter>
     </>
   );
