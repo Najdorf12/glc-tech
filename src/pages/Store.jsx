@@ -59,7 +59,7 @@ const Store = () => {
       >
         {isLoading && <Loader />}
 
-        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-9 mt-20 px-  md:gap-8 lg:gap-14 xl:mt-28 2xl:mt-32 2xl:gap-16">
+        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-y-6 gap-x-[2.5rem] mt-20 px-  md:gap-8 lg:gap-14 xl:mt-28 2xl:mt-32 2xl:gap-16">
           {btns.map((btn, i) => (
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Card = ({ product, arsPrice }) => {
   return (
     <>
-      <div className="card-container w-[175px] h-[19.55rem] sm:w-[190px] sm:h-[19.80rem] md:w-[220px] md:h-[26.5rem]  lg:w-[240px] lg:h-[26.6rem] xl:w-[250px] xl:h-[27.5rem] hover:scale-105 duration-500">
+      <div className="card-container w-[180px] h-[19.55rem] sm:w-[192px] sm:h-[19.80rem] md:w-[220px] md:h-[26.5rem]  lg:w-[240px] lg:h-[26.6rem] xl:w-[250px] xl:h-[27.5rem] hover:scale-105 duration-500">
         <picture className="w-full">
           <Link to={`/${product._id}`}>
             <img
