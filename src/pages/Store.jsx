@@ -23,7 +23,7 @@ const Store = () => {
       .get("/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error))
-       /* .finally(() => setIsLoading(false)); */
+     .finally(() => setIsLoading(false)); 
     }, 2500);
 
   };
@@ -34,7 +34,7 @@ const Store = () => {
         .get(`/products/category/${category}`)
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
-        /* .finally(() => setIsLoading(false)); */
+         .finally(() => setIsLoading(false)); 
     }, 2500);
   };
 
