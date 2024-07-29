@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Card = ({ product, arsPrice }) => {
   return (
     <>
-      <div className="card-container w-[175px] h-[19.55rem] sm:w-[190px] sm:h-[19.80rem] md:w-[220px] md:h-[26.5rem]  lg:w-[240px] lg:h-[26.6rem] xl:w-[250px] xl:h-[26.85rem] hover:scale-105 duration-500">
+      <div className="card-container w-[175px] h-[19.55rem] sm:w-[190px] sm:h-[19.80rem] md:w-[220px] md:h-[26.5rem]  lg:w-[240px] lg:h-[26.6rem] xl:w-[250px] xl:h-[27.5rem] hover:scale-105 duration-500">
         <picture className="w-full">
           <Link to={`/${product._id}`}>
             <img
@@ -19,13 +19,13 @@ const Card = ({ product, arsPrice }) => {
           <h6 className="text-gray-600 font-bold leading-4 text-base self-center sm:text-[1rem] md:text-lg lg:font-bold border-b w-[90%] pb-[4px] flex items-center justify-center">
             {product.name?.toUpperCase()?.substring(0, 21)}
           </h6>
-          <p className="text-stone-500 pl-3 font-semibold text-sm sm:mt-[1px] md:text-[0.9rem] md:text-base">
+          <p className="text-stone-500 pl-3 font-semibold text-sm sm:mt-[1px] md:text-[0.9rem] md:text-base xl:mt-[3px]">
             {product.category}
           </p>
           <p className="text-stone-500 pl-3 text-xs sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[0.9rem] font-semibold">
             {product.description?.substring(0, 20)}
           </p>
-          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[.95rem] text-gray-600 font-bold md:text-[1rem] lg:text-[1.1rem] ">
+          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[.95rem] text-gray-600 font-bold md:text-[1rem] lg:text-[1.1rem] xl:my-1 ">
             <p className="">
               usd {product?.price}
             </p>
