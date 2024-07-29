@@ -41,7 +41,7 @@ const Card = ({ product, arsPrice }) => {
             >
               {" "}
               COMPRAR
-              <i className="bx bxl-whatsapp text-[1.55rem] text-green-600 "></i>
+             {/*  <i className="bx bxl-whatsapp text-[1.55rem] text-green-600 "></i> */}
             </a>
           </button>
         </article>
