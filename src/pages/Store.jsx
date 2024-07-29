@@ -7,7 +7,7 @@ const Store = () => {
   const btns = ["Todos", "Motorola", "Xiaomi", "Samsung"];
   const [allProducts, setAllProducts] = useState([]);
   const [ARSPrice, setARSPrice] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getARSPrice = () => {
     axios
@@ -23,7 +23,7 @@ const Store = () => {
       .get("/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error))
-       .finally(() => setIsLoading(false));
+       /* .finally(() => setIsLoading(false)); */
     }, 2500);
 
   };
@@ -34,7 +34,7 @@ const Store = () => {
         .get(`/products/category/${category}`)
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
-        .finally(() => setIsLoading(false));
+        /* .finally(() => setIsLoading(false)); */
     }, 2500);
   };
 
