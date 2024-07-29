@@ -35,11 +35,11 @@ const Home = () => {
         </section>
       </main>
       <section
-        className="relative w-full h-[50dvh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[70dvh] 2xl:h-[60dvh]"
+        className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[70dvh] "
       >
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] lg:max-w-[800px]  xl:gap-8 2xl:gap-10 ">
           <h6
-            className="font-title text-6xl  text-stone-500 font-bold md:text-6xl lg:text-[9dvh]"
+            className="font-title text-4xl  text-stone-500 font-bold md:text-6xl lg:text-[9dvh]"
           >
             LOREM IMPSUM
           </h6>
@@ -53,7 +53,7 @@ const Home = () => {
             alias quibusdam. Voluptatem nulla rerum earum dolores
             alias.
           </p>
-          <button className="btn-home2 py-2 px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button>
+          <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button>
         </article>
         <div
           id="line-stats"

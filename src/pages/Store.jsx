@@ -59,12 +59,12 @@ const Store = () => {
       >
         {isLoading && <Loader />}
 
-        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-5 mt-20 px-  md:gap-8 lg:gap-14 xl:mt-28 2xl:mt-32 2xl:gap-16">
+        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-9 mt-20 px-  md:gap-8 lg:gap-14 xl:mt-28 2xl:mt-32 2xl:gap-16">
           {btns.map((btn, i) => (
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="btn-home2 py-2 px-8 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px] text-stone-500 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider"
+              className="btn-home2 py-[5px] px-8 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px] text-stone-500 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider"
             >
               <span>{btn.toUpperCase()}</span>
             </button>

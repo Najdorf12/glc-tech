@@ -80,13 +80,13 @@
 
 
 .btn-home2 {
-  border-radius: 0.5em;
+  border-radius: 1.3rem;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -5px -5px 11px #f1f1f1;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #f1f1f1;
 }
 
 .btn-home2:active {
   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -5px -5px 12px #ffffff;
 }
