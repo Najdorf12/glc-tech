@@ -11,10 +11,10 @@ const Home = () => {
           </span>
 
           <article className="flex flex-col  justify-center items-center z-50 ">
-            <h1 className="text-zinc-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] ">
+            <h1 className="text-stone-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] ">
               GLC TECH
             </h1>
-            <h2 className="text-zinc-500 text-[1.25rem] font-semibold   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem]">
+            <h2 className="text-stone-500 text-[1.25rem] font-semibold   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem]">
               GRUPO LA COMUNIDAD
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
@@ -35,11 +35,12 @@ const Home = () => {
         </section>
       </main>
       <section
-        className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[70dvh] "
+        className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] "
       >
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] lg:max-w-[800px]  xl:gap-8 2xl:gap-10 ">
           <h6
-            className="font-title text-4xl  text-stone-500 font-bold md:text-6xl lg:text-[9dvh]"
+         
+            className="font-title text-4xl  text-stone-600  font-bold md:text-6xl lg:text-[9dvh]"
           >
             LOREM IMPSUM
           </h6>
