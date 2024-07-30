@@ -34,47 +34,47 @@ const ProductDetail = () => {
   };
 
   return (
-    <section className="relative bg-zinc-900 pb-12  2xl:h-dvh w-full pt-3 lg:pt-12 flex flex-col items-center gap-14  lg:justify-center xl:flex-row  xl:gap-24 2xl:gap-40 overflow-hidden">
-      <nav className="w-full">
-        <ul className="text-gray-200 text-lg flex  pl-3 items-center font-semibold">
-          <Link to={"/"}>
-            <li>Inicio</li>
-          </Link>
+    <section className="relative bg-gray-300 pb-12  2xl:h-dvh w-full pt-3 lg:pt-12 flex flex-col items-center   lg:justify-center xl:flex-row  overflow-hidden">
+      <nav className="w-full flex items-center justify-between px-3">
+        <ul className="text-[#838282ab] text-base flex  pl-3 items-center font-semibold">
+          <li>Todos</li>
           <li>
             <i className="bx bx-chevron-right text-3xl mt-1"></i>
           </li>
-
-          <li>Detalle</li>
+          <li>{productDetail.name}</li>
         </ul>
+        <Link to={"/"}>
+          <button className="flex items-center text-[#838282ab] text-base font-semibold border-[1.5px] rounded-[1rem] px-5 py-1 border-stone-500">
+            Volver
+          </button>
+        </Link>
       </nav>
       {isLoading && <Loader />}
-      <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-3">
-        <h5 className="text-3xl text-[#92856e] font-semibold lg:self-start xl:text-4xl 2xl:text-5xl">
+      <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-3 bg-teal-500 mt-10">
+        <h5 className="text-3xl text-stone-500 font-bold lg:self-start xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
         </h5>
         <div className="flex justify-center items-center gap-3 sm:gap-10 lg:self-start">
-          <p className="mt-2 py-2 px-4 text-xl font-bold text-[#92856e] 2xl:text-2xl 2xl:px-7 md:tracking-wide">
+          <p className=" py-2 px-4 text-2xl font-bold text-stone-600 2xl:text-2xl 2xl:px-7 md:tracking-wide">
             $USD {productDetail.price}
           </p>
-          <p className="mt-2 py-2 px-4  text-xl font-bold text-[#92856e] 2xl:text-2xl 2xl:px-7 md:tracking-wide">
+          <p className=" py-2 px-4  text-2xl font-bold text-stone-600 2xl:text-2xl 2xl:px-7 md:tracking-wide">
             $ {productDetail.price * ARSPrice[0]?.usdPrice}
           </p>
         </div>
-        <p className="text-center lg:text-start text-lg text-zinc-400 font-semibold  sm:max-w-[500px] lg:self-start xl:max-w-[420px] md:text-xl  2xl:max-w-[470px] ">
-          {productDetail.description}
-        </p>
-        <p className="text-center lg:text-start text-base text-zinc-300 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
-          {productDetail.description2}
-        </p>
+        <button className="btn-home2 mt-1 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-500">
+          <span>COMPRAR</span>
+        </button>
+       
       </article>
-      <picture className="w-[300px] sm:w-[350px] md:w-[400px] xl:w-[400px] ">
+      <picture className="mt-5 w-[300px] sm:w-[350px] md:w-[400px] xl:w-[400px]  ">
         <img
           className="w-full rounded-lg"
           src={productDetail.image?.secure_url}
           alt=""
         />
       </picture>
-      <div className="w-full flex justify-center  text-base text-gray-300 font-semibold font-title">
+      <div className="mt-4 w-full flex justify-center  text-base text-gray-300 font-semibold font-title">
         <ul className="bg-red-500 w-[90%] flex flex-col gap-2 py-2 px-2">
           <li>
             <img src="" alt="" />
@@ -98,7 +98,10 @@ const ProductDetail = () => {
           </li>
         </ul>
       </div>
-      <div className="my-3 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
+      <p className="text-center lg:text-start text-base text-zinc-600 mt-4 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
+        {productDetail.description2}
+      </p>
+      <div className="my-3 mt-5 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
         <iframe
           className="aspect-video w-full h-[250px]  xl:h-[230px]"
           src={

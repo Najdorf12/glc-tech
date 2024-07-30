@@ -13,7 +13,7 @@ const CardProductsAdmin = ({ product, getProducts, selectProduct }) => {
 
   return (
     <>
-      <section className="relative bg-[#212121] w-[95%] border border-[#92856e]  sm:w-[400px] xl:w-[400px] rounded-md h-[138px] flex justify-center items-center">
+      <section className="relative bg-[#212121] w-[95%] border border-[#92856e]  sm:w-[400px] xl:w-[400px] rounded-md h-[138px] flex justify-center items-center hover:scale-105 duration-500">
         <picture className="h-full mr-1 sm:mr-3 lg:mr-5">
           <Link to={`/${_id}`}>
             <img
