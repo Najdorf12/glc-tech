@@ -44,7 +44,7 @@ const ProductDetail = () => {
           <li>{productDetail.name}</li>
         </ul>
         <Link to={"/"}>
-          <button className="flex items-center text-gray-500 text-base font-semibold border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-7 2xl:text-lg">
+          <button className="flex items-center text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-7 2xl:text-lg">
             Volver
           </button>
         </Link>
