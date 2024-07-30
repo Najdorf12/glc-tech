@@ -50,7 +50,7 @@ const ProductDetail = () => {
         </Link>
       </nav>
       {isLoading && <Loader />}
-      <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-3 bg-teal-500 mt-10">
+      <article className="font-title flex flex-col justify-center items-center gap-3 xl:gap-3  mt-10">
         <h5 className="text-3xl text-stone-500 font-bold lg:self-start xl:text-4xl 2xl:text-5xl">
           {productDetail.name}
         </h5>
@@ -65,7 +65,6 @@ const ProductDetail = () => {
         <button className="btn-home2 mt-1 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-500">
           <span>COMPRAR</span>
         </button>
-       
       </article>
       <picture className="mt-5 w-[300px] sm:w-[350px] md:w-[400px] xl:w-[400px]  ">
         <img
@@ -74,31 +73,45 @@ const ProductDetail = () => {
           alt=""
         />
       </picture>
-      <div className="mt-4 w-full flex justify-center  text-base text-gray-300 font-semibold font-title">
-        <ul className="bg-red-500 w-[90%] flex flex-col gap-2 py-2 px-2">
-          <li>
-            <img src="" alt="" />
-            Procesador
+      <div className="mt-4 w-full flex justify-center text-sm text-stone-600 font-semibold font-title">
+        <ul className="rounded-lg w-[90%] flex flex-col gap-3 py-2  ">
+          <li className="flex items-center justify-between border-[2px] border-white py-[6px]  px-2 rounded-xl">
+            <div className="flex gap-2 items-center text-gray-500">Procesador</div>
+            <div>
+              {productDetail.procesador
+                ? productDetail.procesador
+                : productDetail.description}
+            </div>
           </li>
-          <li>
-            <img src="" alt="" />
-            Cámara
+          <li className="flex items-center justify-between border-[2px] border-white py-[6px] px-2 rounded-xl">
+            <div className="flex gap-2 items-center text-gray-500">Cámara</div>
+            <div>
+              {productDetail.camara
+                ? productDetail.camara
+                : "FRONTAL 5MP - TRASERA 8MP"}
+            </div>
           </li>
-          <li>
-            <img src="" alt="" />
-            Pantalla
+          <li className="flex items-center justify-between border-[2px] border-white py-[6px] px-2 rounded-xl">
+            <div className="flex gap-2 items-center text-gray-500">Pantalla</div>
+            <div>
+              {productDetail.pantalla
+                ? productDetail.pantalla
+                : "PANTALLA FLUIDA DE 6,71 Y 90 HZ"}
+            </div>
           </li>
-          <li>
-            <img src="" alt="" />
-            RAM - MEMORIA
+          <li className="flex items-center justify-between border-[2px] border-white py-[6px] px-2 rounded-xl">
+            <div className="flex gap-2 items-center text-gray-500">Memoria</div>
+            <div>{productDetail.description}</div>
           </li>
-          <li>
-            <img src="" alt="" />
-            Batería
+          <li className="flex items-center justify-between border-[2px] border-white py-[6px] px-2 rounded-xl">
+            <div className="flex gap-2 items-center text-gray-500">Batería</div>
+            <div>
+              {productDetail.bateria ? productDetail.bateria : "5000MAH"}
+            </div>
           </li>
         </ul>
       </div>
-      <p className="text-center lg:text-start text-base text-zinc-600 mt-4 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
+      <p className="text-center lg:text-start text-base font-semibold font-title text-gray-500 mt-4 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
         {productDetail.description2}
       </p>
       <div className="my-3 mt-5 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
