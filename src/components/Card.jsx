@@ -28,7 +28,7 @@ const Card = ({ product, arsPrice }) => {
               {product.description?.substring(0, 20)}
             </Link>
           </p>
-          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[.95rem] text-gray-600 font-bold md:text-[1rem] lg:text-[1.1rem] xl:my-1 ">
+          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[.95rem] text-stone-600 font-bold md:text-[1rem] lg:text-[1.1rem] xl:my-1 ">
             <p className="">
               <Link to={`/${product._id}`}>usd {product?.price}</Link>
             </p>
@@ -39,7 +39,7 @@ const Card = ({ product, arsPrice }) => {
             </p>
           </div>
 
-          <button className="w-[70%] md:w-[60%] mt-1  bg-gradient-to-br from-stone-500 to-stone-800  py-[2px] self-center rounded-[1.3rem] font-title font-semibold text-[.85rem] md:text-[.90rem] lg:text-[.98rem] text-gray-100 hover:scale-105 duration-500  xl:py-[2.5px] ">
+          <button className="w-[70%] md:w-[60%] mt-1  bg-gradient-to-br from-stone-500 to-stone-800  py-[2px] self-center rounded-[1.3rem] font-title font-semibold text-[.85rem] md:text-[.90rem] lg:text-[.98rem] text-white hover:scale-105 duration-500  xl:py-[2.5px] ">
             <a
               className="flex items-center  justify-center gap-2 "
               href="https://api.whatsapp.com/send/?phone=541125043539"
