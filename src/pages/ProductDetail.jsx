@@ -44,7 +44,7 @@ const ProductDetail = () => {
           <li>{productDetail.name}</li>
         </ul>
         <Link to={"/"}>
-          <button className="flex items-center text-[#838282ab] text-base font-semibold border-[1.5px] rounded-[1rem] px-5 py-1 border-stone-500">
+          <button className="flex items-center text-[#838282ab] text-base font-semibold border-[2px] rounded-[1rem] px-5 py-1 border-white">
             Volver
           </button>
         </Link>
@@ -111,7 +111,7 @@ const ProductDetail = () => {
           </li>
         </ul>
       </div>
-      <p className="text-center lg:text-start text-base font-semibold font-title text-gray-500 mt-4 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
+      <p className="text-center lg:text-start text-base font-semibold font-title text-stone-600 mt-4 px-3 sm:px-4 lg:self-start lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 2xl:max-w-[470px] 2xl:mt-2">
         {productDetail.description2}
       </p>
       <div className="my-3 mt-5 flex justify-center items-center lg:justify-start lg:my-[3%] 2xl:bg-teal-800 2xl:self-start">
