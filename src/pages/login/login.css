@@ -4,14 +4,14 @@
     flex-direction: column;
     gap: 1.5rem;
     max-width: 450px;
-    background-color: #1b1515;
+  
     padding: 20px;
     border-radius: 20px;
     position: relative;
   }
   .title {
     font-size: 35px;
-    color: #d97706;
+    color: #c57d2b;
     font-weight: 600;
     position: relative;
     display: flex;
@@ -26,13 +26,13 @@
     width: 16px;
     border-radius: 50%;
     left: 0px;
-    background-color: #d97706;
+    background-color: #c57d2b;
   }
   
   .title::before {
     width: 18px;
     height: 18px;
-    background-color: #d97706;
+    background-color: #c57d2b;
   }
   
   .title::after {
@@ -41,17 +41,16 @@
     animation: pulse 1s linear infinite;
   }
   .message, .signin {
-    color: rgba(243, 242, 242, 0.822);
     font-size: 1.1rem;
   }
   .signin {
     text-align: center;
   }
   .signin a {
-    color: #d97706;
+    color: #c57d2b;
   }
   .signin a:hover {
-    text-decoration: underline #d97706;
+    text-decoration: underline #c57d2b;
   }
   .form label {
     position: relative;
@@ -88,7 +87,7 @@
   .submit {
     border: none;
     outline: none;
-    background-color: #d97706;
+    background-color: #c57d2b;
     padding: 10px;
     border-radius: 10px;
     color: #000000;
@@ -97,7 +96,7 @@
     transform: .3s ease;
   }
   .submit:hover {
-    background-color: #d97706;
+    background-color: #c57d2b;
   }
   @keyframes pulse {
     from {

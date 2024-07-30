@@ -44,7 +44,7 @@ const Login = () => {
 
   return (
     <>
-      <main className="bg-gray-300  h-screen w-full flex justify-center items-center relative px-3 sm:px-4">
+      <main className="bg-gray-300  h-screen w-full flex justify-center items-center relative px-5 sm:px-6">
         <picture className="absolute w-32 bottom-0 mt-4 md:right-0 md:mr-10 xl:mr-20 md:w-44 lg:w-72">
           {/*  <img src={imgLogo} alt="" /> */}
         </picture>
@@ -62,7 +62,7 @@ const Login = () => {
           ))}
 
           <p className="title">Iniciar Sesión </p>
-          <p className="message">Signup now and get full access to our app. </p>
+          <p className="message text-gray-600">Signup now and get full access to our app. </p>
           <label className="relative">
             <input
               required=""
@@ -105,7 +105,7 @@ const Login = () => {
           <button type="submit" className="submit">
             Enviar
           </button>
-          <p className="signin">
+          <p className="signin text-gray-600 font-semibold">
             Todavía no tienes una cuenta ?
             <Link to="/register"> Regístrate</Link>
           </p>

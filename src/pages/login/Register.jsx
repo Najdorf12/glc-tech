@@ -53,7 +53,7 @@ const Register = () => {
             </div>
           ))}
           <p className="title">Regístrate </p>
-          <p className="message">Signup now and get full access to our app. </p>
+          <p className="message text-gray-600 ">Signup now and get full access to our app. </p>
           <div className="w-full gap-6 flex">
             <label>
               <input
@@ -130,7 +130,7 @@ const Register = () => {
           <button type="submit" className="submit">
             Enviar
           </button>
-          <p className="signin">
+          <p className="signin text-gray-600 font-semibold">
             Ya tienes una cuenta :<Link to="/login"> Inicia sesión </Link>
           </p>
         </form>
