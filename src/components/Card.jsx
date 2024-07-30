@@ -39,7 +39,7 @@ const Card = ({ product, arsPrice }) => {
             </p>
           </div>
 
-          <button className="w-[70%] md:w-[60%] mt-1  bg-gradient-to-br from-stone-500 to-stone-800  py-[2px] self-center rounded-[1.3rem] font-title font-semibold text-[.85rem] md:text-[.90rem] lg:text-[.98rem] text-amber-500 hover:scale-105 duration-500  xl:py-[2.7px] ">
+          <button className="w-[70%] md:w-[60%] mt-1  bg-gradient-to-br from-stone-500 to-stone-800  py-[2px] self-center rounded-[1.3rem] font-title font-semibold text-[.85rem] md:text-[.90rem] lg:text-[.98rem] text-white hover:scale-105 duration-500  xl:py-[2.7px] ">
             <a
               className="flex items-center  justify-center gap-2 "
               href="https://api.whatsapp.com/send/?phone=541125043539"
