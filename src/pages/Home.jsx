@@ -54,7 +54,12 @@ const Home = () => {
             alias quibusdam. Voluptatem nulla rerum earum dolores
             alias.
           </p>
-          <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button>
+          <ul className="text-white text-4xl flex gap-10 mt-2 xl:text-5xl xl:gap-12 2xl:text-6xl 2xl:gap-16">
+            <li><i class='bx bxl-instagram'></i></li>
+            <li><i class='bx bxl-facebook-circle'></i></li>
+            <li><i class='bx bxl-youtube'></i></li>
+          </ul>
+         {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
         </article>
         <div
           id="line-stats"
