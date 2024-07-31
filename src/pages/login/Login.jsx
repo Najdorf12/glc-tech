@@ -42,9 +42,11 @@ const Login = () => {
   return (
     <>
       <main className="bg-gray-300  h-screen w-full flex justify-center  relative px-5 sm:px-6 pt-[20%] lg:pt-[5%] 2xl:pt-[8%]">
-        <button className="btn-home2 absolute top-6 right-6  text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white  xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold">
-          <span>Home</span>
-        </button>
+        <Link to={"/"}>
+          <button className="btn-home2 absolute top-6 right-6  text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white  xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold xl:top-8 xl:right-12">
+            <span>Home</span>
+          </button>
+        </Link>
         <form
           onSubmit={handleSubmit(submit)}
           className="form  lg:w-[400px] 2xl:w-[550px] lg:gap-7 lg:px-8"

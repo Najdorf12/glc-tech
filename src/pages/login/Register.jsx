@@ -39,11 +39,15 @@ const Register = () => {
   return (
     <>
       <main className="bg-gray-300 h-screen w-full flex justify-center pt-[20%] xl:pt-[5%] 2xl:pt-[8%] relative px-3 sm:px-4">
-      <button className="btn-home2 absolute top-6 right-6  text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white  xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold">
-          <span>Home</span>
-        </button>
-
-        <form onSubmit={handleSubmit(submit)} className="form lg:w-[400px] 2xl:w-[550px] ">
+        <Link to={"/"}>
+          <button className="btn-home2 absolute top-6 right-6  text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white  xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold xl:top-8 xl:right-1">
+            <span>Home</span>
+          </button>
+        </Link>
+        <form
+          onSubmit={handleSubmit(submit)}
+          className="form lg:w-[400px] 2xl:w-[550px] "
+        >
           {registerError.map((error, i) => (
             <div
               key={i}
@@ -53,7 +57,9 @@ const Register = () => {
             </div>
           ))}
           <p className="title">Regístrate </p>
-          <p className="message text-gray-600 ">Signup now and get full access to our app. </p>
+          <p className="message text-gray-600 ">
+            Signup now and get full access to our app.{" "}
+          </p>
           <div className="w-full gap-6 flex">
             <label>
               <input

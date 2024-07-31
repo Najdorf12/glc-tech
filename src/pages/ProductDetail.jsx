@@ -70,7 +70,7 @@ const ProductDetail = () => {
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
-            <button className="btn-home2 mt-6 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-500 border-[2px] border-white 2xl:text-xl 2xl:mt-7">
+            <button className="btn-home2 mt-3 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-500 border-[2px] border-white 2xl:text-xl 2xl:mt-7">
               <span>COMPRAR</span>
             </button>
           </article>
@@ -151,10 +151,10 @@ const ProductDetail = () => {
       <p className="text-stone-500 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">
         SIMILARES
       </p>
-      <div className="w-full mt-2 flex justify-center items-center gap-2 max-w-[500px] xl:gap-6 2xl:max-w-[600px] ">
+      <div className="w-full mt-2 flex justify-center items-center gap-3 sm:gap-4 max-w-[500px] xl:gap-6 2xl:max-w-[600px] 2xl:gap-12 ">
         {similarProducts?.slice(5, 8)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
-            <picture className="w-56 flex flex-col justify-center items-center gap-2 xl:mt-3 2xl:mt-5 xl:gap-[12px]">
+            <picture className=" flex flex-col mt-5 justify-center items-center  gap-2 xl:mt-3 2xl:mt-5 xl:gap-[12px]">
               <p className="text-stone-600 font-title font-semibold xl:font-semibold 2xl:text-xl">
                 {product.name}
               </p>
