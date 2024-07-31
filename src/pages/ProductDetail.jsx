@@ -9,22 +9,45 @@ const ProductDetail = () => {
   const [ARSPrice, setARSPrice] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
-  
+
   const getProductsByCategory = () => {
-   axios
-      .get(`/products/category/${productDetail.category}`)
-      .then((res) => setSimilarProducts(res.data))
+    axios
+      .get(`/products/category/${productDetail?.category}`)
+      .then((res) => {
+        setSimilarProducts(res?.data);
+      })
       .catch((error) => console.error(error));
-      
   };
 
   useEffect(() => {
-    getProductsByCategory();
-    getProductDetail();
-    getARSPrice();
-  }, [id]);
+    // Fetch product details and price
+    const fetchProductData = async () => {
+      try {
+        setIsLoading(true);
+        const productResponse = await axios.get(`/products/${id}`);
+        setProductDetail(productResponse.data);
+        const priceResponse = await axios.get("/usdPrice");
+        setARSPrice(priceResponse.data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  const getARSPrice = () => {
+    fetchProductData();
+  }, [id]);
+  useEffect(() => {
+    // Fetch similar products if productDetail.category is available
+    if (productDetail.category) {
+      axios
+        .get(`/products/category/${productDetail.category}`)
+        .then((res) => setSimilarProducts(res.data))
+        .catch((error) => console.error(error));
+    }
+  }, [productDetail.category]);
+
+  /*  const getARSPrice = () => {
     axios
       .get("/usdPrice")
       .then((res) => setARSPrice(res.data))
@@ -41,9 +64,7 @@ const ProductDetail = () => {
         .catch((error) => console.error(error))
         .finally(() => setIsLoading(false));
     }, 1200);
-  };
-
- 
+  }; */
 
   return (
     <section className="relative bg-gray-300 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
@@ -154,18 +175,22 @@ const ProductDetail = () => {
         ></iframe>
       </div>
 
-      <p className="text-stone-500 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">SIMILARES</p>
+      <p className="text-stone-500 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">
+        SIMILARES
+      </p>
       <div className="w-full mt-2 flex justify-center items-center gap-2 max-w-[500px] xl:gap-6 2xl:max-w-[600px] ">
-        {similarProducts.slice(5,8).map((product) => (
+        {similarProducts?.slice(5, 8)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
-          <picture className="w-56 flex flex-col justify-center items-center gap-2 xl:mt-3 2xl:mt-5 xl:gap-[12px]">
-            <p className="text-stone-600 font-title font-semibold xl:font-semibold 2xl:text-xl">{product.name}</p>
-            <img
-              className="w-28 max-w-56 2xl:max-w-60 rounded-xl"
-              src={product.image?.secure_url}
-              alt=""
-            />
-          </picture>
+            <picture className="w-56 flex flex-col justify-center items-center gap-2 xl:mt-3 2xl:mt-5 xl:gap-[12px]">
+              <p className="text-stone-600 font-title font-semibold xl:font-semibold 2xl:text-xl">
+                {product.name}
+              </p>
+              <img
+                className="w-28 max-w-56 2xl:max-w-60 rounded-xl"
+                src={product.image?.secure_url}
+                alt=""
+              />
+            </picture>
           </Link>
         ))}
       </div>
