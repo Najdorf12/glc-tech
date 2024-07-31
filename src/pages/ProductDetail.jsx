@@ -10,17 +10,7 @@ const ProductDetail = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
 
-  const getProductsByCategory = () => {
-    axios
-      .get(`/products/category/${productDetail?.category}`)
-      .then((res) => {
-        setSimilarProducts(res?.data);
-      })
-      .catch((error) => console.error(error));
-  };
-
   useEffect(() => {
-    // Fetch product details and price
     const fetchProductData = async () => {
       try {
         setIsLoading(true);
@@ -37,8 +27,8 @@ const ProductDetail = () => {
 
     fetchProductData();
   }, [id]);
+ 
   useEffect(() => {
-    // Fetch similar products if productDetail.category is available
     if (productDetail.category) {
       axios
         .get(`/products/category/${productDetail.category}`)
@@ -47,24 +37,7 @@ const ProductDetail = () => {
     }
   }, [productDetail.category]);
 
-  /*  const getARSPrice = () => {
-    axios
-      .get("/usdPrice")
-      .then((res) => setARSPrice(res.data))
-      .catch((error) => console.error(error));
-  };
-  const getProductDetail = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      axios
-        .get(`/products/${id}`)
-        .then((res) => {
-          setProductDetail(res.data);
-        })
-        .catch((error) => console.error(error))
-        .finally(() => setIsLoading(false));
-    }, 1200);
-  }; */
+  
 
   return (
     <section className="relative bg-gray-300 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">

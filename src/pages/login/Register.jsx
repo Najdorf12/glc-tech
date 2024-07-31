@@ -38,10 +38,10 @@ const Register = () => {
 
   return (
     <>
-      <main className="bg-gray-300 h-screen w-full flex justify-center items-center relative px-3 sm:px-4">
-        <picture className="absolute w-32 bottom-0 mt-4 md:right-0 md:mr-10 xl:mr-20 md:w-44 lg:w-72">
-          {/* <img src={imgLogo} alt="" /> */}
-        </picture>
+      <main className="bg-gray-300 h-screen w-full flex justify-center pt-[20%] xl:pt-[5%] 2xl:pt-[8%] relative px-3 sm:px-4">
+      <button className="btn-home2 absolute top-6 right-6  text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white  xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold">
+          <span>Home</span>
+        </button>
 
         <form onSubmit={handleSubmit(submit)} className="form lg:w-[400px] 2xl:w-[550px] ">
           {registerError.map((error, i) => (
