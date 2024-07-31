@@ -65,7 +65,7 @@ const ProductDetail = () => {
       <section className=" p-1 xl:flex xl:justify-evenly xl:w-[90%] 2xl:w-[80%] xl:mt-10  2xl:py-6">
         <div className="flex flex-col justify-center items-center  xl:justify-start">
           <article className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2">
-            <h5 className="text-3xl text-stone-500 font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl ">
+            <h5 className="text-3xl text-stone-500 font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text ">
               {productDetail.name}
             </h5>
             <div className="flex justify-center items-center gap-3 sm:gap-10 2xl:mt-3">
