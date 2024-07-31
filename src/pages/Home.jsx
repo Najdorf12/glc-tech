@@ -11,7 +11,7 @@ const Home = () => {
           </span>
 
           <article className="flex flex-col  justify-center items-center z-50 ">
-            <h1 className="text-stone-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] ">
+            <h1 className="text-stone-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text ">
               GLC TECH
             </h1>
             <h2 className="text-stone-500 text-[1.25rem] font-semibold   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem]">
@@ -40,7 +40,7 @@ const Home = () => {
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] lg:max-w-[800px]  xl:gap-8 2xl:gap-10 ">
           <h6
          
-            className="font-title text-4xl  text-stone-600  font-bold md:text-6xl lg:text-[9dvh]"
+            className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-t from-stone-600 to-stone-500 inline-block text-transparent bg-clip-text"
           >
             LOREM IMPSUM
           </h6>

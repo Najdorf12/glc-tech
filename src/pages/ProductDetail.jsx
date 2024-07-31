@@ -30,7 +30,7 @@ const ProductDetail = () => {
         })
         .catch((error) => console.error(error))
         .finally(() => setIsLoading(false));
-    }, 2600);
+    }, 1200);
   };
 
   return (

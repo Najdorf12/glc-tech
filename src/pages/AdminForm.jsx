@@ -58,7 +58,7 @@ const AdminForm = () => {
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
         .finally(() => setIsLoading(false));
-    }, 2500);
+    }, 2000);
   };
   const logout = () => {
     axios
