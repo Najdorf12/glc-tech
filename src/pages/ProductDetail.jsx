@@ -8,11 +8,21 @@ const ProductDetail = () => {
   const [productDetail, setProductDetail] = useState({});
   const [ARSPrice, setARSPrice] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [similarProducts, setSimilarProducts] = useState([]);
+  
+  const getProductsByCategory = () => {
+   axios
+      .get(`/products/category/${productDetail.category}`)
+      .then((res) => setSimilarProducts(res.data))
+      .catch((error) => console.error(error));
+      
+  };
 
   useEffect(() => {
+    getProductsByCategory();
     getProductDetail();
     getARSPrice();
-  }, []);
+  }, [id]);
 
   const getARSPrice = () => {
     axios
@@ -32,6 +42,8 @@ const ProductDetail = () => {
         .finally(() => setIsLoading(false));
     }, 1200);
   };
+
+ 
 
   return (
     <section className="relative bg-gray-300 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
@@ -132,14 +144,30 @@ const ProductDetail = () => {
           </p>
         </div>
       </section>
-      <div className="my-3 mt-7 flex justify-center items-center xl:mt-20 xl:w-[600px] xl:self-center 2xl:w-[600px]">
+      <div className="my-3 mt-7 flex justify-center items-center xl:mt-20 xl:w-[600px] xl:self-center 2xl:w-[670px]">
         <iframe
-          className="aspect-video w-full h-[250px]  xl:h-[300px] rounded-lg"
+          className="aspect-video w-full h-[250px]  xl:h-[300px] 2xl:h-[350px] rounded-lg"
           src={
             productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
           }
           allowFullScreen
         ></iframe>
+      </div>
+
+      <p className="text-stone-500 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">SIMILARES</p>
+      <div className="w-full mt-2 flex justify-center items-center gap-2 max-w-[500px] xl:gap-6 2xl:max-w-[600px] ">
+        {similarProducts.slice(5,8).map((product) => (
+          <Link key={product._id} to={`/${product._id}`}>
+          <picture className="w-56 flex flex-col justify-center items-center gap-2 xl:mt-3 2xl:mt-5 xl:gap-[12px]">
+            <p className="text-stone-600 font-title font-semibold xl:font-semibold 2xl:text-xl">{product.name}</p>
+            <img
+              className="w-28 max-w-56 2xl:max-w-60 rounded-xl"
+              src={product.image?.secure_url}
+              alt=""
+            />
+          </picture>
+          </Link>
+        ))}
       </div>
     </section>
   );
