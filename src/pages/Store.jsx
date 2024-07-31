@@ -64,7 +64,7 @@ const Store = () => {
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="btn-home2 py-[5px] px-8 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px] text-stone-500 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider"
+              className="btn-home2 py-[5px] px-8 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px] text-stone-500 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider border-[2px] border-white"
             >
               <span>{btn.toUpperCase()}</span>
             </button>

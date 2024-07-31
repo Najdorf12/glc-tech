@@ -35,7 +35,7 @@ const ProductDetail = () => {
 
   return (
     <section className="relative bg-gray-300 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
-      <nav className="w-full flex items-center justify-between px-3 xl:px-8 2xl:px-12 ">
+      <nav className="w-full flex items-center justify-between px-3 xl:px-8 2xl:px-12 2xl:pt-2 ">
         <ul className="text-gray-500 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
           <li>{productDetail.category}</li>
           <li>
@@ -44,7 +44,7 @@ const ProductDetail = () => {
           <li>{productDetail.name}</li>
         </ul>
         <Link to={"/"}>
-          <button className="flex items-center text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-7 2xl:text-lg">
+          <button className="btn-home2 flex items-center text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold">
             Volver
           </button>
         </Link>
@@ -52,19 +52,19 @@ const ProductDetail = () => {
       {isLoading && <Loader />}
       <section className=" p-1 xl:flex xl:justify-evenly xl:w-[90%] 2xl:w-[80%] xl:mt-10  2xl:py-6">
         <div className="flex flex-col justify-center items-center  xl:justify-start">
-          <article className=" font-title flex flex-col justify-center items-center gap-3 xl:gap-3  mt-10 xl:mt-2">
-            <h5 className="btn-home2 text-2xl text-stone-500 font-bold 2xl:text-4xl  py-2 px-8">
+          <article className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2">
+            <h5 className="text-3xl text-stone-500 font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl ">
               {productDetail.name}
             </h5>
-            <div className="flex justify-center items-center gap-3 sm:gap-10 2xl:my-3 ">
-              <p className=" py-2 px-4 text-2xl font-bold text-stone-600 2xl:text-3xl 2xl:px-7 md:tracking-wide">
+            <div className="flex justify-center items-center gap-3 sm:gap-10 2xl:mt-3">
+              <p className=" py-2 px-4 text-3xl font-bold text-stone-600 xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl">
                 $USD {productDetail.price}
               </p>
-              <p className=" py-2 px-4  text-2xl font-bold text-stone-600 2xl:text-3xl 2xl:px-7 md:tracking-wide ">
+              <p className=" py-2 px-4  text-3xl font-bold text-stone-600 xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl">
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
-            <button className="btn-home2 mt-1 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold bg-stone-600 text-stone-300">
+            <button className="btn-home2 mt-6 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-500 border-[2px] border-white 2xl:text-xl 2xl:mt-7">
               <span>COMPRAR</span>
             </button>
           </article>
