@@ -21,8 +21,8 @@ const AdminForm = () => {
   const [user, setUser] = useState({});
   const [productSelected, setProductSelected] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [urlImagen, setUrlImagen] = useState("");
-  const [urlImagenPublicId, setUrlImagenPublicId] = useState("");
+  const [images, setImages] = useState([]);
+  const [loadingImage, setLoadingImage] = useState(false);
 
   const navigate = useNavigate();
 
@@ -98,22 +98,35 @@ const AdminForm = () => {
       .catch((error) => console.error(error));
   };
 
-  const changeUploadImage = async (e) => {
-    const file = e.target?.files[0];
+  async function handleImage(e) {
+    const files = e.target.files;
     const data = new FormData();
-
-    data.append("file", file);
+    data.append("file", files[0]);
     data.append("upload_preset", "glcTech");
-    const response = await axios.post(
-      "https://api.cloudinary.com/v1_1/najdorf/image/upload",
-      data
-    );
-    setUrlImagen(response.data.secure_url);
-    setUrlImagenPublicId(response.data.public_id);
-  };
+    data.append("folder", "glcTech");
+
+    try {
+      setLoadingImage(true);
+      const res = await axios.post(
+        "https://api.cloudinary.com/v1_1/najdorf/image/upload",
+        data
+      );
+      setImages([...images, res.data?.secure_url]);
+    } catch (error) {
+      // alert("No seleccionaste ninguna imagen")
+      console.log(error);
+    } finally {
+      console.log(images);
+      setLoadingImage(false);
+    }
+  }
+
   const deleteImage = () => {
     setUrlImagen("");
   };
+  function handleDelete(event) {
+    setImages(images.filter((e) => e !== event));
+  }
 
   const submit = (data) => {
     if (productSelected !== null) {
@@ -130,10 +143,7 @@ const AdminForm = () => {
         pantalla: data.pantalla,
         bateria: data.bateria,
         youtube: data.youtube,
-        image: {
-          public_id: urlImagenPublicId,
-          secure_url: urlImagen,
-        },
+        image: images,
       };
       axios
         .post("/products", newProduct)
@@ -141,7 +151,6 @@ const AdminForm = () => {
         .catch((error) => console.error(error));
     }
   };
-
   return (
     <section className="relative w-full bg-[#212121] min-h-screen flex flex-col items-center  pb-10">
       {isLoading && <Loader />}
@@ -266,25 +275,33 @@ const AdminForm = () => {
                     cols="33"
                   />
                 </div>
-
-                <div className="flex flex-col gap-2 mt-1 mb-3 text-sm xl:gap-3 text-[#717171] xl:self-start">
-                  Imagen
+                <div className="flex flex-col items-center gap-5 ">
+                  <label className="font-light text-white text-xl">
+                    Imágenes
+                  </label>
                   <input
                     type="file"
                     name="image"
-                    accept="image/*"
-                    onChange={changeUploadImage}
+                    accept=".jpg, .png, .jpeg"
+                    onChange={(e) => handleImage(e)}
+                    className=" rounded-lg flex-1 appearance-none w-full py-2 px-4 bg-amber-600  text-white placeholder-white text-sm focus:outline-none focus:border-transparent"
                   />
-                  {urlImagen && (
-                    <picture className="w-32">
-                      <img src={urlImagen} alt="" />
-                      <button
-                        onClick={() => deleteImage()}
-                        className="text-gray-400 rounded-sm border border-gray-300 py-1 px-2 mt-2"
-                      >
-                        Eliminar imagen
-                      </button>
-                    </picture>
+                  {loadingImage ? (
+                    <h3>Cargando imagen...</h3>
+                  ) : (
+                    images?.map((el) => (
+                      <div key={el} className="relative">
+                        <button
+                          key={el}
+                          type="button"
+                          onClick={() => handleDelete(el)}
+                          className="absolute right-0 px-2 border-2 border-black flex items-center rounded-sm font-bold text-white bg-red-500"
+                        >
+                          X
+                        </button>
+                        <img src={el} alt="" width="300px" />
+                      </div>
+                    ))
                   )}
                 </div>
                 <button
