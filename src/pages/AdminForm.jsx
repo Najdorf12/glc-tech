@@ -21,6 +21,8 @@ const AdminForm = () => {
   const [user, setUser] = useState({});
   const [productSelected, setProductSelected] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const [image, setImage] = useState({});
   const [images, setImages] = useState([]);
   const [loadingImage, setLoadingImage] = useState(false);
 
@@ -105,25 +107,27 @@ const AdminForm = () => {
     data.append("upload_preset", "glcTech");
     data.append("folder", "glcTech");
 
+    setLoadingImage(true);
     try {
-      setLoadingImage(true);
-      const res = await axios.post(
+      const res = await fetch(
         "https://api.cloudinary.com/v1_1/najdorf/image/upload",
-        data
+        {
+          method: "POST",
+          body: data,
+        }
       );
-      setImages([...images, res.data?.secure_url]);
+      const file = await res.json();
+      setImages([...images, file.secure_url]);
+      setImage({
+        public_id: file.public_id,
+        secure_url: file.secure_url,
+      });
     } catch (error) {
-      // alert("No seleccionaste ninguna imagen")
       console.log(error);
     } finally {
-      console.log(images);
       setLoadingImage(false);
     }
   }
-
-  const deleteImage = () => {
-    setUrlImagen("");
-  };
   function handleDelete(event) {
     setImages(images.filter((e) => e !== event));
   }
@@ -143,7 +147,8 @@ const AdminForm = () => {
         pantalla: data.pantalla,
         bateria: data.bateria,
         youtube: data.youtube,
-        image: images,
+        image: image,
+        images: images,
       };
       axios
         .post("/products", newProduct)
@@ -289,7 +294,8 @@ const AdminForm = () => {
                   {loadingImage ? (
                     <h3>Cargando imagen...</h3>
                   ) : (
-                    images?.map((el) => (
+                    <div className="lg:flex gap-5 xl:gap-10">
+                     { images?.map((el) => (
                       <div key={el} className="relative">
                         <button
                           key={el}
@@ -299,9 +305,15 @@ const AdminForm = () => {
                         >
                           X
                         </button>
-                        <img src={el} alt="" width="300px" />
+                        <img
+                          className="w-32 h-32 object-cover 2xl:w-36 2xl:h-36"
+                          src={el}
+                          alt=""
+                          width="300px"
+                        />
                       </div>
-                    ))
+                      ))}
+                    </div>
                   )}
                 </div>
                 <button

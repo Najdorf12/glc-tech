@@ -30,6 +30,7 @@ const ProductDetail = () => {
  
   useEffect(() => {
     if (productDetail.category) {
+      console.log(productDetail);
       axios
         .get(`/products/category/${productDetail.category}`)
         .then((res) => setSimilarProducts(res.data))
@@ -84,9 +85,9 @@ const ProductDetail = () => {
           </picture>
         </div>
         <div className="flex flex-col  xl:justify-center xl:gap-6 xl:pt-10">
-          <div className="mt-6 w-full flex justify-center text-sm text-stone-600 font-semibold font-title 2xl:text-base">
-            <ul className="rounded-lg w-[90%] flex flex-col gap-3 py-2  max-w-[500px] ">
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3">
+          <div className="mt-6 w-full flex justify-center text-sm text-stone-600 font-semibold font-title 2xl:text-lg ">
+            <ul className="rounded-lg w-[90%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
+              <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
                 <div className="flex gap-2 items-center text-gray-500">
                   Procesador
                 </div>
@@ -96,7 +97,7 @@ const ProductDetail = () => {
                     : productDetail.description}
                 </div>
               </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl">
+              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
                 <div className="flex gap-2 items-center text-gray-500">
                   Cámara
                 </div>
@@ -106,7 +107,7 @@ const ProductDetail = () => {
                     : "FRONTAL 5MP - TRASERA 8MP"}
                 </div>
               </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl">
+              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
                 <div className="flex gap-2 items-center text-gray-500">
                   Pantalla
                 </div>
@@ -116,13 +117,13 @@ const ProductDetail = () => {
                     : "PANTALLA FLUIDA DE 6,71 Y 90 HZ"}
                 </div>
               </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl">
+              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
                 <div className="flex gap-2 items-center text-gray-500">
                   Memoria
                 </div>
                 <div>{productDetail.description}</div>
               </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl">
+              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
                 <div className="flex gap-2 items-center text-gray-500">
                   Batería
                 </div>
