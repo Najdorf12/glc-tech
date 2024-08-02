@@ -39,8 +39,8 @@ const Home = () => {
       </main>
       <section className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] lg:max-w-[800px]  xl:gap-8 2xl:gap-10 ">
-          <h6 className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-t from-stone-600 to-stone-500 inline-block text-transparent bg-clip-text">
-            LOREM IMPSUM
+          <h6 className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text">
+            SOBRE NOSOTROS
           </h6>
           <p className="font-text2 px-3  text-zinc-500 text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg  ">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
@@ -49,7 +49,7 @@ const Home = () => {
             earum dolores alias quibusdam. Voluptatem nulla rerum earum dolores
             alias quibusdam. Voluptatem nulla rerum earum dolores alias.
           </p>
-          <ul className="text-white text-4xl flex gap-10 mt-2 xl:text-5xl xl:gap-12 2xl:text-6xl 2xl:gap-16">
+          <ul className="text-white text-5xl flex gap-10 mt-2 xl:text-5xl xl:gap-12 2xl:text-6xl 2xl:gap-16">
             <li>
               <Link to={"https://www.instagram.com/grupolacomunidad/"} target="blank">
                 <i class="bx bxl-instagram"></i>
