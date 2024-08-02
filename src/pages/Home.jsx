@@ -1,5 +1,6 @@
 import imgHome from "../assets/imgHome.png";
 import Store from "../pages/Store";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,9 +19,11 @@ const Home = () => {
               GRUPO LA COMUNIDAD
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
-              <button className="btn-home2 py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider ">
-                <span>NUESTRA TIENDA</span>
-              </button>
+              <a href="#store">
+                <button className="btn-home2 py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider ">
+                  <span>NUESTRA TIENDA</span>
+                </button>
+              </a>
             </div>
           </article>
 
@@ -34,32 +37,36 @@ const Home = () => {
           </picture>
         </section>
       </main>
-      <section
-        className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] "
-      >
+      <section className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] lg:max-w-[800px]  xl:gap-8 2xl:gap-10 ">
-          <h6
-         
-            className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-t from-stone-600 to-stone-500 inline-block text-transparent bg-clip-text"
-          >
+          <h6 className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-t from-stone-600 to-stone-500 inline-block text-transparent bg-clip-text">
             LOREM IMPSUM
           </h6>
-          <p
-            className="font-text2 px-3  text-zinc-500 text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg  "
-          >
+          <p className="font-text2 px-3  text-zinc-500 text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg  ">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
             impedit sit aliquam laborum incidunt consectetur dicta temporibus
             libero, illum provident nobis, veniam sed! Voluptatem nulla rerum
             earum dolores alias quibusdam. Voluptatem nulla rerum earum dolores
-            alias quibusdam. Voluptatem nulla rerum earum dolores
-            alias.
+            alias quibusdam. Voluptatem nulla rerum earum dolores alias.
           </p>
           <ul className="text-white text-4xl flex gap-10 mt-2 xl:text-5xl xl:gap-12 2xl:text-6xl 2xl:gap-16">
-            <li><i class='bx bxl-instagram'></i></li>
-            <li><i class='bx bxl-facebook-circle'></i></li>
-            <li><i class='bx bxl-youtube'></i></li>
+            <li>
+              <Link to={"https://www.instagram.com/grupolacomunidad/"} target="blank">
+                <i class="bx bxl-instagram"></i>
+              </Link>
+            </li>
+            <li>
+              <Link>
+                <i class="bx bxl-facebook-circle"></i>
+              </Link>
+            </li>
+            <li>
+            <Link to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"} target="blank">
+              <i class="bx bxl-youtube"></i>
+            </Link>
+            </li>
           </ul>
-         {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
+          {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
         </article>
         <div
           id="line-stats"
