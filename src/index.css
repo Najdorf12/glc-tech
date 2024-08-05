@@ -59,12 +59,39 @@
 
 /* BORDER CARDS */
 .card-container {
- /*  border: 2px solid #92856e; */
   border-radius: 16px;
   background-color: white;
 }
 
+/* SLIDER */
+.image-gallery-slide{
+  max-width: 400px;
+  height: 480px;
+}
+ .image-gallery-thumbnails-bottom{
+  width: 100%;
+}
+.image-gallery-content .image-gallery-slide .image-gallery-image{
+  border-radius: 12px;
+}
 
+@media(min-width:1200px) {
+  .image-gallery-slide{
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+  }
+  .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 100px;
+    width: 50px;
+}
+
+}
+
+@media(min-width:1500px) {
+  
+  
+}
 
 /* CUSTOM SCROLLBAR */
 #products-container_admin::-webkit-scrollbar {
@@ -77,6 +104,7 @@
   background-color: #b88425;
   border-radius: 6px;
 }
+
 
 
 .btn-home2 {

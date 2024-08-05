@@ -155,6 +155,7 @@ const AdminForm = () => {
         .then(() => getProducts())
         .catch((error) => console.error(error));
     }
+    alert("Su producto se creó exitosamente")
   };
   return (
     <section className="relative w-full bg-[#212121] min-h-screen flex flex-col items-center  pb-10">

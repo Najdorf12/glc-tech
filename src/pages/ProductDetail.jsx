@@ -2,22 +2,52 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../api/axios";
 import Loader from "../components/Loader";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const ProductDetail = () => {
   const { id } = useParams();
+
   const [productDetail, setProductDetail] = useState({});
   const [ARSPrice, setARSPrice] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
 
+  const images2 = [
+    {
+      original: productDetail?.images
+        ? productDetail?.images[0]
+        : productDetail?.image?.secure_url,
+      thumbnail: productDetail?.images
+        ? productDetail?.images[0]
+        : productDetail?.image?.secure_url,
+    },
+    {
+      original: productDetail?.images 
+        ? productDetail?.images[1]
+        : productDetail?.image?.secure_url,
+      thumbnail: productDetail?.images
+        ? productDetail?.images[1]
+        : productDetail?.image?.secure_url,
+    },
+    {
+      original: productDetail?.images
+        ? productDetail?.images[2]
+        : productDetail?.image?.secure_url,
+      thumbnail: productDetail?.images
+        ? productDetail?.images[2]
+        : productDetail?.image?.secure_url,
+    },
+  ];
+ 
   useEffect(() => {
     const fetchProductData = async () => {
       try {
         setIsLoading(true);
         const productResponse = await axios.get(`/products/${id}`);
-        setProductDetail(productResponse.data);
+        setProductDetail(productResponse?.data);
         const priceResponse = await axios.get("/usdPrice");
-        setARSPrice(priceResponse.data);
+        setARSPrice(priceResponse?.data);
       } catch (error) {
         console.error(error);
       } finally {
@@ -27,18 +57,16 @@ const ProductDetail = () => {
 
     fetchProductData();
   }, [id]);
- 
+
   useEffect(() => {
-    if (productDetail.category) {
-      console.log(productDetail);
+    console.log(productDetail.images);
+    if (productDetail?.category) {
       axios
-        .get(`/products/category/${productDetail.category}`)
-        .then((res) => setSimilarProducts(res.data))
+        .get(`/products/category/${productDetail?.category}`)
+        .then((res) => setSimilarProducts(res?.data))
         .catch((error) => console.error(error));
     }
   }, [productDetail.category]);
-
-  
 
   return (
     <section className="relative bg-gray-300 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
@@ -61,7 +89,7 @@ const ProductDetail = () => {
         <div className="flex flex-col justify-center items-center  xl:justify-start">
           <article className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2">
             <h5 className="text-3xl text-stone-500 font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text ">
-              {productDetail.name}
+              {productDetail.name?.toUpperCase()}
             </h5>
             <div className="flex justify-center items-center gap-3 sm:gap-10 2xl:mt-3">
               <p className=" py-2 px-4 text-3xl font-bold text-stone-600 xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl">
@@ -76,15 +104,22 @@ const ProductDetail = () => {
             </button>
           </article>
 
-          <picture className="mt-7 xl:mt-8 2xl:mt-12">
-            <img
-              className="w-full rounded-lg max-w-[350px] 2xl:max-w-[400px]"
-              src={productDetail.image?.secure_url}
-              alt=""
-            />
-          </picture>
+          <div className="mt-6 sm:mt-8 xl:mt-8 2xl:mt-12 w-full  flex justify-center object-cover items-center overflow-hidden">
+            <picture
+              loading="lazy"
+              className="imgs w-[95%] flex items-center justify-center  p-2 xl:p-0"
+            >
+              <ImageGallery
+                items={images2}
+                showPlayButton={false}
+                showFullscreenButton={false}
+                showThumbnails={false}
+                showBullets={true}
+              />
+            </picture>
+          </div>
         </div>
-        <div className="flex flex-col  xl:justify-center xl:gap-6 xl:pt-10">
+        <div className="flex flex-col mt-8  xl:justify-center xl:gap-6 xl:pt-10">
           <div className="mt-6 w-full flex justify-center text-sm text-stone-600 font-semibold font-title 2xl:text-lg ">
             <ul className="rounded-lg w-[90%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
               <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
@@ -139,13 +174,14 @@ const ProductDetail = () => {
           </p>
         </div>
       </section>
-      <div className="my-3 mt-7 flex justify-center items-center xl:mt-20 xl:w-[600px] xl:self-center 2xl:w-[670px]">
+      <div className="my-3 w-full mt-7 flex justify-center items-center xl:mt-20 ">
         <iframe
-          className="aspect-video w-full h-[250px]  xl:h-[300px] 2xl:h-[350px] rounded-lg"
-          src={
-            productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
-          }
-          allowFullScreen
+          id="ytplayer"
+          type="text/html"
+         className="w-[98%] h-[270px] rounded-lg max-w-[500px] md:max-w-[600px] md:h-[330px] 2xl:max-w-[700px] 2xl:h-[350px]"
+           src={
+            productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0] 
+          } 
         ></iframe>
       </div>
 
@@ -160,7 +196,7 @@ const ProductDetail = () => {
                 {product.name}
               </p>
               <img
-                className="w-28 max-w-56 2xl:max-w-60 rounded-xl"
+                className="w-28 h-32 max-w-56 2xl:max-w-60 rounded-xl"
                 src={product.image?.secure_url}
                 alt=""
               />
