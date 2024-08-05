@@ -73,7 +73,6 @@
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   border-radius: 12px;
   max-width:500px;
-
 }
 
 @media (min-width: 1200px) {
@@ -93,7 +92,23 @@
   
   }
 }
-
+@media (min-width: 1500px) {
+  .image-gallery-slide {
+    max-width: 620px;
+    height: 620px;
+    border-radius: 12px;
+    align-self: center;
+  }
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-width:620px;
+  }
+  .image-gallery-left-nav .image-gallery-svg,
+  .image-gallery-right-nav .image-gallery-svg {
+    height: 100px;
+    width: 50px;
+  
+  }
+}
 /* CUSTOM SCROLLBAR */
 #products-container_admin::-webkit-scrollbar {
   width: 10px;
