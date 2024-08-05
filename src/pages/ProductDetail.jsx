@@ -16,26 +16,26 @@ const ProductDetail = () => {
   const images2 = [
     {
       original: productDetail?.images
-        ? productDetail?.images[0]
+        ? productDetail?.images[0]?.secure_url
         : productDetail?.image?.secure_url,
       thumbnail: productDetail?.images
-        ? productDetail?.images[0]
+        ? productDetail?.images[0]?.secure_url
         : productDetail?.image?.secure_url,
     },
     {
       original: productDetail?.images 
-        ? productDetail?.images[1]
+        ? productDetail?.images[1]?.secure_url
         : productDetail?.image?.secure_url,
       thumbnail: productDetail?.images
-        ? productDetail?.images[1]
+        ? productDetail?.images[1]?.secure_url
         : productDetail?.image?.secure_url,
     },
     {
       original: productDetail?.images
-        ? productDetail?.images[2]
+        ? productDetail?.images[2]?.secure_url
         : productDetail?.image?.secure_url,
       thumbnail: productDetail?.images
-        ? productDetail?.images[2]
+        ? productDetail?.images[2]?.secure_url
         : productDetail?.image?.secure_url,
     },
   ];
