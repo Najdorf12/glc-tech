@@ -65,14 +65,14 @@
 
 /* SLIDER */
 .image-gallery-slide {
-  height: 480px;
+  height: 480px; 
 }
 .image-gallery-thumbnails-bottom {
   width: 100%;
 }
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   border-radius: 12px;
-  max-width:600px;
+  max-width:500px;
 
 }
 
@@ -81,6 +81,10 @@
     width: 600px;
     height: 600px;
     border-radius: 12px;
+    align-self: center;
+  }
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-width:600px;
   }
   .image-gallery-left-nav .image-gallery-svg,
   .image-gallery-right-nav .image-gallery-svg {

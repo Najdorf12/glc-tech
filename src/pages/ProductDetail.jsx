@@ -107,7 +107,7 @@ const ProductDetail = () => {
           <div className="mt-6 sm:mt-8 xl:mt-8 2xl:mt-12 w-full  flex justify-center object-cover items-center overflow-hidden ">
             <picture
               loading="lazy"
-              className="imgs w-[95%] flex items-center justify-center  xl:w-full"
+              className="imgs w-[95%] flex items-center justify-center xl:w-full"
             >
               <ImageGallery
                 items={images2}
