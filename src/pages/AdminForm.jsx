@@ -60,7 +60,7 @@ const AdminForm = () => {
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
         .finally(() => setIsLoading(false));
-    }, 2000);
+    }, 500);
   };
   const logout = () => {
     axios
