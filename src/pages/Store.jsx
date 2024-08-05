@@ -24,7 +24,7 @@ const Store = () => {
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error))
      .finally(() => setIsLoading(false)); 
-    }, 1500);
+    }, 1000);
 
   };
   const getProductsByCategory = (category) => {
@@ -35,7 +35,7 @@ const Store = () => {
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
          .finally(() => setIsLoading(false)); 
-    }, 1500);
+    }, 1000);
   };
 
   useEffect(() => {

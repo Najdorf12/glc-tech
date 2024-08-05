@@ -53,8 +53,8 @@
   filter: brightness(0.7);
   transform: scale(0.98);
 }
-#img-home{
-  filter:drop-shadow(20px 20px 20px rgb(255, 255, 255))
+#img-home {
+  filter: drop-shadow(20px 20px 20px rgb(255, 255, 255));
 }
 
 /* BORDER CARDS */
@@ -64,33 +64,30 @@
 }
 
 /* SLIDER */
-.image-gallery-slide{
-  max-width: 400px;
+.image-gallery-slide {
   height: 480px;
 }
- .image-gallery-thumbnails-bottom{
+.image-gallery-thumbnails-bottom {
   width: 100%;
 }
-.image-gallery-content .image-gallery-slide .image-gallery-image{
+.image-gallery-content .image-gallery-slide .image-gallery-image {
   border-radius: 12px;
+  max-width:600px;
+
 }
 
-@media(min-width:1200px) {
-  .image-gallery-slide{
-    width: 500px;
-    height: 500px;
+@media (min-width: 1200px) {
+  .image-gallery-slide {
+    width: 600px;
+    height: 600px;
     border-radius: 12px;
   }
-  .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+  .image-gallery-left-nav .image-gallery-svg,
+  .image-gallery-right-nav .image-gallery-svg {
     height: 100px;
     width: 50px;
-}
-
-}
-
-@media(min-width:1500px) {
   
-  
+  }
 }
 
 /* CUSTOM SCROLLBAR */
@@ -104,8 +101,6 @@
   background-color: #b88425;
   border-radius: 6px;
 }
-
-
 
 .btn-home2 {
   border-radius: 1.3rem;
