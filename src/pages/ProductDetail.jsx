@@ -99,10 +99,11 @@ const ProductDetail = () => {
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
-            <Link to="https://api.whatsapp.com/send/?phone=541125043539"></Link>
+            <Link to="https://api.whatsapp.com/send/?phone=541125043539" target="blank">
             <button className="btn-home2 mt-3 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-500 border-[2px] border-white 2xl:text-xl 2xl:mt-7">
               <span>COMPRAR</span>
             </button>
+            </Link>
           </article>
 
           <div className="mt-6 sm:mt-8 xl:mt-8 2xl:mt-12 w-full  flex justify-center object-cover items-center overflow-hidden ">
