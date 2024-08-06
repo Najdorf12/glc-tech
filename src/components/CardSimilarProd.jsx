@@ -1,6 +1,6 @@
 const CardSimilarProd = ({ product }) => {
   return (
-    <div className=" w-40 h-[256px] 2xl:w-60 2xl:h-[320px] p-2 flex flex-col gap-1 rounded-br-3xl rounded-t-lg">
+    <div className=" w-40 h-[256px]  p-2 flex flex-col gap-1 rounded-br-3xl rounded-t-lg">
       <div className="w-full flex justify-center items-center ">
         <img
           src={product?.image?.secure_url}
@@ -9,7 +9,7 @@ const CardSimilarProd = ({ product }) => {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <span className="text-base 2xl:text-xl text-white font-bold">
+        <span className="text-base  text-white font-bold">
         {product?.name?.toUpperCase()?.substring(0, 14)}
         </span>
         <div className="flex flex-row justify-between items-center">

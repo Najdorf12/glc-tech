@@ -191,7 +191,7 @@ const ProductDetail = () => {
       <p className="text-stone-500 mb-5 2xl:mb-7 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">
         SIMILARES
       </p>
-      <div className="w-full mt-2 gap-x-5 sm:gap-x-5 md:gap-6 xl:gap-8 2xl:gap-9 flex flex-wrap justify-center items-center ">
+      <div className="w-full mt-2 gap-x-5 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
         {similarProducts?.slice(4, 8)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
             <CardSimilarProd product={product} />
