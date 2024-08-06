@@ -15,7 +15,7 @@ const Home = () => {
       <main className="w-full h-screen overflow-hidden bg-gray-300  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[90dvh]">
         <button
           onClick={()=>handleDarkMode()}
-          className="btn-home2 z-50 border-[1.5px] mt-2 ml-3 border-white  outline-none absolute top-0 left-0 w-10 h-10 rounded-full text-2xl text-stone-500"
+          className="btn-home2 z-50 border-[1.5px] mt-2 mr-3 border-white  outline-none absolute top-0 right-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center text-stone-500 lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[30px] 2xl:w-[54px] 2xl:h-[54px] 2xl:mt-5 2xl:ml-7 2xl:border-[2px] "
         >
           {isActive ? (
             <i className="bx bxs-sun"></i>
