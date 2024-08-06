@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <main className="w-full h-screen overflow-hidden bg-gray-300  flex flex-col items-center pt-10 pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[90dvh]">
+      <main className="w-full h-screen overflow-hidden bg-gray-300  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[90dvh]">
+        <button className="btn-home2 flex font-semibold font-title justify-center items-center absolute top-0 left-0 ml-2 text-sm text-stone-500 gap-2 py-[.2px] px-3 mt-2  border-[1.3px] border-white lg:ml-5 lg:mt-4 lg:px-5 lg:text-[1rem] lg:py-[.6px]">
+        <i className='bx bxs-moon   z-50  text-2xl xl:text-xl'></i>
+          DARK MODE
+        </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
           <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-200 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem]">
             GLC

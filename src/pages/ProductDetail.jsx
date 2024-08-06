@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "../api/axios";
 import Loader from "../components/Loader";
 import ImageGallery from "react-image-gallery";
+import CardSimilarProd from "../components/CardSimilarProd";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const ProductDetail = () => {
@@ -187,22 +188,13 @@ const ProductDetail = () => {
         ></iframe>
       </div>
 
-      <p className="text-stone-500 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">
+      <p className="text-stone-500 mb-5 2xl:mb-7 font-title font-bold text-lg mt-7 border-[2px] border-white py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16">
         SIMILARES
       </p>
-      <div className="w-full mt-2 flex justify-center items-center gap-3 sm:gap-4 max-w-[500px] xl:gap-6 2xl:max-w-[600px] 2xl:gap-12 ">
-        {similarProducts?.slice(5, 8)?.map((product) => (
+      <div className="w-full mt-2 gap-2 sm:gap-x-5 md:gap-6 2xl:gap-8 flex flex-wrap justify-center items-center ">
+        {similarProducts?.slice(4, 8)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
-            <picture className=" flex flex-col mt-5 justify-center items-center  gap-2 xl:mt-3 2xl:mt-5 xl:gap-[12px]">
-              <p className="text-stone-600 font-title font-semibold xl:font-semibold 2xl:text-xl">
-                {product.name}
-              </p>
-              <img
-                className="w-28 h-32 max-w-56 2xl:max-w-60 rounded-xl"
-                src={product.image?.secure_url}
-                alt=""
-              />
-            </picture>
+            <CardSimilarProd product={product} />
           </Link>
         ))}
       </div>
