@@ -17,7 +17,7 @@ const CardSimilarProd = ({ product }) => {
             {product?.description}
           </p>
         </div>
-        <button className="hover:bg-amber-600 w-full mt-[5px] text-gray-100 font-medium bg-[#bd8f2db4] py-1 rounded-br-xl self-start">
+        <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-full mt-[5px] text-gray-100 font-medium py-1 rounded-br-xl self-start">
           {product?.price} USD
         </button>
       </div>
@@ -26,4 +26,4 @@ const CardSimilarProd = ({ product }) => {
 };
 
 export default CardSimilarProd;
-/* duration-500 contrast-50 h-48 bg-gradient-to-bl from-black via-orange-900 to-indigo-600  hover:contrast-100 */
+/* duration-500 contrast-50 h-48 bg-gradient-to-bl from-black via-orange-900 to-indigo-600  hover:contrast-100  bg-[#bd8f2db4]*/

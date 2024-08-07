@@ -77,7 +77,7 @@ const ProductDetail = () => {
           <li>
             <i className="bx bx-chevron-right text-3xl mt-1 font-light"></i>
           </li>
-          <li>{productDetail.name}</li>
+          <li>{productDetail.name?.substring(0, 14)}</li>
         </ul>
         <Link to={"/"}>
           <button className="btn-home2 flex items-center text-gray-500 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold">
@@ -123,7 +123,7 @@ const ProductDetail = () => {
           </div>
         </div>
         <div className="flex flex-col mt-8  xl:justify-center xl:gap-6 xl:pt-10">
-          <div className="mt-6 w-full flex justify-center text-sm text-stone-600 font-semibold font-title 2xl:text-lg ">
+          <div className="mt-2 w-full flex justify-center text-sm text-stone-600 font-semibold font-title 2xl:text-lg ">
             <ul className="rounded-lg w-[90%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
               <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
                 <div className="flex gap-2 items-center text-gray-500">
