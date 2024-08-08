@@ -55,7 +55,7 @@ const Store = () => {
     <>
       <section
         id="store"
-        className=" relative w-full pb-24 bg-gray-300  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 justify-center pt-64  lg:pt-52  lg:px-10 lg:gap-x-10 lg:gap-y-8 lg:pb-32 xl:pt-60 2xl:pt-72 2xl:gap-10 2xl:px-20"
+        className=" relative w-full pb-24 bg-gray-300  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 justify-center pt-64  lg:pt-52  lg:px-10 lg:gap-x-10 lg:gap-y-8 lg:pb-32 xl:pt-60 2xl:pt-72 2xl:gap-10 2xl:px-32"
       >
         {isLoading && <Loader />}
 

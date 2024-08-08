@@ -18,7 +18,7 @@ const Card = ({ product, arsPrice }) => {
 
         <article className="relative flex flex-col   gap-1 pt-2 font-title">
           <h6 className="text-white font-bold leading-4 text-[1.1rem] self-start md:text-lg lg:font-extrabold lg:text-[1.2rem] 2xl:text-[1.3rem] w-full  pl-2">
-            {product.name?.toUpperCase()?.substring(0, 18)}
+            {product.name?.toUpperCase()?.substring(0, 21)}
           </h6>
           <p className="text-stone-500 pl-2 font-bold text-sm sm:mt-[1px] md:text-[1rem] md:text-base 2xl:text-[1.1rem]">
             <Link to={`/${product._id}`}>{product.category}</Link>
