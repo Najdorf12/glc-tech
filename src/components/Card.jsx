@@ -17,7 +17,7 @@ const Card = ({ product, arsPrice }) => {
         </Link>
 
         <article className="relative flex flex-col   gap-1 pt-2 font-title">
-          <h6 className="text-stone-600 font-bold leading-4 text-base self-center sm:text-[1rem] md:text-lg lg:font-bold border-b w-[90%] pb-[4px] flex items-center justify-center">
+          <h6 className="text-stone-500 font-bold leading-4 text-base self-center sm:text-[1rem] md:text-lg lg:font-bold w-[90%] border-[#845EC2] border-b-[1.5px] pb-[4px] flex items-center justify-center">
             {product.name?.toUpperCase()?.substring(0, 18)}
           </h6>
           <p className="text-stone-500 pl-3 font-semibold text-sm sm:mt-[1px] md:text-[1rem] md:text-base xl:mt-[3px]">

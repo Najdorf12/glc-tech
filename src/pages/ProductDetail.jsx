@@ -104,7 +104,7 @@ const ProductDetail = () => {
               to="https://api.whatsapp.com/send/?phone=541125043539"
               target="blank"
             >
-              <button className="btn-home2 mt-3 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 border-[2px] border-white 2xl:text-xl 2xl:mt-7">
+              <button className="btn-home2 mt-3 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 border-[2px] border-white 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218] ">
                 <span>COMPRAR</span>
               </button>
             </Link>
