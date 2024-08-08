@@ -75,7 +75,7 @@ const ProductDetail = () => {
         <ul className="text-gray-500 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
           <li>{productDetail.category}</li>
           <li>
-            <i className="bx bx-chevron-right text-3xl mt-1 font-light"></i>
+            <i className="bx bx-chevron-right text-3xl mt-1 font-light text-[rgba(75,30,133,1)]"></i>
           </li>
           <li>{productDetail.name?.toUpperCase()?.substring(0, 14)}</li>
         </ul>
@@ -88,7 +88,7 @@ const ProductDetail = () => {
       {isLoading && <Loader />}
       <section className=" p-1 xl:flex xl:justify-evenly xl:w-[90%] 2xl:w-[80%] xl:mt-10  2xl:py-6">
         <div className="flex flex-col justify-center items-center  xl:justify-start">
-          <article id="title-product-detail" className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6">
+          <article id="title-product-detail" className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:shadow-2xl shadow-gray-800">
             <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-400 inline-block text-transparent bg-clip-text ">
               {productDetail.name?.toUpperCase()?.substring(0, 19)}
             </h5>
@@ -190,7 +190,7 @@ const ProductDetail = () => {
         ></iframe>
       </div>
 
-      <p className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)]">
+      <p className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] shadow-xl shadow-gray-800">
         SIMILARES
       </p>
       <div className="w-full mt-2 gap-x-5 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
