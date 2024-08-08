@@ -9,7 +9,7 @@ const Card = ({ product, arsPrice }) => {
           <picture className="w-full">
             <img
               loading="lazy"
-              className="rounded-t-lg w-full h-[170px] md:h-[260px] object-cover"
+              className="rounded-xl w-full h-[170px] md:h-[260px] object-cover"
               src={product.image?.secure_url}
               alt="phone-img"
             />
@@ -17,18 +17,18 @@ const Card = ({ product, arsPrice }) => {
         </Link>
 
         <article className="relative flex flex-col   gap-1 pt-2 font-title">
-          <h6 className="text-stone-500 font-bold leading-4 text-base self-center sm:text-[1rem] md:text-lg lg:font-bold w-[90%] border-[#845EC2] border-b-[1.5px] pb-[4px] flex items-center justify-center">
+          <h6 className="text-white font-bold leading-4 text-[1.1rem] self-start md:text-lg lg:font-extrabold lg:text-[1.2rem] 2xl:text-[1.3rem] w-full  pl-2">
             {product.name?.toUpperCase()?.substring(0, 18)}
           </h6>
-          <p className="text-stone-500 pl-3 font-semibold text-sm sm:mt-[1px] md:text-[1rem] md:text-base xl:mt-[3px]">
+          <p className="text-stone-500 pl-2 font-bold text-sm sm:mt-[1px] md:text-[1rem] md:text-base 2xl:text-[1.1rem]">
             <Link to={`/${product._id}`}>{product.category}</Link>
           </p>
-          <p className="text-stone-500 pl-3 text-sm sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[1rem] font-semibold">
+          <p className="text-stone-500 pl-2 text-sm sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[1rem] font-bold 2xl:text-[1.1rem]">
             <Link to={`/${product._id}`}>
               {product.description?.substring(0, 20)}
             </Link>
           </p>
-          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[1rem] text-[#60438f] font-bold md:text-[1rem] lg:text-[1.2rem]  ">
+          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[1rem] text-[#60438f] font-extrabold md:text-[1rem] lg:text-[1.25rem]">
             <p className="">
               <Link to={`/${product._id}`}>usd {product?.price}</Link>
             </p>
@@ -38,7 +38,7 @@ const Card = ({ product, arsPrice }) => {
               </Link>
             </p>
           </div>
-          <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[60%] mt-[3px] text-gray-100 text-[.9rem] font-medium py-[2px] rounded-full self-center lg:text-base lg:py-[5px] lg:mt-[5px] xl:font-semibold">
+          <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[98%] mt-[3px] text-gray-100 text-[.9rem] font-medium py-[3.5px] rounded-br-xl self-start lg:text-[1.1rem] lg:py-[5px] lg:mt-[5px] xl:font-semibold shadow-lg shadow-gray-400">
             <Link
               className="flex items-center  justify-center gap-2 "
               to={"https://api.whatsapp.com/send/?phone=541125043539"}
