@@ -55,16 +55,14 @@ const Home = () => {
         </section>
       </main>
       <section className="relative w-full h-[70vh] bg-gray-300 z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[10%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
-        <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] lg:max-w-[800px]  xl:gap-8 2xl:gap-10 ">
+        <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
           <h6 className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text">
             SOBRE NOSOTROS
           </h6>
-          <p className="font-text2 px-3  text-zinc-500 text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg  ">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-            impedit sit aliquam laborum incidunt consectetur dicta temporibus
-            libero, illum provident nobis, veniam sed! Voluptatem nulla rerum
-            earum dolores alias quibusdam. Voluptatem nulla rerum earum dolores
-            alias quibusdam. Voluptatem nulla rerum earum dolores alias.
+          <p className="font-text2 px-1   text-zinc-500 text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg  ">
+          Ubicados en el corazón de Caballito, nos dedicamos a ofrecer la mejor experiencia en tecnología móvil. Contamos con dos locales donde te ofrecemos atención personalizada. Nuestro objetivo es guiarte para que encuentres el celular perfecto para vos. 
+          Entendemos que cada cliente es único, con necesidades y preferencias distintas. Por eso, hemos desarrollado videos comparativos y reviews detallados de todos los modelos de celulares para que puedas tomar la mejor decisión.
+          Además, nuestro equipo de servicio técnico altamente capacitado está siempre listo para asistirte.{/*  proporcionando soluciones efectivas y confiables para cualquier problema que puedas enfrentar con tu celular. En Glc Tech, tu satisfacción es nuestra prioridad. */}
           </p>
           <ul className="text-white text-5xl flex gap-10 mt-2 xl:text-5xl xl:gap-12 2xl:text-6xl 2xl:gap-16">
             <li>
