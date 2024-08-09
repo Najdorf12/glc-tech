@@ -55,7 +55,7 @@ const Store = () => {
     <>
       <section
         id="store"
-        className=" relative w-full pb-24 bg-gray-300  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 justify-center pt-64  lg:pt-52  lg:px-10 lg:gap-x-10 lg:gap-y-8 lg:pb-32 xl:pt-60 2xl:pt-72 2xl:gap-10 2xl:px-32"
+        className=" relative w-full pb-24 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 justify-center pt-64  lg:pt-52  lg:px-10 lg:gap-x-10 lg:gap-y-8 lg:pb-32 xl:pt-60 2xl:pt-72 2xl:gap-10 2xl:px-32"
       >
         {isLoading && <Loader />}
 
@@ -65,7 +65,7 @@ const Store = () => {
           
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="mt-3 py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937] to-[#845EC2] rounded-br-xl rounded-tl-xl shadow-2xl shadow-gray-700"
+              className="mt-3 py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937] to-[#845EC2] rounded-br-xl rounded-tl-xl shadow-2xl shadow-gray-700 dark:shadow-gray-600"
             >
               <span>{btn.toUpperCase()}</span>
             </button>

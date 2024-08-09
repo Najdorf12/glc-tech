@@ -53,9 +53,6 @@
   filter: brightness(0.7);
   transform: scale(0.98);
 }
-#img-home {
-  filter: drop-shadow(20px 20px 20px rgb(255, 255, 255));
-}
 
 /* BORDER CARDS */
 
