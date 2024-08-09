@@ -97,18 +97,18 @@ const Home = () => {
             capacitado está siempre listo para asistirte.
             {/*  proporcionando soluciones efectivas y confiables para cualquier problema que puedas enfrentar con tu celular. En Glc Tech, tu satisfacción es nuestra prioridad. */}
           </p>
-          <ul className="text-white text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200">
+          <ul className="text-white text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200 ">
             <li>
               <Link
                 to={"https://www.instagram.com/grupolacomunidad/"}
                 target="blank"
               >
-                <i className="bx bxl-instagram"></i>
+                <i className="bx bxl-instagram hover:scale-105 duration-500"></i>
               </Link>
             </li>
             <li>
               <Link to={"https://www.facebook.com/grupolacomunidadtech"}>
-                <i className="bx bxl-facebook-circle"></i>
+                <i className="bx bxl-facebook-circle hover:scale-105 duration-500"></i>
               </Link>
             </li>
             <li>
@@ -116,7 +116,7 @@ const Home = () => {
                 to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
                 target="blank"
               >
-                <i className="bx bxl-youtube"></i>
+                <i className="bx bxl-youtube hover:scale-105 duration-500"></i>
               </Link>
             </li>
             <li>
@@ -124,7 +124,7 @@ const Home = () => {
                 to={"https://www.tiktok.com/@grupolacomunidad"}
                 target="blank"
               >
-               <i class='bx bxl-tiktok'></i>
+               <i class='bx bxl-tiktok hover:scale-105 duration-500'></i>
               </Link>
             </li>
             

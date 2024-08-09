@@ -38,7 +38,7 @@ const Card = ({ product, arsPrice }) => {
               </Link>
             </p>
           </div>
-          <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[98%] mt-[3px] text-gray-100 text-[.9rem] font-medium py-[3.5px] rounded-br-xl self-start lg:text-[1.1rem] lg:py-[5px] lg:mt-[5px] xl:font-semibold shadow-lg shadow-gray-400 dark:shadow-inherit">
+          <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[98%] mt-[3px] text-gray-100 text-[.9rem] font-medium py-[3.5px] rounded-br-xl self-start lg:text-[1.1rem] lg:py-[5px] lg:mt-[5px] xl:font-semibold shadow-lg shadow-gray-400 dark:shadow-inherit hover:text-stone-400 hover:scale-105 duration-500">
             <Link
               className="flex items-center  justify-center gap-2 "
               to={"https://api.whatsapp.com/send/?phone=541125043539"}
