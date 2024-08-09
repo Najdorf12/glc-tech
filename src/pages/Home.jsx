@@ -97,7 +97,7 @@ const Home = () => {
             capacitado está siempre listo para asistirte.
             {/*  proporcionando soluciones efectivas y confiables para cualquier problema que puedas enfrentar con tu celular. En Glc Tech, tu satisfacción es nuestra prioridad. */}
           </p>
-          <ul className="text-white text-[2.5rem] flex gap-12 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200">
+          <ul className="text-white text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200">
             <li>
               <Link
                 to={"https://www.instagram.com/grupolacomunidad/"}
@@ -107,7 +107,7 @@ const Home = () => {
               </Link>
             </li>
             <li>
-              <Link>
+              <Link to={"https://www.facebook.com/grupolacomunidadtech"}>
                 <i className="bx bxl-facebook-circle"></i>
               </Link>
             </li>
@@ -119,6 +119,15 @@ const Home = () => {
                 <i className="bx bxl-youtube"></i>
               </Link>
             </li>
+            <li>
+              <Link
+                to={"https://www.tiktok.com/@grupolacomunidad"}
+                target="blank"
+              >
+               <i class='bx bxl-tiktok'></i>
+              </Link>
+            </li>
+            
           </ul>
           {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
         </article>
