@@ -26,13 +26,6 @@ background-color: #521f74d0;
 }
 
 @media (min-width: 1200px) {
-  .image-gallery-slide {
-   
-   
-  }
-  .image-gallery-content .image-gallery-slide .image-gallery-image {
-   
-  }
   .image-gallery-left-nav .image-gallery-svg,
   .image-gallery-right-nav .image-gallery-svg {
     height: 100px;
@@ -57,8 +50,6 @@ background-color: #521f74d0;
   }
 }
 
-
-
 /* CUSTOM SCROLLBAR */
 #products-container_admin::-webkit-scrollbar {
   width: 10px;
@@ -75,7 +66,7 @@ background-color: #521f74d0;
   border-radius: 1.3rem;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #f1f1f1;
+  /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #f1f1f1; */
 }
 
 .btn-home2:active {

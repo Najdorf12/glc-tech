@@ -24,9 +24,14 @@ const Home = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   const dropShadowStyle =
-  theme === "dark"
-    ? { filter: "drop-shadow(12px 12px 16px #44403c)" } // sombra oscura para tema claro
-    : { filter: "drop-shadow(20px 20px 20px rgba(255, 255, 255))" }; 
+    theme === "dark"
+      ? { filter: "drop-shadow(12px 12px 16px #44403c)" } // sombra oscura para tema claro
+      : { filter: "drop-shadow(20px 20px 20px rgba(255, 255, 255))" };
+
+  const btnHomeShadow =
+    theme === "dark"
+      ? { boxShadow: "6px 6px 12px #666, -6px -6px 12px #f1f1f1" }
+      : { boxShadow: "6px 6px 12px #c5c5c5, -6px -6px 12px #f1f1f1" };
 
   return (
     <>
@@ -34,14 +39,14 @@ const Home = () => {
         <button
           onClick={handleChangeTheme}
           style={{
-            boxShadow: "3px 3px 9px #c5c5c5, -3px -3px 9px #f1f1f1"
+            boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
           }}
-          className=" z-50 border-[1.5px] mt-3 ml-3 border-white  outline-none absolute top-0 left-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center text-stone-500 lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7  dark:text-white"
+          className=" z-50 border-[1.5px] mt-3 ml-3 border-white  outline-none absolute top-0 left-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center text-stone-500 lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7 dark:bg-gray-200  dark:text-stone-500"
         >
           {theme === "dark" ? (
-            <i className="bx bxs-moon"></i>
-          ) : (
             <i className="bx bxs-sun "></i>
+          ) : (
+            <i className="bx bxs-moon"></i>
           )}
         </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
@@ -58,7 +63,7 @@ const Home = () => {
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
-                <button className="btn-home2 py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-gray-200">
+                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-gray-200 rounded-3xl">
                   <span>NUESTRA TIENDA</span>
                 </button>
               </a>
@@ -67,7 +72,7 @@ const Home = () => {
 
           <picture className="z-50  pl-8 lg:-mr-20">
             <img
-              style={dropShadowStyle} 
+              style={dropShadowStyle}
               className="img-home mt-10 h-auto max-w-96 lg:mt-0 xl:max-w-[420px]  2xl:max-w-[500px] "
               src={imgHome}
               alt=""
@@ -77,7 +82,7 @@ const Home = () => {
       </main>
       <section className="relative w-full h-[75vh] bg-gray-300 dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[8%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
-          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
+          <h6  className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
           <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-[#051937] to-[#845EC2]  dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
