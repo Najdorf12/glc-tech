@@ -87,7 +87,7 @@ const ProductDetail = () => {
         </Link>
       </nav>
       {isLoading && <Loader />}
-      <section className=" p-1 xl:flex xl:justify-evenly xl:w-[90%] 2xl:w-[80%] xl:mt-10  2xl:py-6">
+      <section className="p-1 flex flex-col items-center xl:flex-row xl:justify-evenly xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
         <div className="flex flex-col justify-center items-center  xl:justify-start">
           <article id="title-product-detail" className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:shadow-2xl shadow-gray-800">
             <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-400 inline-block text-transparent bg-clip-text ">
@@ -126,11 +126,11 @@ const ProductDetail = () => {
             </picture>
           </div>
         </div>
-        <div className="flex flex-col mt-8  xl:justify-center xl:gap-6 xl:pt-10">
-          <div className="mt-2 w-full flex justify-center text-sm text-stone-600 font-semibold font-title 2xl:text-lg ">
-            <ul className="rounded-lg w-[90%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
+        <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[99%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-10 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:max-w-[550px]">
+          <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
+            <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
               <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
-                <div className="flex gap-2 items-center text-gray-500">
+                <div className="flex gap-2 items-center text-stone-400">
                   Procesador
                 </div>
                 <div>
@@ -140,7 +140,7 @@ const ProductDetail = () => {
                 </div>
               </li>
               <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-gray-500">
+                <div className="flex gap-2 items-center text-stone-400">
                   Cámara
                 </div>
                 <div>
@@ -150,7 +150,7 @@ const ProductDetail = () => {
                 </div>
               </li>
               <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-gray-500">
+                <div className="flex gap-2 items-center text-stone-400">
                   Pantalla
                 </div>
                 <div>
@@ -160,13 +160,13 @@ const ProductDetail = () => {
                 </div>
               </li>
               <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-gray-500">
+                <div className="flex gap-2 items-center text-stone-400">
                   Memoria
                 </div>
                 <div>{productDetail.description}</div>
               </li>
               <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-gray-500">
+                <div className="flex gap-2 items-center text-stone-400">
                   Batería
                 </div>
                 <div>
@@ -176,7 +176,7 @@ const ProductDetail = () => {
             </ul>
           </div>
 
-          <p className="text-center  text-base font-semibold font-title text-stone-600 mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[470px]">
+          <p className="text-center self-center  text-base font-semibold font-title text-white mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[470px]">
             {productDetail.description2}
           </p>
         </div>

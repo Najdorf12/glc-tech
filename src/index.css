@@ -6,56 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-home {
-  --color: #b8b7b3;
-  --color2: #f1a415;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: 0.5s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 600;
-  font-size: 17px;
-  text-transform: uppercase;
-}
-.btn-home::after,
-.btn-home::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
-  inset: 50%;
-  left: 25%;
-  z-index: -1;
-  transition: all 1s;
-  background-color: var(--color);
-}
-
-.btn-home::before {
-  top: -50%;
-  left: -25%;
-  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.btn-home:hover::before {
-  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.btn-home:hover::after {
-  transform: skew(45deg) translate(-50%, -50%);
-}
-
-.btn-home:active {
-  filter: brightness(0.7);
-  transform: scale(0.98);
-}
-
-/* BORDER CARDS */
-
 
 /* SLIDER */
 .image-gallery-slide {
@@ -71,6 +21,9 @@
   width:500px;
   height: 100%;
 }
+.image-gallery-bullets .image-gallery-bullet {
+background-color: #521f74d0;
+}
 
 @media (min-width: 1200px) {
   .image-gallery-slide {
@@ -84,6 +37,7 @@
   .image-gallery-right-nav .image-gallery-svg {
     height: 100px;
     width: 50px;
+    color: #521f74d0
   }
 }
 @media (min-width: 1500px) {
@@ -99,7 +53,7 @@
   .image-gallery-right-nav .image-gallery-svg {
     height: 100px;
     width: 50px;
-  
+    
   }
 }
 
