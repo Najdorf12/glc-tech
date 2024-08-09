@@ -6,10 +6,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* SLIDER */
 .image-gallery-slide {
-  height: 430px; 
+  height: 430px;
   background-color: white;
   border-radius: 12px;
 }
@@ -18,11 +17,15 @@
 }
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   border-radius: 12px;
-  width:500px;
+  width: 500px;
   height: 100%;
 }
 .image-gallery-bullets .image-gallery-bullet {
-background-color: #521f74d0;
+  background-color: #521f74d0;
+}
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  color: #521f74d0;
 }
 
 @media (min-width: 1200px) {
@@ -30,7 +33,7 @@ background-color: #521f74d0;
   .image-gallery-right-nav .image-gallery-svg {
     height: 100px;
     width: 50px;
-    color: #521f74d0
+    color: #521f74d0;
   }
 }
 @media (min-width: 1500px) {
@@ -40,13 +43,12 @@ background-color: #521f74d0;
     align-self: center;
   }
   .image-gallery-content .image-gallery-slide .image-gallery-image {
-    max-width:620px;
+    max-width: 620px;
   }
   .image-gallery-left-nav .image-gallery-svg,
   .image-gallery-right-nav .image-gallery-svg {
     height: 100px;
     width: 50px;
-    
   }
 }
 
