@@ -45,7 +45,7 @@ const Home = () => {
           )}
         </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
-          <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-200 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-stone-700 dark:to-[#3d2663] dark:bg-clip-text ">
+          <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-200 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-stone-800 dark:to-stone-400 dark:bg-clip-text ">
             GLC
           </span>
 
@@ -77,7 +77,7 @@ const Home = () => {
       </main>
       <section className="relative w-full h-[75vh] bg-gray-300 dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[8%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
-          <h6 className="font-title text-4xl  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
+          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
           <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-[#051937] to-[#845EC2]  dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
@@ -92,7 +92,7 @@ const Home = () => {
             capacitado está siempre listo para asistirte.
             {/*  proporcionando soluciones efectivas y confiables para cualquier problema que puedas enfrentar con tu celular. En Glc Tech, tu satisfacción es nuestra prioridad. */}
           </p>
-          <ul className="text-white text-5xl flex gap-10 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200">
+          <ul className="text-white text-[2.5rem] flex gap-12 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200">
             <li>
               <Link
                 to={"https://www.instagram.com/grupolacomunidad/"}
