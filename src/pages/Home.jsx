@@ -41,7 +41,7 @@ const Home = () => {
           style={{
             boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
           }}
-          className=" z-50 border-[1.5px] mt-3 ml-3 border-white  outline-none absolute top-0 left-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center text-stone-500 lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7 dark:bg-gray-200  dark:text-stone-500"
+          className=" z-50 border-[1.5px] mt-3 ml-3 border-white  outline-none absolute top-0 left-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7 bg-[#666] text-stone-400 dark:bg-gray-200  dark:text-stone-500"
         >
           {theme === "dark" ? (
             <i className="bx bxs-sun "></i>
@@ -63,7 +63,7 @@ const Home = () => {
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
-                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-gray-200 rounded-3xl">
+                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-stone-400 dark:bg-stone-700 rounded-3xl">
                   <span>NUESTRA TIENDA</span>
                 </button>
               </a>
