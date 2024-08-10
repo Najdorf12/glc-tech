@@ -25,13 +25,13 @@ const Home = () => {
   };
   const dropShadowStyle =
     theme === "dark"
-      ? { filter: "drop-shadow(12px 12px 16px #666)" } // sombra oscura para tema claro
+      ? { filter: "drop-shadow(12px 12px 16px black)" } // sombra oscura para tema claro
       : { filter: "drop-shadow(20px 20px 20px #666)" };
 
   const btnHomeShadow =
     theme === "dark"
-      ? { boxShadow: "6px 6px 12px #6666, -6px -6px 12px #f1f1f1" }
-      : { boxShadow: "6px 6px 12px #c5c5c5, -6px -6px 12px #f1f1f1" };
+      ? { boxShadow: "6px 6px 12px black, -6px -6px 12px #f1f1f1" }
+      : { boxShadow: "6px 6px 12px #6666, -6px -6px 12px #f1f1f1" };
 
   return (
     <>
@@ -63,7 +63,7 @@ const Home = () => {
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
-                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-stone-400 dark:bg-stone-700 rounded-3xl">
+                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-stone-400 dark:bg-stone-600 rounded-3xl">
                   <span>NUESTRA TIENDA</span>
                 </button>
               </a>
