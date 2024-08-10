@@ -50,7 +50,7 @@ const Home = () => {
           )}
         </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
-          <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-200 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-stone-800 dark:to-stone-400 dark:bg-clip-text ">
+          <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-100 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-stone-800 dark:to-stone-400 dark:bg-clip-text ">
             GLC
           </span>
 
@@ -85,7 +85,7 @@ const Home = () => {
           <h6  className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
-          <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-[#051937] to-[#845EC2]  dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
+          <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-stone-700 to-[#6e4da3] dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
             Ubicados en el corazón de Caballito, nos dedicamos a ofrecer la
             mejor experiencia en tecnología móvil. Contamos con dos locales
             donde te ofrecemos atención personalizada. Nuestro objetivo es
