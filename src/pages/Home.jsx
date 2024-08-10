@@ -25,8 +25,8 @@ const Home = () => {
   };
   const dropShadowStyle =
     theme === "dark"
-      ? { filter: "drop-shadow(12px 12px 16px #44403c)" } // sombra oscura para tema claro
-      : { filter: "drop-shadow(20px 20px 20px rgba(255, 255, 255))" };
+      ? { filter: "drop-shadow(12px 12px 16px #666)" } // sombra oscura para tema claro
+      : { filter: "drop-shadow(20px 20px 20px #666)" };
 
   const btnHomeShadow =
     theme === "dark"
