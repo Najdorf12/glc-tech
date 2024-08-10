@@ -30,7 +30,7 @@ const Home = () => {
 
   const btnHomeShadow =
     theme === "dark"
-      ? { boxShadow: "6px 6px 12px #666, -6px -6px 12px #f1f1f1" }
+      ? { boxShadow: "6px 6px 12px #6666, -6px -6px 12px #f1f1f1" }
       : { boxShadow: "6px 6px 12px #c5c5c5, -6px -6px 12px #f1f1f1" };
 
   return (
