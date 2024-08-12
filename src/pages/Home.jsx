@@ -63,7 +63,7 @@ const Home = () => {
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
-                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider dark:text-stone-400 dark:bg-stone-600 rounded-3xl">
+                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-stone-600 hover:text-stone-300 dark:text-stone-400 dark:bg-stone-600 dark:hover:bg-gray-100 dark:hover:text-stone-500 rounded-3xl">
                   <span>NUESTRA TIENDA</span>
                 </button>
               </a>
@@ -103,12 +103,12 @@ const Home = () => {
                 to={"https://www.instagram.com/grupolacomunidad/"}
                 target="blank"
               >
-                <i className="bx bxl-instagram hover:scale-105 duration-500"></i>
+                <i className="bx bxl-instagram hover:scale-105 hover:text-stone-600 duration-500"></i>
               </Link>
             </li>
             <li>
               <Link to={"https://www.facebook.com/grupolacomunidadtech"}>
-                <i className="bx bxl-facebook-circle hover:scale-105 duration-500"></i>
+                <i className="bx bxl-facebook-circle hover:scale-105 hover:text-stone-600 duration-500"></i>
               </Link>
             </li>
             <li>
@@ -116,7 +116,7 @@ const Home = () => {
                 to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
                 target="blank"
               >
-                <i className="bx bxl-youtube hover:scale-105 duration-500"></i>
+                <i className="bx bxl-youtube hover:scale-105 hover:text-stone-600 duration-500"></i>
               </Link>
             </li>
             <li>
@@ -124,7 +124,7 @@ const Home = () => {
                 to={"https://www.tiktok.com/@grupolacomunidad"}
                 target="blank"
               >
-               <i class='bx bxl-tiktok hover:scale-105 duration-500'></i>
+               <i class='bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500'></i>
               </Link>
             </li>
             
