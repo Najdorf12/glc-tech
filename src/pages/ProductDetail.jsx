@@ -87,9 +87,12 @@ const ProductDetail = () => {
         </Link>
       </nav>
       {isLoading && <Loader />}
-      <section className="p-1 flex flex-col items-center xl:flex-row xl:justify-evenly xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
-        <div className="flex flex-col justify-center items-center  xl:justify-start">
-          <article id="title-product-detail" className="font-title flex flex-col justify-center items-center  mt-10 xl:mt-2   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:shadow-2xl shadow-gray-800">
+      <section className="relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
+        <div className="flex flex-col justify-center items-center  xl:justify-start  ">
+          <article
+            id="title-product-detail"
+            className="font-title flex flex-col justify-center items-center  mt-10   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:mt-4 xl:shadow-2xl shadow-gray-800"
+          >
             <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-400 inline-block text-transparent bg-clip-text ">
               {productDetail.name?.toUpperCase()?.substring(0, 19)}
             </h5>
@@ -126,72 +129,79 @@ const ProductDetail = () => {
             </picture>
           </div>
         </div>
-        <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[99%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:max-w-[550px]">
-          <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
-            <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
-                <div className="flex gap-2 items-center text-stone-400">
-                  Procesador
-                </div>
-                <div>
-                  {productDetail.procesador
-                    ? productDetail.procesador
-                    : productDetail.description}
-                </div>
-              </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-stone-400">
-                  Cámara
-                </div>
-                <div>
-                  {productDetail.camara
-                    ? productDetail.camara
-                    : "FRONTAL 5MP - TRASERA 8MP"}
-                </div>
-              </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-stone-400">
-                  Pantalla
-                </div>
-                <div>
-                  {productDetail.pantalla
-                    ? productDetail.pantalla
-                    : "PANTALLA FLUIDA DE 6,71 Y 90 HZ"}
-                </div>
-              </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-stone-400">
-                  Memoria
-                </div>
-                <div>{productDetail.description}</div>
-              </li>
-              <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                <div className="flex gap-2 items-center text-stone-400">
-                  Batería
-                </div>
-                <div>
-                  {productDetail.bateria ? productDetail.bateria : "5000MAH"}
-                </div>
-              </li>
-            </ul>
+        <section className=" flex flex-col items-center justify-start">
+          <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:max-w-[550px] xl:mt-4">
+            <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
+              <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
+                <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
+                  <div className="flex gap-2 items-center text-stone-400">
+                    Procesador
+                  </div>
+                  <div>
+                    {productDetail.procesador
+                      ? productDetail.procesador
+                      : productDetail.description}
+                  </div>
+                </li>
+                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400">
+                    Cámara
+                  </div>
+                  <div>
+                    {productDetail.camara
+                      ? productDetail.camara
+                      : "FRONTAL 5MP - TRASERA 8MP"}
+                  </div>
+                </li>
+                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400">
+                    Pantalla
+                  </div>
+                  <div>
+                    {productDetail.pantalla
+                      ? productDetail.pantalla
+                      : "PANTALLA FLUIDA DE 6,71 Y 90 HZ"}
+                  </div>
+                </li>
+                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400">
+                    Memoria
+                  </div>
+                  <div>{productDetail.description}</div>
+                </li>
+                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400">
+                    Batería
+                  </div>
+                  <div>
+                    {productDetail.bateria ? productDetail.bateria : "5000MAH"}
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-center self-center  text-base font-semibold font-title text-white mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[470px]">
+              {productDetail.description2}
+            </p>
           </div>
-
-          <p className="text-center self-center  text-base font-semibold font-title text-white mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[470px]">
-            {productDetail.description2}
-          </p>
-        </div>
+          <div className="my-4 w-full mt-7 flex justify-center items-center">
+            <iframe
+              id="ytplayer"
+              className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:w-[600px] md:h-[330px] 2xl:max-w-[700px] 2xl:h-[350px]"
+              src={
+                productDetail.youtube
+                  ?.replace("watch?v=", "embed/")
+                  ?.split("&")[0]
+              }
+            ></iframe>
+          </div>
+        </section>
       </section>
-      <div className="my-3 w-full mt-7 flex justify-center items-center xl:mt-20 ">
-        <iframe
-          id="ytplayer"
-          className="w-[98%] h-[270px] rounded-lg max-w-[500px] md:max-w-[600px] md:h-[330px] 2xl:max-w-[700px] 2xl:h-[350px]"
-          src={
-            productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
-          }
-        ></iframe>
-      </div>
 
-      <p className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] shadow-xl shadow-gray-800">
+      <p
+        className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[#051937] to-[#845EC2]
+      "
+      >
         SIMILARES
       </p>
       <div className="w-full mt-2 gap-x-5 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
