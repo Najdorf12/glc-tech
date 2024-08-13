@@ -204,10 +204,10 @@ const ProductDetail = () => {
       >
         SIMILARES
       </p>
-      <div className="w-full mt-2 gap-x-5 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
+      <div className="w-full mt-2 gap-x-5 gap-y-4 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
         {similarProducts?.slice(4, 8)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
-            <CardSimilarProd product={product} />
+            <CardSimilarProd product={product} ARSPrice={ARSPrice} />
           </Link>
         ))}
       </div>
