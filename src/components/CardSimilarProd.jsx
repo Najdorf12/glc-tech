@@ -14,7 +14,7 @@ const CardSimilarProd = ({ product, ARSPrice }) => {
         <span className="text-base  text-white font-bold">
           {product?.name?.toUpperCase()?.substring(0, 14)}
         </span>
-        <div className="flex flex-row justify-between items-center text-[0.95rem] font-semibold text-gray-500 dark:text-stone-400">
+        <div className="flex flex-row justify-between items-center text-[0.95rem] 2xl:text-[1rem] font-semibold xl:font-bold text-gray-500 dark:text-stone-400">
           <p>$ {product?.price * ARSPrice[0]?.usdPrice}</p>
           <p>{product?.price} USD</p>
         </div>
