@@ -149,7 +149,7 @@ const AdminForm = () => {
         procesador: data.procesador,
         pantalla: data.pantalla,
         bateria: data.bateria,
-        youtube: data.youtube,
+        youtube: data.youtube || "https://www.youtube.com/watch?v=5ceiCS77CKU",
         image: image,
         images: images,
       };
@@ -166,12 +166,12 @@ const AdminForm = () => {
       <nav className="font-title text-xl xl:text-xl flex gap-2 justify-between uppercase items-center  font-bold text-[#92856e] w-full px-4 py-2 xl:py-3 rounded-b-2xl xl:px-12 2xl:text-2xl">
         {user.username}
         <div className="flex gap-3 xl:gap-4 2xl:gap-8 ">
-          <button className="text-sm border-[1px] border-[#92856e] px-3 py-1 font-normal rounded-lg text-zinc-100 xl:px-6 xl:text-[16px] xl:font-semibold ">
+          <button className="text-sm border-[1px] border-[#92856e] px-3 py-1 font-normal rounded-xl text-zinc-100 xl:px-6 xl:text-[16px] xl:font-semibold ">
             <Link to="/">Home</Link>
           </button>
           <button
             onClick={() => logout()}
-            className="text-sm border-[1px] border-[#92856e] px-3 py-1 font-normal rounded-lg text-zinc-100 xl:px-6 xl:text-[16px] xl:font-semibold"
+            className="text-sm border-[1px] border-[#92856e] px-3 py-1 font-normal rounded-xl text-zinc-100 xl:px-6 xl:text-[16px] xl:font-semibold"
           >
             Cerrar sesión
           </button>
