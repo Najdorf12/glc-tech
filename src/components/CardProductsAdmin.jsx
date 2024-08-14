@@ -26,7 +26,7 @@ const CardProductsAdmin = ({ product, getProducts, selectProduct }) => {
 
         <article className="w-[80%] lg:w-[70%] pl-2  h-full pt-2">
           <p className="text-lg  font-text font-semibold text-amber-500 leading-5 mb-1">
-            {name?.toUpperCase()}
+            {name?.toUpperCase()?.substring(0, 20)}
           </p>
           <span className="font-text mt-2 font-base text-md  text-gray-400 tracking-wide rounded-lg">
             {category}

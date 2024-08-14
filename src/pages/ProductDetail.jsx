@@ -130,7 +130,7 @@ const ProductDetail = () => {
           </div>
         </div>
         <section className=" flex flex-col items-center justify-start">
-          <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:max-w-[550px] xl:mt-4">
+          <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[650px]">
             <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
               <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
                 <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
@@ -180,14 +180,18 @@ const ProductDetail = () => {
               </ul>
             </div>
 
-            <p className="text-center self-center  text-base font-semibold font-title text-white mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[470px]">
+            <p className="text-center self-center  text-base font-semibold font-title text-white mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[520px]">
               {productDetail.description2}
             </p>
           </div>
-          <div className="my-4 w-full mt-7 flex justify-center items-center">
+          
+        </section>
+        
+      </section>
+      <div className="my-8 w-full  flex justify-center items-center xl:mt-20">
             <iframe
               id="ytplayer"
-              className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:w-[600px] md:h-[330px] 2xl:max-w-[700px] 2xl:h-[350px]"
+              className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[355px]  2xl:max-w-[850px] 2xl:h-[440px]"
               src={
                 productDetail.youtube
                   ?.replace("watch?v=", "embed/")
@@ -195,9 +199,6 @@ const ProductDetail = () => {
               }
             ></iframe>
           </div>
-        </section>
-      </section>
-
       <p
         className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[#051937] to-[#845EC2]
       "
