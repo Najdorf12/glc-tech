@@ -66,7 +66,7 @@ const Store = () => {
           <i className='bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl'></i>
         </p>
         </article>
-        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-y-3 gap-x-[2rem] mt-36 md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  xl:mt-[11rem] 2xl:mt-[13rem]  xl:max-w-[1000px] 2xl:max-w-[1200px] 2xl:px-0 2xl:">
+        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-y-3 gap-x-[2rem] mt-36 md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  xl:mt-[11rem] 2xl:mt-[14rem]  xl:max-w-[1000px] 2xl:max-w-[1200px] 2xl:px-0 2xl:">
           {btns.map((btn, i) => (
             <button
           
