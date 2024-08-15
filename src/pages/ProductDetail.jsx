@@ -13,6 +13,8 @@ const ProductDetail = () => {
   const [ARSPrice, setARSPrice] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
+  
+  
 
   const images2 = [
     {
@@ -61,7 +63,7 @@ const ProductDetail = () => {
   }, [id]);
 
   useEffect(() => {
-    console.log(productDetail.images);
+    
     if (productDetail?.category) {
       axios
         .get(`/products/category/${productDetail?.category}`)
@@ -206,7 +208,7 @@ const ProductDetail = () => {
         SIMILARES
       </p>
       <div className="w-full mt-2 gap-x-5 gap-y-4 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
-        {similarProducts?.slice(4, 8)?.map((product) => (
+        {similarProducts?.slice(0, 4)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
             <CardSimilarProd product={product} ARSPrice={ARSPrice} />
           </Link>
