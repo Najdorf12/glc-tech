@@ -22,7 +22,7 @@ const CardSimilarProd = ({ product, ARSPrice }) => {
           <p>$ {product?.price * ARSPrice[0]?.usdPrice}</p>
         </div>
         <Link to={"https://api.whatsapp.com/send/?phone=541125043539"}>
-          <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-full mt-[4px] xl:mt-[7px] 2xl:mt-[7px] text-gray-100 font-medium py-1 rounded-br-xl self-start 2xl:text-[1.1rem] ">
+          <button className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-full mt-[4px] xl:mt-[7px] 2xl:mt-[9px] text-gray-100 font-medium py-1 rounded-br-xl self-start 2xl:text-[1.1rem] ">
            COMPRAR
           </button>
         </Link>
