@@ -28,7 +28,7 @@ const Card = ({ product, arsPrice }) => {
               {product.description?.substring(0, 20)}
             </Link>
           </p>
-          <div className="flex gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[1rem] text-[#60438f] font-extrabold md:text-[1rem] lg:text-[1.25rem]">
+          <div className="flex  justify-between w-full px-2 gap-3 mt-[1px] sm:mt-[1.5px] self-center text-[1.1rem] text-[#60438f] font-extrabold md:text-[1rem] lg:text-[1.25rem] 2xl:text-[1.4rem]">
             <p className="">
               <Link to={`/${product._id}`}>usd {product?.price}</Link>
             </p>
