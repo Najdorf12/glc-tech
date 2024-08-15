@@ -4,7 +4,7 @@ import Card from "../components/Card";
 import Loader from "../components/Loader";
 
 const Store = () => {
-  const btns = ["Motorola", "Xiaomi", "Samsung", "Iphone", "Infinix", "Tablets", "Consolas","Todos"
+  const btns = ["Motorola", "Xiaomi", "Samsung", "Iphone", "Infinix", "Realme", "Tablets", "Consolas","Todos"
   ];
   const [allProducts, setAllProducts] = useState([]);
   const [ARSPrice, setARSPrice] = useState([]);
