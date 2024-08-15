@@ -89,8 +89,8 @@ const ProductDetail = () => {
         </Link>
       </nav>
       {isLoading && <Loader />}
-      <section className="relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
-        <div className="flex flex-col justify-center items-center  xl:justify-start  ">
+      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
+        <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
             id="title-product-detail"
             className="font-title flex flex-col justify-center items-center  mt-10   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:mt-4 xl:shadow-2xl shadow-gray-800"
@@ -131,7 +131,7 @@ const ProductDetail = () => {
             </picture>
           </div>
         </div>
-        <section className=" flex flex-col items-center justify-start">
+        <section className=" flex flex-col items-center justify-start  2xl:self-center">
           <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[620px]">
             <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
               <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2  max-w-[500px]  2xl:w-full ">
@@ -207,8 +207,8 @@ const ProductDetail = () => {
       >
         SIMILARES
       </p>
-      <div className="w-full mt-2 gap-x-5 gap-y-4 sm:gap-x-5 md:gap-6 xl:gap-10 2xl:gap-12 flex flex-wrap justify-center items-center ">
-        {similarProducts?.slice(0, 4)?.map((product) => (
+      <div className="w-full mt-2 gap-x-5 gap-y-6 sm:gap-x-5 md:gap-6 xl:gap-8 2xl:gap-12 flex flex-wrap justify-center items-center  xl:w-[90%] 2xl:w-[80%]">
+        {similarProducts?.slice(0, 6)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
             <CardSimilarProd product={product} ARSPrice={ARSPrice} />
           </Link>
