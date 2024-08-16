@@ -25,8 +25,8 @@ const Home = () => {
   };
   const dropShadowStyle =
     theme === "dark"
-      ? { filter: "drop-shadow(12px 12px 16px black)" } // sombra oscura para tema claro
-      : { filter: "drop-shadow(20px 20px 20px #666)" };
+      ? { filter: "drop-shadow(9px 9px 14px #f1f1f1)" } // sombra oscura para tema claro
+      : { filter: "drop-shadow(9px 9px 14px #f1f1f1)" };
 
   const btnHomeShadow =
     theme === "dark"
@@ -35,7 +35,8 @@ const Home = () => {
 
   return (
     <>
-      <main className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[90dvh]">
+      <main className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[90dvh] relative">
+      
         <button
           onClick={handleChangeTheme}
           style={{
@@ -50,12 +51,13 @@ const Home = () => {
           )}
         </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
+         
           <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-100 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-stone-800 dark:to-stone-400 dark:bg-clip-text ">
             GLC
           </span>
 
-          <article className="flex flex-col  justify-center items-center z-50 ">
-            <h1 className="text-stone-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text  dark:text-gray-200">
+          <article className="flex flex-col  justify-center items-center z-50">
+            <h1 className="text-stone-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text  dark:text-gray-200 z-50">
               GLC TECH
             </h1>
             <h2 className="text-stone-500 text-[1.25rem] font-semibold   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem]">
@@ -63,7 +65,10 @@ const Home = () => {
             </h2>
             <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
-                <button style={btnHomeShadow} className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-stone-600 hover:text-stone-300 dark:text-stone-400 dark:bg-stone-600 dark:hover:bg-gray-100 dark:hover:text-stone-500 rounded-3xl">
+                <button
+                  style={btnHomeShadow}
+                  className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-stone-600 hover:text-stone-300 dark:text-stone-400 dark:bg-stone-600 dark:hover:bg-gray-100 dark:hover:text-stone-500 rounded-3xl"
+                >
                   <span>NUESTRA TIENDA</span>
                 </button>
               </a>
@@ -73,16 +78,18 @@ const Home = () => {
           <picture className="z-50  pl-8 lg:-mr-20">
             <img
               style={dropShadowStyle}
-              className="img-home mt-10 h-auto max-w-96 lg:mt-0 xl:max-w-[420px]  2xl:max-w-[500px] "
+              className="img-home mt-10 h-auto max-w-96 lg:mt-0 xl:max-w-[420px]  2xl:max-w-[500px] z-50 relative "
               src={imgHome}
               alt=""
             />
+            
           </picture>
+       
         </section>
       </main>
       <section className="relative w-full h-[75vh] bg-gray-300 dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[8%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
-          <h6  className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
+          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
           <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-stone-700 to-[#6e4da3] dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
@@ -124,10 +131,9 @@ const Home = () => {
                 to={"https://www.tiktok.com/@grupolacomunidad"}
                 target="blank"
               >
-               <i class='bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500'></i>
+                <i class="bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500"></i>
               </Link>
             </li>
-            
           </ul>
           {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
         </article>
