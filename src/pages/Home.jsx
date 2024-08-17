@@ -78,7 +78,7 @@ const Home = () => {
               <a href="#store">
                 <button
                   style={btnHomeShadow}
-                  className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-600 hover:text-white dark:text-white dark:hover:bg-gray-100 dark:hover:text-stone-500 rounded-3xl  "
+                  className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-600 hover:text-white dark:text-white dark:hover:bg-stone-800 dark:hover:text-stone-100 rounded-3xl  "
                 >
                   <span>NUESTRA TIENDA</span>
                 </button>
