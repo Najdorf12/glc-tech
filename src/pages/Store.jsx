@@ -66,7 +66,7 @@ const Store = ({theme}) => {
         {isLoading && <Loader />}
         <article className="absolute top-0 font-title flex flex-col justify-center items-center gap-5 mt-16 xl:gap-5 2xl:gap-7 2xl:mt-[4.5rem]">
         <p className="text-gray-600 text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text">TIENDA</p>
-        <p className="text-stone-500 dark:text-stone-400 text-xl font-semibold flex items-center justify-center gap-2 xl:text-2xl 2xl:gap-3 2xl:text-[1.7rem]">
+        <p className="text-stone-600 dark:text-stone-400 text-xl font-semibold flex items-center justify-center gap-2 xl:text-2xl 2xl:gap-3 2xl:text-[1.7rem]">
           Busca por categoría
           <i className='bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl'></i>
         </p>

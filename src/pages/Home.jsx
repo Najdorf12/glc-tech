@@ -53,7 +53,7 @@ const Home = () => {
           style={{
             boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
           }}
-          className=" z-50 border-[1.5px] mt-3 ml-3 border-white  outline-none absolute top-0 left-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7 bg-[#666] text-stone-400 dark:bg-gray-200  dark:text-stone-500"
+          className=" z-50 border-[1.5px] mt-3 ml-3 border-white  outline-none absolute top-0 left-0 w-9 h-9 rounded-full text-[1.4rem] flex justify-center items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7 bg-gray-200 text-stone-400 dark:bg-gray-200  dark:text-stone-500"
         >
           {theme === "dark" ? (
             <i className="bx bxs-sun "></i>
@@ -63,22 +63,22 @@ const Home = () => {
         </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
          
-          <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-gray-100 mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-stone-800 dark:to-stone-400 dark:bg-clip-text ">
+          <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-white mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-[#301b55] dark:via-[#2a2631] dark:to-stone-900 dark:bg-clip-text ">
             GLC
           </span>
 
           <article className="flex flex-col  justify-center items-center z-50">
-            <h1 className="text-stone-600 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-t from-stone-700 to-stone-400 inline-block text-transparent bg-clip-text  dark:text-gray-200 z-50">
+            <h1 className=" text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-tl from-stone-600 via-[#845EC2] to-stone-900  inline-block text-transparent bg-clip-text dark:from-stone-700 dark:via-[#ffffff] dark:to-stone-700 z-50">
               GLC TECH
             </h1>
-            <h2 className="text-stone-500 text-[1.25rem] font-semibold   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem]">
+            <h2 className=" text-[1.25rem] font-semibold bg-gradient-to-tr   from-stone-700 to-stone-500 inline-block text-transparent bg-clip-text   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem] dark:from-stone-600 dark:to-stone-400 ">
               GRUPO LA COMUNIDAD
             </h2>
-            <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
+            <div className="mt-4 flex font-title text-sm text-white font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
                 <button
                   style={btnHomeShadow}
-                  className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-stone-600 hover:text-stone-300 dark:text-stone-400 dark:bg-stone-600 dark:hover:bg-gray-100 dark:hover:text-stone-500 rounded-3xl"
+                  className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-600 hover:text-white dark:text-white dark:hover:bg-gray-100 dark:hover:text-stone-500 rounded-3xl  "
                 >
                   <span>NUESTRA TIENDA</span>
                 </button>
@@ -103,7 +103,7 @@ const Home = () => {
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
-          <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-stone-700 to-[#6e4da3] dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
+          <p className="font-text2 px-1   text-[.9rem] font-semibold sm:text-base  xl:px-8 2xl:text-lg bg-gradient-to-br from-stone-900 to-[#5c3f8b] dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text ">
             Ubicados en el corazón de Caballito, nos dedicamos a ofrecer la
             mejor experiencia en tecnología móvil. Contamos con dos locales
             donde te ofrecemos atención personalizada. Nuestro objetivo es
@@ -115,18 +115,18 @@ const Home = () => {
             capacitado está siempre listo para asistirte.
             {/*  proporcionando soluciones efectivas y confiables para cualquier problema que puedas enfrentar con tu celular. En Glc Tech, tu satisfacción es nuestra prioridad. */}
           </p>
-          <ul className="text-white text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200 ">
+          <ul className="text-stone-500 text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200 ">
             <li>
               <Link
                 to={"https://www.instagram.com/grupolacomunidad/"}
                 target="blank"
               >
-                <i className="bx bxl-instagram hover:scale-105 hover:text-stone-600 duration-500"></i>
+                <i className="bx bxl-instagram hover:scale-105 hover:text-white duration-500"></i>
               </Link>
             </li>
             <li>
               <Link to={"https://www.facebook.com/grupolacomunidadtech"}>
-                <i className="bx bxl-facebook-circle hover:scale-105 hover:text-stone-600 duration-500"></i>
+                <i className="bx bxl-facebook-circle hover:scale-105 hover:text-white duration-500"></i>
               </Link>
             </li>
             <li>
@@ -134,7 +134,7 @@ const Home = () => {
                 to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
                 target="blank"
               >
-                <i className="bx bxl-youtube hover:scale-105 hover:text-stone-600 duration-500"></i>
+                <i className="bx bxl-youtube hover:scale-105 hover:text-white duration-500"></i>
               </Link>
             </li>
             <li>
