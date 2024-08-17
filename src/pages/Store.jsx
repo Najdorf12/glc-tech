@@ -3,7 +3,7 @@ import axios from "../api/axios";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 
-const Store = () => {
+const Store = ({theme}) => {
   const btns = ["Motorola", "Xiaomi", "Samsung", "Iphone", "Infinix", "Realme", "Tablets", "Consolas","Todos"
   ];
   const [allProducts, setAllProducts] = useState([]);
@@ -51,10 +51,15 @@ const Store = () => {
       getProductsByCategory(str);
     }
   };
+  const bgStore = 
+  theme === "dark"
+  ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" } //dark
+  : { backgroundImage: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
 
   return (
     <>
       <section
+      style={bgStore}
         id="store"
         className=" relative w-full pb-24 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 md:gap-x-8 justify-center pt-[33rem] md:pt-[24rem]  lg:pt-80  lg:px-10 lg:gap-x-12 lg:gap-y-12 lg:pb-32 xl:pt-[23.5rem] 2xl:pt-[29rem] 2xl:gap-12 2xl:px-32"
       >
@@ -72,7 +77,7 @@ const Store = () => {
           
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="mt-3 py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937] to-[#845EC2] rounded-br-xl rounded-tl-xl shadow-2xl shadow-gray-700 dark:shadow-black hover:shadow-white hover:text-white duration-500"
+              className="mt-3 py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937] to-[#845EC2]  rounded-br-xl rounded-tl-xl shadow-2xl shadow-gray-700 dark:shadow-black hover:shadow-white hover:text-white duration-500"
             >
               <span>{btn.toUpperCase()}</span>
             </button>

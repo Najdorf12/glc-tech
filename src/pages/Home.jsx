@@ -33,9 +33,20 @@ const Home = () => {
       ? { boxShadow: "6px 6px 12px black, -5px -5px 9px #f1f1f1" }
       : { boxShadow: "6px 6px 12px #6666, -6px -6px 12px #f1f1f1" };
 
+  const bgHome = 
+    theme === "dark"
+    ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" } //dark
+    : { backgroundImage: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
+  
+    const bgHome2 = 
+    theme === "dark"
+    ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" }//dark
+    : { background: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
+    
+
   return (
     <>
-      <main className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[90dvh] relative">
+      <main style={bgHome} className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[100dvh] relative">
       
         <button
           onClick={handleChangeTheme}
@@ -87,7 +98,7 @@ const Home = () => {
        
         </section>
       </main>
-      <section className="relative w-full h-[75vh] bg-gray-300 dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[8%] md:mt-0 xl:h-[80dvh] 2xl:h[70dvh] ">
+      <section style={bgHome2}  className="relative w-full h-[75vh] bg-gray-300 dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[8%] md:mt-0 xl:h-[100dvh]  ">
         <article className="relative z-50 flex flex-col  justify-center items-center gap-8 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
@@ -137,16 +148,16 @@ const Home = () => {
           </ul>
           {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
         </article>
-        <div
+       {/*  <div
           id="line-stats"
           className="w-[50%] lg:w-[35%] absolute h-[1px] bg-white top-0 left-0"
         ></div>
         <div
           id="line-stats2"
           className="w-[50%] lg:w-[35%] absolute z-0 h-[1px] bg-white bottom-0 right-0 "
-        ></div>
+        ></div> */}
       </section>
-      <Store />
+      <Store theme={theme} />
     </>
   );
 };
