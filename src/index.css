@@ -5,7 +5,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.text-about{
+text-wrap: wrap;
+}
 /* SLIDER */
 .image-gallery-slide {
   height: 430px;

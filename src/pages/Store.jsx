@@ -61,17 +61,17 @@ const Store = ({theme}) => {
       <section
       style={bgStore}
         id="store"
-        className=" relative w-full pb-24 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 md:gap-x-8 justify-center pt-[33rem] md:pt-[24rem]  lg:pt-80  lg:px-10 lg:gap-x-12 lg:gap-y-12 lg:pb-32 xl:pt-[23.5rem] 2xl:pt-[29rem] 2xl:gap-12 2xl:px-32"
+        className=" relative w-full pb-24 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 md:gap-x-8 justify-center pt-[33rem] md:pt-[24rem]  lg:pt-80  lg:px-10 lg:gap-x-12 lg:gap-y-12 lg:pb-32 xl:pt-[25rem] 2xl:pt-[31rem] 2xl:gap-12 2xl:px-32"
       >
         {isLoading && <Loader />}
-        <article className="absolute top-0 font-title flex flex-col justify-center items-center gap-5 mt-16 xl:gap-5 2xl:gap-7 2xl:mt-[4.5rem]">
+        <article className="absolute top-0 font-title flex flex-col justify-center items-center gap-5 mt-12 xl:mt-20 xl:gap-5 2xl:gap-9 2xl:mt-[6rem] ">
         <p className="text-gray-600 text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text">TIENDA</p>
         <p className="text-stone-600 dark:text-stone-400 text-xl font-semibold flex items-center justify-center gap-2 xl:text-2xl 2xl:gap-3 2xl:text-[1.7rem]">
           Busca por categoría
           <i className='bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl'></i>
         </p>
         </article>
-        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-y-3 gap-x-[2rem] mt-44 md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  xl:mt-[11rem] 2xl:mt-[14rem]  xl:max-w-[1000px] 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
+        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-y-3 gap-x-[2rem] mt-40 md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  xl:mt-[13rem] 2xl:mt-[15rem]  xl:max-w-[1000px] 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
           {btns.map((btn, i) => (
             <button
           
