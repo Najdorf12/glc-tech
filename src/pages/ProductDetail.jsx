@@ -6,7 +6,7 @@ import ImageGallery from "react-image-gallery";
 import CardSimilarProd from "../components/CardSimilarProd";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const ProductDetail = () => {
+const ProductDetail = ({theme}) => {
   const { id } = useParams();
 
   const [productDetail, setProductDetail] = useState({});
@@ -14,7 +14,10 @@ const ProductDetail = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
   
-  
+  const bgProductDetail = 
+    theme === "dark"
+    ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" } //dark
+    : { backgroundImage: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
 
   const images2 = [
     {
@@ -73,9 +76,9 @@ const ProductDetail = () => {
   }, [productDetail.category]);
 
   return (
-    <section className="relative bg-gray-300 dark:bg-[#212121] pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
+    <section style={bgProductDetail} className="relative bg-gray-300 dark:bg-[#212121] pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
       <nav className="w-full flex items-center justify-between px-3 xl:px-8 2xl:px-12 2xl:pt-2 ">
-        <ul className="text-gray-500 dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
+        <ul className="text-white dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
           <li>{productDetail.category}</li>
           <li>
             <i className="bx bx-chevron-right text-3xl mt-1 font-light text-[rgba(75,30,133,1)] dark:text-purple-600"></i>
@@ -83,7 +86,7 @@ const ProductDetail = () => {
           <li>{productDetail.name?.toUpperCase()?.substring(0, 14)}</li>
         </ul>
         <Link to={"/"}>
-          <button className="btn-home2 flex items-center text-gray-500 dark:text-gray-100 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold ">
+          <button className="btn-home2 flex items-center text-stone-600 dark:text-gray-100 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold ">
             Volver
           </button>
         </Link>
@@ -131,8 +134,8 @@ const ProductDetail = () => {
             </picture>
           </div>
         </div>
-        <section className=" flex flex-col items-center justify-start  2xl:self-center">
-          <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%] sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[610px]">
+        <section className=" flex flex-col items-center justify-start   2xl:self-center">
+          <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%]  sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[610px]">
             <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
               <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2 px-2 2xl:px-4  2xl:w-full ">
                 <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">

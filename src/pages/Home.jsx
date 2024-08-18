@@ -3,26 +3,9 @@ import imgHome from "../assets/imgHome.png";
 import Store from "../pages/Store";
 import { Link } from "react-router-dom";
 
-const Home = () => {
-  const [theme, setTheme] = useState(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
+const Home = ({handleChangeTheme, theme}) => {
+  
 
-    return "light";
-  });
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.querySelector("html").classList.add("dark");
-    } else {
-      document.querySelector("html").classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
   const dropShadowStyle =
     theme === "dark"
       ? { filter: "drop-shadow(9px 9px 9px #f1f1f1)" } // sombra oscura para tema claro
