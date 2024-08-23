@@ -48,7 +48,7 @@ const AdminForm = () => {
         pantalla: "",
         bateria: "",
         youtube: "",
-        youtubeShort:""
+        youtubeShort: "",
       });
     }
   }, [productSelected]);
@@ -118,10 +118,13 @@ const AdminForm = () => {
         }
       );
       const file = await res.json();
-      setImages([...images, {
-        public_id: file.public_id,
-        secure_url: file.secure_url,
-      }]);
+      setImages([
+        ...images,
+        {
+          public_id: file.public_id,
+          secure_url: file.secure_url,
+        },
+      ]);
       setImage({
         public_id: file.public_id,
         secure_url: file.secure_url,
@@ -151,7 +154,8 @@ const AdminForm = () => {
         pantalla: data.pantalla,
         bateria: data.bateria,
         youtube: data.youtube || "https://www.youtube.com/watch?v=5ceiCS77CKU",
-        youtubeShort: data.youtubeShort || "https://www.youtube.com/shorts/usxUFrrvgio",
+        youtubeShort:
+          data.youtubeShort || "https://www.youtube.com/shorts/usxUFrrvgio",
         image: image,
         images: images,
       };
@@ -160,7 +164,7 @@ const AdminForm = () => {
         .then(() => getProducts())
         .catch((error) => console.error(error));
     }
-    alert("Su producto se creó exitosamente")
+    alert("Su producto se creó exitosamente");
   };
   return (
     <section className="relative w-full bg-[#212121] min-h-screen flex flex-col items-center  pb-10">
@@ -270,29 +274,29 @@ const AdminForm = () => {
 
                 <div className=" w-full flex flex-col justify-center items-center gap-5  xl:flex-row xl:gap-7 ">
                   <input
-                    placeholder="Youtube link"
+                    placeholder="Youtube - full video"
                     className="input w-[80%] xl:text-sm xl:self-start"
                     name="youtube"
                     id="youtube"
                     {...register("youtube")}
                   />
-                   <input
+                  <input
                     placeholder="Youtube Short"
                     className="input w-[80%] xl:text-sm xl:self-start"
                     name="youtube"
                     id="youtube"
                     {...register("youtubeShort")}
                   />
-                  <textarea
-                    placeholder="Descripcion detalle (max-200)"
-                    className="input text-gray-200 bg-[#212121] border input w-[80%] xl:text-base rounded-lg p-2"
-                    name="description2"
-                    id="description2"
-                    {...register("description2")}
-                    rows="5"
-                    cols="33"
-                  />
                 </div>
+                <textarea
+                  placeholder="Descripcion detalle (max-200)"
+                  className="input text-gray-200 bg-[#212121] border input w-[80%] xl:text-base rounded-lg p-2"
+                  name="description2"
+                  id="description2"
+                  {...register("description2")}
+                  rows="5"
+                  cols="33"
+                />
                 <div className="flex flex-col items-center gap-5 ">
                   <label className="font-light text-white text-xl">
                     Imágenes
@@ -308,23 +312,23 @@ const AdminForm = () => {
                     <h3>Cargando imagen...</h3>
                   ) : (
                     <div className="lg:flex gap-5 xl:gap-10">
-                     { images?.map((el) => (
-                      <div key={el?.public_id} className="relative">
-                        <button
-                          key={el?.public_id}
-                          type="button"
-                          onClick={() => handleDelete(el)}
-                          className="absolute right-0 px-2 border-2 border-black flex items-center rounded-sm font-bold text-white bg-red-500"
-                        >
-                          X
-                        </button>
-                        <img
-                          className="w-32 h-32 object-cover 2xl:w-36 2xl:h-36"
-                          src={el?.secure_url}
-                          alt=""
-                          width="300px"
-                        />
-                      </div>
+                      {images?.map((el) => (
+                        <div key={el?.public_id} className="relative">
+                          <button
+                            key={el?.public_id}
+                            type="button"
+                            onClick={() => handleDelete(el)}
+                            className="absolute right-0 px-2 border-2 border-black flex items-center rounded-sm font-bold text-white bg-red-500"
+                          >
+                            X
+                          </button>
+                          <img
+                            className="w-32 h-32 object-cover 2xl:w-36 2xl:h-36"
+                            src={el?.secure_url}
+                            alt=""
+                            width="300px"
+                          />
+                        </div>
                       ))}
                     </div>
                   )}

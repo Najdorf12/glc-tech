@@ -24,7 +24,7 @@ const Store = ({theme}) => {
       .get("/products")
       .then((res) => setAllProducts(res.data))
       .catch((error) => console.error(error))
-     .finally(() => setIsLoading(false)); 
+      .finally(() => setIsLoading(false));  
     }, 1500);
 
   };
@@ -35,7 +35,7 @@ const Store = ({theme}) => {
         .get(`/products/category/${category}`)
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
-         .finally(() => setIsLoading(false)); 
+        .finally(() => setIsLoading(false));  
     }, 1000);
   };
 

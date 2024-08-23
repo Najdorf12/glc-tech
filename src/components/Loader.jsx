@@ -1,55 +1,26 @@
 import "./loader.css";
 const Loader = () => {
   return (
-    <section className="w-full h-screen fixed bg-[#e8e8e8] inset-0 z-50 flex flex-col items-center justify-between">
-      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#838282ab] font-semibold  h-1/2 -mt-[20%] lg:-mt-[2%] 2xl:text-xl">
+    <section
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)",
+      }}
+      className="w-full h-screen fixed  inset-0 z-50 flex flex-col items-center pt-24 gap-6  xl:pt-0 xl:justify-center "
+    >
+      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#464545ab] font-semibold 2xl:text-2xl">
         Cargando ...
       </div>
 
-      <div className="loader-container -mt-[25%] lg:-mt-[3%]">
-        <div className="loaders ">
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-          <div className="loader"></div>
-        </div>
-        <div className="loadersB">
-          <div className="loaderA">
-            <div className="ball0"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball1"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball2"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball3"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball4"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball5"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball6"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball7"></div>
-          </div>
-          <div className="loaderA">
-            <div className="ball8"></div>
-          </div>
-        </div>
+      <div className="loader-container mt-20">
+        <span class="loader"></span>
       </div>
-      <div className=" text-stone-500 text-4xl 2xl:text-5xl font-bold w-full h-1/2 flex justify-center items-center "> GLC TECH </div>
+      <div className="text-4xl text-[#675479] mt-40 2xl:text-6xl font-bold w-full flex justify-center items-center ">
+        GLC TECH
+      </div>
+      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#464545ab] font-semibold 2xl:text-2xl">
+        Grupo La Comunidad
+      </div>
     </section>
   );
 };
