@@ -2,9 +2,28 @@ import { useState, useEffect } from "react";
 import imgHome from "../assets/imgHome.png";
 import Store from "../pages/Store";
 import { Link } from "react-router-dom";
+import imgFacebook from "../assets/socials/facebook.jpg"
+import imgTikTok from "../assets/socials/tiktok.jpg"
+import imgYoutube from "../assets/socials/youtube.jpg"
+import imgInstagram from "../assets/socials/instagram.jpg"
 
-const Home = ({handleChangeTheme, theme}) => {
-  
+const Home = ({ handleChangeTheme, theme }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
+  const images = [
+    imgInstagram,
+    imgFacebook,
+    imgYoutube,
+    imgTikTok
+  ];
 
   const dropShadowStyle =
     theme === "dark"
@@ -16,21 +35,34 @@ const Home = ({handleChangeTheme, theme}) => {
       ? { boxShadow: "6px 6px 12px black, -5px -5px 9px #f1f1f1" }
       : { boxShadow: "6px 6px 12px #6666, -6px -6px 12px #f1f1f1" };
 
-  const bgHome = 
+  const bgHome =
     theme === "dark"
-    ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" } //dark
-    : { backgroundImage: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
-  
-    const bgHome2 = 
+      ? {
+          backgroundImage:
+            "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)",
+        } //dark
+      : {
+          backgroundImage:
+            "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)",
+        };
+
+  const bgHome2 =
     theme === "dark"
-    ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" }//dark
-    : { background: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
-    
+      ? {
+          backgroundImage:
+            "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)",
+        } //dark
+      : {
+          background:
+            "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)",
+        };
 
   return (
     <>
-      <main style={bgHome} className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[100dvh] relative">
-      
+      <main
+        style={bgHome}
+        className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[100dvh] relative"
+      >
         <button
           onClick={handleChangeTheme}
           style={{
@@ -45,7 +77,6 @@ const Home = ({handleChangeTheme, theme}) => {
           )}
         </button>
         <section className="relative flex flex-col items-center lg:flex-row lg:gap-28  xl:gap-44 2xl:gap-72">
-         
           <span className="z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center text-white mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:-mt-[82px] md:-mr-36 md:text-[10.5rem] lg:justify-center lg:text-[15rem] lg:-mt-[38px] lg:mr-0 lg:-ml-3 xl:-mt-[36px] xl:text-[16rem] 2xl:-mt-[5px] 2xl:-ml-20 2xl:text-[17rem] dark:bg-gradient-to-br dark:text-transparent dark:from-[#301b55] dark:via-[#2a2631] dark:to-stone-900 dark:bg-clip-text ">
             GLC
           </span>
@@ -76,12 +107,13 @@ const Home = ({handleChangeTheme, theme}) => {
               src={imgHome}
               alt=""
             />
-            
           </picture>
-       
         </section>
       </main>
-      <section style={bgHome2}  className="relative w-full h-[65dvh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[3%] md:mt-0 xl:h-[90dvh] 2xl:h-[85dvh]  ">
+      <section
+        style={bgHome2}
+        className="relative w-full h-[65dvh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[3%] md:mt-0 xl:h-[90dvh] 2xl:h-[85dvh]  "
+      >
         <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
@@ -98,38 +130,69 @@ const Home = ({handleChangeTheme, theme}) => {
             capacitado está siempre listo para asistirte.
             {/*  proporcionando soluciones efectivas y confiables para cualquier problema que puedas enfrentar con tu celular. En Glc Tech, tu satisfacción es nuestra prioridad. */}
           </p>
-          <ul className="text-stone-500 text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200 ">
-            <li>
-              <Link
-                to={"https://www.instagram.com/grupolacomunidad/"}
-                target="blank"
+          <div className="relative">
+            <ul className="text-stone-500 text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 dark:text-gray-200">
+              <li
+                onMouseEnter={() => handleMouseEnter(0)}
+                onMouseLeave={handleMouseLeave}
               >
-                <i className="bx bxl-instagram hover:scale-105 hover:text-white duration-500"></i>
-              </Link>
-            </li>
-            <li>
-              <Link to={"https://www.facebook.com/grupolacomunidadtech"}>
-                <i className="bx bxl-facebook-circle hover:scale-105 hover:text-white duration-500"></i>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
-                target="blank"
+                <Link
+                  to={"https://www.instagram.com/grupolacomunidad/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-instagram hover:scale-105 hover:text-white duration-500"></i>
+                </Link>
+              </li>
+              <li
+                onMouseEnter={() => handleMouseEnter(1)}
+                onMouseLeave={handleMouseLeave}
               >
-                <i className="bx bxl-youtube hover:scale-105 hover:text-white duration-500"></i>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"https://www.tiktok.com/@grupolacomunidad"}
-                target="blank"
+                <Link
+                  to={"https://www.facebook.com/grupolacomunidadtech"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-facebook-circle hover:scale-105 hover:text-white duration-500"></i>
+                </Link>
+              </li>
+              <li
+                onMouseEnter={() => handleMouseEnter(2)}
+                onMouseLeave={handleMouseLeave}
               >
-                <i class="bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500"></i>
-              </Link>
-            </li>
-          </ul>
-          {/*  <button className="btn-home2 py-[5px] px-8 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 lg:w-[200px]  bg-stone-600 text-stone-300 font-extrabold font-title xl:text-base 2xl:text-lg tracking-wider">CONTACTO</button> */}
+                <Link
+                  to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-youtube hover:scale-105 hover:text-white duration-500"></i>
+                </Link>
+              </li>
+              <li
+                onMouseEnter={() => handleMouseEnter(3)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link
+                  to={"https://www.tiktok.com/@grupolacomunidad"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500"></i>
+                </Link>
+              </li>
+            </ul> 
+            <div className="absolute   w-full flex justify-center items-center left-0 bg-red-600 z-50">
+          {hoveredIndex !== null && (
+              <img
+                src={images[hoveredIndex]}
+                alt="img-social"
+                className="max-w-[550px] 2xl:max-w-[650px] rounded-xl"
+              />
+            )}
+          </div>
+          </div>
+          
+          
         </article>
         <div
           id="line-stats"
@@ -138,7 +201,7 @@ const Home = ({handleChangeTheme, theme}) => {
         <div
           id="line-stats2"
           className="w-[50%] lg:w-[35%] absolute z-0 h-[1px] bg-white bottom-0 right-0 "
-        ></div> 
+        ></div>
       </section>
       <Store theme={theme} />
     </>
