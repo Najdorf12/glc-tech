@@ -87,7 +87,7 @@ const ProductDetail = ({ theme }) => {
     >
       <nav className="w-full flex items-center justify-between px-3 xl:px-8 2xl:px-12 2xl:pt-2 ">
         <ul className="text-white dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
-          <li>{productDetail.category}</li>
+          <li>{productDetail.category?.toUpperCase()}</li>
           <li>
             <i className="bx bx-chevron-right text-3xl mt-1 font-light text-[rgba(75,30,133,1)] dark:text-purple-600"></i>
           </li>
@@ -133,7 +133,7 @@ const ProductDetail = ({ theme }) => {
               className="imgs w-[95%] flex items-center justify-center xl:w-full"
             >
               <ImageGallery
-                items={images2}
+                items={images2?.reverse()}
                 showPlayButton={false}
                 showFullscreenButton={false}
                 showThumbnails={false}
@@ -199,7 +199,7 @@ const ProductDetail = ({ theme }) => {
           </div>
         </section>
       </section>
-      <div className="my-8 w-full  flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row xl:gap-12 xl:items-start">
+      <div className="my-8 w-full  flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row xl:gap-12 xl:items-start 2xl:gap-24">
         <iframe
           id="ytplayer"
           className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[600px] lg:h-[355px]  2xl:max-w-[750px] 2xl:h-[450px]"
