@@ -48,6 +48,7 @@ const AdminForm = () => {
         pantalla: "",
         bateria: "",
         youtube: "",
+        youtubeShort:""
       });
     }
   }, [productSelected]);
@@ -150,6 +151,7 @@ const AdminForm = () => {
         pantalla: data.pantalla,
         bateria: data.bateria,
         youtube: data.youtube || "https://www.youtube.com/watch?v=5ceiCS77CKU",
+        youtubeShort: data.youtubeShort || "https://www.youtube.com/shorts/usxUFrrvgio",
         image: image,
         images: images,
       };
@@ -273,6 +275,13 @@ const AdminForm = () => {
                     name="youtube"
                     id="youtube"
                     {...register("youtube")}
+                  />
+                   <input
+                    placeholder="Youtube Short"
+                    className="input w-[80%] xl:text-sm xl:self-start"
+                    name="youtube"
+                    id="youtube"
+                    {...register("youtubeShort")}
                   />
                   <textarea
                     placeholder="Descripcion detalle (max-200)"

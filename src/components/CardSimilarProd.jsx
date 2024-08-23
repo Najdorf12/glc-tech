@@ -1,23 +1,23 @@
 import  {Link} from "react-router-dom";
-
+import imgPhone from "../assets/phone-images/MOTOROLA/MOTO G14.jpg";
 const CardSimilarProd = ({ product, ARSPrice }) => {
   return (
     <div className=" w-40 h-[256px]  p-2 flex flex-col gap-1 rounded-br-3xl rounded-t-lg xl:w-[175px] 2xl:w-52 lg:h-[320px]">
       <div className="w-full flex justify-center items-center ">
         <img
-          src={product?.image?.secure_url}
+          src={product?.image?.secure_url ? product?.image?.secure_url : imgPhone}
           alt="img-similar-prod"
           className="w-36 xl:w-52 2xl:w-48 rounded-lg"
         />
       </div>
       <div className="flex flex-col xl:pl-[3px] 2xl:mt-[2px]">
-        <span className="text-base  text-white font-bold xl:text-[1.02rem] 2xl:text-[1.2rem]">
+        <span className="text-base  text-stone-800 font-bold xl:text-[1.02rem] 2xl:text-[1.2rem]">
           {product?.name?.toUpperCase()?.substring(0, 14)}
         </span>
-        <div className="text-stone-600 text-sm sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[.92rem] font-semibold xl:mt-[2px]  2xl:mt-[4px] 2xl:text-[1.05rem]">
+        <div className="text-stone-700 text-sm sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[.92rem] font-semibold xl:mt-[2px]  2xl:mt-[4px] 2xl:text-[1.05rem]">
           {product?.description}
         </div>
-        <div className="flex flex-row justify-between items-center mt-[2px] text-[0.95rem] xl:mt-[4px] xl:text-[1.05rem] 2xl:text-[1.25rem] font-bold xl:font-bold  2xl:mt-[4px] text-[#60438f] ">
+        <div className="flex flex-row justify-between items-center mt-[2px] text-[0.95rem] xl:mt-[4px] xl:text-[1.05rem] 2xl:text-[1.25rem] font-bold xl:font-bold  2xl:mt-[4px] text-[#3d2b5a] ">
           <p>usd {product?.price} </p>
           <p>$ {product?.price * ARSPrice[0]?.usdPrice}</p>
         </div>

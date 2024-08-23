@@ -6,18 +6,24 @@ import ImageGallery from "react-image-gallery";
 import CardSimilarProd from "../components/CardSimilarProd";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const ProductDetail = ({theme}) => {
+const ProductDetail = ({ theme }) => {
   const { id } = useParams();
 
   const [productDetail, setProductDetail] = useState({});
   const [ARSPrice, setARSPrice] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
-  
-  const bgProductDetail = 
+
+  const bgProductDetail =
     theme === "dark"
-    ? { backgroundImage: "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)" } //dark
-    : { backgroundImage: "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)" }; 
+      ? {
+          backgroundImage:
+            "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)",
+        } //dark
+      : {
+          backgroundImage:
+            "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)",
+        };
 
   const images2 = [
     {
@@ -66,7 +72,6 @@ const ProductDetail = ({theme}) => {
   }, [id]);
 
   useEffect(() => {
-    
     if (productDetail?.category) {
       axios
         .get(`/products/category/${productDetail?.category}`)
@@ -76,7 +81,10 @@ const ProductDetail = ({theme}) => {
   }, [productDetail.category]);
 
   return (
-    <section style={bgProductDetail} className="relative bg-gray-300 dark:bg-[#212121] pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
+    <section
+      style={bgProductDetail}
+      className="relative bg-gray-300 dark:bg-[#212121] pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen"
+    >
       <nav className="w-full flex items-center justify-between px-3 xl:px-8 2xl:px-12 2xl:pt-2 ">
         <ul className="text-white dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
           <li>{productDetail.category}</li>
@@ -189,21 +197,27 @@ const ProductDetail = ({theme}) => {
               {productDetail.description2}
             </p>
           </div>
-          
         </section>
-        
       </section>
-      <div className="my-8 w-full  flex justify-center items-center xl:mt-20">
-            <iframe
-              id="ytplayer"
-              className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[355px]  2xl:max-w-[850px] 2xl:h-[440px]"
-              src={
-                productDetail.youtube
-                  ?.replace("watch?v=", "embed/")
-                  ?.split("&")[0]
-              }
-            ></iframe>
-          </div>
+      <div className="my-8 w-full  flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row xl:gap-12 xl:items-start">
+        <iframe
+          id="ytplayer"
+          className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[600px] lg:h-[355px]  2xl:max-w-[750px] 2xl:h-[450px]"
+          src={
+            productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
+          }
+        ></iframe>
+
+        <iframe
+          id="ytplayer"
+          className="w-[80%] h-[370px] rounded-lg max-w-[450px] md:h-[450px] xl:max-w-[400px] lg:h-[500px] 2xl:max-w-[500px] 2xl:h-[600px] "
+          src={
+            productDetail.youtubeShort?.includes("shorts/")
+              ? productDetail.youtubeShort?.replace("shorts/", "embed/")
+              : "https://www.youtube.com/embed/usxUFrrvgio"
+          }
+        ></iframe>
+      </div>
       <p
         className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[#051937] to-[#845EC2]
       "

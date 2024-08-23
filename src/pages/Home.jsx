@@ -51,13 +51,13 @@ const Home = ({handleChangeTheme, theme}) => {
           </span>
 
           <article className="flex flex-col  justify-center items-center z-50">
-            <h1 className=" text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-tl from-stone-600 via-[#845EC2] to-stone-900  inline-block text-transparent bg-clip-text dark:from-stone-700 dark:via-[#ffffff] dark:to-stone-700 z-50">
+            <h1 className=" text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[9rem] bg-gradient-to-tl from-stone-600 via-[#4f3a72] to-stone-900  inline-block text-transparent bg-clip-text dark:from-stone-700 dark:via-[#ffffff] dark:to-stone-700 z-50">
               GLC TECH
             </h1>
             <h2 className=" text-[1.25rem] font-semibold bg-gradient-to-tr   from-stone-700 to-stone-500 inline-block text-transparent bg-clip-text   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem] dark:from-stone-600 dark:to-stone-400 ">
               GRUPO LA COMUNIDAD
             </h2>
-            <div className="mt-4 flex font-title text-sm text-stone-500 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
+            <div className="mt-4 flex font-title text-sm text-[#676768] font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
                 <button
                   style={btnHomeShadow}
