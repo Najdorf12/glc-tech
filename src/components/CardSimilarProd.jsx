@@ -11,13 +11,13 @@ const CardSimilarProd = ({ product, ARSPrice }) => {
         />
       </div>
       <div className="flex flex-col xl:pl-[3px] 2xl:mt-[2px]">
-        <span className="text-base  text-[#302247] font-bold xl:text-[1.02rem] 2xl:text-[1.2rem]">
+        <span className="text-base  text-[#302247] dark:text-[#7252a5] font-bold xl:text-[1.02rem] 2xl:text-[1.2rem]">
           {product?.name?.toUpperCase()?.substring(0, 14)}
         </span>
-        <div className="text-stone-700 text-sm sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[.92rem] font-semibold xl:mt-[2px]  2xl:mt-[4px] 2xl:text-[1.05rem]">
+        <div className="text-stone-700 dark:text-stone-500 text-sm sm:text-[0.8rem] pr-1 sm:-mt-[.3px] md:text-[.92rem] font-semibold xl:mt-[2px]  2xl:mt-[4px] 2xl:text-[1.05rem]">
           {product?.description}
         </div>
-        <div className="flex flex-row justify-between items-center mt-[2px] text-[0.95rem] xl:mt-[4px] xl:text-[1.05rem] 2xl:text-[1.25rem] font-bold xl:font-bold  2xl:mt-[4px] text-[#302247] ">
+        <div className="flex flex-row justify-between items-center mt-[2px] text-[0.95rem] xl:mt-[4px] xl:text-[1.05rem] 2xl:text-[1.25rem] font-bold xl:font-bold  2xl:mt-[4px] text-[#302247] dark:text-[#7252a5]">
           <p>usd {product?.price} </p>
           <p>$ {product?.price * ARSPrice[0]?.usdPrice}</p>
         </div>
