@@ -2,7 +2,7 @@ import  {Link} from "react-router-dom";
 import imgPhone from "../assets/phone-images/MOTOROLA/MOTO G14.jpg";
 const CardSimilarProd = ({ product, ARSPrice }) => {
   return (
-    <div className=" w-40 h-[256px]  p-2 flex flex-col gap-1 rounded-br-3xl rounded-t-lg xl:w-[175px] 2xl:w-52 lg:h-[320px]">
+    <div className=" w-40 h-[256px]  p-2 flex flex-col gap-1 rounded-br-3xl rounded-t-lg xl:w-[175px] 2xl:w-52 lg:h-[320px] duration-500 hover:scale-105">
       <div className="w-full flex justify-center items-center ">
         <img
           src={product?.image?.secure_url ? product?.image?.secure_url : imgPhone}
