@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import imgHome from "../assets/imgHome.png";
 import Store from "../pages/Store";
 import { Link } from "react-router-dom";
-import imgFacebook from "../assets/socials/facebook.jpg"
-import imgTikTok from "../assets/socials/tiktok.jpg"
-import imgYoutube from "../assets/socials/youtube.jpg"
-import imgInstagram from "../assets/socials/instagram.jpg"
+import imgFacebook from "../assets/socials/facebook.jpg";
+import banner from "../assets/banner.png";
+import imgTikTok from "../assets/socials/tiktok.jpg";
+import imgYoutube from "../assets/socials/youtube.jpg";
+import imgInstagram from "../assets/socials/instagram.jpg";
 
 const Home = ({ handleChangeTheme, theme }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -18,12 +19,7 @@ const Home = ({ handleChangeTheme, theme }) => {
     setHoveredIndex(null);
   };
 
-  const images = [
-    imgInstagram,
-    imgFacebook,
-    imgYoutube,
-    imgTikTok
-  ];
+  const images = [imgInstagram, imgFacebook, imgYoutube, imgTikTok];
 
   const dropShadowStyle =
     theme === "dark"
@@ -112,7 +108,7 @@ const Home = ({ handleChangeTheme, theme }) => {
       </main>
       <section
         style={bgHome2}
-        className="relative w-full h-[65dvh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[3%] md:mt-0 xl:h-[90dvh] 2xl:h-[85dvh]  "
+        className="relative w-full h-[65vh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[3%] md:mt-0 xl:h-[90dvh] 2xl:h-[85dvh]  "
       >
         <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
@@ -180,19 +176,17 @@ const Home = ({ handleChangeTheme, theme }) => {
                   <i className="bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500"></i>
                 </Link>
               </li>
-            </ul> 
+            </ul>
             <div className="absolute   w-full flex justify-center items-center left-0 bg-red-600 z-50">
-          {hoveredIndex !== null && (
-              <img
-                src={images[hoveredIndex]}
-                alt="img-social"
-                className="max-w-[550px] 2xl:max-w-[650px] rounded-xl"
-              />
-            )}
+              {hoveredIndex !== null && (
+                <img
+                  src={images[hoveredIndex]}
+                  alt="img-social"
+                  className="max-w-[550px] 2xl:max-w-[650px] rounded-xl"
+                />
+              )}
+            </div>
           </div>
-          </div>
-          
-          
         </article>
         <div
           id="line-stats"
@@ -202,6 +196,11 @@ const Home = ({ handleChangeTheme, theme }) => {
           id="line-stats2"
           className="w-[50%] lg:w-[35%] absolute z-0 h-[1px] bg-white bottom-0 right-0 "
         ></div>
+      </section>
+      <section style={bgHome2} className="w-full flex justify-center items-center pt-12 xl:pt-20 2xl:pt-28">
+        <picture className=" flex justify-center">
+          <img className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%]" src={banner} alt="" />
+        </picture>
       </section>
       <Store theme={theme} />
     </>

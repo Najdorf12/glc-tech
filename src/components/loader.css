@@ -15,6 +15,7 @@
   height: 64px;
   border-radius: 50%;
   background: #675479;
+  background-image:  linear-gradient(to bottom, #3b2364, #291c4b, #231c40, #1e1b35, #1b1a2a, #514061);
   transform: translate(-50% , -100%)  scale(0);
   animation: push_401 2s infinite linear;
 }

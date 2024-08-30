@@ -8,17 +8,17 @@ const Loader = () => {
       }}
       className="w-full h-screen fixed  inset-0 z-50 flex flex-col items-center pt-24 gap-6  xl:pt-0 xl:justify-center "
     >
-      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#464545ab] font-semibold 2xl:text-2xl">
+      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#675479] font-semibold 2xl:text-2xl">
         Cargando ...
       </div>
 
       <div className="loader-container mt-20">
         <span class="loader"></span>
       </div>
-      <div className="text-4xl text-[#675479] mt-40 2xl:text-6xl font-bold w-full flex justify-center items-center ">
+      <div className="text-4xl text-[#291c4b] mt-40 2xl:text-6xl font-bold w-full flex justify-center items-center ">
         GLC TECH
       </div>
-      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#464545ab] font-semibold 2xl:text-2xl">
+      <div className="w-full flex flex-col items-center justify-center font-title text-lg text-[#675479] font-semibold 2xl:text-2xl">
         Grupo La Comunidad
       </div>
     </section>

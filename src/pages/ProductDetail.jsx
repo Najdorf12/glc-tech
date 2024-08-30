@@ -199,18 +199,26 @@ const ProductDetail = ({ theme }) => {
           </div>
         </section>
       </section>
-      <div className="my-8 w-full  flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row xl:gap-12 xl:items-start 2xl:gap-24">
+      <div className="my-8 w-full relative pb-28 flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row  xl:pb-0 xl:justify-center xl:items-start xl:gap-20 ">
+        <div className="absolute bottom-0 xl:left-[20%] xl:bottom-5 2xl:bottom-16 2xl:left-[28%]">
+          <p className="text-xl px-4 max-w-[350px] text-gray-100 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px]">
+            Descubre mas reviews en nuestro canal de
+            <span className="text-zinc-400 cursor-pointer font-bold hover:text-2xl 2xl:hover:text-3xl hover:text-[#f00000] duration-500 ">
+              {" "}
+              Youtube
+            </span>
+          </p>
+        </div>
         <iframe
           id="ytplayer"
-          className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[600px] lg:h-[355px]  2xl:max-w-[750px] 2xl:h-[450px]"
+          className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[420px]  2xl:max-w-[900px] 2xl:h-[500px] aspect-w-16 aspect-h-9"
           src={
             productDetail.youtube?.replace("watch?v=", "embed/")?.split("&")[0]
           }
         ></iframe>
-
         <iframe
           id="ytplayer"
-          className="w-[80%] h-[370px] rounded-lg max-w-[450px] md:h-[450px] xl:max-w-[400px] lg:h-[500px] 2xl:max-w-[500px] 2xl:h-[600px] "
+          className="w-[85%] h-[530px] rounded-lg max-w-[300px] xl:max-w-[330px] xl:h-[550px] 2xl:max-w-[400px] 2xl:h-[700px] "
           src={
             productDetail.youtubeShort?.includes("shorts/")
               ? productDetail.youtubeShort?.replace("shorts/", "embed/")
