@@ -201,9 +201,9 @@ const ProductDetail = ({ theme }) => {
       </section>
       <div className="my-8 w-full relative pb-28 flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row  xl:pb-0 xl:justify-center xl:items-start xl:gap-20 ">
         <div className="absolute bottom-0 xl:left-[20%] xl:bottom-5 2xl:bottom-16 2xl:left-[28%]">
-          <p className="text-xl px-4 max-w-[350px] text-gray-100 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px]">
+          <p className="text-xl px-4 max-w-[350px] text-gray-100 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px] shadow-lg shadow-zinc-700">
             Descubre mas reviews en nuestro canal de
-            <span className="text-zinc-400 cursor-pointer font-bold hover:text-2xl 2xl:hover:text-3xl hover:text-[#f00000] duration-500 ml-[2px] 2xl:ml-[3px] ">
+            <span className="text-zinc-400 cursor-pointer font-bold hover:text-2xl 2xl:hover:text-3xl hover:text-[#f00000] duration-500 ml-[2px] 2xl:ml-[3px]  ">
               <Link
                 to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
                 target="_blank"

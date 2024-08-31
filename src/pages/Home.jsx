@@ -197,9 +197,9 @@ const Home = ({ handleChangeTheme, theme }) => {
           className="w-[50%] lg:w-[35%] absolute z-0 h-[1px] bg-white bottom-0 right-0 "
         ></div>
       </section>
-      <section style={bgHome2} className="w-full flex justify-center items-center pt-12 xl:pt-20 2xl:pt-28">
-        <picture className=" flex justify-center">
-          <img className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%]" src={banner} alt="" />
+      <section style={bgHome2} className="w-full flex justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 ">
+        <picture   className=" flex justify-center  ">
+          <img  className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 " src={banner} alt="" />
         </picture>
       </section>
       <Store theme={theme} />
