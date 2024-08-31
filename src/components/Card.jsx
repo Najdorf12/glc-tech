@@ -20,10 +20,10 @@ const Card = ({ product, arsPrice }) => {
           <h6 className="text-[#251a36] dark:text-gray-100 font-bold leading-4 text-[1.05rem] self-start md:text-lg lg:font-bold lg:text-[1.3rem] 2xl:text-[1.40rem] w-full pl-2">
             {product.name?.toUpperCase()?.substring(0, 19)}
           </h6>
-          <p className="text-[#302246] dark:text-stone-500 pl-2 font-bold text-[.95rem] mt-[2px]  md:text-[1.1rem] lg:text-[1.2rem] lg:mt-0 2xl:text-[1.20rem] 2xl:mt-[2px]">
+          <p className="text-stone-800 dark:text-stone-500 pl-2 font-bold text-[.95rem] mt-[2px]  md:text-[1.1rem] lg:text-[1.2rem] lg:mt-0 2xl:text-[1.20rem] 2xl:mt-[2px]">
             <Link to={`/${product._id}`}>{product.category}</Link>
           </p>
-          <p className="text-[#302246] dark:text-stone-500 pl-2 text-[.95rem] sm:text-[0.95rem] pr-1  md:text-[1.1rem] lg:text-[1.2rem]  font-bold 2xl:text-[1.20rem]">
+          <p className="text-stone-800 dark:text-stone-500 pl-2 text-[.95rem] sm:text-[0.95rem] pr-1  md:text-[1.1rem] lg:text-[1.2rem]  font-bold 2xl:text-[1.20rem]">
             <Link to={`/${product._id}`}>
               {product.description?.substring(0, 20)}
             </Link>

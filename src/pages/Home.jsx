@@ -8,7 +8,13 @@ import imgTikTok from "../assets/socials/tiktok.jpg";
 import imgYoutube from "../assets/socials/youtube.jpg";
 import imgInstagram from "../assets/socials/instagram.jpg";
 
-const Home = ({ handleChangeTheme, theme }) => {
+const Home = ({
+  handleChangeTheme,
+  theme,
+  allProducts,
+  setAllProducts,
+  arsPrice,
+}) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -84,7 +90,7 @@ const Home = ({ handleChangeTheme, theme }) => {
             <h2 className=" text-[1.25rem] font-semibold bg-gradient-to-tr   from-stone-700 to-stone-500 inline-block text-transparent bg-clip-text   font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold lg:-mt-2 lg:text-[1.7rem] 2xl:text-[1.8rem] dark:from-stone-600 dark:to-stone-400 ">
               GRUPO LA COMUNIDAD
             </h2>
-            <div className="mt-4 flex font-title text-sm text-[#676768] font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
+            <div className="mt-4 flex font-title text-sm text-stone-700 font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 ">
               <a href="#store">
                 <button
                   style={btnHomeShadow}
@@ -197,12 +203,24 @@ const Home = ({ handleChangeTheme, theme }) => {
           className="w-[50%] lg:w-[35%] absolute z-0 h-[1px] bg-white bottom-0 right-0 "
         ></div>
       </section>
-      <section style={bgHome2} className="w-full flex justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 ">
-        <picture   className=" flex justify-center  ">
-          <img  className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 " src={banner} alt="" />
+      <section
+        style={bgHome2}
+        className="w-full flex justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 "
+      >
+        <picture className=" flex justify-center  ">
+          <img
+            className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 "
+            src={banner}
+            alt=""
+          />
         </picture>
       </section>
-      <Store theme={theme} />
+      <Store
+        theme={theme}
+        allProducts={allProducts}
+        setAllProducts={setAllProducts}
+        arsPrice={arsPrice}
+      />
     </>
   );
 };

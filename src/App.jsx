@@ -8,8 +8,12 @@ import ProtectedRoutes from "./pages/ProtectedRoutes";
 import ErrorPage from "./pages/ErrorPage";
 import { useState, useEffect } from "react";
 import Loader from "./components/Loader";
+import { getAllProducts, getArsPrice } from "./api/handlers";
 
 function App() {
+  const [allProducts, setAllProducts] = useState([]);
+  const [arsPrice, setArsPrice] = useState([]);
+
   const [theme, setTheme] = useState(() => {
     // Leer el tema desde localStorage si está guardado, de lo contrario usar la preferencia del sistema
     const storedTheme = localStorage.getItem("theme");
@@ -24,7 +28,9 @@ function App() {
 
     return "light";
   });
-
+  const handleChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   useEffect(() => {
     // Actualizar la clase del tema en el <html> y guardar el tema en localStorage
     if (theme === "dark") {
@@ -35,14 +41,49 @@ function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const productsData = await getAllProducts();
+        setAllProducts(productsData);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    const fetchUsdPrice = async () => {
+      try {
+        const arsPriceData = await getArsPrice();
+        setArsPrice(arsPriceData);
+      } catch (error) {
+        console.error("Failed to fetch usdPrice:", error);
+      }
+    };
+
+    fetchUsdPrice();
+  }, []);
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home theme={theme} handleChangeTheme={handleChangeTheme} />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                theme={theme}
+                handleChangeTheme={handleChangeTheme}
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                arsPrice={arsPrice}
+                setARSPrice={setArsPrice}
+              />
+            }
+          />
           <Route path="/:id" element={<ProductDetail theme={theme} />} />
 
           <Route path="/login" element={<Login />} />
@@ -50,7 +91,17 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
 
           <Route element={<ProtectedRoutes />}>
-            <Route path="/admin" element={<AdminForm />} />
+            <Route
+              path="/admin"
+              element={
+                <AdminForm
+                  allProducts={allProducts}
+                  setAllProducts={setAllProducts}
+                  arsPrice={arsPrice}
+                  setARSPrice={setArsPrice}
+                />
+              }
+            />
           </Route>
         </Routes>
       </BrowserRouter>
