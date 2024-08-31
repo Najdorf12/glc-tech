@@ -30,7 +30,17 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setIsLoading(false);
     }
   };
-
+  const fetchProducts = async () => {
+    setIsLoading(true);
+    try {
+      const productsData = await getAllProducts();
+      setAllProducts(productsData);
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   // Efecto para cargar la categoría inicial al montar el componente
   useEffect(() => {
     getProductsByCategory("Samsung"); // Aquí puedes cambiar "Samsung" por la categoría que desees
