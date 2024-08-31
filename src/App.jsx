@@ -13,6 +13,7 @@ import { getAllProducts, getArsPrice } from "./api/handlers";
 function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [arsPrice, setArsPrice] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [theme, setTheme] = useState(() => {
     // Leer el tema desde localStorage si está guardado, de lo contrario usar la preferencia del sistema
@@ -42,6 +43,7 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
+    setIsLoading(true);
     const fetchProducts = async () => {
       try {
         const productsData = await getAllProducts();
@@ -49,6 +51,7 @@ function App() {
       } catch (error) {
         console.error("Failed to fetch products:", error);
       }
+      setIsLoading(false);
     };
 
     fetchProducts();
@@ -81,6 +84,7 @@ function App() {
                 setAllProducts={setAllProducts}
                 arsPrice={arsPrice}
                 setARSPrice={setArsPrice}
+                isLoading={isLoading}
               />
             }
           />

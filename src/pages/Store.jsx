@@ -17,33 +17,34 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Consolas",
     "Todos",
   ];
-  const fetchProducts = async () => {
+
+  // Función para obtener productos por categoría
+  const getProductsByCategory = async (category) => {
+    setIsLoading(true);
     try {
-      const productsData = await getAllProducts();
-      setAllProducts(productsData);
+      const res = await axios.get(`/products/category/${category}`);
+      setAllProducts(res.data);
     } catch (error) {
-      console.error("Failed to fetch products:", error);
+      console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const getProductsByCategory = (category) => {
-    setIsLoading(true);
-    setTimeout(() => {
-      axios
-        .get(`/products/category/${category}`)
-        .then((res) => setAllProducts(res.data))
-        .catch((error) => console.error(error))
-        .finally(() => setIsLoading(false));
-    }, 600);
-  };
+  // Efecto para cargar la categoría inicial al montar el componente
+  useEffect(() => {
+    getProductsByCategory("Samsung"); // Aquí puedes cambiar "Samsung" por la categoría que desees
+  }, []);
 
   const searchByCategory = (category) => {
     const str = category.at(0) + category.slice(1).toLowerCase();
-    if (category === "TODOS") fetchProducts();
-    else {
+    if (category === "TODOS") {
+      fetchProducts();
+    } else {
       getProductsByCategory(str);
     }
   };
+
   const bgStore =
     theme === "dark"
       ? {
