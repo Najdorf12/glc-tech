@@ -15,7 +15,7 @@ const Home = ({
   allProducts,
   setAllProducts,
   arsPrice,
-  isLoading
+  isLoading,
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -67,8 +67,6 @@ const Home = ({
         style={bgHome}
         className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[100dvh] relative"
       >
-      
-
         <button
           onClick={handleChangeTheme}
           style={{
@@ -120,7 +118,7 @@ const Home = ({
         style={bgHome2}
         className="relative w-full h-[65vh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[3%] md:mt-0 xl:h-[90dvh] 2xl:h-[85dvh]  "
       >
-          {isLoading && <Loader />}
+        {isLoading && <Loader />}
         <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
@@ -214,6 +212,7 @@ const Home = ({
       >
         <picture className=" flex justify-center  ">
           <img
+            loading="lazy"
             className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 "
             src={banner}
             alt=""

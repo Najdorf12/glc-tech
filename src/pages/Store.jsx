@@ -3,6 +3,7 @@ import axios from "../api/axios";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import { getAllProducts } from "../api/handlers";
+import banner from "../assets/banner.png";
 
 const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -98,6 +99,19 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
           <Card key={i} product={product} arsPrice={arsPrice} />
         ))}
       </section>
+      <footer>
+        <picture
+          style={bgStore}
+          className="w-full bg-transparent flex items-center justify-center"
+        >
+          <img
+            loading="lazy"
+            className="lg:w-[80%] rounded-2xl shadow-lg shadow-zinc-800 "
+            src={banner}
+            alt=""
+          />
+        </picture>
+      </footer>
     </>
   );
 };

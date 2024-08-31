@@ -42,7 +42,7 @@ function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  useEffect(() => {
+ /*  useEffect(() => {
     setIsLoading(true);
     const fetchProducts = async () => {
       try {
@@ -55,7 +55,7 @@ function App() {
     };
 
     fetchProducts();
-  }, []);
+  }, []); */
 
   useEffect(() => {
     const fetchUsdPrice = async () => {
