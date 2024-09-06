@@ -210,6 +210,7 @@ const Home = ({
         style={bgHome2}
         className="w-full flex justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 "
       >
+        <Link target="blank" to={"https://acoyteservice.com.ar"}>
         <picture className=" flex justify-center  ">
           <img
             loading="lazy"
@@ -218,6 +219,7 @@ const Home = ({
             alt=""
           />
         </picture>
+        </Link>
       </section>
       <Store
         theme={theme}

@@ -54,7 +54,7 @@ const ProductDetail = ({ theme }) => {
   ];
 
   useEffect(() => {
-    /* window.scrollTo(0, 0); */
+    window.scrollTo(0, 0);
     const fetchProductData = async () => {
       try {
         setIsLoading(true);
@@ -211,14 +211,16 @@ const ProductDetail = ({ theme }) => {
                 ?.split("&")[0]
             }
           ></iframe>
-          <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-[700px] 2xl:max-w-[900px] xl:mt-5 2xl:mt-5">
-            <img
-              loading="lazy"
-              className="w-full lg:rounded-3xl shadow-lg shadow-zinc-800 "
-              src={banner2}
-              alt=""
-            />
-          </picture>
+          <Link target="blank" to={"https://acoyteservice.com.ar"}>
+            <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-[700px] 2xl:max-w-[900px] xl:mt-5 2xl:mt-5">
+              <img
+                loading="lazy"
+                className="w-full lg:rounded-3xl shadow-lg shadow-zinc-800 "
+                src={banner2}
+                alt=""
+              />
+            </picture>
+          </Link>
         </div>
 
         <iframe

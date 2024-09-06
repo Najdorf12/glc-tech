@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Loader from "../components/Loader";
 import { getAllProducts } from "../api/handlers";
 import banner from "../assets/banner.png";
+import { Link } from "react-router-dom";
 
 const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -100,6 +101,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
         ))}
       </section>
       <footer>
+        <Link target="blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
         <picture
           style={bgStore}
           className="w-full bg-transparent flex items-center justify-center"
@@ -111,6 +113,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
             alt=""
           />
         </picture>
+        </Link>
       </footer>
     </>
   );
