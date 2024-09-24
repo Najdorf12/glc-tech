@@ -82,7 +82,7 @@ const ProductDetail = ({ theme }) => {
   }, [productDetail.category]);
 
   const handleShare = () => {
-    const productName = productDetail?.name || "Producto";
+    const productName = aproductDetail?.name || "Producto";
     const productImage = productDetail?.images[0]?.secure_url || "";
 
     // Codificar los datos para la URL

@@ -7,6 +7,7 @@ import banner from "../assets/banner2.png";
 import imgTikTok from "../assets/socials/tiktok.jpg";
 import imgYoutube from "../assets/socials/youtube.jpg";
 import imgInstagram from "../assets/socials/instagram.jpg";
+import imgRecomendacionGoogle from "../assets/socials/recomendacionesGoogle2.jpeg";
 import Loader from "../components/Loader";
 
 const Home = ({
@@ -115,8 +116,8 @@ const Home = ({
         </section>
       </main>
       <section
-        style={bgHome2}
-        className="relative w-full h-[65vh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300 -mt-[3%] md:mt-0 xl:h-[90dvh] 2xl:h-[85dvh]  "
+        style={bgHome2} 
+        className="relative w-full h-[90vh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300  md:mt-0 lg:min-h-screen lg:py-20 "
       >
         {isLoading && <Loader />}
         <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
@@ -196,7 +197,27 @@ const Home = ({
               )}
             </div>
           </div>
+          <div className="flex flex-col items-center gap-4">
+            <p className=" text-about font-text2 px-[8px]  text-[.9rem] font-semibold sm:text-[.95rem]  xl:px-8 2xl:text-lg bg-gradient-to-br from-stone-800 to-[#5c3f8b] dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text lg:mt-3">
+              Puedes encontrar mas informacion sobre nosotros y opiniones de
+              nuestros clientes
+              <Link target="blank" to={"https://www.google.com/search?q=glc+tech&sca_esv=11b9b55d5edba133&sca_upv=1&sxsrf=ADLYWIIPWK1hNt4Gu4HcexptVpTqzn-uAA%3A1727195653956&source=hp&ei=BeryZvihNvDe1sQP8duBqA4&iflsig=AL9hbdgAAAAAZvL4FTjaWgYkOvh6b1IUQmVsCo0irI_o&gs_ssp=eJzj4tVP1zc0rDTOLSg3NC0xYLRSNaiwNE1KTk4ySzZKMbMwNTa0tDKoMDNIsUwzSTVJskxOM7CwNPDiSM9JVihJTc4AAEoAElE&oq=glc+&gs_lp=Egdnd3Mtd2l6IgRnbGMgKgIIATIEECMYJzIQEC4YgAQYxwEYJxiKBRivATIEECMYJzIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyChAAGIAEGEMYigVI3StQswZY6AtwAXgAkAEAmAH8BaAB9g6qAQ0wLjEuMC4xLjAuMS4xuAEDyAEA-AEBmAIFoAKwEKgCCsICBxAjGCcY6gLCAg0QLhjHARgnGOoCGK8BwgIHEC4YJxjqAsICChAjGIAEGCcYigXCAhAQABiABBixAxhDGIMBGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICCxAAGIAEGLEDGIMBmANGkgcLMS4wLjEuMS4wLjKgB-gv&sclient=gws-wiz#lrd=0x95bccb6c2d685319:0x60d9f4e4b9cf0890,1,,,,"}>
+              <span className="text-stone-600 ml-1">aquí.</span>
+              </Link>
+            </p>
+            <Link target="blank" to={"https://acoyteservice.com.ar"}>
+              <figure className=" flex justify-center  ">
+                <img
+                  loading="lazy"
+                  className="lg:w-[90%] lg:rounded-3xl 2xl:w-[95%] shadow-lg shadow-zinc-800 "
+                  src={imgRecomendacionGoogle}
+                  alt=""
+                />
+              </figure>
+            </Link>
+          </div>
         </article>
+
         <div
           id="line-stats"
           className="w-[50%] lg:w-[35%] absolute h-[1px] bg-white top-0 left-0"
@@ -206,19 +227,20 @@ const Home = ({
           className="w-[50%] lg:w-[35%] absolute z-0 h-[1px] bg-white bottom-0 right-0 "
         ></div>
       </section>
+
       <section
         style={bgHome2}
-        className="w-full flex justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 "
+        className="w-full flex flex-col justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 "
       >
         <Link target="blank" to={"https://acoyteservice.com.ar"}>
-        <figure className=" flex justify-center  ">
-          <img
-            loading="lazy"
-            className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 "
-            src={banner}
-            alt=""
-          />
-        </figure>
+          <figure className=" flex justify-center  ">
+            <img
+              loading="lazy"
+              className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 "
+              src={banner}
+              alt=""
+            />
+          </figure>
         </Link>
       </section>
       <Store
