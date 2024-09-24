@@ -84,7 +84,9 @@ const ProductDetail = ({ theme }) => {
   const handleShare = () => {
     const productName = productDetail?.name || "Nombre del celular";
     const productImage = productDetail?.images[0]?.secure_url;
-    const message = `${productName}\n${productImage}`;
+    const productUrl = productDetail?.images[0]?.secure_url; // Cambia esto por la URL de tu página intermedia.
+  
+    const message = `${productName}\n${productUrl}`;
     
     const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     
