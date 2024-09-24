@@ -234,9 +234,9 @@ const ProductDetail = ({ theme }) => {
         ></iframe>
       </div>
 
-      <p className="mt-2 lg:mt-14 mb-6 text-xl px-4 max-w-[350px] text-gray-100 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px] shadow-lg shadow-zinc-700">
+      <p className="mt-2 lg:mt-14 mb-6 text-xl px-4 max-w-[350px] text-gray-400 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px] shadow-lg shadow-zinc-700">
         Descubre mas reviews en nuestro canal de
-        <span className="text-zinc-400 cursor-pointer font-bold hover:text-2xl 2xl:hover:text-3xl hover:text-[#f00000] duration-500 ml-[2px] 2xl:ml-[3px]  ">
+        <span className="text-gray-100 cursor-pointer font-bold duration-500 ml-[2px] 2xl:ml-[3px]  ">
           <Link
             to={"https://www.youtube.com/@GlcTech-GrupolaComunidad"}
             target="_blank"

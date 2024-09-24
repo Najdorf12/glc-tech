@@ -47,6 +47,7 @@ const AdminForm = () => {
         procesador: "",
         pantalla: "",
         bateria: "",
+        gama:"",
         youtube: "",
         youtubeShort: "",
       });
@@ -153,6 +154,7 @@ const AdminForm = () => {
         procesador: data.procesador,
         pantalla: data.pantalla,
         bateria: data.bateria,
+        gama: data.gama,
         youtube: data.youtube || "https://www.youtube.com/watch?v=5ceiCS77CKU",
         youtubeShort:
           data.youtubeShort || "https://www.youtube.com/shorts/usxUFrrvgio",
@@ -168,7 +170,7 @@ const AdminForm = () => {
   };
   return (
     <section className="relative w-full bg-[#212121] min-h-screen flex flex-col items-center  pb-10">
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <nav className="font-title text-xl xl:text-xl flex gap-2 justify-between uppercase items-center  font-bold text-[#92856e] w-full px-4 py-2 xl:py-3 rounded-b-2xl xl:px-12 2xl:text-2xl">
         {user.username}
         <div className="flex gap-3 xl:gap-4 2xl:gap-8 ">
@@ -288,9 +290,44 @@ const AdminForm = () => {
                     {...register("youtubeShort")}
                   />
                 </div>
+                <p className="text-[rgb(128,128,128)] font-medium -mt-1 text-xl xl:mt-2">Gama</p>
+                <div className="flex gap-7 items-center -mt-1 xl:-mt-3 xl:gap-12 ">
+                  <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
+                    <input
+                      type="radio"
+                      name="gama"
+                      value="ALTA"
+                      {...register("gama")}
+                      className="mr-2 h-6 w-6 appearance-none border-2 border-gray-300 rounded-md checked:border-amber-600 checked:bg-amber-600 focus:outline-none focus:ring-amber-600 relative "
+                    />
+                    Alta
+                  </label>
+
+                  <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
+                    <input
+                      type="radio"
+                      name="gama"
+                      value="MEDIA"
+                      {...register("gama")}
+                      className="mr-2 h-6 w-6 appearance-none border-2 border-gray-300 rounded-md checked:border-amber-600 checked:bg-amber-600 focus:outline-none focus:ring-amber-600 relative "
+                    />
+                    Media
+                  </label>
+
+                  <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
+                    <input
+                      type="radio"
+                      name="gama"
+                      value="BAJA"
+                      {...register("gama")}
+                      className="mr-2 h-6 w-6 appearance-none border-2 border-gray-300 rounded-md checked:border-amber-600 checked:bg-amber-600 focus:outline-none focus:ring-amber-600 relative "
+                    />
+                    Baja
+                  </label>
+                </div>
                 <textarea
                   placeholder="Descripcion detalle (max-200)"
-                  className="input text-gray-200 bg-[#212121] border input w-[80%] xl:text-base rounded-lg p-2"
+                  className="input text-gray-200 bg-[#212121] border input w-[80%] xl:text-base rounded-lg p-2 xl:mt-2"
                   name="description2"
                   id="description2"
                   {...register("description2")}
