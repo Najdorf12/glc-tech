@@ -73,7 +73,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       <section
         style={bgStore}
         id="store"
-        className=" relative w-full pb-24 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 md:gap-x-8 justify-center pt-[33rem] md:pt-[24rem]  lg:pt-80  lg:px-10 lg:gap-x-12 lg:gap-y-12 lg:pb-32 xl:pt-[25rem] 2xl:pt-[31rem] 2xl:gap-12 2xl:px-32"
+        className=" relative w-full pb-12 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 md:gap-x-8 justify-center pt-[33rem] md:pt-[24rem]  lg:pt-80  lg:px-10 lg:gap-x-12 lg:gap-y-12 lg:pb-32 xl:pt-[25rem] 2xl:pt-[31rem] 2xl:gap-12 2xl:px-32 "
       >
         {isLoading && <Loader />}
         <article className="absolute top-0 font-title flex flex-col justify-center items-center gap-5 mt-12 xl:mt-20 xl:gap-5 2xl:gap-9 2xl:mt-[6rem] ">
@@ -100,19 +100,19 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
           <Card key={i} product={product} arsPrice={arsPrice} />
         ))}
       </section>
-      <footer>
+      <footer style={bgStore} className="pb-12 lg:pb-28">
         <Link target="blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
-        <picture
-          style={bgStore}
-          className="w-full bg-transparent flex items-center justify-center"
-        >
-          <img
-            loading="lazy"
-            className="lg:w-[80%] rounded-2xl shadow-lg shadow-zinc-800 "
-            src={banner}
-            alt=""
-          />
-        </picture>
+          <figure
+            style={bgStore}
+            className="flex justify-center"
+          >
+            <img
+              loading="lazy"
+              className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800"
+              src={banner}
+              alt=""
+            />
+          </figure>
         </Link>
       </footer>
     </>

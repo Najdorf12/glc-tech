@@ -211,14 +211,14 @@ const Home = ({
         className="w-full flex justify-center items-center pt-12 xl:pt-20 pb-6 xl:pb-8 2xl:pt-28 "
       >
         <Link target="blank" to={"https://acoyteservice.com.ar"}>
-        <picture className=" flex justify-center  ">
+        <figure className=" flex justify-center  ">
           <img
             loading="lazy"
             className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800 "
             src={banner}
             alt=""
           />
-        </picture>
+        </figure>
         </Link>
       </section>
       <Store
