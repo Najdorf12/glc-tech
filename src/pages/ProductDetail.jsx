@@ -81,6 +81,18 @@ const ProductDetail = ({ theme }) => {
     }
   }, [productDetail.category]);
 
+  const handleShare = () => {
+    const productName = productDetail?.name || "Producto";
+    const productImage = productDetail?.images[0]?.secure_url || "";
+
+    // Codificar los datos para la URL
+    const message = `*${productName}*%0A${productImage}`;
+    const whatsappUrl = `https://wa.me/?text=${message}`;
+
+    // Abrir la URL en una nueva ventana
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <section
       style={bgProductDetail}
@@ -110,6 +122,7 @@ const ProductDetail = ({ theme }) => {
             <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-400 inline-block text-transparent bg-clip-text ">
               {productDetail.name?.toUpperCase()?.substring(0, 19)}
             </h5>
+
             <div className="flex justify-center items-center gap-3 sm:gap-10 2xl:mt-3 ">
               <p className=" py-2 px-4 text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl bg-gradient-to-br from-white to-gray-300 inline-block text-transparent bg-clip-text">
                 $USD {productDetail.price}
@@ -118,14 +131,23 @@ const ProductDetail = ({ theme }) => {
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
-            <Link
-              to="https://api.whatsapp.com/send/?phone=541125043539"
-              target="blank"
-            >
-              <button className="btn-home2 mt-3 py-2 px-6 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 border-[2px] border-white 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218] ">
-                <span>COMPRAR</span>
+            <div className="flex gap-6">
+              <Link
+                to="https://api.whatsapp.com/send/?phone=541125043539"
+                target="blank"
+              >
+                <button className="btn-home2 mt-3 py-1 px-6 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 border-[2px] border-white 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218] ">
+                  <span>COMPRAR</span>
+                </button>
+              </Link>
+              <button
+                onClick={handleShare}
+                className="btn-home2 mt-3 px-6 xl:py-[3px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300 border-[2px] border-white 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218]  flex items-center gap-1 "
+              >
+                <i className="bx bxs-share-alt text-xl font-normal"></i>
+                Compartir
               </button>
-            </Link>
+            </div>
           </article>
 
           <div className="mt-6 sm:mt-8 xl:mt-8 2xl:mt-12 w-full  flex justify-center object-cover items-center overflow-hidden ">
