@@ -82,16 +82,17 @@ const ProductDetail = ({ theme }) => {
   }, [productDetail.category]);
 
   const handleShare = () => {
-    const productName = productDetail?.name || "Nombre del celular";
-    const productImage = productDetail?.images[0]?.secure_url;
-    const productUrl = productDetail?.images[0]?.secure_url; // Cambia esto por la URL de tu página intermedia.
-  
-    const message = `${productName}\n${productUrl}`;
-    
-    const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
-    
-    window.open(whatsappLink, "_blank");
+    const productName = productDetail?.name || "Producto";
+    const productImage = productDetail?.images[0]?.secure_url || "";
+
+    // Codificar los datos para la URL
+    const message = `*${productName}*%0A${productImage}`;
+    const whatsappUrl = `https://wa.me/?text=${message}`;
+
+    // Abrir la URL en una nueva ventana
+    window.open(whatsappUrl, "_blank");
   };
+
   return (
     <section
       style={bgProductDetail}
