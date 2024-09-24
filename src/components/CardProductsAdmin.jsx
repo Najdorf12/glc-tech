@@ -2,7 +2,7 @@ import axios from "../api/axios";
 import { Link } from "react-router-dom";
 
 const CardProductsAdmin = ({ product, getProducts, selectProduct }) => {
-  const { _id, name, description, category, price, image } = product;
+  const { _id, name, description, category, price, image, gama } = product;
 
   const deleteProduct = (id) => {
     axios
@@ -28,9 +28,13 @@ const CardProductsAdmin = ({ product, getProducts, selectProduct }) => {
           <p className="text-lg  font-text font-semibold text-amber-500 leading-5 mb-1">
             {name?.toUpperCase()?.substring(0, 20)}
           </p>
-          <span className="font-text mt-2 font-base text-md  text-gray-400 tracking-wide rounded-lg">
-            {category}
-          </span>
+          <div className="font-text mt-2 font-base text-md  text-gray-400 tracking-wide rounded-lg flex items-center justify-between pr-4">
+            <span className="text-gray-400">{category}</span>
+            <p>
+              Gama: <span className="text-gray-100">{gama}</span>
+            </p>
+          </div>
+
           <p className="text-sm mt-1 font-text text-gray-200 leading-6">
             {description}
           </p>
