@@ -201,7 +201,7 @@ const Home = ({
                 </Link>
               </li>
             </ul>
-            <div className="absolute   w-full flex justify-center items-center left-0 bg-red-600 z-50">
+            <div className="absolute   w-full flex justify-center items-center left-0 z-50">
               {hoveredIndex !== null && (
                 <img
                   src={images[hoveredIndex]}
