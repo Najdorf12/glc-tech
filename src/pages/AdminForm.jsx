@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import CardProductsAdmin from "../components/CardProductsAdmin";
 import ArsPriceForm from "../components/ArsPriceForm";
+import DinamicImagesForm from "../components/DinamicImagesForm";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
-import "../components/arsPrice.css";
 import axios from "../api/axios";
 import Loader from "../components/Loader";
-import { useCookies } from "react-cookie";
+import "../components/arsPrice.css";
 
 const AdminForm = () => {
   const {
@@ -15,7 +15,6 @@ const AdminForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
 
   const [allProducts, setAllProducts] = useState([]);
   const [user, setUser] = useState({});
@@ -47,7 +46,7 @@ const AdminForm = () => {
         procesador: "",
         pantalla: "",
         bateria: "",
-        gama:"",
+        gama: "",
         youtube: "",
         youtubeShort: "",
       });
@@ -55,14 +54,10 @@ const AdminForm = () => {
   }, [productSelected]);
 
   const getProducts = () => {
-    setIsLoading(true);
-    setTimeout(() => {
       axios
         .get("/products")
         .then((res) => setAllProducts(res.data))
         .catch((error) => console.error(error))
-        .finally(() => setIsLoading(false));
-    }, 500);
   };
   const logout = () => {
     axios
@@ -187,7 +182,10 @@ const AdminForm = () => {
       </nav>
 
       <section className="flex flex-col justify-center items-center lg:flex-row-reverse lg:gap-24 xl:gap-[5%] 2xl:gap-[8%] ">
-        <ArsPriceForm />
+        <div>
+          <ArsPriceForm />
+          <DinamicImagesForm />
+        </div>
         <div className="container-ars mt-10 ">
           <form
             onSubmit={handleSubmit(submit)}
@@ -290,7 +288,9 @@ const AdminForm = () => {
                     {...register("youtubeShort")}
                   />
                 </div>
-                <p className="text-[rgb(128,128,128)] font-medium -mt-1 text-xl xl:mt-2">Gama</p>
+                <p className="text-[rgb(128,128,128)] font-medium -mt-1 text-xl xl:mt-2">
+                  Gama
+                </p>
                 <div className="flex gap-7 items-center -mt-1 xl:-mt-3 xl:gap-12 ">
                   <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
                     <input

@@ -2,13 +2,9 @@ import { useState, useEffect } from "react";
 import imgHome from "../assets/imgHome.png";
 import Store from "../pages/Store";
 import { Link } from "react-router-dom";
-import imgFacebook from "../assets/socials/facebook.jpg";
 import banner from "../assets/banner2.png";
-import imgTikTok from "../assets/socials/tiktok.jpg";
-import imgYoutube from "../assets/socials/youtube.jpg";
-import imgInstagram from "../assets/socials/instagram.jpg";
-import imgRecomendacionGoogle from "../assets/socials/recomendacionesGoogle2.jpeg";
 import Loader from "../components/Loader";
+import axios from "../api/axios";
 
 const Home = ({
   handleChangeTheme,
@@ -19,6 +15,7 @@ const Home = ({
   isLoading,
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [imagesData, setImagesData] = useState([]);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -28,7 +25,24 @@ const Home = ({
     setHoveredIndex(null);
   };
 
-  const images = [imgInstagram, imgFacebook, imgYoutube, imgTikTok];
+  const images = [
+    imagesData[0]?.images?.instagram?.secure_url,
+    imagesData[0]?.images?.facebook?.secure_url,
+    imagesData[0]?.images?.youtube?.secure_url,
+    imagesData[0]?.images?.tiktok?.secure_url,
+  ];
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const res = await axios.get("/dinamicImages");
+        setImagesData(res.data);
+      } catch (error) {
+        console.error("Error fetching dynamic images:", error);
+      }
+    };
+    fetchImages();
+  }, []);
 
   const dropShadowStyle =
     theme === "dark"
@@ -116,7 +130,7 @@ const Home = ({
         </section>
       </main>
       <section
-        style={bgHome2} 
+        style={bgHome2}
         className="relative w-full h-[90vh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300  md:mt-0 lg:min-h-screen lg:py-20 "
       >
         {isLoading && <Loader />}
@@ -201,16 +215,28 @@ const Home = ({
             <p className=" text-about font-text2 px-[8px]  text-[.9rem] font-semibold sm:text-[.95rem]  xl:px-8 2xl:text-lg bg-gradient-to-br from-stone-800 to-[#5c3f8b] dark:from-stone-400 dark:to-[#845EC2] inline-block text-transparent bg-clip-text lg:mt-3">
               Puedes encontrar mas informacion sobre nosotros y opiniones de
               nuestros clientes
-              <Link target="blank" to={"https://www.google.com/search?q=glc+tech&sca_esv=11b9b55d5edba133&sca_upv=1&sxsrf=ADLYWIIPWK1hNt4Gu4HcexptVpTqzn-uAA%3A1727195653956&source=hp&ei=BeryZvihNvDe1sQP8duBqA4&iflsig=AL9hbdgAAAAAZvL4FTjaWgYkOvh6b1IUQmVsCo0irI_o&gs_ssp=eJzj4tVP1zc0rDTOLSg3NC0xYLRSNaiwNE1KTk4ySzZKMbMwNTa0tDKoMDNIsUwzSTVJskxOM7CwNPDiSM9JVihJTc4AAEoAElE&oq=glc+&gs_lp=Egdnd3Mtd2l6IgRnbGMgKgIIATIEECMYJzIQEC4YgAQYxwEYJxiKBRivATIEECMYJzIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyChAAGIAEGEMYigVI3StQswZY6AtwAXgAkAEAmAH8BaAB9g6qAQ0wLjEuMC4xLjAuMS4xuAEDyAEA-AEBmAIFoAKwEKgCCsICBxAjGCcY6gLCAg0QLhjHARgnGOoCGK8BwgIHEC4YJxjqAsICChAjGIAEGCcYigXCAhAQABiABBixAxhDGIMBGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICCxAAGIAEGLEDGIMBmANGkgcLMS4wLjEuMS4wLjKgB-gv&sclient=gws-wiz#lrd=0x95bccb6c2d685319:0x60d9f4e4b9cf0890,1,,,,"}>
-              <span className="text-stone-600 ml-1 dark:text-gray-100 xl:ml-2">aquí.</span>
+              <Link
+                target="blank"
+                to={
+                  "https://www.google.com/search?q=glc+tech&sca_esv=11b9b55d5edba133&sca_upv=1&sxsrf=ADLYWIIPWK1hNt4Gu4HcexptVpTqzn-uAA%3A1727195653956&source=hp&ei=BeryZvihNvDe1sQP8duBqA4&iflsig=AL9hbdgAAAAAZvL4FTjaWgYkOvh6b1IUQmVsCo0irI_o&gs_ssp=eJzj4tVP1zc0rDTOLSg3NC0xYLRSNaiwNE1KTk4ySzZKMbMwNTa0tDKoMDNIsUwzSTVJskxOM7CwNPDiSM9JVihJTc4AAEoAElE&oq=glc+&gs_lp=Egdnd3Mtd2l6IgRnbGMgKgIIATIEECMYJzIQEC4YgAQYxwEYJxiKBRivATIEECMYJzIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyChAAGIAEGEMYigVI3StQswZY6AtwAXgAkAEAmAH8BaAB9g6qAQ0wLjEuMC4xLjAuMS4xuAEDyAEA-AEBmAIFoAKwEKgCCsICBxAjGCcY6gLCAg0QLhjHARgnGOoCGK8BwgIHEC4YJxjqAsICChAjGIAEGCcYigXCAhAQABiABBixAxhDGIMBGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICCxAAGIAEGLEDGIMBmANGkgcLMS4wLjEuMS4wLjKgB-gv&sclient=gws-wiz#lrd=0x95bccb6c2d685319:0x60d9f4e4b9cf0890,1,,,,"
+                }
+              >
+                <span className="text-stone-600 ml-1 dark:text-gray-100 xl:ml-2">
+                  aquí.
+                </span>
               </Link>
             </p>
-            <Link target="blank" to={"https://acoyteservice.com.ar"}>
+            <Link
+              target="blank"
+              to={
+                "https://www.google.com/search?q=glc+tech&sca_esv=11b9b55d5edba133&sca_upv=1&sxsrf=ADLYWIIPWK1hNt4Gu4HcexptVpTqzn-uAA%3A1727195653956&source=hp&ei=BeryZvihNvDe1sQP8duBqA4&iflsig=AL9hbdgAAAAAZvL4FTjaWgYkOvh6b1IUQmVsCo0irI_o&gs_ssp=eJzj4tVP1zc0rDTOLSg3NC0xYLRSNaiwNE1KTk4ySzZKMbMwNTa0tDKoMDNIsUwzSTVJskxOM7CwNPDiSM9JVihJTc4AAEoAElE&oq=glc+&gs_lp=Egdnd3Mtd2l6IgRnbGMgKgIIATIEECMYJzIQEC4YgAQYxwEYJxiKBRivATIEECMYJzIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyChAAGIAEGEMYigVI3StQswZY6AtwAXgAkAEAmAH8BaAB9g6qAQ0wLjEuMC4xLjAuMS4xuAEDyAEA-AEBmAIFoAKwEKgCCsICBxAjGCcY6gLCAg0QLhjHARgnGOoCGK8BwgIHEC4YJxjqAsICChAjGIAEGCcYigXCAhAQABiABBixAxhDGIMBGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICCxAAGIAEGLEDGIMBmANGkgcLMS4wLjEuMS4wLjKgB-gv&sclient=gws-wiz#lrd=0x95bccb6c2d685319:0x60d9f4e4b9cf0890,1,,,,"
+              }
+            >
               <figure className=" flex justify-center  ">
                 <img
                   loading="lazy"
                   className="lg:w-[90%] lg:rounded-3xl 2xl:w-[95%] shadow-lg shadow-zinc-800 "
-                  src={imgRecomendacionGoogle}
+                  src={imagesData[0]?.images?.google?.secure_url}
                   alt=""
                 />
               </figure>
