@@ -182,7 +182,7 @@ const AdminForm = () => {
       </nav>
 
       <section className="flex flex-col justify-center items-center lg:flex-row-reverse lg:gap-24 xl:gap-[5%] 2xl:gap-[8%] ">
-        <div>
+        <div className="lg:self-start">
           <ArsPriceForm />
           <DinamicImagesForm />
         </div>
