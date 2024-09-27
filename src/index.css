@@ -21,6 +21,8 @@ text-wrap: wrap;
   border-radius: 12px;
   width: 500px;
   height: 100%;
+  
+
 }
 .image-gallery-bullets .image-gallery-bullet {
   background-color: #521f74d0;
@@ -46,6 +48,7 @@ text-wrap: wrap;
   }
   .image-gallery-content .image-gallery-slide .image-gallery-image {
     width: 650px;
+    
   }
   .image-gallery-left-nav .image-gallery-svg,
   .image-gallery-right-nav .image-gallery-svg {

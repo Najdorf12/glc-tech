@@ -29,7 +29,7 @@ const Card = ({ product, arsPrice }) => {
               ? product.name?.toUpperCase()?.substring(0, 19)
               : product.name?.toUpperCase()?.substring(0, 15)}
           </h6>
-          <p className="text-stone-800 dark:text-stone-500 pl-2 font-bold text-[.95rem] mt-[2px]  md:text-[1.1rem] lg:text-[1.2rem] lg:mt-0 2xl:text-[1.20rem] 2xl:mt-[2px]">
+          <p className="text-stone-800 dark:text-stone-500 pl-2 font-bold text-[.95rem] mt-[2px]  md:text-[1.1rem] lg:text-[1.2rem] lg:mt-[2px] 2xl:text-[1.20rem] 2xl:mt-[3px]">
             <Link to={`/${product._id}`}>{product.category}</Link>
           </p>
           <p className="text-stone-800 dark:text-stone-500 pl-2 text-[.95rem] sm:text-[0.95rem] pr-1  md:text-[1.1rem] lg:text-[1.2rem]  font-bold 2xl:text-[1.20rem]">
@@ -37,7 +37,7 @@ const Card = ({ product, arsPrice }) => {
               {product.description?.substring(0, 20)}
             </Link>
           </p>
-          <div className="flex  justify-between w-full px-2  mt-[1px] sm:mt-[1.5px] self-center text-[1.07rem]  text-[#251a36] dark:text-gray-100 font-extrabold md:mt-[3px] lg:mt-0 md:text-[1.25rem] lg:text-[1.5rem]   2xl:text-[1.50rem] 2xl:mt-0">
+          <div className="flex  justify-between w-full px-2  mt-[1px] sm:mt-[1.5px] self-center text-[1.04rem]  text-[#251a36] dark:text-gray-100 font-extrabold md:mt-[3px]  md:text-[1.25rem] lg:text-[1.5rem]   2xl:text-[1.50rem]">
             <p className="">
               <Link to={`/${product._id}`}>usd {product?.price}</Link>
             </p>
@@ -48,12 +48,7 @@ const Card = ({ product, arsPrice }) => {
             </p>
           </div>
           <button
-            style={
-              {
-                /* boxShadow: "-2px -2px 6px #f1f1f1, -2px -2px 6px #f1f1f1", */
-              }
-            }
-            className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[98%] mt-[5px] text-gray-100 text-[1rem] font-medium py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[6px] 2xl:mt-[8px] xl:font-semibold xl:text-[1.25rem] dark:shadow-gray-100  hover:text-stone-400 hover:scale-105 duration-500"
+            className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[98%] mt-[5px] text-gray-100 text-[1rem] font-medium py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem] dark:shadow-gray-100  hover:text-stone-400 hover:scale-105 duration-500"
           >
             <Link
               className="flex items-center  justify-center gap-2 "

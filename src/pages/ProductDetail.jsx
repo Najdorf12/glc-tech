@@ -82,7 +82,7 @@ const ProductDetail = ({ theme }) => {
   }, [productDetail.category]);
 
   const handleShare = () => {
-    const productName = aproductDetail?.name || "Producto";
+    const productName = productDetail?.name || "Producto";
     const productImage = productDetail?.images[0]?.secure_url || "";
 
     // Codificar los datos para la URL
@@ -100,14 +100,16 @@ const ProductDetail = ({ theme }) => {
     >
       <nav className="w-full flex items-center justify-between px-1 xl:px-8 2xl:px-12 2xl:pt-2 ">
         <ul className="text-white dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
-          <li>{productDetail.category?.toUpperCase()}</li>
+          <Link to={"/#store"}>
+            <li>{productDetail.category?.toUpperCase()}</li>
+          </Link>
           <li>
-            <i className="bx bx-chevron-right text-3xl mt-1 font-light text-[rgba(75,30,133,1)] dark:text-purple-600"></i>
+            <i className="bx bx-chevron-right text-3xl mt-1 font-light text-white"></i>
           </li>
           <li>{productDetail.name?.toUpperCase()?.substring(0, 14)}</li>
         </ul>
         <Link to={"/"}>
-          <button className="btn-home2 flex items-center text-stone-600 dark:text-gray-100 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold ">
+          <button className="btn-home2 flex items-center text-stone-500 dark:text-gray-100 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold hover:scale-105 ">
             Volver
           </button>
         </Link>
@@ -117,17 +119,17 @@ const ProductDetail = ({ theme }) => {
         <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
             id="title-product-detail"
-            className="font-title flex flex-col justify-center items-center  mt-10   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:mt-4 xl:shadow-2xl shadow-gray-800"
+            className="font-title flex flex-col justify-center items-center  mt-10   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:mt-4 xl:shadow-2xl shadow-gray-800 border border-zinc-300 dark:border-zinc-800"
           >
-            <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-400 inline-block text-transparent bg-clip-text ">
+            <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-300 inline-block text-transparent bg-clip-text ">
               {productDetail.name?.toUpperCase()?.substring(0, 19)}
             </h5>
 
-            <div className="flex justify-center items-center gap-3 sm:gap-10 2xl:mt-3 ">
-              <p className=" py-2 px-4 text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl bg-gradient-to-br from-white to-gray-300 inline-block text-transparent bg-clip-text">
+            <div className="flex justify-center items-center  gap-3 sm:gap-10 2xl:mt-3 text-white">
+              <p className=" py-2 px-4 text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl ">
                 $USD {productDetail.price}
               </p>
-              <p className=" py-2 px-4  text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl bg-gradient-to-br from-white to-gray-300  inline-block text-transparent bg-clip-text">
+              <p className=" py-2 px-4  text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl ">
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
@@ -142,7 +144,7 @@ const ProductDetail = ({ theme }) => {
               </Link>
               <button
                 onClick={handleShare}
-                className="btn-home2 mt-3 px-6 xl:py-[3px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300 border-[2px] border-white 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218]  flex items-center gap-1 "
+                className="btn-home2 mt-3 px-6 xl:py-[3px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300 border-[2px] border-zinc-400 dark:border-zinc-800 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218]  flex items-center gap-1 "
               >
                 <i className="bx bxs-share-alt text-xl font-normal"></i>
                 Compartir
@@ -166,11 +168,11 @@ const ProductDetail = ({ theme }) => {
           </div>
         </div>
         <section className=" flex flex-col items-center justify-start   2xl:self-center">
-          <div className="flex flex-col  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%]  sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[610px]">
+          <div className="flex flex-col border border-zinc-300 dark:border-zinc-800  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%]  sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[610px]">
             <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
               <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2 px-2 2xl:px-4  2xl:w-full ">
-                <li className="flex items-center justify-between border-[2px] border-white py-[7px]  px-2 rounded-xl 2xl:px-3 ">
-                  <div className="flex gap-2 items-center text-stone-400">
+                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px]  px-2 rounded-xl 2xl:px-3 ">
+                  <div className="flex gap-2 items-center text-zinc-300">
                     Procesador
                   </div>
                   <div>
@@ -179,8 +181,8 @@ const ProductDetail = ({ theme }) => {
                       : productDetail.description}
                   </div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-stone-400">
+                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-zinc-300">
                     Cámara
                   </div>
                   <div>
@@ -189,8 +191,8 @@ const ProductDetail = ({ theme }) => {
                       : "FRONTAL 5MP - TRASERA 8MP"}
                   </div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-stone-400">
+                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-zinc-300">
                     Pantalla
                   </div>
                   <div>
@@ -199,14 +201,14 @@ const ProductDetail = ({ theme }) => {
                       : "PANTALLA FLUIDA DE 6,71 Y 90 HZ"}
                   </div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-stone-400">
+                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-zinc-300">
                     Memoria
                   </div>
                   <div>{productDetail.description}</div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-white py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-stone-400">
+                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-zinc-300">
                     Batería
                   </div>
                   <div>
@@ -226,7 +228,7 @@ const ProductDetail = ({ theme }) => {
         <div className="flex flex-col justify-center items-center">
           <iframe
             id="ytplayer"
-            className="w-[96%] h-[270px] rounded-lg max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[420px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
+            className="w-[96%] h-[270px] rounded-lg border border-zinc-300 dark:border-zinc-800  max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[420px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
             src={
               productDetail.youtube
                 ?.replace("watch?v=", "embed/")
@@ -247,7 +249,7 @@ const ProductDetail = ({ theme }) => {
 
         <iframe
           id="ytplayer"
-          className="w-[85%] h-[530px] rounded-lg max-w-[300px] xl:max-w-[330px] xl:h-[612px] 2xl:max-w-[400px] 2xl:h-[740px] "
+          className="w-[85%] h-[530px] rounded-lg border border-zinc-300 dark:border-zinc-800  max-w-[300px] xl:max-w-[330px] xl:h-[612px] 2xl:max-w-[400px] 2xl:h-[740px] "
           src={
             productDetail.youtubeShort?.includes("shorts/")
               ? productDetail.youtubeShort?.replace("shorts/", "embed/")
@@ -256,7 +258,7 @@ const ProductDetail = ({ theme }) => {
         ></iframe>
       </div>
 
-      <p className="mt-2 lg:mt-14 mb-6 text-xl px-4 max-w-[350px] text-gray-400 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px] shadow-lg shadow-zinc-700">
+      <p className="mt-2 lg:mt-14 mb-6 text-xl px-4 max-w-[350px] border border-zinc-300  dark:border-zinc-800 text-gray-400 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px] shadow-lg shadow-zinc-700">
         Descubre mas reviews en nuestro canal de
         <span className="text-gray-100 cursor-pointer font-bold duration-500 ml-[2px] 2xl:ml-[3px]  ">
           <Link
@@ -268,7 +270,7 @@ const ProductDetail = ({ theme }) => {
         </span>
       </p>
       <p
-        className="text-white mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[#051937] to-[#845EC2]
+        className="text-white border-zinc-300 dark:border-zinc-800 mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[#051937] to-[#845EC2]
       "
       >
         SIMILARES

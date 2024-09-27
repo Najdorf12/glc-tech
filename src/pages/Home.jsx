@@ -24,7 +24,7 @@ const Home = ({
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
-
+ 
   const images = [
     imagesData[0]?.images?.instagram?.secure_url,
     imagesData[0]?.images?.facebook?.secure_url,
@@ -130,8 +130,8 @@ const Home = ({
         </section>
       </main>
       <section
-        style={bgHome2}
-        className="relative w-full h-[90vh]  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300  md:mt-0 lg:min-h-screen lg:py-20 "
+         style={bgHome2} 
+        className="relative w-full py-12  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300  md:mt-0 lg:h-auto lg:py-20 "
       >
         {isLoading && <Loader />}
         <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
@@ -232,7 +232,7 @@ const Home = ({
                 "https://www.google.com/search?q=glc+tech&sca_esv=11b9b55d5edba133&sca_upv=1&sxsrf=ADLYWIIPWK1hNt4Gu4HcexptVpTqzn-uAA%3A1727195653956&source=hp&ei=BeryZvihNvDe1sQP8duBqA4&iflsig=AL9hbdgAAAAAZvL4FTjaWgYkOvh6b1IUQmVsCo0irI_o&gs_ssp=eJzj4tVP1zc0rDTOLSg3NC0xYLRSNaiwNE1KTk4ySzZKMbMwNTa0tDKoMDNIsUwzSTVJskxOM7CwNPDiSM9JVihJTc4AAEoAElE&oq=glc+&gs_lp=Egdnd3Mtd2l6IgRnbGMgKgIIATIEECMYJzIQEC4YgAQYxwEYJxiKBRivATIEECMYJzIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyChAAGIAEGEMYigVI3StQswZY6AtwAXgAkAEAmAH8BaAB9g6qAQ0wLjEuMC4xLjAuMS4xuAEDyAEA-AEBmAIFoAKwEKgCCsICBxAjGCcY6gLCAg0QLhjHARgnGOoCGK8BwgIHEC4YJxjqAsICChAjGIAEGCcYigXCAhAQABiABBixAxhDGIMBGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICCxAAGIAEGLEDGIMBmANGkgcLMS4wLjEuMS4wLjKgB-gv&sclient=gws-wiz#lrd=0x95bccb6c2d685319:0x60d9f4e4b9cf0890,1,,,,"
               }
             >
-              <figure className=" flex justify-center  ">
+              <figure className=" flex justify-center mt-2 ">
                 <img
                   loading="lazy"
                   className="lg:w-[90%] lg:rounded-3xl 2xl:w-[95%] shadow-lg shadow-zinc-800 "
