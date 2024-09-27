@@ -288,43 +288,17 @@ const AdminForm = () => {
                     {...register("youtubeShort")}
                   />
                 </div>
-                <p className="text-[rgb(128,128,128)] font-medium -mt-1 text-xl xl:mt-2">
-                  Gama
-                </p>
-                <div className="flex gap-7 items-center -mt-1 xl:-mt-3 xl:gap-12 ">
-                  <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
-                    <input
-                      type="radio"
-                      name="gama"
-                      value="ALTA"
-                      {...register("gama")}
-                      className="mr-2 h-6 w-6 appearance-none border-2 border-gray-300 rounded-md checked:border-amber-600 checked:bg-amber-600 focus:outline-none focus:ring-amber-600 relative "
-                    />
-                    Alta
-                  </label>
-
-                  <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
-                    <input
-                      type="radio"
-                      name="gama"
-                      value="MEDIA"
-                      {...register("gama")}
-                      className="mr-2 h-6 w-6 appearance-none border-2 border-gray-300 rounded-md checked:border-amber-600 checked:bg-amber-600 focus:outline-none focus:ring-amber-600 relative "
-                    />
-                    Media
-                  </label>
-
-                  <label className="flex items-center text-[rgb(128,128,128)] text-lg font-normal">
-                    <input
-                      type="radio"
-                      name="gama"
-                      value="BAJA"
-                      {...register("gama")}
-                      className="mr-2 h-6 w-6 appearance-none border-2 border-gray-300 rounded-md checked:border-amber-600 checked:bg-amber-600 focus:outline-none focus:ring-amber-600 relative "
-                    />
-                    Baja
-                  </label>
+                <div className=" w-full flex flex-col justify-center items-center gap-5  xl:flex-row xl:gap-7 ">
+                  <input
+                    placeholder="Gama"
+                    className="input w-[80%] xl:text-sm xl:self-start"
+                    name="gama"
+                    id="gama"
+                    {...register("gama")}
+                  />
+                 
                 </div>
+               
                 <textarea
                   placeholder="Descripcion detalle (max-200)"
                   className="input text-gray-200 bg-[#212121] border input w-[80%] xl:text-base rounded-lg p-2 xl:mt-2"
