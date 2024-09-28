@@ -16,7 +16,7 @@ const Home = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [imagesData, setImagesData] = useState([]);
-
+  
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
@@ -24,7 +24,7 @@ const Home = ({
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
- 
+
   const images = [
     imagesData[0]?.images?.instagram?.secure_url,
     imagesData[0]?.images?.facebook?.secure_url,
@@ -130,7 +130,7 @@ const Home = ({
         </section>
       </main>
       <section
-         style={bgHome2} 
+        style={bgHome2}
         className="relative w-full py-12  dark:bg-[#212121] z-50 flex justify-center items-center px-2 sm:px-4 text-gray-300  md:mt-0 lg:h-auto lg:py-20 "
       >
         {isLoading && <Loader />}

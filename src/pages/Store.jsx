@@ -19,7 +19,12 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Consolas",
     "Todos",
   ];
-
+  useEffect(() => {
+    const section = document.getElementById("store");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
   // Función para obtener productos por categoría
   const getProductsByCategory = async (category) => {
     setIsLoading(true);
