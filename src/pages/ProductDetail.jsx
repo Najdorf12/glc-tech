@@ -82,7 +82,7 @@ const ProductDetail = ({ theme }) => {
   }, [productDetail.category]);
 
   const handleShare = () => {
-    const productName = productDetail?.name + `"https://www.grupolacomunidad.com.ar/"${productDetail._id}` || "Producto";
+    const productName = productDetail?.name || "Producto";
     const productImage = "Puedes seguirnos en Instagram: https://www.instagram.com/grupolacomunidad/ Facebook: https://www.facebook.com/grupolacomunidadtech y Youtube:https://www.youtube.com/@GlcTech-GrupolaComunidad. Tambien encontraras mas productos como este en https://www.grupolacomunidad.com.ar/"  || "";
 
     // Codificar los datos para la URL
