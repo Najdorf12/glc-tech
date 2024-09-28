@@ -20,11 +20,17 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Todos",
   ];
   useEffect(() => {
-    const section = document.getElementById("store");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    // Solo desplazarse a la sección "store" si ya se ha visitado el Home antes
+    const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
+
+    if (hasVisitedHome) {
+      const section = document.getElementById("store");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }, []);
+
   // Función para obtener productos por categoría
   const getProductsByCategory = async (category) => {
     setIsLoading(true);
@@ -107,10 +113,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       </section>
       <footer style={bgStore} className="pb-12 lg:pb-28">
         <Link target="blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
-          <figure
-            style={bgStore}
-            className="flex justify-center"
-          >
+          <figure style={bgStore} className="flex justify-center">
             <img
               loading="lazy"
               className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800"

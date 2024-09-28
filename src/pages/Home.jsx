@@ -16,7 +16,19 @@ const Home = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [imagesData, setImagesData] = useState([]);
-  
+
+  useEffect(() => {
+    // Verificar si el usuario ya ha visitado el Home antes
+    const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
+
+    if (!hasVisitedHome) {
+      // Si es la primera vez que visita el Home, desplazarse a la parte superior
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Guardar en sessionStorage que ya visitó el Home
+      sessionStorage.setItem("hasVisitedHome", "true");
+    }
+  }, []);
+
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
