@@ -94,6 +94,22 @@ const Home = ({
         style={bgHome}
         className="w-full h-screen overflow-hidden bg-gray-300  dark:bg-[#212121]  flex flex-col items-center pt-[85px] pr-1 md:pt-10 lg:pt-0 lg:justify-center 2xl:h-[100dvh] relative"
       >
+        <div className="fixed bottom-3 left-0 z-[100] lg:bottom-8">
+          <Link
+            target="blank"
+            to={"https://api.whatsapp.com/send/?phone=541125043539"}
+          >
+            <button
+              style={{
+                boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
+              }}
+              onClick={handleChangeTheme}
+              className=" z-50 border-[1.5px]  ml-4 border-white  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600 dark:bg-gray-200  dark:text-stone-500"
+            >
+              <i class="bx bxl-whatsapp"></i>
+            </button>
+          </Link>
+        </div>
         <button
           onClick={handleChangeTheme}
           style={{

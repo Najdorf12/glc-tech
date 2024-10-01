@@ -20,17 +20,20 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Todos",
   ];
   useEffect(() => {
-    // Solo desplazarse a la sección "store" si ya se ha visitado el Home antes
+    // Verifica si el usuario ya ha visitado el Home
     const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
-
+  
     if (hasVisitedHome) {
+      // Solo desplazarse si el usuario ya ha visitado el Home
       const section = document.getElementById("store");
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }
+  
+    // Almacena que el usuario ha visitado el Home para futuras visitas
+    sessionStorage.setItem("hasVisitedHome", true);
   }, []);
-
   // Función para obtener productos por categoría
   const getProductsByCategory = async (category) => {
     setIsLoading(true);
@@ -54,13 +57,20 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setIsLoading(false);
     }
   };
-  // Efecto para cargar la categoría inicial al montar el componente
   useEffect(() => {
-    getProductsByCategory("Samsung"); // Aquí puedes cambiar "Samsung" por la categoría que desees
+    const savedCategory = sessionStorage.getItem("selectedCategory");
+  
+    if (!savedCategory || savedCategory === "TODOS") {
+      fetchProducts();  // Asegúrate de que los productos se carguen siempre si no hay una categoría seleccionada
+    } else {
+      getProductsByCategory(savedCategory);
+    }
   }, []);
 
+  // Función para manejar la selección de categoría
   const searchByCategory = (category) => {
     const str = category.at(0) + category.slice(1).toLowerCase();
+    sessionStorage.setItem("selectedCategory", category); // Guardar la categoría en sessionStorage
     if (category === "TODOS") {
       fetchProducts();
     } else {
