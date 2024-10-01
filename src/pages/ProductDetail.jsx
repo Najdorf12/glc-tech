@@ -100,18 +100,21 @@ const ProductDetail = ({ theme }) => {
       style={bgProductDetail}
       className="relative bg-gray-300 dark:bg-[#212121] pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen"
     >
-      <div className="fixed bottom-3 left-0 z-[100]">
-        <Link target="blank" to={"https://api.whatsapp.com/send/?phone=541125043539"}>
-          <button
-            style={{
-              boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
-            }}
-            className=" z-50 border-[1.5px] mt-3 ml-4 border-white  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5 lg:mt-4 lg:text-2xl lg:h-10 lg:w-10 2xl:text-[29px] 2xl:h-14 2xl:w-14 2xl:mt-5 2xl:ml-7 bg-gray-200 text-stone-600 dark:bg-gray-200  dark:text-stone-500"
+       <div className="fixed bottom-3 left-0 z-[100] lg:bottom-8">
+          <Link
+            target="blank"
+            to={"https://api.whatsapp.com/send/?phone=541125043539"}
           >
-            <i class="bx bxl-whatsapp"></i>
-          </button>
-        </Link>
-      </div>
+            <button
+              style={{
+                boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
+              }}
+              className=" z-50 border-[1.5px]  ml-4 border-white  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600 dark:bg-gray-200  dark:text-stone-500"
+            >
+              <i class="bx bxl-whatsapp"></i>
+            </button>
+          </Link>
+        </div>
       <nav className="w-full flex items-center justify-between px-1 xl:px-8 2xl:px-12 2xl:pt-2 ">
         <ul className="text-white dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
           <Link to={"/#store"}>
