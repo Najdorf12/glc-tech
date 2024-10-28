@@ -3,12 +3,12 @@ import AdminForm from "./pages/AdminForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/login/Login";
+import Infinix from "./pages/Infinix"
 import Register from "./pages/login/Register";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
 import ErrorPage from "./pages/ErrorPage";
 import { useState, useEffect } from "react";
-import Loader from "./components/Loader";
-import { getAllProducts, getArsPrice } from "./api/handlers";
+import { getArsPrice } from "./api/handlers";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -42,21 +42,7 @@ function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
- /*  useEffect(() => {
-    setIsLoading(true);
-    const fetchProducts = async () => {
-      try {
-        const productsData = await getAllProducts();
-        setAllProducts(productsData);
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
-      }
-      setIsLoading(false);
-    };
-
-    fetchProducts();
-  }, []); */
-
+ 
   useEffect(() => {
     const fetchUsdPrice = async () => {
       try {
@@ -89,6 +75,8 @@ function App() {
             }
           />
           <Route path="/:id" element={<ProductDetail theme={theme} />} />
+          <Route path="/products/infinix" element={<Infinix />} />
+
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

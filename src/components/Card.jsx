@@ -12,7 +12,7 @@ const Card = ({ product, arsPrice }) => {
   return (
     <>
       <div className="card-container w-[180px] h-[19.70rem] sm:w-[192px] sm:h-[19.85rem] md:w-[220px] md:h-[26.5rem]  lg:w-[240px] lg:h-[26.6rem] xl:w-[255px] xl:h-[27.6rem] hover:scale-105 duration-500 2xl:w-[270px] 2xl:h-[28rem]">
-        <Link to={`/${product._id}`}>
+        <Link to={`/${product?._id}`}>
           <picture className="w-full">
             <img
               loading="lazy"
@@ -39,11 +39,11 @@ const Card = ({ product, arsPrice }) => {
           </p>
           <div className="flex  justify-between w-full px-2  mt-[1px] sm:mt-[1.5px] self-center text-[1.04rem]  text-[#251a36] dark:text-gray-100 font-extrabold md:mt-[3px]  md:text-[1.25rem] lg:text-[1.5rem]   2xl:text-[1.50rem]">
             <p className="">
-              <Link to={`/${product._id}`}>usd {product?.price}</Link>
+              <Link to={`/${product?._id}`}>usd {product?.price}</Link>
             </p>
             <p className="">
               <Link to={`/${product._id}`}>
-                $ {product.price * arsPrice[0]?.usdPrice}
+                $ {product?.price * arsPrice[0]?.usdPrice}
               </Link>
             </p>
           </div>

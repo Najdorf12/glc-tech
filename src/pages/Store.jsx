@@ -24,14 +24,12 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
   
     if (hasVisitedHome) {
-      // Solo desplazarse si el usuario ya ha visitado el Home
       const section = document.getElementById("store");
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     }
-  
-    // Almacena que el usuario ha visitado el Home para futuras visitas
+
     sessionStorage.setItem("hasVisitedHome", true);
   }, []);
   // Función para obtener productos por categoría
