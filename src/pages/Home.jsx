@@ -262,7 +262,7 @@ const Home = ({
               <figure className=" flex justify-center mt-2 ">
                 <img
                   loading="lazy"
-                  className="lg:w-[90%] lg:rounded-3xl 2xl:w-[95%] shadow-lg shadow-zinc-800 "
+                  className="lg:w-[90%] border-[3px] border-white rounded-lg 2xl:w-[95%] shadow-lg shadow-zinc-800 lg:border-[6px] lg:border-l-[8px] "
                   src={imagesData[0]?.images?.google?.secure_url}
                   alt=""
                 />
