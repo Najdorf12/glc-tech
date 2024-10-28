@@ -75,7 +75,7 @@ function App() {
             }
           />
           <Route path="/:id" element={<ProductDetail theme={theme} />} />
-          <Route path="/products/infinix" element={<Infinix />} />
+          <Route path="/products/infinix"  element={<Infinix arsPrice={arsPrice} />} />
 
 
           <Route path="/login" element={<Login />} />
