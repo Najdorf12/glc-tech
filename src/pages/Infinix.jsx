@@ -67,7 +67,7 @@ const Infinix = ({ arsPrice }) => {
             </p>
             <button className="button">
               <a
-                href="https://www.grupolacomunidad.com.ar/products/infinix"
+                href="https://www.grupolacomunidad.com.ar"
                 target="_blank"
               >
                 <div className="button__circle">
