@@ -27,7 +27,7 @@ const AcoyteService = () => {
         </article>
       </section>
 
-      <div className="flex justify-center items-center  gap-3 xl:gap-4 2xl:gap-6 absolute left-0 rounded-tr-2xl bottom-0 border-t-[2px] border-r-[2px] bg-zinc-900 border-zinc-400 pt-2 px-6 pb-1 lg:pb-3 lg:px-8 z-50 xl:px-12">
+      <div className="flex justify-center items-center  gap-3 xl:gap-4 2xl:gap-6 absolute left-0 rounded-tr-2xl bottom-0 border-t-[2px] border-r-[2px] bg-zinc-900 border-stone-500 pt-2 px-6 pb-1 lg:pb-3 lg:px-8 z-50 xl:px-12 xl:pt-3 ">
         <p className="font-title text-lg font-semibold text-stone-300 xl:text-2xl xl:font-medium">Visitar sitio</p>
         <button className="button3">
           <a href="https://www.grupolacomunidad.com.ar" target="_blank">

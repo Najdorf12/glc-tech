@@ -97,7 +97,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7  bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-zinc-700  rounded-br-xl rounded-tl-xl shadow-sm shadow-gray-500  hover:shadow-white  hover:text-white duration-500"
+              className="py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7  bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-stone-500  rounded-br-xl rounded-tl-xl shadow-sm shadow-gray-500  hover:shadow-white  hover:text-stone-400 duration-500"
             >
               <span>{btn.toUpperCase()}</span>
             </button>
