@@ -48,7 +48,7 @@ const Card = ({ product, arsPrice }) => {
             </p>
           </div>
           <button
-            className="bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-stone-600 w-[98%] mt-[5px] text-stone-200 shadow-sm shadow-gray-500 text-[1rem] font-medium py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem]   hover:text-stone-400 hover:scale-105 duration-500"
+            className="bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-stone-600 w-[98%] mt-[5px] text-stone-200 shadow-sm shadow-gray-700 text-[1rem] font-medium py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem]   hover:text-stone-400 hover:scale-105 duration-500"
           >
             <Link
               className="flex items-center  justify-center gap-2 "
