@@ -24,20 +24,20 @@ const Card = ({ product, arsPrice }) => {
         </Link>
 
         <article className="relative flex flex-col mt-[8px] md:mt-[6px] font-title">
-          <h6 className="text-[#251a36] dark:text-gray-100 font-bold leading-4 text-[1.05rem] self-start md:text-lg lg:font-bold lg:text-[1.3rem] 2xl:text-[1.40rem] w-full pl-2">
+          <h6 className="text-rose-800 font-bold leading-4 text-[1.05rem] self-start md:text-lg lg:font-bold lg:text-[1.3rem] 2xl:text-[1.40rem] w-full pl-2">
             { windowWidth > 500
               ? product.name?.toUpperCase()?.substring(0, 19)
-              : product.name?.toUpperCase()?.substring(0, 15)}
+              : product.name?.toUpperCase()?.substring(0, 17)}
           </h6>
-          <p className="text-stone-800 dark:text-stone-500 pl-2 font-bold text-[.95rem] mt-[2px]  md:text-[1.1rem] lg:text-[1.2rem] lg:mt-[2px] 2xl:text-[1.20rem] 2xl:mt-[3px]">
+          <p className="text-stone-600 pl-2 font-bold text-[.95rem] mt-[2px]  md:text-[1.1rem] lg:text-[1.2rem] lg:mt-[2px] 2xl:text-[1.20rem] 2xl:mt-[3px]">
             <Link to={`/${product._id}`}>{product.category}</Link>
           </p>
-          <p className="text-stone-800 dark:text-stone-500 pl-2 text-[.95rem] sm:text-[0.95rem] pr-1  md:text-[1.1rem] lg:text-[1.2rem]  font-bold 2xl:text-[1.20rem]">
+          <p className="text-stone-600 pl-2 text-[.95rem] sm:text-[0.95rem] pr-1  md:text-[1.1rem] lg:text-[1.2rem]  font-bold 2xl:text-[1.20rem]">
             <Link to={`/${product._id}`}>
               {product.description?.substring(0, 20)}
             </Link>
           </p>
-          <div className="flex  justify-between w-full px-2  mt-[1px] sm:mt-[1.5px] self-center text-[1.04rem]  text-[#251a36] dark:text-gray-100 font-extrabold md:mt-[3px]  md:text-[1.25rem] lg:text-[1.5rem]   2xl:text-[1.50rem]">
+          <div className="flex  justify-between w-full px-2  mt-[1px] sm:mt-[1.5px] self-center text-[1.04rem] text-white font-extrabold md:mt-[3px]  md:text-[1.25rem] lg:text-[1.5rem]   2xl:text-[1.50rem]">
             <p className="">
               <Link to={`/${product?._id}`}>usd {product?.price}</Link>
             </p>
@@ -48,7 +48,7 @@ const Card = ({ product, arsPrice }) => {
             </p>
           </div>
           <button
-            className="bg-gradient-to-br from-[#051937] to-[#845EC2] w-[98%] mt-[5px] text-gray-100 text-[1rem] font-medium py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem] dark:shadow-gray-100  hover:text-stone-400 hover:scale-105 duration-500"
+            className="bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-zinc-700 w-[98%] mt-[5px] text-stone-200 shadow-sm shadow-gray-500 text-[1rem] font-medium py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem]   hover:text-stone-400 hover:scale-105 duration-500"
           >
             <Link
               className="flex items-center  justify-center gap-2 "

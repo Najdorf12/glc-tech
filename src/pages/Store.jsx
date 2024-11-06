@@ -22,7 +22,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
   useEffect(() => {
     // Verifica si el usuario ya ha visitado el Home
     const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
-  
+
     if (hasVisitedHome) {
       const section = document.getElementById("store");
       if (section) {
@@ -57,9 +57,9 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
   };
   useEffect(() => {
     const savedCategory = sessionStorage.getItem("selectedCategory");
-  
+
     if (!savedCategory || savedCategory === "TODOS") {
-      fetchProducts();  // Asegúrate de que los productos se carguen siempre si no hay una categoría seleccionada
+      fetchProducts(); // Asegúrate de que los productos se carguen siempre si no hay una categoría seleccionada
     } else {
       getProductsByCategory(savedCategory);
     }
@@ -76,52 +76,44 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     }
   };
 
-  const bgStore =
-    theme === "dark"
-      ? {
-          backgroundImage:
-            "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)",
-        } //dark
-      : {
-          backgroundImage:
-            "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)",
-        };
-
   return (
     <>
       <section
-        style={bgStore}
         id="store"
-        className=" relative w-full pb-12 bg-gray-300 dark:bg-[#212121]  flex flex-wrap  gap-x-4 gap-y-7 sm:gap-x-5 md:gap-x-8 justify-center pt-[33rem] md:pt-[24rem]  lg:pt-80  lg:px-10 lg:gap-x-12 lg:gap-y-12 lg:pb-32 xl:pt-[25rem] 2xl:pt-[31rem] 2xl:gap-12 2xl:px-32 "
+        className="bg-zinc-900 relative w-full pt-12 xl:pt-16"
       >
-        {isLoading && <Loader />}
-        <article className="absolute top-0 font-title flex flex-col justify-center items-center gap-5 mt-12 xl:mt-20 xl:gap-5 2xl:gap-9 2xl:mt-[6rem] ">
-          <p className="text-gray-600 text-4xl xl:text-5xl 2xl:text-6xl font-bold bg-gradient-to-br from-[#051937] to-[#845EC2] dark:text-gray-200 inline-block text-transparent bg-clip-text">
+        {/* {isLoading && <Loader />} */}
+        <article className="font-title flex flex-col justify-center items-center gap-5  2xl:gap-7  ">
+          <p className="text-gray-600 text-7xl xl:text-8xl 2xl:text-9xl font-bold bg-gradient-to-t from-stone-300 via-stone-200 to-white bg-clip-text text-transparent inline-block ">
             TIENDA
           </p>
-          <p className="text-stone-600 dark:text-stone-400 text-xl font-semibold flex items-center justify-center gap-2 xl:text-2xl 2xl:gap-3 2xl:text-[1.7rem]">
-            Busca por categoría
-            <i className="bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl"></i>
+          <p className="text-stone-600 text-xl font-medium flex items-center justify-center gap-2 xl:gap-0 xl:text-3xl 2xl:text-4xl">
+            BUSCA POR CATEGORÍA
+            <i className="bx bx-log-in-circle text-3xl  text-white xl:text-5xl xl:ml-3"></i>
           </p>
         </article>
-        <div className="absolute top-0 flex flex-wrap justify-center items-center gap-y-3 gap-x-[2rem] mt-40 md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  xl:mt-[13rem] 2xl:mt-[15rem]  xl:max-w-[1000px] 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
+        <div className="flex flex-wrap justify-center items-center gap-y-4 mt-5 gap-x-[2rem] md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  lg:mx-auto self-center  xl:max-w-[1000px] xl:mt-8 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
           {btns.map((btn, i) => (
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="mt-3 py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937] to-[#845EC2]  rounded-br-xl rounded-tl-xl shadow-2xl shadow-gray-700 dark:shadow-black hover:shadow-white dark:hover:shadow-[#666] hover:text-white duration-500"
+              className="py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7  bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-zinc-700  rounded-br-xl rounded-tl-xl shadow-sm shadow-gray-500  hover:shadow-white  hover:text-white duration-500"
             >
               <span>{btn.toUpperCase()}</span>
             </button>
           ))}
         </div>
-        {allProducts?.map((product, i) => (
-          <Card key={i} product={product} arsPrice={arsPrice} />
-        ))}
+
+        <div className="w-full flex flex-wrap justify-center items-center mt-12 gap-y-6 gap-x-3 sm:gap-x-4 lg:gap-x-6 lg:gap-y-12 xl:mt-14">
+          {allProducts?.map((product, i) => (
+            <Card key={i} product={product} arsPrice={arsPrice} />
+          ))}
+        </div>
       </section>
-      <footer style={bgStore} className="pb-12 lg:pb-28">
+
+      <footer className="pb-12 lg:pb-28">
         <Link target="blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
-          <figure style={bgStore} className="flex justify-center">
+          <figure className="flex justify-center">
             <img
               loading="lazy"
               className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800"

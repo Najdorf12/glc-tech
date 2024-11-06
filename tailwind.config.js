@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  "darkMode": "class",
+  darkMode: "class",
   theme: {
     screens: {
       sm: "420px",
@@ -16,8 +16,7 @@ export default {
     },
     extend: {
       colors: {
-        orange: "#FF6500",
-        orange2: "#E65C19",
+        primary: "#AB2343",
       },
       fontFamily: {
         title: ["Manrope", "sans-serif"],

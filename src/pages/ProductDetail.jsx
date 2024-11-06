@@ -96,27 +96,24 @@ const ProductDetail = ({ theme }) => {
   };
 
   return (
-    <section
-      style={bgProductDetail}
-      className="relative bg-gray-300 dark:bg-[#212121] pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen"
-    >
-       <div className="fixed bottom-3 left-0 z-[100] lg:bottom-8">
-          <Link
-            target="blank"
-            to={"https://api.whatsapp.com/send/?phone=541125043539"}
+    <section className="relative bg-zinc-900 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
+      <div className="fixed bottom-3 left-0 z-[100] lg:bottom-8">
+        <Link
+          target="blank"
+          to={"https://api.whatsapp.com/send/?phone=541125043539"}
+        >
+          <button
+            style={{
+              boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
+            }}
+            className=" z-50 border-[1.5px]  ml-4 border-white  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600  "
           >
-            <button
-              style={{
-                boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
-              }}
-              className=" z-50 border-[1.5px]  ml-4 border-white  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600 dark:bg-gray-200  dark:text-stone-500"
-            >
-              <i class="bx bxl-whatsapp"></i>
-            </button>
-          </Link>
-        </div>
+            <i class="bx bxl-whatsapp"></i>
+          </button>
+        </Link>
+      </div>
       <nav className="w-full flex items-center justify-between px-1 xl:px-8 2xl:px-12 2xl:pt-2 ">
-        <ul className="text-white dark:text-gray-100 text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
+        <ul className="text-white  text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
           <Link to={"/#store"}>
             <li>{productDetail.category?.toUpperCase()}</li>
           </Link>
@@ -126,7 +123,7 @@ const ProductDetail = ({ theme }) => {
           <li>{productDetail.name?.toUpperCase()?.substring(0, 14)}</li>
         </ul>
         <Link to={"/"}>
-          <button className="btn-home2 flex items-center text-stone-500 dark:text-gray-100 text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold hover:scale-105 ">
+          <button className="btn-home2 flex items-center text-stone-500  text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold hover:scale-105 ">
             Volver
           </button>
         </Link>
@@ -136,9 +133,10 @@ const ProductDetail = ({ theme }) => {
         <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
             id="title-product-detail"
-            className="font-title flex flex-col justify-center items-center  mt-10   rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] pt-3 pb-5 md:py-6 shadow-lg xl:mt-4 xl:shadow-2xl shadow-gray-800 border border-zinc-300 dark:border-zinc-800"
+            className="font-title flex flex-col justify-center items-center  mt-10 
+             bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border-[2px] border-stone-600 rounded-2xl  pt-3 pb-5   md:py-6 xl:mt-4   "
           >
-            <h5 className="text-3xl  font-bold xl:text-4xl  py-2 px-8 2xl:text-5xl bg-gradient-to-t from-stone-100 to-stone-300 inline-block text-transparent bg-clip-text ">
+            <h5 className="text-3xl  font-bold   py-2 px-8 xl:text-5xl 2xl:text-6xl bg-gradient-to-t from-stone-100 to-stone-300 inline-block text-transparent bg-clip-text ">
               {productDetail.name?.toUpperCase()?.substring(0, 19)}
             </h5>
 
@@ -155,16 +153,16 @@ const ProductDetail = ({ theme }) => {
                 to="https://api.whatsapp.com/send/?phone=541125043539"
                 target="blank"
               >
-                <button className="btn-home2 mt-3 py-1 px-6 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 border-[2px] border-white 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218] ">
+                <button className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 py-1 px-6 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 2xl:text-xl 2xl:mt-7 ">
                   <span>COMPRAR</span>
                 </button>
               </Link>
               <button
                 onClick={handleShare}
-                className="btn-home2 mt-3 px-6 xl:py-[3px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300 border-[2px] border-zinc-400 dark:border-zinc-800 2xl:text-xl 2xl:mt-7 bg-gradient-to-br from-[#051937d0] to-[#845ec218]  flex items-center gap-1 "
+                className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 px-4 xl:py-[3px] xl:px-8 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300    2xl:mt-7  flex items-center gap-1 "
               >
                 <i className="bx bxs-share-alt text-xl font-normal"></i>
-                Compartir
+                COMPARTIR
               </button>
             </div>
           </article>
@@ -185,11 +183,11 @@ const ProductDetail = ({ theme }) => {
           </div>
         </div>
         <section className=" flex flex-col items-center justify-start   2xl:self-center">
-          <div className="flex flex-col border border-zinc-300 dark:border-zinc-800  rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%]  sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6 bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.25)] backdrop-blur-[12px] lg:w-[510px] xl:mt-4 2xl:w-[610px]">
+          <div className="bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border-[2px] border-stone-600 flex flex-col   rounded-2xl mt-8 pt-3 pb-5 shadow-lg xl:shadow-2xl shadow-gray-800 w-[96%]  sm:w-[95%]  xl:justify-start xl:gap-6 xl:pt-4 xl:pb-6  lg:w-[510px] xl:mt-4 2xl:w-[610px]">
             <div className="mt-2 w-full flex justify-center text-sm text-white font-semibold font-title 2xl:text-lg ">
               <ul className="rounded-lg w-[95%] flex flex-col gap-3 py-2 px-2 2xl:px-4  2xl:w-full ">
-                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px]  px-2 rounded-xl 2xl:px-3 ">
-                  <div className="flex gap-2 items-center text-zinc-300">
+                <li className="flex items-center justify-between border-[2px] border-stone-500 py-[7px]  px-2 rounded-xl 2xl:px-3 ">
+                  <div className="flex gap-2 items-center text-stone-400 xl:text-base">
                     Procesador
                   </div>
                   <div>
@@ -198,8 +196,8 @@ const ProductDetail = ({ theme }) => {
                       : productDetail.description}
                   </div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-zinc-300">
+                <li className="flex items-center justify-between border-[2px] border-stone-500 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400 xl:text-base">
                     Cámara
                   </div>
                   <div>
@@ -208,8 +206,8 @@ const ProductDetail = ({ theme }) => {
                       : "FRONTAL 5MP - TRASERA 8MP"}
                   </div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-zinc-300">
+                <li className="flex items-center justify-between border-[2px] border-stone-500 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400 xl:text-base">
                     Pantalla
                   </div>
                   <div>
@@ -218,14 +216,14 @@ const ProductDetail = ({ theme }) => {
                       : "PANTALLA FLUIDA DE 6,71 Y 90 HZ"}
                   </div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-zinc-300">
+                <li className="flex items-center justify-between border-[2px] border-stone-500 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400 xl:text-base">
                     Memoria
                   </div>
                   <div>{productDetail.description}</div>
                 </li>
-                <li className="flex items-center justify-between border-[2px] border-zinc-300 py-[7px] px-2 rounded-xl 2xl:px-3">
-                  <div className="flex gap-2 items-center text-zinc-300">
+                <li className="flex items-center justify-between border-[2px] border-stone-500 py-[7px] px-2 rounded-xl 2xl:px-3">
+                  <div className="flex gap-2 items-center text-stone-400 xl:text-base">
                     Batería
                   </div>
                   <div>
@@ -235,7 +233,7 @@ const ProductDetail = ({ theme }) => {
               </ul>
             </div>
 
-            <p className="text-center self-center  text-base font-semibold font-title text-white mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[520px]">
+            <p className="text-center self-center  text-base font-semibold font-title text-stone-300 mt-6 px-3 sm:px-4  lg:px-0 sm:max-w-[500px] xl:max-w-[420px] 2xl:text-lg 2xl:leading-6 xl:mt-0  2xl:max-w-[520px]">
               {productDetail.description2}
             </p>
           </div>

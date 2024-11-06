@@ -5,8 +5,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.text-about{
-text-wrap: wrap;
+.text-about {
+  text-wrap: wrap;
 }
 /* SLIDER */
 .image-gallery-slide {
@@ -21,8 +21,6 @@ text-wrap: wrap;
   border-radius: 12px;
   width: 500px;
   height: 100%;
-  
-
 }
 .image-gallery-bullets .image-gallery-bullet {
   background-color: #521f74d0;
@@ -48,7 +46,6 @@ text-wrap: wrap;
   }
   .image-gallery-content .image-gallery-slide .image-gallery-image {
     width: 650px;
-    
   }
   .image-gallery-left-nav .image-gallery-svg,
   .image-gallery-right-nav .image-gallery-svg {
@@ -81,12 +78,39 @@ text-wrap: wrap;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -5px -5px 12px #ffffff;
 }
 
+.button3 {
+  cursor: pointer;
+  border: none;
+  background: rgb(68, 66, 66);
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-content: center;
+  transition: background 300ms, transform 200ms;
+  font-weight: 600;
+}
+.button__circle3 {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #ab2343;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
+  overflow: hidden;
+}
 
 .button {
   cursor: pointer;
   border: none;
-  background: rgb(146,195,73);
+  background: rgb(146, 195, 73);
   color: #fff;
   width: 100px;
   height: 100px;
@@ -95,9 +119,7 @@ text-wrap: wrap;
   position: relative;
   display: grid;
   place-content: center;
-  transition:
-    background 300ms,
-    transform 200ms;
+  transition: background 300ms, transform 200ms;
   font-weight: 600;
 }
 .button2 {
@@ -112,9 +134,7 @@ text-wrap: wrap;
   position: relative;
   display: grid;
   place-content: center;
-  transition:
-    background 300ms,
-    transform 200ms;
+  transition: background 300ms, transform 200ms;
   font-weight: 600;
 }
 
@@ -136,7 +156,7 @@ text-wrap: wrap;
   height: 40px;
   overflow: hidden;
   background: #fff;
-  color: rgb(146,195,73);
+  color: rgb(146, 195, 73);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -154,7 +174,7 @@ text-wrap: wrap;
 }
 
 .button:hover .button__icon {
-  color: rgb(146,195,73);
+  color: rgb(146, 195, 73);
 }
 
 .button:hover .button__icon:first-child {
@@ -171,4 +191,123 @@ text-wrap: wrap;
   to {
     rotate: 360deg;
   }
+}
+/* slider */
+.slider {
+  width: 100%;
+
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider .slide-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 30s linear infinite;
+  width: calc(250px * 14);
+  align-items: center;
+}
+
+.slider .slide img {
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 3));
+    transform: translateX(calc(-200px * 3));
+  }
+}
+@media (min-width: 800px) {
+  .slider .slide-track {
+    gap: 7rem;
+  }
+}
+
+/* BTN NAV */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 40px;
+  box-shadow: 0 0 0 2px rgb(133, 130, 130);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg, .bxl-whatsapp {
+  position: absolute;
+  width: 24px;
+  fill: rgb(244, 63, 94);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+ 
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: rgb(255, 255, 255);
+  background-color: #c42c4f;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #b9163f;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px rgb(253, 0, 0);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
 }
