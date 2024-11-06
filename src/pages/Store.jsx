@@ -104,7 +104,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
           ))}
         </div>
 
-        <div className="w-full flex flex-wrap justify-center items-center mt-12 gap-y-6 gap-x-3 sm:gap-x-4 lg:gap-x-6 lg:gap-y-12 xl:mt-14">
+        <div className="w-full flex flex-wrap justify-center items-center mt-12 gap-y-6 gap-x-3 sm:gap-x-4 lg:gap-x-6 lg:gap-y-12 xl:mt-14 xl:px-[6%]">
           {allProducts?.map((product, i) => (
             <Card key={i} product={product} arsPrice={arsPrice} />
           ))}
