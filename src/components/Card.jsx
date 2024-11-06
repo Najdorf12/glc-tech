@@ -38,9 +38,9 @@ const Card = ({ product, arsPrice }) => {
             </Link>
           </p>
           <div className="flex  justify-between w-full px-2  mt-[1px] sm:mt-[1.5px] self-center text-[1.04rem] text-white font-extrabold md:mt-[3px]  md:text-[1.25rem] lg:text-[1.5rem]   2xl:text-[1.50rem]">
-            <p className="">
+          {/*   <p className="">
               <Link to={`/${product?._id}`}>usd {product?.price}</Link>
-            </p>
+            </p> */}
             <p className="">
               <Link to={`/${product._id}`}>
                 $ {product?.price * arsPrice[0]?.usdPrice}

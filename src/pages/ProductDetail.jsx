@@ -128,7 +128,7 @@ const ProductDetail = ({ theme }) => {
           </button>
         </Link>
       </nav>
-      {isLoading && <Loader />}
+     {/*  {isLoading && <Loader />} */}
       <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
         <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
@@ -243,7 +243,7 @@ const ProductDetail = ({ theme }) => {
         <div className="flex flex-col justify-center items-center">
           <iframe
             id="ytplayer"
-            className="w-[96%] h-[270px] rounded-lg border border-zinc-300 dark:border-zinc-800  max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[420px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
+            className="w-[96%] h-[270px] rounded-lg border border-stone-600  max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[420px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
             src={
               productDetail.youtube
                 ?.replace("watch?v=", "embed/")
@@ -254,7 +254,7 @@ const ProductDetail = ({ theme }) => {
             <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-[700px] 2xl:max-w-[900px] xl:mt-5 2xl:mt-5">
               <img
                 loading="lazy"
-                className="w-full lg:rounded-3xl shadow-lg shadow-zinc-800 "
+                className="w-full lg:rounded-3xl shadow-sm shadow-gray-700 "
                 src={banner2}
                 alt=""
               />
@@ -264,7 +264,7 @@ const ProductDetail = ({ theme }) => {
 
         <iframe
           id="ytplayer"
-          className="w-[85%] h-[530px] rounded-lg border border-zinc-300 dark:border-zinc-800  max-w-[300px] xl:max-w-[330px] xl:h-[612px] 2xl:max-w-[400px] 2xl:h-[740px] "
+          className="w-[85%] h-[530px] rounded-lg border border-stone-600   max-w-[300px] xl:max-w-[330px] xl:h-[612px] 2xl:max-w-[400px] 2xl:h-[740px] shadow-sm shadow-gray-700 "
           src={
             productDetail.youtubeShort?.includes("shorts/")
               ? productDetail.youtubeShort?.replace("shorts/", "embed/")
@@ -273,7 +273,7 @@ const ProductDetail = ({ theme }) => {
         ></iframe>
       </div>
 
-      <p className="mt-2 lg:mt-14 mb-6 text-xl px-4 max-w-[350px] border border-zinc-300  dark:border-zinc-800 text-gray-400 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-[#051937] to-[#845EC2] backdrop-blur-[12px] shadow-lg shadow-zinc-700">
+      <p className="mt-2 w-[90%] lg:mt-14 mb-6 text-2xl px-4 max-w-[350px] border border-stone-500   text-stone-400 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-zinc-900 via-rose-800 to-zinc-900  shadow-sm shadow-gray-700">
         Descubre mas reviews en nuestro canal de
         <span className="text-gray-100 cursor-pointer font-bold duration-500 ml-[2px] 2xl:ml-[3px]  ">
           <Link
@@ -285,7 +285,7 @@ const ProductDetail = ({ theme }) => {
         </span>
       </p>
       <p
-        className="text-white border-zinc-300 dark:border-zinc-800 mb-5 2xl:mb-7 font-title font-bold text-lg mt-7  py-[3px] px-7 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16 bg-gradient-to-br from-[#051937] to-[#845EC2]
+        className="bg-gradient-to-br from-zinc-900 via-rose-800 to-transparent  shadow-sm shadow-gray-700 text-white border-stone-600 mb-5 2xl:mb-7 font-title font-bold text-2xl mt-6  py-[3px] px-12 rounded-xl  xl:mt-12 2xl:text-2xl 2xl:mt-16  
       "
       >
         SIMILARES
