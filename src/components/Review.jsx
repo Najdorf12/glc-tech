@@ -21,7 +21,7 @@ const Review = ({ imagesData }) => {
     {
       name: "Gabriel Gonzalez",
       content:
-        "Quería agradecer el excelente asesoramiento y atención.Además de recomendar a Grupo La Comunidad a todas aquellas personas que estén buscando cambio de celular, que es lo que yo hice, pero dudaba en donde comprar. Equipos nuevos en caja cerrada y con garantía simplemente MUCHAS GRACIAS!!!",
+        "Quería agradecer el excelente asesoramiento y atención.Además de recomendar a Grupo La Comunidad a todas aquellas personas que estén buscando cambio de celular, que es lo que yo hice, pero dudaba en donde comprar. Equipos nuevos en caja cerrada y con garantía simplemente.",
     },
     {
       name: "Soledad Martinez",
