@@ -6,37 +6,37 @@ const Review = ({ imagesData }) => {
     {
       name: "Marcos Lorem",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore voluptate illum aut ab culpa sequi repellendus, debitis id nostrum necessitatibus ipsam tenetur mollitia eligendi tempore quos earum maiores corrupti.",
+        "La mejor compra que he hecho. Precio súper cómodo y con garantía. Buena atención.  Siempre me sentí seguro durante la compra. Yo compré el Moto G84. Los recomiendo porque tienen mucha variedad y al precio que vale, no a los que otras compañías más grandes te arrancan la cabeza. A mucho más de lo que vale, realmente. Le pongo 5 estrellas.",
     },
     {
       name: "Enrique Lorem",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore voluptate illum aut ab culpa sequi repellendus, debitis id nostrum necessitatibus ipsam tenetur mollitia eligendi tempore quos earum maiores corrupti.",
+        "Excelente y desinteresada atención. Asesoran, explican, sugieren. Los precios son los mejores por lejos.  Son muy buena gente y honesta por eso los recomiendo. Además, venden accesorios a muy buenos precios. Ofrecen servicio técnico y salimos con el teléfono listo. SON MUY RECOMENDABLES.",
     },
     {
       name: "Juan Pablo Lorem",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore voluptate illum aut ab culpa sequi repellendus, debitis id nostrum necessitatibus ipsam tenetur mollitia eligendi tempore quos earum maiores corrupti.",
+        "Excelente servicio y atención. Soy del interior y estaba dudando por la compra , y si el producto iba a llegar a destino, la verdad que me sorprendió el precio del producto, por debajo de varios lugares donde estuve averiguando. El tema de la atención, impecable, te das cuenta del compromiso que tienen con la gente.",
     },
     {
       name: "Gabriel Gonzalez",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore voluptate illum aut ab culpa sequi repellendus, debitis id nostrum necessitatibus ipsam tenetur mollitia eligendi tempore quos earum maiores corrupti.",
+        "Quería agradecer el excelente asesoramiento y atención.Además de recomendar a Grupo La Comunidad a todas aquellas personas que estén buscando cambio de celular, que es lo que yo hice, pero dudaba en donde comprar. Equipos nuevos en caja cerrada y con garantía simplemente MUCHAS GRACIAS!!!",
     },
     {
       name: "Soledad Martinez",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore voluptate illum aut ab culpa sequi repellendus, debitis id nostrum necessitatibus ipsam tenetur mollitia eligendi tempore quos earum maiores corrupti.",
+        "Mi esposo compró un equipo con todos los temores de tener que depositar dinero (hoy todo es mucho) y esperar el envio. Pero quedó más que satisfecho. Recibió el t.e. en tiempo pactado, asesoramiento telefónico por parte del vendedor. La verdad, totalmente recomendable.Excelentes precios",
     },
   ];
   return (
     <>
-      <section className="flex overflow-hidden items-center justify-center gap-4 z-50 w-full h-[40vh] bg-zinc-900 xl:h-[60vh]">
+      <section className="flex overflow-hidden items-center justify-center gap-4 z-50 w-full py-7 bg-zinc-900 xl:py-12 2xl:py-16 ">
         <section className="slider lg:w-full flex justify-center items-center">
           <div className="slide-track">
             {testimonials?.map((testimonial, i) => (
               <div key={i} className="slide">
-                <CardQuote  testimonial={testimonial} />
+                <CardQuote testimonial={testimonial} />
               </div>
             ))}
           </div>

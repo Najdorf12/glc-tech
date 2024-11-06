@@ -3,7 +3,7 @@ import quote from "/quote1.png";
 const CardQuote = ({testimonial}) => {
   return (
     <>
-      <div className="w-[350px] h-[280px] bg-gradient-to-br from-pink-800 via-pink-900 to-zinc-800 relative rounded-xl xl:w-[450px] xl:h-[350px] 2xl:w-[500px] 2xl:h-[400px]">
+      <div className="w-[350px] h-[300px] bg-gradient-to-br from-pink-800 via-pink-900 to-zinc-800 relative rounded-xl xl:w-[450px] xl:h-[350px] 2xl:w-[500px] 2xl:h-[400px]">
         <figure className="w-20 mt-2 ml-2 xl:w-28">
           <img src={quote} alt="quote-icon" className="w-full" />
         </figure>

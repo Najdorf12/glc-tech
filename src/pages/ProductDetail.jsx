@@ -96,7 +96,7 @@ const ProductDetail = ({ theme }) => {
   };
 
   return (
-    <section className="relative bg-zinc-900 pb-12  w-full pt-3  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
+    <section className="relative bg-zinc-900 pb-12  w-full pt-2  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
       <div className="fixed bottom-3 left-0 z-[100] lg:bottom-8">
         <Link
           target="blank"
@@ -106,24 +106,24 @@ const ProductDetail = ({ theme }) => {
             style={{
               boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
             }}
-            className=" z-50 border-[1.5px]  ml-4 border-white  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600  "
+            className=" z-50 border-[1.5px]  ml-4 border-stone-600  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600  "
           >
             <i class="bx bxl-whatsapp"></i>
           </button>
         </Link>
       </div>
       <nav className="w-full flex items-center justify-between px-1 xl:px-8 2xl:px-12 2xl:pt-2 ">
-        <ul className="text-white  text-base flex  pl-3 items-center font-normal md:font-semibold 2xl:text-lg">
+        <ul className="text-stone-400 font-title font-medium  text-base flex  pl-3 items-center  md:font-semibold 2xl:text-lg">
           <Link to={"/#store"}>
             <li>{productDetail.category?.toUpperCase()}</li>
           </Link>
           <li>
-            <i className="bx bx-chevron-right text-3xl mt-1 font-light text-white"></i>
+            <i className="bx bx-chevron-right text-3xl mt-1 font-light text-stone-400"></i>
           </li>
           <li>{productDetail.name?.toUpperCase()?.substring(0, 14)}</li>
         </ul>
         <Link to={"/"}>
-          <button className="btn-home2 flex items-center text-stone-500  text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-white mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold hover:scale-105 ">
+          <button className="btn-home2 flex items-center text-stone-100  text-base font-normal border-[2px] rounded-[1rem] px-5 py-1 border-stone-500 mt-[3px] xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold hover:scale-105 ">
             Volver
           </button>
         </Link>
@@ -161,7 +161,7 @@ const ProductDetail = ({ theme }) => {
                 onClick={handleShare}
                 className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 px-4 xl:py-[3px] xl:px-8 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300    2xl:mt-7  flex items-center gap-1 "
               >
-                <i className="bx bxs-share-alt text-xl font-normal"></i>
+                <i className="bx bxs-share-alt text-xl font-normal text-stone-400"></i>
                 COMPARTIR
               </button>
             </div>
