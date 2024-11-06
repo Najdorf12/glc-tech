@@ -92,7 +92,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
             <i className="bx bx-log-in-circle text-3xl  text-white xl:text-5xl xl:ml-3"></i>
           </p>
         </article>
-        <div className="flex flex-wrap justify-center items-center gap-y-4 mt-5 gap-x-[2rem] md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-3  lg:mx-auto self-center  xl:max-w-[1000px] xl:mt-8 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
+        <div className="flex flex-wrap justify-center items-center gap-y-4 mt-5 gap-x-[2rem] md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-5  lg:mx-auto self-center  xl:max-w-[1000px] xl:mt-8 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
           {btns.map((btn, i) => (
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}
