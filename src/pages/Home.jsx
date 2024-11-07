@@ -69,7 +69,7 @@ const Home = ({
         </nav>
 
         <div className="w-full h-screen absolute inset-0 z-10 flex items-center justify-center ">
-          <picture className="w-full lg:w-[75%] overflow-visible h-screen flex justify-center items-center">
+          <picture className="w-full h-screen lg:w-[75%] lg:h-[75%] overflow-visible  flex justify-center items-center">
             <img
               src={imgHome}
               alt=""
@@ -79,7 +79,7 @@ const Home = ({
         </div>
 
         <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-3">
-          <span className="bg-gradient-to-b from-stone-600 via-rose-500 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem] xl:text-[14rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] ">
+          <span className="bg-gradient-to-b from-stone-600 via-rose-500 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem] xl:text-[14rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] xl:-mr-32">
             GLC
           </span>
 
@@ -87,7 +87,7 @@ const Home = ({
             <h1 className="bg-gradient-to-t from-stone-700 via-stone-200 to-stone-700    text-transparent bg-clip-text text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[12rem]  z-50">
               GLC TECH
             </h1>
-            <h2 className=" text-[1.25rem] font-semibold text- inline-block  font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold -mt-3 lg:text-[1.7rem] 2xl:text-[1.8rem] text-stone-400 z-50">
+            <h2 className=" text-[1.25rem] font-semibold text- inline-block  font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold -mt-3 lg:text-[1.7rem] 2xl:text-[1.8rem] text-stone-400 z-50 xl:-mt-6">
               GRUPO LA COMUNIDAD
             </h2>
             <div className="mt-6 flex font-title text-sm text-white font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 z-50">

@@ -85,7 +85,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
         className="bg-zinc-900 relative w-full pt-12 xl:pt-16"
       >
         {/* {isLoading && <Loader />} */}
-        <article className="font-title flex flex-col justify-center items-center gap-5  2xl:gap-7  ">
+        <article className="font-title flex flex-col justify-center items-center gap-5  xl:gap-14  ">
           <p className="text-gray-600 text-7xl xl:text-8xl 2xl:text-9xl font-bold bg-gradient-to-t from-stone-300 via-stone-200 to-white bg-clip-text text-transparent inline-block ">
             TIENDA
           </p>
@@ -94,19 +94,19 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
             <i className="bx bx-log-in-circle text-3xl  text-white xl:text-5xl xl:ml-3"></i>
           </p>
         </article>
-        <div className="flex flex-wrap justify-center items-center gap-y-4 mt-5 gap-x-[2rem] md:gap-8 lg:max-w-[900px] lg:gap-x-6 lg:gap-y-5  lg:mx-auto self-center  xl:max-w-[1000px] xl:mt-8 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
+        <div className="flex flex-wrap justify-center items-center gap-y-4 mt-5 gap-x-[2rem]  lg:max-w-[900px] lg:gap-x-6   lg:mx-auto self-center  xl:max-w-[1000px] xl:mt-7 2xl:max-w-[1200px] 2xl:gap-x-7 2xl:px-0 2xl:">
           {btns.map((btn, i) => (
             <button
               onClick={(e) => searchByCategory(e.target?.innerText)}
               key={i}
-              className="py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl 2xl:mt-7  bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-stone-700  rounded-br-xl rounded-tl-xl shadow-sm shadow-gray-500  hover:shadow-white  hover:text-stone-400 duration-500"
+              className="py-2 px-6 min-w-36 xl:min-w-44 xl:py-[9px] xl:px-12 hover:scale-105   tracking-wider font-title font-bold text-stone-100  2xl:text-xl bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border border-stone-700  rounded-br-xl rounded-tl-xl shadow-sm shadow-gray-500  hover:shadow-white  hover:text-stone-400 duration-500"
             >
               <span>{btn.toUpperCase()}</span>
             </button>
           ))}
         </div>
 
-        <div className="w-full flex flex-wrap justify-center items-center mt-12 gap-y-6 gap-x-3 sm:gap-x-4 lg:gap-x-6 lg:gap-y-12 xl:mt-14 xl:px-[6%]">
+        <div className="w-full flex flex-wrap justify-center items-center mt-12 gap-y-6 gap-x-3 sm:gap-x-4 lg:gap-x-8 lg:gap-y-12 xl:mt-24 xl:px-[8%]">
           {allProducts?.map((product, i) => (
             <Card key={i} product={product} arsPrice={arsPrice} />
           ))}
