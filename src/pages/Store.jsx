@@ -155,10 +155,10 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
           </div>
         </figure>
           <article className="flex mt-3 flex-col justify-center items-center text-balance text-center xl:mt-6  z-50">
-            <h6 className="text-5xl bg-gradient-to-t from-stone-300 via-stone-200 to-white bg-clip-text text-transparent inline-block font-title font-semibold xl:text-8xl 2xl:text-9xl">
+            <h6 className="text-5xl bg-gradient-to-t from-stone-300 via-stone-100 to-stone-600  bg-clip-text text-transparent inline-block font-title font-semibold xl:text-8xl 2xl:text-9xl">
               INFINIX SERVICE
             </h6>
-            <p className="text-lg leading-5 mt-4 text-stone-500 font-semibold  xl:text-3xl xl:mt-6 2xl:mt-8 2xl:text-4xl">
+            <p className="text-lg leading-5 mt-4 text-stone-300 font-semibold  xl:text-3xl xl:mt-6 2xl:mt-8 2xl:text-4xl">
               SERVICIO TECNICO ESPECIALIZADO EN DISPOSITIVOS INFINIX
             </p>
            
