@@ -282,7 +282,7 @@ const ProductDetail = ({ theme }) => {
         SIMILARES
       </p>
       <div className="w-full mt-2 gap-x-5 gap-y-6 sm:gap-x-5 md:gap-6 xl:gap-8 2xl:gap-9 flex flex-wrap justify-center items-center  xl:w-[90%] 2xl:w-[80%]">
-        {similarProducts?.slice(0, 6)?.map((product) => (
+        {similarProducts?.slice(0, 5)?.map((product) => (
           <Link key={product._id} to={`/${product._id}`}>
             <CardSimilarProd product={product} ARSPrice={ARSPrice} />
           </Link>
