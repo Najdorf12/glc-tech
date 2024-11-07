@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import CardQuote from "../components/CardQuote";
-const Review = ({ imagesData }) => {
+const Review = () => {
   /* #AB2343 */
   const testimonials = [
     {

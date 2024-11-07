@@ -15,16 +15,7 @@ const ProductDetail = ({ theme }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
 
-  const bgProductDetail =
-    theme === "dark"
-      ? {
-          backgroundImage:
-            "linear-gradient(to right, #301b55, #291c4b, #231c40, #1e1b35, #1b1a2a, #1a1925, #191920, #18181b, #18181b, #18181b, #18181b, #18181b)",
-        } //dark
-      : {
-          backgroundImage:
-            "linear-gradient(to right, #482e71, #67528c, #8778a7, #a89fc1, #ccc7dc, #d8d6e5, #e6e5ee, #f4f4f6, #ececef, #e3e4e8, #dadde2, #d1d5db)",
-        };
+  
 
   const images2 = [
     {

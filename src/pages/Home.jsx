@@ -29,13 +29,8 @@ const Home = ({
   }, []);
 
   const [imagesData, setImagesData] = useState([]);
-  const images = [
-    imagesData[0]?.images?.instagram?.secure_url,
-    imagesData[0]?.images?.facebook?.secure_url,
-    imagesData[0]?.images?.youtube?.secure_url,
-    imagesData[0]?.images?.tiktok?.secure_url,
-  ];
-
+ 
+  
   useEffect(() => {
     const fetchImages = async () => {
       try {
@@ -113,7 +108,7 @@ const Home = ({
       {isLoading && <Loader />}
 
       <About imagesData={imagesData} />
-      <Review imagesData={imagesData} />
+      <Review />
       <AcoyteService />
       <Store
         theme={theme}

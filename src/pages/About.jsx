@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import imgAbout from "/bg/bg6.webp";
 
 const About = ({imagesData}) => {
+
+  const images = [
+    imagesData[0]?.images?.instagram?.secure_url,
+    imagesData[0]?.images?.facebook?.secure_url,
+    imagesData[0]?.images?.youtube?.secure_url,
+    imagesData[0]?.images?.tiktok?.secure_url,
+  ];
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   
   const handleMouseEnter = (index) => {
