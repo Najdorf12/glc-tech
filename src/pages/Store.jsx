@@ -21,7 +21,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Todos",
   ];
   useEffect(() => {
-    /*  const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
+      const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
 
     if (hasVisitedHome) {
       const section = document.getElementById("store");
@@ -30,9 +30,9 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       }
     }
 
-    sessionStorage.setItem("hasVisitedHome", true); */
+    sessionStorage.setItem("hasVisitedHome", true); 
   }, []);
-  // Función para obtener productos por categoría
+
   const getProductsByCategory = async (category) => {
     setIsLoading(true);
     try {
@@ -44,6 +44,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setIsLoading(false);
     }
   };
+  
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
@@ -55,6 +56,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setIsLoading(false);
     }
   };
+ 
   useEffect(() => {
     const savedCategory = sessionStorage.getItem("selectedCategory");
 
