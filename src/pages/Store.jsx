@@ -5,6 +5,7 @@ import Loader from "../components/Loader";
 import { getAllProducts } from "../api/handlers";
 import banner from "../assets/banner.png";
 import { Link } from "react-router-dom";
+import imgbg from "/bg20.jpg";
 
 const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,8 +21,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Todos",
   ];
   useEffect(() => {
-    // Verifica si el usuario ya ha visitado el Home
-    const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
+    /*  const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
 
     if (hasVisitedHome) {
       const section = document.getElementById("store");
@@ -30,7 +30,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       }
     }
 
-    sessionStorage.setItem("hasVisitedHome", true);
+    sessionStorage.setItem("hasVisitedHome", true); */
   }, []);
   // Función para obtener productos por categoría
   const getProductsByCategory = async (category) => {
@@ -111,17 +111,58 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
         </div>
       </section>
 
-      <footer className="pb-12 lg:pb-28">
-        <Link target="blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
-          <figure className="flex justify-center">
-            <img
-              loading="lazy"
-              className="lg:w-[90%] lg:rounded-3xl 2xl:w-[80%] shadow-lg shadow-zinc-800"
-              src={banner}
-              alt=""
-            />
-          </figure>
-        </Link>
+      <footer className=" pt-12 xl:pt-28  bg-zinc-900 ">
+        <section className="flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%] relative">
+        <figure className="w-full  h-[40vh] md:h-[70vh]  bg-zinc-900 absolute inset-0">
+          <img src={imgbg} alt="" className="object-cover w-full h-full" />
+          <div className="flex justify-center items-center  gap-3 2xl:gap-4 absolute left-0 rounded-tr-2xl bottom-0 pt-2 pl-3  pr-3 pb-1 lg:pb-3 lg:w-[30%] 2xl:[25%] bg-zinc-900 z-50">
+            <p className="text-zinc-300 font-title text-lg xl:text-xl 2xl:text-2xl">
+              Visita nuestra Tienda
+            </p>
+            <button className="button">
+              <a href="https://www.grupolacomunidad.com.ar" target="_blank">
+                <div className="button__circle">
+                  <svg
+                    viewBox="0 0 14 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="button__icon"
+                    width="14"
+                  >
+                    <path
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+
+                  <svg
+                    viewBox="0 0 14 15"
+                    fill="none"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="button__icon button__icon--copy"
+                  >
+                    <path
+                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </button>
+          </div>
+        </figure>
+          <article className="flex mt-3 flex-col justify-center items-center text-balance text-center xl:mt-6  z-50">
+            <h6 className="text-5xl bg-gradient-to-t from-stone-300 via-stone-200 to-white bg-clip-text text-transparent inline-block font-title font-semibold xl:text-8xl 2xl:text-9xl">
+              INFINIX SERVICE
+            </h6>
+            <p className="text-lg leading-5 mt-4 text-stone-500 font-semibold  xl:text-3xl xl:mt-6 2xl:mt-8 2xl:text-4xl">
+              SERVICIO TECNICO ESPECIALIZADO EN DISPOSITIVOS INFINIX
+            </p>
+           
+          </article>
+        </section>
+       
       </footer>
     </>
   );
