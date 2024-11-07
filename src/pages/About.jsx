@@ -25,9 +25,9 @@ const About = ({imagesData}) => {
 
   return (
     <>
-      <section className="relative w-full h-[65vh]  z-50 flex justify-center items-center  text-gray-300  bg-white  lg:h-[80vh] 2xl:h-[85vh]">
+      <section className="relative w-full h-[65vh]  z-50 flex justify-center items-center  text-gray-300  bg-white  lg:h-[80vh] xl:items-start xl:pt-[5%]  xl:h-[90vh]  ">
         <div className="h-full w-full  absolute inset-0 z-10 flex items-start justify-center  xl:justify-start">
-          <figure className="w-full h-full flex justify-center items-center grayscale-[.0] xl:w-[60%] ">
+          <figure className="w-full h-full flex justify-center items-center grayscale-[.0] xl:w-[50%] ">
             <img
               src={imgAbout}
               alt=""
@@ -35,11 +35,11 @@ const About = ({imagesData}) => {
             />
           </figure>
         </div>
-        <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[900px] 2xl:max-w-[1000px]  xl:gap-8 2xl:gap-10 ">
-          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] bg-gradient-to-br from-stone-400 via-stone-100 to-stone-600  inline-block text-transparent bg-clip-text ">
+        <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[1000px] 2xl:max-w-[1300px]  xl:gap-8 2xl:gap-12 ">
+          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] xl:text-[12dvh] bg-gradient-to-br from-stone-500 via-stone-300 to-stone-600    inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
-          <p className="text-about text-zinc-400 font-title text-balance text-center px-[8px] font-semibold text-sm xl:text-lg xl:px-8 2xl:text-xl  ">
+          <p className="text-about text-stone-400 font-title text-balance text-center px-[8px] font-semibold text-sm xl:text-lg xl:px-8 2xl:text-2xl  ">
             Ubicados en el corazón de Caballito, nos dedicamos a ofrecer la
             mejor experiencia en tecnología móvil. Contamos con dos locales
             donde te ofrecemos atención personalizada. Nuestro objetivo es
@@ -53,7 +53,7 @@ const About = ({imagesData}) => {
           </p>
 
           <div className="relative">
-            <ul className="text-stone-200 text-[2.5rem] flex gap-8 mt-2 xl:text-5xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 ">
+            <ul className="text-stone-400 text-[2.5rem] flex gap-8 mt-2 xl:text-6xl xl:gap-[4rem] 2xl:text-6xl 2xl:gap-20 ">
               <li
                 onMouseEnter={() => handleMouseEnter(0)}
                 onMouseLeave={handleMouseLeave}
@@ -63,7 +63,7 @@ const About = ({imagesData}) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="bx bxl-instagram hover:scale-105 hover:text-white duration-500"></i>
+                  <i className="bx bxl-instagram hover:scale-105 hover:text-rose-300 duration-500"></i>
                 </Link>
               </li>
               <li
@@ -75,7 +75,7 @@ const About = ({imagesData}) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="bx bxl-facebook-circle hover:scale-105 hover:text-white duration-500"></i>
+                  <i className="bx bxl-facebook-circle hover:scale-105 hover:text-rose-300 duration-500"></i>
                 </Link>
               </li>
               <li
@@ -87,7 +87,7 @@ const About = ({imagesData}) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="bx bxl-youtube hover:scale-105 hover:text-white duration-500"></i>
+                  <i className="bx bxl-youtube hover:scale-105 hover:text-rose-300 duration-500"></i>
                 </Link>
               </li>
               <li
@@ -99,7 +99,7 @@ const About = ({imagesData}) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="bx bxl-tiktok hover:scale-105 hover:text-stone-600 duration-500"></i>
+                  <i className="bx bxl-tiktok hover:scale-105 hover:text-rose-300 duration-500"></i>
                 </Link>
               </li>
             </ul>

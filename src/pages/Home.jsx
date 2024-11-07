@@ -45,14 +45,14 @@ const Home = ({
 
   return (
     <>
-      <main className="w-full h-[100dvh] overflow-hidden flex flex-col items-center bg-white relative ">
-        <nav className="fixed z-[100] w-full flex justify-end items-center mt-2 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 2xl:mr-12 ">
+      <main className="w-full h-screen overflow-hidden flex flex-col items-center bg-white relative ">
+        <nav className="fixed z-[100] w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 2xl:mr-12 ">
           <Link
             target="blank"
             to={"https://api.whatsapp.com/send/?phone=541125043539"}
           >
             <button class="animated-button text-zinc-100 bg-zinc-800 rounded-3xl shadow-sm shadow-gray-300">
-              <i className="bx bxl-whatsapp arr-2 text-2xl  text-rose-500"></i>
+              <i className="bx bxl-whatsapp arr-2 text-3xl  text-[#25D366]"></i>
               <span className="text font-title font-medium text-base">
                 Escríbenos
               </span>
@@ -69,7 +69,7 @@ const Home = ({
         </nav>
 
         <div className="w-full h-screen absolute inset-0 z-10 flex items-center justify-center ">
-          <picture className="w-full lg:w-[80%] overflow-visible h-screen flex justify-center items-center">
+          <picture className="w-full lg:w-[75%] overflow-visible h-screen flex justify-center items-center">
             <img
               src={imgHome}
               alt=""
@@ -78,8 +78,8 @@ const Home = ({
           </picture>
         </div>
 
-        <section className="relative mt-20 z-50 flex flex-col justify-center items-center xl:mt-3">
-          <span className="bg-gradient-to-b from-[#AB2343] via-rose-500 to-zinc-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem] xl:text-[14rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] ">
+        <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-3">
+          <span className="bg-gradient-to-b from-stone-600 via-rose-500 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem] xl:text-[14rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] ">
             GLC
           </span>
 
@@ -93,10 +93,7 @@ const Home = ({
             <div className="mt-6 flex font-title text-sm text-white font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 z-50">
               <a href="#store">
                 <button
-                  style={{
-                    boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
-                  }}
-                  className="py-2 px-5 xl:py-[9px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-800 hover:text-stone-400   rounded-3xl  border-[2px] border-zinc-500 "
+                  className="py-2 px-5 text-white xl:py-[9px] bg-gradient-to-tr from-stone-600 via-rose-600 to-stone-800 xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-800 hover:text-stone-400   rounded-3xl  border-[2px] border-stone-600 shadow-md shadow-gray-700 "
                 >
                   <span>NUESTRA TIENDA</span>
                 </button>
