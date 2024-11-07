@@ -82,10 +82,10 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     <>
       <section
         id="store"
-        className="bg-zinc-900 relative w-full pt-12 xl:pt-16"
+        className="bg-zinc-900 relative w-full pt-12 xl:pt-24"
       >
         {/* {isLoading && <Loader />} */}
-        <article className="font-title flex flex-col justify-center items-center gap-5  xl:gap-14  ">
+        <article className="font-title flex flex-col justify-center items-center gap-5  xl:gap-10  ">
           <p className="text-gray-600 text-7xl xl:text-8xl 2xl:text-9xl font-bold bg-gradient-to-t from-stone-300 via-stone-200 to-white bg-clip-text text-transparent inline-block ">
             TIENDA
           </p>

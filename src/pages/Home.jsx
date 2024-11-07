@@ -73,12 +73,12 @@ const Home = ({
             <img
               src={imgHome}
               alt=""
-              className="w-full h-full  object-cover object-[-350px_30px] z-50 md:object-center  "
+              className="w-full h-full  object-cover object-[-350px_30px] z-50 md:object-center xl:object-[center_-40px] 2xl:object-[center_-80px] "
             />
           </picture>
         </div>
 
-        <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-3">
+        <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-6">
           <span className="bg-gradient-to-b from-stone-600 via-rose-500 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem] xl:text-[14rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] xl:-mr-32">
             GLC
           </span>

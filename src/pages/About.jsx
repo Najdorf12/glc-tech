@@ -25,18 +25,18 @@ const About = ({imagesData}) => {
 
   return (
     <>
-      <section className="relative w-full h-[65vh]  z-50 flex justify-center items-center  text-gray-300  bg-white  lg:h-[80vh] xl:items-start xl:pt-[5%]  xl:h-[90vh]  ">
+      <section className="relative w-full h-[65vh]  z-10 flex justify-center items-center  text-gray-300  bg-white  lg:h-[80vh] xl:items-start xl:pt-[5%]  xl:h-[90vh]  ">
         <div className="h-full w-full  absolute inset-0 z-10 flex items-start justify-center  xl:justify-start">
-          <figure className="w-full h-full flex justify-center items-center grayscale-[.0] xl:w-[50%] ">
+          <figure className="w-full h-full z-10 flex justify-center items-center grayscale-[.0] xl:w-[50%] ">
             <img
               src={imgAbout}
               alt=""
-              className="w-full h-full object-cover object-[-140px] lg:object-center  "
+              className="w-full h-full object-cover object-[-140px] lg:object-center  z-10"
             />
           </figure>
         </div>
         <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:max-w-[1000px] 2xl:max-w-[1300px]  xl:gap-8 2xl:gap-12 ">
-          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] xl:text-[12dvh] bg-gradient-to-br from-stone-500 via-stone-300 to-stone-600    inline-block text-transparent bg-clip-text ">
+          <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-[9dvh] xl:text-[6rem] 2xl:text-[7rem] bg-gradient-to-br from-stone-500 via-stone-300 to-stone-600    inline-block text-transparent bg-clip-text ">
             SOBRE NOSOTROS
           </h6>
           <p className="text-about text-stone-400 font-title text-balance text-center px-[8px] font-semibold text-sm xl:text-lg xl:px-8 2xl:text-2xl  ">
