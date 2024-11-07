@@ -93,7 +93,7 @@ const Home = ({
             <div className="mt-6 flex font-title text-sm text-white font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 z-50">
               <a href="#store">
                 <button
-                  className="py-2 px-5 text-white xl:py-[9px] bg-gradient-to-tr from-stone-600 via-rose-600 to-stone-800 xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-800 hover:text-stone-400   rounded-3xl  border-[2px] border-stone-600 shadow-md shadow-gray-700 "
+                  className="py-2 px-5 text-white xl:py-[9px] bg-gradient-to-br from-rose-600 via-stone-800 to-stone-800 xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-800 hover:text-stone-400   rounded-3xl  border-[2px] border-stone-600 shadow-md shadow-gray-700 "
                 >
                   <span>NUESTRA TIENDA</span>
                 </button>
