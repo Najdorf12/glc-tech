@@ -219,8 +219,8 @@
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-200px * 3));
-    transform: translateX(calc(-200px * 3));
+    -webkit-transform: translateX(calc(-200px * 4));
+    transform: translateX(calc(-200px * 4));
   }
 }
 @media (min-width: 800px) {

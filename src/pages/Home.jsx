@@ -68,17 +68,17 @@ const Home = ({
           </Link>
         </nav>
 
-        <div className="w-full h-screen absolute inset-0 z-10 flex items-center justify-center  lg:justify-end">
-          <picture className="w-full h-screen lg:w-[70%] lg:h-[75%] overflow-visible  flex justify-center items-center lg:self-end lg:items-end lg:justify-end">
+        <div className="w-full h-screen absolute inset-0 z-10 flex items-center justify-start  lg:justify-end">
+          <picture className="w-full h-[90%] lg:w-[70%] lg:h-[75%] overflow-visible  flex justify-start items-center lg:self-end lg:items-end lg:justify-end">
             <img
               src={imgHome}
               alt=""
-              className="w-full h-full  object-cover object-[-350px_30px] z-50 md:object-center xl:object-[center_-10px] 2xl:object-[center_-80px] "
+              className="w-full h-full  object-cover object-[-300px_30px] z-50 md:object-center xl:object-[center_-10px] 2xl:object-[center_-80px] "
             />
           </picture>
         </div>
 
-        <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-[5%]   lg:ml-[3%]  ">
+        <section className="relative mt-20 z-50 flex flex-col justify-center items-center xl:mt-[5%]   lg:ml-[3%]  ">
           <span className="bg-gradient-to-b from-stone-600 via-rose-700 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem]  xl:text-[15rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] xl:-mr-32">
             GLC
           </span>
