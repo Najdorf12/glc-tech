@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Store from "../pages/Store";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
-import imgHome from "/bg/bg5.webp";
+import imgHome from "/bgHome.png";
 import About from "./About";
 import AcoyteService from "../components/AcoyteService";
 import Review from "../components/Review";
@@ -45,8 +45,8 @@ const Home = ({
 
   return (
     <>
-      <main className="w-full h-screen overflow-hidden flex flex-col items-center bg-white relative ">
-        <nav className="fixed z-[100] w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 2xl:mr-12 ">
+      <main className="w-full h-screen overflow-hidden flex flex-col items-center bg-zinc-900 relative  lg:items-start  ">
+        <nav className="fixed z-[100] w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 lg:pr-9 2xl:pr-12 ">
           <Link
             target="blank"
             to={"https://api.whatsapp.com/send/?phone=541125043539"}
@@ -68,8 +68,8 @@ const Home = ({
           </Link>
         </nav>
 
-        <div className="w-full h-screen absolute inset-0 z-10 flex items-center justify-center ">
-          <picture className="w-full h-screen lg:w-[75%] lg:h-[75%] overflow-visible  flex justify-center items-center">
+        <div className="w-full h-screen absolute inset-0 z-10 flex items-center justify-center  lg:justify-end">
+          <picture className="w-full h-screen lg:w-[70%] lg:h-[75%] overflow-visible  flex justify-center items-center lg:self-end lg:items-end lg:justify-end">
             <img
               src={imgHome}
               alt=""
@@ -78,13 +78,13 @@ const Home = ({
           </picture>
         </div>
 
-        <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-6">
-          <span className="bg-gradient-to-b from-stone-600 via-rose-500 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem] xl:text-[14rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] xl:-mr-32">
+        <section className="relative mt-16 z-50 flex flex-col justify-center items-center xl:mt-[5%]   lg:ml-[3%]  ">
+          <span className="bg-gradient-to-b from-stone-600 via-rose-700 to-stone-800   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem]  xl:text-[15rem] xl:-mt-[93px] 2xl:text-[17rem] 2xl:-mt-[95px] xl:-mr-32">
             GLC
           </span>
 
-          <article className="flex flex-col  justify-center items-center z-50 ">
-            <h1 className="bg-gradient-to-t from-stone-700 via-stone-200 to-stone-700    text-transparent bg-clip-text text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[9rem] 2xl:text-[12rem]  z-50">
+          <article className="flex flex-col  justify-center items-center z-50  ">
+            <h1 className="bg-gradient-to-t from-stone-800 via-stone-300 to-stone-900    text-transparent bg-clip-text text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[10rem] 2xl:text-[12rem]  z-50">
               GLC TECH
             </h1>
             <h2 className=" text-[1.25rem] font-semibold text- inline-block  font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold -mt-3 lg:text-[1.7rem] 2xl:text-[1.8rem] text-stone-400 z-50 xl:-mt-6">
