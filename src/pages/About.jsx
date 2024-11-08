@@ -35,7 +35,7 @@ const About = ({imagesData}) => {
             />
           </figure>
         </div>
-        <article className="relative z-0 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:mr-[2%] 2xl:mr-[6%] lg:w-[50%]  xl:gap-7 2xl:gap-9 ">
+        <article className="relative z-0 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:mr-[5%] 2xl:mr-[9%] lg:w-[50%]  xl:gap-7 2xl:gap-9 ">
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-7xl bg-gradient-to-br from-stone-500 via-stone-300 to-stone-600    inline-block text-transparent bg-clip-text lg:from-stone-600 lg:via-rose-700 lg:to-stone-700">
             SOBRE NOSOTROS
           </h6>
