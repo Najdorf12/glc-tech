@@ -115,7 +115,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
 
       <footer className=" pt-12 xl:pt-28  bg-zinc-900 ">
         <section className="flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%] relative">
-        <figure className="w-full  h-[40vh] md:h-[70vh]  bg-zinc-900 absolute inset-0">
+        <figure className="w-full  h-[40vh] md:h-[60vh]  bg-zinc-900 absolute inset-0">
           <img src={imgbg} alt="" className="object-cover w-full h-full" />
           <div className="flex justify-center items-center  gap-3 2xl:gap-4 absolute left-0 rounded-tr-2xl bottom-0 pt-2 pl-3  pr-3 pb-1 lg:pb-3 lg:w-[30%] 2xl:[25%] bg-zinc-900 z-50">
             <p className="text-zinc-300 font-title text-lg xl:text-xl 2xl:text-2xl">

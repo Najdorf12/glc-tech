@@ -2,7 +2,7 @@ import imgAcoyteService from "/bg/bg8.jpeg";
 
 const AcoyteService = () => {
   return (
-    <div className="flex justify-center items-start h-[60vh] w-full relative lg:h-[80vh]">
+    <div className="flex justify-center items-start h-[60vh] w-full relative lg:h-[60vh]">
       <picture className="absolute inset-0 w-full  overflow-visible flex justify-center items-center">
         <img
           src={imgAcoyteService}
