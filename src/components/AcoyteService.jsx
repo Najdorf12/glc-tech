@@ -1,18 +1,25 @@
-import imgAcoyteService from "/bg/bg8.jpeg";
+import imgAcoyteService from "/banneracoyte.png";
 
 const AcoyteService = () => {
   return (
-    <div className="flex justify-center items-start h-[40vh] w-full relative lg:h-[60vh]">
-      <picture className="absolute inset-0 w-full  overflow-visible flex justify-center items-center">
+    <div className="w-full relative py-6 flex justify-center bg-zinc-900">
+      <picture className="w-full h-full flex justify-center items-center">
+        <img
+          src={imgAcoyteService}
+          alt="imgAcoyteService"
+          className="w-full h-full object-contain object-center z-40   "
+        />
+      </picture>  
+     {/*  <picture className="absolute inset-0 w-full  overflow-hidden flex justify-center items-center">
         <img
           src={imgAcoyteService}
           alt="imgAcoyteService"
           className="w-full h-full object-cover object-center z-40   "
         />
-      </picture>
+      </picture> */}
 
-      <section className="z-50 flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%]">
-        <article className="flex flex-col justify-center items-center text-balance text-center  lg:self-end lg:mr-[6%]">
+      {/* <section className="z-50 flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%]">
+       <article className="flex flex-col justify-center items-center text-balance text-center  lg:self-end lg:mr-[6%]">
           <h6 className="text-4xl bg-gradient-to-t from-stone-300 via-stone-200 to-white bg-clip-text text-transparent inline-block font-title font-semibold xl:text-7xl 2xl:text-8xl">
             ACOYTESERVICE
           </h6>
@@ -24,10 +31,10 @@ const AcoyteService = () => {
             <li>CONSOLAS</li>
             <li>SMARTPHONES</li>
           </ul>
-        </article>
-      </section>
+        </article> 
+      </section> */}
 
-      <div className="flex justify-center items-center  gap-3 xl:gap-4 2xl:gap-6 absolute left-0 rounded-tr-2xl bottom-0 border-t-[2px] border-r-[2px] bg-zinc-900 border-stone-500 pt-2 px-6 pb-1 lg:pb-3 lg:px-8 z-50 xl:px-12 xl:pt-3 ">
+      {/* <div className="flex justify-center items-center  gap-3 xl:gap-4 2xl:gap-6 absolute left-0 rounded-tr-2xl bottom-0 border-t-[2px] border-r-[2px] bg-zinc-900 border-stone-500 pt-2 px-6 pb-1 lg:pb-3 lg:px-8 z-50 xl:px-12 xl:pt-3 ">
         <p className="font-title text-lg font-semibold text-stone-300 xl:text-2xl xl:font-medium">Visitar sitio</p>
         <button className="button3">
           <a href="https://www.grupolacomunidad.com.ar" target="_blank">
@@ -60,7 +67,7 @@ const AcoyteService = () => {
             </div>
           </a>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
