@@ -3,7 +3,7 @@ import axios from "../api/axios";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import { getAllProducts } from "../api/handlers";
-import banner from "../assets/banner.png";
+import bannerXiaomi from "/bannerxiaomi.png";
 import { Link } from "react-router-dom";
 import imgbg from "/bg20.jpg";
 
@@ -21,7 +21,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     "Todos",
   ];
   useEffect(() => {
-      const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
+    const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
 
     if (hasVisitedHome) {
       const section = document.getElementById("store");
@@ -30,7 +30,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       }
     }
 
-    sessionStorage.setItem("hasVisitedHome", true); 
+    sessionStorage.setItem("hasVisitedHome", true);
   }, []);
 
   const getProductsByCategory = async (category) => {
@@ -44,7 +44,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setIsLoading(false);
     }
   };
-  
+
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
@@ -56,7 +56,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setIsLoading(false);
     }
   };
- 
+
   useEffect(() => {
     const savedCategory = sessionStorage.getItem("selectedCategory");
 
@@ -114,7 +114,18 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       </section>
 
       <footer className=" pt-12 xl:pt-28  bg-zinc-900 ">
-        <section className="flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%] relative">
+        <div className="w-full relative mt-6 flex justify-center bg-zinc-900">
+          <Link target="_blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
+            <picture className="w-full h-full flex justify-center items-center">
+              <img
+                src={bannerXiaomi}
+                alt="imgAcoyteService"
+                className="w-full h-full object-contain object-center z-40   "
+              />
+            </picture>
+          </Link>
+        </div>
+        {/*  <section className="flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%] relative">
         <figure className="w-full  h-[40vh] md:h-[60vh]  bg-zinc-900 absolute inset-0">
           <img src={imgbg} alt="" className="object-cover w-full h-full" />
           <div className="flex justify-center items-center  gap-3 2xl:gap-4 absolute left-0 rounded-tr-2xl bottom-0 pt-2 pl-3  pr-3 pb-1 lg:pb-3 lg:w-[30%] 2xl:[25%] bg-zinc-900 z-50">
@@ -164,7 +175,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
            
           </article>
         </section>
-       
+        */}
       </footer>
     </>
   );

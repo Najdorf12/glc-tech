@@ -1,16 +1,19 @@
 import imgAcoyteService from "/banneracoyte.png";
+import { Link } from "react-router-dom";
 
 const AcoyteService = () => {
   return (
     <div className="w-full relative py-6 flex justify-center bg-zinc-900">
-      <picture className="w-full h-full flex justify-center items-center">
-        <img
-          src={imgAcoyteService}
-          alt="imgAcoyteService"
-          className="w-full h-full object-contain object-center z-40   "
-        />
-      </picture>  
-     {/*  <picture className="absolute inset-0 w-full  overflow-hidden flex justify-center items-center">
+      <Link target="_blank" to={"https://acoyteservice.com.ar"}>
+        <picture className="w-full h-full flex justify-center items-center">
+          <img
+            src={imgAcoyteService}
+            alt="imgAcoyteService"
+            className="w-full h-full object-contain object-center z-40   "
+          />
+        </picture>
+      </Link>
+      {/*  <picture className="absolute inset-0 w-full  overflow-hidden flex justify-center items-center">
         <img
           src={imgAcoyteService}
           alt="imgAcoyteService"
