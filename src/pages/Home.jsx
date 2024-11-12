@@ -107,6 +107,7 @@ const Home = ({
       <About imagesData={imagesData} />
       <Review />
       <AcoyteService />
+      
       <Store
         theme={theme}
         allProducts={allProducts}

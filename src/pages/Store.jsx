@@ -3,7 +3,6 @@ import axios from "../api/axios";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import { getAllProducts } from "../api/handlers";
-import bannerXiaomi from "/bannerxiaomi.png";
 import { Link } from "react-router-dom";
 import imgbg from "/bg20.jpg";
 
@@ -114,7 +113,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       </section>
 
       <footer className=" pt-12 xl:pt-28  bg-zinc-900 ">
-        <div className="w-full relative mt-6 flex justify-center bg-zinc-900">
+       {/*  <div className="w-full relative mt-6 flex justify-center bg-zinc-900">
           <Link target="_blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
             <picture className="w-full h-full flex justify-center items-center">
               <img
@@ -124,7 +123,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
               />
             </picture>
           </Link>
-        </div>
+        </div> */}
         {/*  <section className="flex flex-col justify-center items-center mt-6 lg:w-full xl:mt-[3%] relative">
         <figure className="w-full  h-[40vh] md:h-[60vh]  bg-zinc-900 absolute inset-0">
           <img src={imgbg} alt="" className="object-cover w-full h-full" />
