@@ -15,8 +15,6 @@ const ProductDetail = ({ theme }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [similarProducts, setSimilarProducts] = useState([]);
 
-  
-
   const images2 = [
     {
       original: productDetail?.images
@@ -119,46 +117,49 @@ const ProductDetail = ({ theme }) => {
           </button>
         </Link>
       </nav>
-     {/*  {isLoading && <Loader />} */}
-      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-12 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
+      {/*  {isLoading && <Loader />} */}
+      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-10 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
         <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
             id="title-product-detail"
-            className="font-title flex flex-col justify-center items-center  mt-10 
-             bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border-[2px] border-stone-600 rounded-2xl  pt-3 pb-5   md:py-6 xl:mt-4   "
+            className="font-title flex flex-col justify-center items-start  mt-10 
+             bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border-[2px] border-stone-600 rounded-2xl pl-3 pt-3 pb-5 w-[90%] max-w-[600px] xl:w-[510px] xl:py-5 lg:pl-5 xl:mt-4 2xl:w-[600px] 2xl:py-6  "
           >
-            <h5 className="text-3xl  font-bold   py-2 px-8 xl:text-5xl 2xl:text-6xl bg-gradient-to-t from-stone-100 to-stone-300 inline-block text-transparent bg-clip-text ">
-              {productDetail.name?.toUpperCase()?.substring(0, 19)}
+            <h5 className="text-3xl  font-bold   py-2 xl:text-5xl 2xl:text-6xl bg-gradient-to-b from-stone-100 via-stone-300 to-stone-800 inline-block text-transparent bg-clip-text ">
+              {productDetail?.name?.toUpperCase()?.substring(0, 19)}
             </h5>
-
-            <div className="flex justify-center items-center  gap-3 sm:gap-10 2xl:mt-3 text-white">
-              <p className=" py-2 px-4 text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl ">
+            <p className="text-lg text-stone-400 xl:text-xl 2xl:text-2xl">
+              {productDetail?.procesador}
+            </p>
+            <div className="flex justify-center items-center  gap-3 sm:gap-10 xl:mt-1 2xl:mt-3 text-white">
+              {/* <p className=" py-2 px-4 text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl ">
                 $USD {productDetail.price}
-              </p>
-              <p className=" py-2 px-4  text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl ">
+              </p> */}
+              <p className=" py-2  text-3xl font-bold xl:text-4xl md:tracking-wide 2xl:text-5xl ">
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-6 2xl:mt-2">
               <Link
                 to="https://api.whatsapp.com/send/?phone=541125043539"
                 target="blank"
               >
-                <button className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 py-1 px-6 xl:py-[6px] xl:px-12 hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 2xl:text-xl 2xl:mt-7 ">
+                <button className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 w-[150px] hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 py-[2px]    xl:w-[180px] 2xl:text-xl 2xl:w-[190px] ">
                   <span>COMPRAR</span>
                 </button>
               </Link>
-              <button
-                onClick={handleShare}
-                className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 px-4 xl:py-[3px] xl:px-8 hover:scale-105 hover:duration-500 tracking-wider font-title font-semibold text-stone-300    2xl:mt-7  flex items-center gap-1 "
-              >
-                <i className="bx bxs-share-alt text-xl font-normal text-stone-400"></i>
-                COMPARTIR
-              </button>
+              <Link>
+                <button
+                  onClick={handleShare}
+                  className="btn-home2 bg-gradient-to-br from-zinc-900 via-zinc-700 shadow-sm shadow-gray-700 to-zinc-900 border border-stone-500 mt-3 w-[150px] hover:scale-105 hover:duration-500 tracking-wider font-title font-bold text-stone-100 py-[2px]    xl:w-[180px] 2xl:text-xl 2xl:w-[190px] "
+                >
+                  <span>COMPARTIR</span>
+                </button>
+              </Link>
             </div>
           </article>
 
-          <div className="mt-6 sm:mt-8 xl:mt-8 2xl:mt-12 w-full  flex justify-center object-cover items-center overflow-hidden ">
+          <div className="mt-6 sm:mt-8 xl:mt-5 2xl:mt-6 w-full  flex justify-center object-cover items-center overflow-hidden ">
             <picture
               loading="lazy"
               className="imgs w-[95%] flex items-center justify-center xl:w-full"
