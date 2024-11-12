@@ -86,18 +86,24 @@ const ProductDetail = ({ theme }) => {
 
   return (
     <section className="relative bg-zinc-900 pb-12  w-full pt-2  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
-      <div className="fixed bottom-3 left-0 z-[100] lg:bottom-8">
+      <div className="fixed bottom-3 left-2 z-[100] lg:bottom-8 lg:left-3">
         <Link
           target="blank"
           to={"https://api.whatsapp.com/send/?phone=541125043539"}
         >
-          <button
-            style={{
-              boxShadow: "3px 3px 9px #f1f1f1, -3px -3px 9px #666",
-            }}
-            className=" z-50 border-[1.5px]  ml-4 border-stone-600  outline-none w-10 h-10 rounded-full text-[1.5rem] flex justify-center font-bold items-center  lg:mr-0  hover:scale-105 duration-400 lg:left-0 lg:ml-5  lg:text-2xl lg:h-12 lg:w-12 xl:text-[32px]  2xl:ml-7 bg-gray-200 text-stone-600  "
-          >
-            <i class="bx bxl-whatsapp"></i>
+          <button class="animated-button text-zinc-100 bg-zinc-800 rounded-3xl shadow-sm shadow-gray-300">
+            <i className="bx bxl-whatsapp arr-2 text-3xl  text-[#25D366]"></i>
+            <span className="text font-title font-medium text-base">
+              Escríbenos
+            </span>
+            <span className="circle bg-zinc-800"></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="arr-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
           </button>
         </Link>
       </div>
