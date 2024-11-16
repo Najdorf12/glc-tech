@@ -3,7 +3,9 @@ import AdminForm from "./pages/AdminForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/login/Login";
-import Infinix from "./pages/Infinix"
+import InfinixPage from "./pages/categories/InfinixPage";
+import SamsungPage from "./pages/categories/SamsungPage";
+import MotorolaPage from "./pages/categories/MotorolaPage";
 import Register from "./pages/login/Register";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
 import ErrorPage from "./pages/ErrorPage";
@@ -15,34 +17,6 @@ function App() {
   const [arsPrice, setArsPrice] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const [theme, setTheme] = useState(() => {
-    // Leer el tema desde localStorage si está guardado, de lo contrario usar la preferencia del sistema
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      return storedTheme;
-    }
-
-    // Si no hay tema en localStorage, usar la preferencia del sistema
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-
-    return "light";
-  });
-  const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
-  useEffect(() => {
-    // Actualizar la clase del tema en el <html> y guardar el tema en localStorage
-    if (theme === "dark") {
-      document.querySelector("html").classList.add("dark");
-    } else {
-      document.querySelector("html").classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
- 
   useEffect(() => {
     const fetchUsdPrice = async () => {
       try {
@@ -64,8 +38,6 @@ function App() {
             path="/"
             element={
               <Home
-                theme={theme}
-                handleChangeTheme={handleChangeTheme}
                 allProducts={allProducts}
                 setAllProducts={setAllProducts}
                 arsPrice={arsPrice}
@@ -74,12 +46,26 @@ function App() {
               />
             }
           />
-          <Route path="/:id" element={<ProductDetail theme={theme} />} />
-          <Route path="/products/infinix"  element={<Infinix arsPrice={arsPrice} />} />
-
+         
+        
+          <Route
+            path="/products/infinix"
+            element={<InfinixPage arsPrice={arsPrice} />}
+          />
+          <Route
+            path="/products/samsung"
+            element={<SamsungPage arsPrice={arsPrice} />}
+          />
+          <Route
+            path="/products/motorola"
+            element={<MotorolaPage arsPrice={arsPrice} />}
+          />
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
+
+          <Route path="/:id" element={<ProductDetail />} />
           <Route path="*" element={<ErrorPage />} />
 
           <Route element={<ProtectedRoutes />}>

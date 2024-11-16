@@ -1,7 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "../api/axios";
-import Loader from "../components/Loader";
+/* import Loader from "../components/Loader"; */
+import PrimaryBtn from "../components/buttons/PrimaryBtn";
 import ImageGallery from "react-image-gallery";
 import CardSimilarProd from "../components/CardSimilarProd";
 import banner2 from "../assets/banner2.png";
@@ -12,7 +13,7 @@ const ProductDetail = ({ theme }) => {
 
   const [productDetail, setProductDetail] = useState({});
   const [ARSPrice, setARSPrice] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  /*  const [isLoading, setIsLoading] = useState(false); */
   const [similarProducts, setSimilarProducts] = useState([]);
 
   const images2 = [
@@ -46,16 +47,16 @@ const ProductDetail = ({ theme }) => {
     window.scrollTo(0, 0);
     const fetchProductData = async () => {
       try {
-        setIsLoading(true);
+        /*    setIsLoading(true); */
         const productResponse = await axios.get(`/products/${id}`);
         setProductDetail(productResponse?.data);
         const priceResponse = await axios.get("/usdPrice");
         setARSPrice(priceResponse?.data);
       } catch (error) {
         console.error(error);
-      } finally {
+      } /*  finally {
         setIsLoading(false);
-      }
+      } */
     };
 
     fetchProductData();
@@ -86,27 +87,15 @@ const ProductDetail = ({ theme }) => {
 
   return (
     <section className="relative bg-zinc-900 pb-12  w-full pt-2  flex flex-col items-center  overflow-hidden xl:pt-4 2xl:min-h-screen">
-      <div className="fixed bottom-3 left-2 z-[100] lg:bottom-8 lg:left-3">
+      <nav className="fixed z-[100] w-full flex justify-start items-center bottom-2 left-1 lg:bottom-6 lg:left-4">
         <Link
           target="blank"
           to={"https://api.whatsapp.com/send/?phone=541125043539"}
+          className="text-white bg-zinc-800 rounded-3xl"
         >
-          <button class="animated-button text-zinc-100 bg-zinc-800 rounded-3xl shadow-sm shadow-gray-300">
-            <i className="bx bxl-whatsapp arr-2 text-3xl  text-[#25D366]"></i>
-            <span className="text font-title font-medium text-base">
-              Escríbenos
-            </span>
-            <span className="circle bg-zinc-800"></span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="arr-1"
-              viewBox="0 0 24 24"
-            >
-              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-            </svg>
-          </button>
+          <PrimaryBtn btnname="Escríbenos" />
         </Link>
-      </div>
+      </nav>
       <nav className="w-full flex items-center justify-between px-1 xl:px-8 2xl:px-12 2xl:pt-2 ">
         <ul className="text-stone-400 font-title font-medium  text-base flex  pl-3 items-center  md:font-semibold 2xl:text-lg">
           <Link to={"/#store"}>

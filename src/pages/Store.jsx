@@ -6,19 +6,19 @@ import { getAllProducts } from "../api/handlers";
 import { Link } from "react-router-dom";
 import imgbg from "/bg20.jpg";
 
+const btns = [
+  "Motorola",
+  "Xiaomi",
+  "Samsung",
+  "Iphone",
+  "Infinix",
+  "Realme",
+  "Tablets",
+  "Consolas",
+  "Todos",
+];
 const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const btns = [
-    "Motorola",
-    "Xiaomi",
-    "Samsung",
-    "Iphone",
-    "Infinix",
-    "Realme",
-    "Tablets",
-    "Consolas",
-    "Todos",
-  ];
   useEffect(() => {
     const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
 
@@ -39,21 +39,21 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       setAllProducts(res.data);
     } catch (error) {
       console.error(error);
-    } finally {
+    } /* finally {
       setIsLoading(false);
-    }
+    } */
   };
 
   const fetchProducts = async () => {
-    setIsLoading(true);
+  /*   setIsLoading(true); */
     try {
       const productsData = await getAllProducts();
       setAllProducts(productsData);
     } catch (error) {
       console.error("Failed to fetch products:", error);
-    } finally {
+    } /* finally {
       setIsLoading(false);
-    }
+    } */
   };
 
   useEffect(() => {
@@ -113,7 +113,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
       </section>
 
       <footer className=" pt-12 xl:pt-28  bg-zinc-900 ">
-       {/*  <div className="w-full relative mt-6 flex justify-center bg-zinc-900">
+        {/*  <div className="w-full relative mt-6 flex justify-center bg-zinc-900">
           <Link target="_blank" to={"https://serviciotecnicoxiaomi.com.ar"}>
             <picture className="w-full h-full flex justify-center items-center">
               <img

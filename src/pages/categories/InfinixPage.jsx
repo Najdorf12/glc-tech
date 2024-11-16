@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import axios from "../api/axios";
+import axios from "../../api/axios";
 import { Link } from "react-router-dom";
-import CardInfinix from "../components/CardInfinix";
+import CardInfinix from "../../components/CardInfinix";
 import logoInfinix from "/InfinixLogo.png";
 import imgbg from "/bg20.jpg";
+import PrimaryBtn from "../../components/buttons/PrimaryBtn";
+import ShareBtn from "../../components/buttons/ShareBtn";
+import shareImg from "/share/shareinfinix.webp";
 
-const Infinix = ({ arsPrice }) => {
+const InfinixPage = ({ arsPrice }) => {
   const [allProductsInfinix, setAllProductsInfinix] = useState([]);
-  console.log(allProductsInfinix);
+
   useEffect(() => {
     getProductsByCategory();
   }, []);
@@ -20,31 +23,35 @@ const Infinix = ({ arsPrice }) => {
       console.error(error);
     }
   };
-
+  const handleShare = () => {
+    const shareUrl = "https://www.grupolacomunidad.com.ar/products/infinix";
+    const brandText = `
+    ¡Descubre todos nuestros celulares Infinix disponibles aquí!
+    ${shareUrl}
+  
+    Encuentra el celular perfecto para ti. 
+    ¡Contáctanos si tienes alguna duda! 
+    Visita nuestra web para más información.
+    `;
+  
+    const message = encodeURIComponent(brandText);
+    const whatsappUrl = `https://wa.me/?text=${message}`;
+    window.open(whatsappUrl, "_blank");
+  };
   return (
     <>
-      <section className="w-full min-h-screen relative flex flex-col justify-start ">
-        <nav className="w-full flex items-center justify-end px-1 xl:px-8 2xl:px-12 2xl:pt-2 lg:justify-end fixed z-50">
-          <Link to={"/"}>
-            <button className="btn-home2 flex items-center gap-3 bg-zinc-700 text-[rgb(146,195,73)]  text-base font-medium  font-title mt-1 border-[2px] rounded-[1rem] pr-2 pl-4  border-zinc-600 xl:px-8 2xl:text-lg 2xl:px-8  xl:font-semibold hover:scale-105 shadow-lg shadow-zinc-400 xl:mt-3">
-              TIENDA
-              <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="button__icon"
-                    width="14"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-            </button>
+      <section className="w-full min-h-screen relative flex flex-col justify-start bg-zinc-900">
+        <nav className="fixed z-[100] w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 lg:pr-9 2xl:pr-12 ">
+          <Link
+            target="blank"
+            to={"/"}
+            className="text-white bg-zinc-800 rounded-3xl"
+          >
+            <PrimaryBtn btnname="TIENDA" />
           </Link>
         </nav>
 
-        <article className="flex flex-col items-center mt-14 gap-4 text-balance text-center xl:mt-12 2xl:mt-20">
+        <article className="flex flex-col items-center pt-16 pb-6 gap-4 text-balance text-center xl:pt-12 2xl:pt-20 bg-white">
           <figure className="w-[90%] lg:w-[40%] xl:w-[45%]">
             <img src={logoInfinix} alt="logoInfinix" className="w-full" />
           </figure>
@@ -52,9 +59,12 @@ const Infinix = ({ arsPrice }) => {
             Aquí encontraras todos nuestros dispositivos Infinix.
             {/*   <i className="bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl"></i> */}
           </p>
+          <Link className="mt-2 xl:mt-3">
+            <ShareBtn handleShare={handleShare} />
+          </Link>
         </article>
 
-        <section className="mt-6 flex flex-wrap justify-center items-center gap-x-2 gap-y-10 px-2 md:px-12 lg:px-12 lg:gap-y-20 xl:gap-x-6  xl:mt-14 2xl:mt-16 xl:px-[15%]">
+        <section className="mt-6 flex flex-wrap justify-center items-center gap-x-2 gap-y-10 px-2 md:px-12 lg:px-12 lg:gap-y-16 xl:gap-x-12  xl:mt-14 2xl:mt-16 xl:px-[15%]">
           {allProductsInfinix?.map((productInfinix, i) => (
             <CardInfinix key={i} product={productInfinix} arsPrice={arsPrice} />
           ))}
@@ -66,10 +76,7 @@ const Infinix = ({ arsPrice }) => {
               Visita nuestra Tienda
             </p>
             <button className="button">
-              <a
-                href="https://www.grupolacomunidad.com.ar"
-                target="_blank"
-              >
+              <a href="https://www.grupolacomunidad.com.ar" target="_blank">
                 <div className="button__circle">
                   <svg
                     viewBox="0 0 14 15"
@@ -106,4 +113,4 @@ const Infinix = ({ arsPrice }) => {
   );
 };
 
-export default Infinix;
+export default InfinixPage;
