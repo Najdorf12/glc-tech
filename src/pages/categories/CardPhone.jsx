@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const CardInfinix = ({ product ,arsPrice}) => {
+const CardPhone = ({ product ,arsPrice}) => {
   const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
@@ -63,4 +63,4 @@ const CardInfinix = ({ product ,arsPrice}) => {
   );
 };
 
-export default CardInfinix;
+export default CardPhone;

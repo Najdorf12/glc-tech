@@ -110,7 +110,7 @@
 .button {
   cursor: pointer;
   border: none;
-  background: rgb(146, 195, 73);
+  background: rgb(136, 14, 51);
   color: #fff;
   width: 100px;
   height: 100px;
@@ -156,7 +156,7 @@
   height: 40px;
   overflow: hidden;
   background: #fff;
-  color: rgb(146, 195, 73);
+  color: rgb(194, 34, 82);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -169,12 +169,12 @@
 }
 
 .button:hover {
-  background: #474747;
+  background: #383636;
   transform: scale(1.05);
 }
 
 .button:hover .button__icon {
-  color: rgb(146, 195, 73);
+  color: rgb(194, 34, 82);
 }
 
 .button:hover .button__icon:first-child {

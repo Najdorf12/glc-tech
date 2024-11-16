@@ -6,8 +6,8 @@ import Footer from "../../components/Footer";
 import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 import ShareBtn from "../../components/buttons/ShareBtn";
 
-const MotorolaPage = ({ arsPrice }) => {
-  const [allProductsMotorola, setAllProductsMotorola] = useState([]);
+const XiaomiPage = ({ arsPrice }) => {
+  const [allProductsXiaomi, setAllProductsXiaomi] = useState([]);
 
   useEffect(() => {
     getProductsByCategory();
@@ -15,16 +15,16 @@ const MotorolaPage = ({ arsPrice }) => {
 
   const getProductsByCategory = async () => {
     try {
-      const res = await axios.get(`/products/category/Motorola`);
-      setAllProductsMotorola(res.data);
+      const res = await axios.get(`/products/category/Xiaomi`);
+      setAllProductsXiaomi(res.data);
     } catch (error) {
       console.error(error);
     }
   };
   const handleShare = () => {
-    const shareUrl = "https://www.grupolacomunidad.com.ar/motorola.html";
+    const shareUrl = "https://www.grupolacomunidad.com.ar/xiaomi.html";
     const brandText = `
-    ¡Descubre todos nuestros celulares Motorola disponibles aquí!
+    ¡Descubre todos nuestros celulares Xiaomi disponibles aquí!
     ${shareUrl}
   
     Encuentra el celular perfecto para ti. 
@@ -64,8 +64,8 @@ const MotorolaPage = ({ arsPrice }) => {
         </article>
 
         <section className="mt-6 flex flex-wrap justify-center items-center gap-x-2 gap-y-10 px-2 md:px-12 lg:px-12 lg:gap-y-16 xl:gap-x-12  xl:mt-14 2xl:mt-16 xl:px-[15%]">
-          {allProductsMotorola?.map((productMotorola, i) => (
-            <CardPhone key={i} product={productMotorola} arsPrice={arsPrice} />
+          {allProductsXiaomi?.map((productXiaomi, i) => (
+            <CardPhone key={i} product={productXiaomi} arsPrice={arsPrice} />
           ))}
         </section>
         <Footer />
@@ -74,4 +74,4 @@ const MotorolaPage = ({ arsPrice }) => {
   );
 };
 
-export default MotorolaPage;
+export default XiaomiPage;

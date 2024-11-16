@@ -5,6 +5,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Login from "./pages/login/Login";
 import InfinixPage from "./pages/categories/InfinixPage";
 import SamsungPage from "./pages/categories/SamsungPage";
+import XiaomiPage from "./pages/categories/XiaomiPage";
 import MotorolaPage from "./pages/categories/MotorolaPage";
 import Register from "./pages/login/Register";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
@@ -59,6 +60,10 @@ function App() {
           <Route
             path="/products/motorola"
             element={<MotorolaPage arsPrice={arsPrice} />}
+          />
+          <Route
+            path="/products/xiaomi"
+            element={<XiaomiPage arsPrice={arsPrice} />}
           />
 
           <Route path="/login" element={<Login />} />
