@@ -24,7 +24,7 @@ const InfinixPage = ({ arsPrice }) => {
     }
   };
   const handleShare = () => {
-    const shareUrl = "https://www.grupolacomunidad.com.ar/products/infinix";
+    const shareUrl = "https://www.grupolacomunidad.com.ar/infinix.html";
     const brandText = `
     ¡Descubre todos nuestros celulares Infinix disponibles aquí!
     ${shareUrl}

@@ -45,7 +45,7 @@ const CardInfinix = ({ product ,arsPrice}) => {
             </p>
           </div>
           <button
-            className="bg-gradient-to-tr from-zinc-900 via-zinc-200 to-zinc-900 border-[2px] border-stone-400 w-[90%] ml-2 mt-[6px] text-stone-700 text-[1rem] font-semibold py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem]  hover:text-white hover:scale-105 hover:bg-white  duration-500"
+            className="bg-gradient-to-tr from-rose-600 via-zinc-800 to-zinc-700 border-[2px] border-stone-400 w-[90%] ml-2 mt-[6px] text-stone-300 text-[1rem] font-semibold py-[3.5px] rounded-br-xl self-start md:text-[1.1rem] lg:py-[5px] md:mt-[9px] 2xl: xl:font-semibold xl:text-[1.25rem]  hover:text-white  hover:border-rose-500 hover:from-rose-800 duration-500"
           >
             <Link
               className="flex items-center  justify-center gap-2 "
