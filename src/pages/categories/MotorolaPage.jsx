@@ -50,20 +50,19 @@ const MotorolaPage = ({ arsPrice }) => {
           </Link>
         </nav>
 
-        <article className="flex flex-col items-center pt-16 pb-6 gap-4 text-balance text-center xl:pt-12 2xl:pt-20 bg-white">
-          {/*  <figure className="w-[90%] lg:w-[40%] xl:w-[45%]">
-            <img src={logoInfinix} alt="logoInfinix" className="w-full" />
-          </figure> */}
-          <p className="text-stone-500  text-base font-semibold px-3 leading-4 font-title lg:text-lg xl:text-xl 2xl:text-2xl">
-            Aquí encontraras todos nuestros dispositivos Infinix.
+        <article className="flex flex-col items-center pt-16 pb-6 gap-4 text-balance text-center xl:pt-14 xl:pb-9 2xl:pt-20 bg-white 2xl:pb-14">
+          <h6 className="text-5xl font-title  bg-gradient-to-t bg-clip-text from-zinc-800 to-zinc-500 text-transparent md:text-6xl font-semibold xl:text-8xl 2xl:text-9xl">MOTOROLA</h6>
+          <p className="text-zinc-400 text-base font-semibold px-3 leading-4 font-text2 lg:text-lg xl:text-xl xl:mt-2 xl:max-w-[700px] 2xl:text-2xl 2xl:max-w-[800px] 2xl:mt-3">
+            Explora nuestra colección exclusiva de dispositivos Motorola.
+            Descubre sus características y elige el que más te convenga.
             {/*   <i className="bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl"></i> */}
           </p>
-          <Link className="mt-2 xl:mt-3">
+          <Link className="mt-4 xl:mt-6 ">
             <ShareBtn handleShare={handleShare} />
           </Link>
         </article>
 
-        <section className="mt-6 flex flex-wrap justify-center items-center gap-x-2 gap-y-10 px-2 md:px-12 lg:px-12 lg:gap-y-16 xl:gap-x-12  xl:mt-14 2xl:mt-16 xl:px-[15%]">
+        <section className="mt-8 flex flex-wrap justify-center items-center gap-x-2 gap-y-10 px-2 md:px-12 lg:px-12 lg:gap-y-16 xl:gap-x-12  xl:mt-14 2xl:mt-16 xl:px-[15%]">
           {allProductsMotorola?.map((productMotorola, i) => (
             <CardPhone key={i} product={productMotorola} arsPrice={arsPrice} />
           ))}
