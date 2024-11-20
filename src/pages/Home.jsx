@@ -63,7 +63,7 @@ const Home = ({
             <img
               src={imgHome}
               alt=""
-              className="w-full h-full  object-cover object-[-1000px] lg:object-[-500px] 2xl:object-center "
+              className="w-full h-full  object-cover object-[-1000px] lg:object-[70%] 2xl:object-center "
             />
           </figure>
         </div>
@@ -74,7 +74,7 @@ const Home = ({
           </span>
 
           <article className="flex flex-col  justify-center items-center z-50 lg:justify-start ">
-            <h1 className="text-zinc-200 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[10rem] 2xl:text-[12rem]  z-50">
+            <h1 className="text-zinc-100 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[10rem] 2xl:text-[12rem]  z-50">
               GLC TECH
             </h1>
             <h2 className=" text-[1.25rem] font-semibold text- inline-block  font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold -mt-3 lg:text-[1.7rem] 2xl:text-[1.8rem] text-stone-300 z-50 xl:-mt-6">
