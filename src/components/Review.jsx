@@ -31,7 +31,14 @@ const Review = () => {
   ];
   return (
     <>
-      <section className="flex overflow-hidden items-center justify-center gap-4 z-50 w-full py-7 bg-zinc-900 xl:py-12 2xl:py-16 ">
+      <section className="relative flex overflow-hidden items-center justify-center gap-4 z-50 w-full pt-7 pb-20 bg-zinc-900 xl:pt-12 xl:pb-24 2xl:pt-16 2xl:pb-28">
+      <a href="https://www.google.com/search?q=grupo+la+comunidad&oq=grupo+la&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBggCEEUYPDIGCAMQRRg8MgYIBBAuGEDSAQg0OTU3ajBqMagCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x95bccb6c2d685319:0x60d9f4e4b9cf0890,1,,,," target="_blank"
+      className="absolute  z-50 bottom-0">
+      <button className="border-[2px] border-stone-500  flex justify-between pl-3 pr-1 items-center rounded-lg text-stone-600 font-medium font-title w-[220px] xl:w-[260px] text-base xl:text-lg 2xl:text-xl 2xl:w-[280px]">
+        VER OPINIONES
+        <i className='bx bxl-google text-stone-500 text-3xl border-l border-stone-500 pl-1 2xl:text-4xl '></i>
+        </button>
+        </a>
         <section className="slider lg:w-full flex justify-center items-center">
           <div className="slide-track">
             {testimonials?.map((testimonial, i) => (
@@ -42,6 +49,7 @@ const Review = () => {
           </div>
         </section>
       </section>
+     
     </>
   );
 };
