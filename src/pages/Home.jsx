@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Store from "../pages/Store";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
-import imgHome from "/bgHome2.png";
+import imgHome from "/bg/bg8.webp";
 import About from "./About";
 import AcoyteService from "../components/AcoyteService";
 import Review from "../components/Review";
@@ -47,7 +47,7 @@ const Home = ({
 
   return (
     <>
-      <main className="w-full h-screen overflow-hidden flex flex-col items-center bg-zinc-900 relative  lg:items-start z-50 ">
+      <main className="w-full h-[100vh] overflow-hidden flex flex-col items-center bg-white relative  lg:items-start z-50 ">
         <nav className="fixed z-[100] w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 lg:pr-9 2xl:pr-12 ">
           <Link
             target="blank"
@@ -58,32 +58,32 @@ const Home = ({
           </Link>
         </nav>
 
-        <div className="w-full h-screen absolute inset-0 z-30 flex items-center justify-start  lg:justify-end">
-          <picture className="w-full h-[90%] lg:w-[65%] lg:h-[75%] overflow-visible  flex justify-start items-center lg:self-end lg:items-end lg:justify-end z-30 2xl:w-[65%]">
+        <div className="w-full h-[90vh] absolute inset-0 z-30 ">
+          <figure className="w-full h-full">
             <img
               src={imgHome}
               alt=""
-              className="w-full h-full  object-cover object-[-300px_30px] z-30 md:object-center xl:object-[center_-10px] 2xl:object-[center_-20px] "
+              className="w-full h-full  object-cover object-[-1000px] lg:object-[-500px] 2xl:object-center "
             />
-          </picture>
+          </figure>
         </div>
 
-        <section className="relative mt-20 z-50 flex flex-col justify-center items-center xl:mt-[5%]   lg:ml-[3%]  ">
-          <span className="bg-gradient-to-b from-stone-500 via-stone-700 to-stone-900   text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem]  xl:text-[16rem] xl:-mt-[112px] 2xl:text-[18rem] 2xl:-mt-[110px] xl:-mr-40">
+        <section className="relative mt-20 z-50 flex flex-col justify-center items-center xl:mt-[3%]   lg:ml-[3%]  ">
+          <span className="bg-gradient-to-b from-white via-stone-400 to-zinc-800  text-transparent bg-clip-text z-10 absolute top-0 font-title font-extrabold text-[8rem]  sm:text-[9rem] w-full -mt-[4.3rem] flex justify-end items-center mr-4 sm:-mr-16 sm:-mt-[4.7rem]  md:text-[12rem]  xl:text-[16rem] xl:-mt-[112px] 2xl:text-[18rem] 2xl:-mt-[110px] xl:-mr-40">
             GLC
           </span>
 
           <article className="flex flex-col  justify-center items-center z-50 lg:justify-start ">
-            <h1 className="bg-gradient-to-t from-stone-800 via-stone-300 to-stone-900    text-transparent bg-clip-text text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[10rem] 2xl:text-[12rem]  z-50">
+            <h1 className="text-zinc-200 text-[4.2rem] font-extrabold font-title sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[10rem] 2xl:text-[12rem]  z-50">
               GLC TECH
             </h1>
-            <h2 className=" text-[1.25rem] font-semibold text- inline-block  font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold -mt-3 lg:text-[1.7rem] 2xl:text-[1.8rem] text-stone-400 z-50 xl:-mt-6">
+            <h2 className=" text-[1.25rem] font-semibold text- inline-block  font-text2 sm:text-2xl md:text-[1.5rem] md:font-semibold -mt-3 lg:text-[1.7rem] 2xl:text-[1.8rem] text-stone-300 z-50 xl:-mt-6">
               GRUPO LA COMUNIDAD
             </h2>
             <div className="mt-6 flex font-title text-sm text-white font-bold justify-start gap-5 2xl:gap-12 xl:text-base 2xl:text-xl xl:mt-6 2xl:mt-8 z-50">
               <a href="#store">
                 <button
-                  className="py-2 px-5 text-white xl:py-[9px] bg-gradient-to-br from-rose-600 via-stone-800 to-stone-800 xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-800 hover:text-stone-400   rounded-3xl  border-[2px] border-stone-600 shadow-md shadow-gray-800 "
+                  className="py-2 px-5 text-white xl:py-[9px] bg-gradient-to-br from-zinc-800 via-stone-700 to-stone-800 xl:px-12 hover:scale-105 hover:duration-500 tracking-wider hover:bg-zinc-800 hover:text-stone-400   rounded-3xl  border-[2px] border-stone-600 shadow-md shadow-gray-800 "
                 >
                   <span>NUESTRA TIENDA</span>
                 </button>
