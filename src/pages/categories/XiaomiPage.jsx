@@ -51,8 +51,8 @@ const XiaomiPage = ({ arsPrice }) => {
         </nav>
 
         <article className="flex flex-col items-center pt-16 pb-6 gap-4 text-balance text-center xl:pt-14 xl:pb-9 2xl:pt-20 bg-white 2xl:pb-14">
-          <h6 className="text-6xl font-title  bg-gradient-to-t bg-clip-text from-zinc-800 to-zinc-500 text-transparent md:text-7xl font-semibold xl:text-[7.5rem] 2xl:text-[9rem]">XIAOMI</h6>
-          <p className="text-zinc-400 text-base font-semibold px-3 leading-4 font-text2 lg:text-lg xl:text-xl xl:mt-2 xl:max-w-[700px] 2xl:text-2xl 2xl:max-w-[800px] 2xl:mt-3">
+          <h6 className="text-6xl font-title  bg-gradient-to-t bg-clip-text from-zinc-800 to-zinc-400 text-transparent md:text-7xl font-semibold xl:text-[7.5rem] 2xl:text-[9rem]">XIAOMI</h6>
+          <p className="text-zinc-500 text-base font-semibold px-3 leading-4 font-text2 lg:text-lg xl:text-xl xl:mt-2 xl:max-w-[700px] 2xl:text-2xl 2xl:max-w-[800px] 2xl:mt-3">
             Explora nuestra colección exclusiva de dispositivos Xiaomi.
             Descubre sus características y elige el que más te convenga.
             {/*   <i className="bx bx-log-in-circle text-3xl  text-white 2xl:text-4xl"></i> */}

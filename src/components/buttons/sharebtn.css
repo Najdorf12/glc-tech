@@ -32,7 +32,7 @@
   .button-share::after {
     content: '';
     position: absolute;
-    height: calc(100% - 2px);
+    height: calc(100% - 0px);
     width: calc(100% - 2px);
     border: 2px solid #d3416a;
     border-radius: 32px;
@@ -41,7 +41,7 @@
   .button-share::before {
     content: "";
     position: absolute;
-    height: 99%;
+    height: 100%;
     width: 100%;
     background-color: #d3416a;
     z-index: 1;

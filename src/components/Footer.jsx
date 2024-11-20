@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </figure>
           <article className="flex mt-3 flex-col justify-center items-center text-balance text-center xl:mt-6  z-50">
-            <h6 className="text-5xl bg-gradient-to-t from-stone-300 via-stone-100 to-stone-600  bg-clip-text text-transparent inline-block font-title font-semibold xl:text-8xl 2xl:text-9xl">
+            <h6 className="text-7xl bg-gradient-to-t from-stone-300 via-stone-100 to-stone-600  bg-clip-text text-transparent inline-block font-title  font-semibold xl:text-9xl ">
               GLC TECH
             </h6>
             <p className="text-lg leading-5 mt-3 text-stone-200 font-semibold  xl:text-3xl xl:mt-4 2xl:mt-6 2xl:text-4xl">
