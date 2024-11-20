@@ -81,7 +81,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     <>
       <section
         id="store"
-        className="bg-zinc-900 relative w-full pt-12 xl:pt-24"
+        className="bg-zinc-900 relative w-full pt-12 xl:pt-14 2xl:pt-20"
       >
         {/* {isLoading && <Loader />} */}
         <article className="font-title flex flex-col justify-center items-center gap-5  xl:gap-10  ">
