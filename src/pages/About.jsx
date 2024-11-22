@@ -25,7 +25,7 @@ const About = ({imagesData}) => {
 
   return (
     <>
-      <section className="relative w-full h-[65vh]  z-10 flex justify-center items-center  text-gray-300  bg-white  lg:h-[80vh] lg:justify-end xl:items-start  xl:pt-[7%] xl:h-[90vh]  ">
+      <section className="relative w-full h-[65vh]  z-40 flex justify-center items-center  text-gray-300  bg-white  lg:h-[80vh] lg:justify-end xl:items-start  xl:pt-[7%] xl:h-[90vh]  ">
         <div className="h-full w-full  absolute inset-0 z-30 flex items-start justify-center  md:justify-start">
           <figure className="w-full h-full z-30 flex justify-center items-center grayscale-[.0] md:w-[50%] ">
             <img
@@ -35,7 +35,7 @@ const About = ({imagesData}) => {
             />
           </figure>
         </div>
-        <article className="relative z-50 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:mr-[2%] 2xl:mr-[9%] lg:w-[50%]  xl:gap-7 2xl:gap-9  lg:z-50">
+        <article className="relative z-40 flex flex-col  justify-center items-center gap-4 lg:gap-5 text-center sm:max-w-[600px] md:max-w-[700px] lg:mr-[2%] 2xl:mr-[9%] lg:w-[50%]  xl:gap-7 2xl:gap-9  lg:z-40">
           <h6 className="font-title text-[2.35rem] sm:text-[2.45rem]  font-bold md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl bg-gradient-to-br from-stone-500 via-stone-300 to-stone-600    inline-block text-transparent bg-clip-text lg:from-stone-600 lg:via-rose-700 lg:to-stone-700">
             SOBRE NOSOTROS
           </h6>

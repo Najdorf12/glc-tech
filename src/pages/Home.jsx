@@ -48,11 +48,11 @@ const Home = ({
   return (
     <>
       <main className="w-full h-[100vh] overflow-hidden flex flex-col items-center bg-white relative  lg:items-start z-50 ">
-        <nav className="fixed z-[100] w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 lg:pr-9 2xl:pr-12 ">
+        <nav className="fixed z-50 w-full flex justify-end items-center mt-1 mr-2 xl:mr-3 xl:mt-3 2xl:mt-6 lg:pr-9 2xl:pr-12 ">
           <Link
             target="blank"
             to={"https://api.whatsapp.com/send/?phone=541125043539"}
-            className="text-white bg-zinc-800 rounded-3xl"
+            className="text-white bg-zinc-800 rounded-3xl z-50"
           >
            <PrimaryBtn btnname="Escríbenos" />
           </Link>
