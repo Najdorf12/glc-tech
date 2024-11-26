@@ -58,7 +58,7 @@ const Home = ({
           </Link>
         </nav>
 
-        <div className="w-full h-[90vh] absolute inset-0 z-30 ">
+        <div className="w-full h-full absolute inset-0 z-30 ">
           <figure className="w-full h-full">
             <img
               src={imgHome}
