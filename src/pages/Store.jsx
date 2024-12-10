@@ -128,7 +128,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
           ))}
         </div>
       </section>
-      <BannerInfinix />
+      {/* <BannerInfinix /> */}
     </>
   );
 };
