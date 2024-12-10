@@ -260,7 +260,7 @@ const ProductDetail = ({ theme }) => {
         ></iframe>
       </div>
 
-      <p className="mt-2 w-[90%] lg:mt-14 mb-6 text-2xl px-4 max-w-[350px] border border-stone-500   text-stone-400 font-title font-semibold  text-center 2xl:text-2xl 2xl:max-w-[410px]  p-3 rounded-xl bg-gradient-to-br from-zinc-900 via-rose-800 to-zinc-900  shadow-sm shadow-gray-700">
+      <p className="mt-2 w-[90%] lg:mt-14 mb-6 text-2xl px-4 max-w-[350px] border border-stone-500   text-stone-400 font-title font-semibold  text-center xl:max-w-[500px] text-blance xl:px-12 2xl:text-2xl 2xl:max-w-[550px]  p-3 rounded-xl bg-gradient-to-br from-zinc-900 via-rose-800 to-zinc-900  shadow-sm shadow-gray-700">
         Descubre mas reviews en nuestro canal de
         <span className="text-gray-100 cursor-pointer font-bold duration-500 ml-[2px] 2xl:ml-[3px]  ">
           <Link
