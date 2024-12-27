@@ -80,7 +80,7 @@ const Store = ({ theme, allProducts, arsPrice, setAllProducts }) => {
     return result;
   };
 
-  const productChunks = chunkArray(allProducts || [], 10);
+  const productChunks = chunkArray(allProducts || [], 12);
 
   return (
     <>
