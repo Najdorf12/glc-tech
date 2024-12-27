@@ -228,7 +228,7 @@ const ProductDetail = ({ theme }) => {
       </section>
      
       <div className="my-8 w-full relative flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row  xl:pb-0 xl:justify-center xl:items-start xl:gap-6   ">
-        <div className="flex flex-col justify-center items-center  xl:w-[900px]">
+        <div className="flex flex-col justify-center items-center  xl:w-[900px] 2xl:w-[1000px]">
           <iframe
             id="ytplayer"
             className="w-[96%] h-[270px] rounded-2xl border border-stone-600  max-w-[500px] md:h-[330px]  lg:max-w-full lg:h-[440px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
@@ -239,7 +239,7 @@ const ProductDetail = ({ theme }) => {
             }
           ></iframe>
           <Link target="blank" to={"https://acoyteservice.com.ar"}>
-            <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-full lg:px-5 2xl:max-w-[900px] xl:mt-5 2xl:mt-5">
+            <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-full lg:px-5  xl:mt-5 2xl:mt-5 2xl:max-w-[950px]">
               <img
                 loading="lazy"
                 className="w-full lg:rounded-2xl shadow-sm shadow-gray-700 "
