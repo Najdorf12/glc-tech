@@ -113,24 +113,24 @@ const ProductDetail = ({ theme }) => {
         </Link>
       </nav>
       {/*  {isLoading && <Loader />} */}
-      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-10 xl:w-[90%] 2xl:w-[80%] xl:mt-7 2xl:py-2">
+      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-10 xl:w-[90%] 2xl:w-[90%] xl:mt-7 2xl:py-2">
         <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
             id="title-product-detail"
             className="font-title flex flex-col justify-center items-start  mt-10 
-             bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border-[2px] border-stone-600 rounded-2xl pl-3 pt-3 pb-5 w-[90%] max-w-[600px] xl:w-[510px] xl:py-5 lg:pl-5 xl:mt-4 2xl:w-[600px] 2xl:py-6  "
+             bg-gradient-to-tr from-zinc-900 via-rose-800 to-zinc-900 border-[2px] border-stone-600 rounded-2xl pl-3 pt-3 pb-5 w-[90%] max-w-[600px] xl:w-[600px] xl:py-2 lg:pl-5 xl:mt-3 xl:pb-4 2xl:max-w-[750px] 2xl:w-[750px] 2xl:mt-0 "
           >
-            <h5 className="text-3xl  font-bold   py-2 xl:text-5xl 2xl:text-6xl bg-gradient-to-b from-stone-100 via-stone-300 to-stone-800 inline-block text-transparent bg-clip-text ">
+            <h5 className="text-3xl  font-bold   py-2 xl:text-6xl bg-gradient-to-b from-stone-100 via-stone-300 to-stone-800 inline-block text-transparent bg-clip-text ">
               {productDetail?.name?.toUpperCase()?.substring(0, 19)}
             </h5>
-            <p className="text-lg text-stone-400 xl:text-xl 2xl:text-2xl">
+            <p className="text-lg text-stone-400 xl:text-xl xl:mt-1 2xl:text-2xl">
               {productDetail?.procesador}
             </p>
             <div className="flex justify-center items-center  gap-3 sm:gap-10 xl:mt-1 2xl:mt-3 text-white">
               {/* <p className=" py-2 px-4 text-3xl font-bold xl:text-4xl 2xl:px-7 md:tracking-wide 2xl:text-5xl ">
                 $USD {productDetail.price}
               </p> */}
-              <p className=" py-2  text-3xl font-bold xl:text-4xl md:tracking-wide 2xl:text-5xl ">
+              <p className=" py-2  text-3xl font-bold xl:text-5xl md:tracking-wide 2xl:text-5xl ">
                 $ {productDetail.price * ARSPrice[0]?.usdPrice}
               </p>
             </div>
