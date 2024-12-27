@@ -113,7 +113,7 @@ const ProductDetail = ({ theme }) => {
         </Link>
       </nav>
       {/*  {isLoading && <Loader />} */}
-      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-10 xl:w-[90%] 2xl:w-[90%] xl:mt-7 2xl:py-2">
+      <section className=" relative p-1  flex flex-col items-center xl:flex-row xl:items-start xl:justify-evenly  xl:gap-10 xl:w-[90%] 2xl:w-[90%] xl:mt-7 2xl:py-2 ">
         <div className="flex flex-col justify-center items-center  xl:justify-start   ">
           <article
             id="title-product-detail"
@@ -226,11 +226,12 @@ const ProductDetail = ({ theme }) => {
           </div>
         </section>
       </section>
-      <div className="my-8 w-full relative flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row  xl:pb-0 xl:justify-center xl:items-start xl:gap-20 ">
-        <div className="flex flex-col justify-center items-center">
+     
+      <div className="my-8 w-full relative flex flex-col justify-center items-center gap-4 xl:mt-20 xl:flex-row  xl:pb-0 xl:justify-center xl:items-start xl:gap-6   ">
+        <div className="flex flex-col justify-center items-center  xl:w-[900px]">
           <iframe
             id="ytplayer"
-            className="w-[96%] h-[270px] rounded-lg border border-stone-600  max-w-[500px] md:h-[330px] lg:max-w-[700px] lg:h-[420px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
+            className="w-[96%] h-[270px] rounded-2xl border border-stone-600  max-w-[500px] md:h-[330px]  lg:max-w-full lg:h-[440px]  2xl:max-w-[920px] 2xl:h-[500px] aspect-w-16 aspect-h-9 "
             src={
               productDetail.youtube
                 ?.replace("watch?v=", "embed/")
@@ -238,10 +239,10 @@ const ProductDetail = ({ theme }) => {
             }
           ></iframe>
           <Link target="blank" to={"https://acoyteservice.com.ar"}>
-            <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-[700px] 2xl:max-w-[900px] xl:mt-5 2xl:mt-5">
+            <picture className="flex justify-center  mt-3 max-w-[500px] lg:max-w-full lg:px-5 2xl:max-w-[900px] xl:mt-5 2xl:mt-5">
               <img
                 loading="lazy"
-                className="w-full lg:rounded-3xl shadow-sm shadow-gray-700 "
+                className="w-full lg:rounded-2xl shadow-sm shadow-gray-700 "
                 src={banner2}
                 alt=""
               />
@@ -251,7 +252,7 @@ const ProductDetail = ({ theme }) => {
 
         <iframe
           id="ytplayer"
-          className="w-[85%] h-[530px] rounded-lg border border-stone-600   max-w-[300px] xl:max-w-[330px] xl:h-[612px] 2xl:max-w-[400px] 2xl:h-[740px] shadow-sm shadow-gray-700 "
+          className="w-[85%] h-[530px] rounded-lg border border-stone-600   max-w-[300px] xl:max-w-[360px] xl:h-[660px] 2xl:max-w-[400px] 2xl:h-[740px] shadow-sm shadow-gray-700 "
           src={
             productDetail.youtubeShort?.includes("shorts/")
               ? productDetail.youtubeShort?.replace("shorts/", "embed/")
