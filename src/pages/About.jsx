@@ -29,7 +29,7 @@ const About = ({imagesData}) => {
         <div className="h-full w-full  absolute inset-0 z-30 flex items-start justify-center  md:justify-start">
           <figure className="w-full h-full z-30 flex justify-center items-center grayscale-[.0] md:w-[50%] ">
             <img
-              src={imgAbout}
+              src={imgAbout2}
               alt=""
               className="w-full h-full object-cover object-[-140px] lg:object-center  z-10"
             />
